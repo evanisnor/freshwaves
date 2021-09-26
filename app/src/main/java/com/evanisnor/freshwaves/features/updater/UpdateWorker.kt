@@ -1,4 +1,4 @@
-package com.evanisnor.freshwaves.updater
+package com.evanisnor.freshwaves.features.updater
 
 import android.content.Context
 import android.util.Log
@@ -18,7 +18,7 @@ class UpdateWorker(
         updateUserProfile {
             updateArtists {
                 updateAlbums {
-
+                    // TODO Update Tracks
                 }
             }
         }

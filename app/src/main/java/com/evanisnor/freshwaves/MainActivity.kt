@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
-import com.evanisnor.freshwaves.updater.UpdateWorker
+import com.evanisnor.freshwaves.features.updater.UpdateWorker
 import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity() {

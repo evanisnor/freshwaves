@@ -36,14 +36,7 @@ class SpotifyAuthorization(
     }
 
     fun authorizeIfNeeded(activity: Activity, allGood: () -> Unit) {
-        if (authState.isAuthorized && authState.needsTokenRefresh) {
-            with(AuthorizationService(activity)) {
-                performTokenRequest(authState.createTokenRefreshRequest()) { response, error ->
-                    authState.update(response, error)
-                    allGood()
-                }
-            }
-        } else if (!authState.isAuthorized) {
+        if (!authState.isAuthorized || authState.lastAuthorizationResponse == null) {
             with(AppMetadata()) {
                 buildAuthorizationRequest(
                     clientId = spotifyClientId(activity),
@@ -55,6 +48,13 @@ class SpotifyAuthorization(
                         activityOnSuccess = MainActivity::class,
                         activityOnCancel = LoginActivity::class,
                     )
+                }
+            }
+        } else if (authState.isAuthorized && authState.needsTokenRefresh) {
+            with(AuthorizationService(activity)) {
+                performTokenRequest(authState.createTokenRefreshRequest()) { response, error ->
+                    authState.update(response, error)
+                    allGood()
                 }
             }
         } else {

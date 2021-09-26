@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.evanisnor.freshwaves">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
+        android:name=".FreshWavesApp"
         android:allowBackup="true"
+        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FreshWaves" />
+        android:theme="@style/Theme.FreshWaves">
+
+        <meta-data
+            android:name="spotifyClientId"
+            android:value="3db837a49d3c4df0a277b0adaa748d87" />
+        <meta-data
+            android:name="spotifyRedirectUri"
+            android:value="com.evanisnor.freshwaves://authorize" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.evanisnor.freshwaves" />
+            </intent-filter>
+        </activity>
+
+    </application>
 
 </manifest>

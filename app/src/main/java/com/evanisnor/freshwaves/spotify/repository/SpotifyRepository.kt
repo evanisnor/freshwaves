@@ -62,7 +62,7 @@ class SpotifyRepository(
                     val pages = 4
                     var offset = 0
                     for (i in 0..pages) {
-                        artstt(
+                        updateArtist(
                             accessToken = accessToken,
                             offset = offset,
                             finishedPage = { numArtists ->
@@ -71,14 +71,14 @@ class SpotifyRepository(
                             onError = onError
                         )
                     }
-
+                    onFinished()
                 }
 
             }
         )
     }
 
-    private fun artstt(
+    private fun updateArtist(
         accessToken: String,
         offset: Int,
         finishedPage: (Int) -> Unit,

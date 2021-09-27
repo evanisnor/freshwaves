@@ -9,16 +9,20 @@ import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
 
 class FreshWavesApp : Application() {
 
+    lateinit var spotifyAuthorization: SpotifyAuthorization
     lateinit var spotifyRepository: SpotifyRepository
 
     override fun onCreate() {
         super.onCreate()
 
         val userSettings = getSharedPreferences("userSettings", MODE_PRIVATE)
+
+        spotifyAuthorization = SpotifyAuthorization(
+            userSettings = userSettings
+        )
+
         spotifyRepository = SpotifyRepository(
-            spotifyAuthorization = SpotifyAuthorization(
-                userSettings = userSettings
-            ),
+            spotifyAuthorization = spotifyAuthorization,
             spotifyAPIService = SpotifyAPIService.create(),
             spotifyCacheDao = Room.databaseBuilder(
                 this, SpotifyCache::class.java, "spotifyCache"

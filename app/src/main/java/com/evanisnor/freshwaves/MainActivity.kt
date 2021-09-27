@@ -5,21 +5,27 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.evanisnor.freshwaves.features.updater.UpdateWorker
-import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
+import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var spotifyRepository: SpotifyRepository
+    lateinit var spotifyAuthorization: SpotifyAuthorization
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        (application as FreshWavesApp).let { app ->
-            spotifyRepository = app.spotifyRepository
+        with(application as FreshWavesApp) {
+            this@MainActivity.spotifyAuthorization = spotifyAuthorization
         }
 
-        WorkManager.getInstance(this)
-            .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
+        spotifyAuthorization.authorize(
+            activity = this,
+            onAuthorized = {
+                WorkManager.getInstance(this)
+                    .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
+            },
+            onAuthorizationError = {}
+        )
     }
 }

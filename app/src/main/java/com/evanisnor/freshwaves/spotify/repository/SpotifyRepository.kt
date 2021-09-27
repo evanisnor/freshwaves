@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
@@ -17,9 +16,6 @@ class SpotifyRepository(
     private val spotifyCacheDao: SpotifyCacheDao,
     private val userSettings: SharedPreferences
 ) {
-
-    fun authorizeIfNeeded(activity: Activity, allGood: () -> Unit) =
-        spotifyAuthorization.authorizeIfNeeded(activity, allGood)
 
     // region with updater
 
@@ -145,7 +141,7 @@ class SpotifyRepository(
         context: Context,
         withFreshAccessToken: (String) -> Unit
     ) {
-        spotifyAuthorization.authorizedAction(context,
+        spotifyAuthorization.refreshToken(context,
             withAccessToken = withFreshAccessToken,
             withError = {
                 Log.e("SpotifyRepository", "Authorization error: ${it.toJsonString()}")

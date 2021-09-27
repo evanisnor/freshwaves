@@ -7,8 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
-import com.evanisnor.freshwaves.LoginActivity
-import com.evanisnor.freshwaves.MainActivity
+import android.util.Log
 import com.evanisnor.freshwaves.system.AppMetadata
 import net.openid.appauth.*
 import kotlin.reflect.KClass
@@ -35,51 +34,98 @@ class SpotifyAuthorization(
         }
     }
 
-    fun authorizeIfNeeded(activity: Activity, allGood: () -> Unit) {
-        if (!authState.isAuthorized || authState.lastAuthorizationResponse == null) {
-            with(AppMetadata()) {
-                buildAuthorizationRequest(
-                    clientId = spotifyClientId(activity),
-                    redirectUri = spotifyRedirectUri(activity)
-                ).let { authorizationRequest ->
-                    authorize(
-                        activity = activity,
-                        authorizationRequest = authorizationRequest,
-                        activityOnSuccess = MainActivity::class,
-                        activityOnCancel = LoginActivity::class,
-                    )
-                }
-            }
-        } else if (authState.isAuthorized && authState.needsTokenRefresh) {
-            with(AuthorizationService(activity)) {
-                performTokenRequest(authState.createTokenRefreshRequest()) { response, error ->
-                    authState.update(response, error)
-                    allGood()
-                }
-            }
+    fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
+        if (!authState.isAuthorized) {
+            notLoggedIn()
         } else {
-            allGood()
+            loggedIn()
         }
     }
 
-    fun authorizedAction(
+    @SuppressLint("UnspecifiedImmutableFlag")
+    fun <SuccessActivity : Activity, CancelActivity : Activity> performLoginAuthorization(
+        activity: Activity,
+        activityOnSuccess: KClass<SuccessActivity>,
+        activityOnCancel: KClass<CancelActivity>
+    ) {
+        with(AppMetadata()) {
+            buildAuthorizationRequest(
+                clientId = spotifyClientId(activity),
+                redirectUri = spotifyRedirectUri(activity)
+            ).let { authorizationRequest ->
+                with(AuthorizationService(activity)) {
+                    performAuthorizationRequest(
+                        authorizationRequest,
+                        PendingIntent.getActivity(
+                            activity,
+                            0,
+                            Intent(activity, activityOnSuccess.java),
+                            0
+                        ),
+                        PendingIntent.getActivity(
+                            activity,
+                            0,
+                            Intent(activity, activityOnCancel.java),
+                            0
+                        )
+                    )
+                }
+            }
+        }
+    }
+
+    fun authorize(
+        activity: Activity,
+        onAuthorized: () -> Unit,
+        onAuthorizationError: (AuthorizationException) -> Unit
+    ) {
+        val response = AuthorizationResponse.fromIntent(activity.intent)
+        val error = AuthorizationException.fromIntent(activity.intent)
+
+        when {
+            error != null -> {
+                Log.e("SpotifyAuthorization", "Failed to authorize: ${error.toJsonString()}")
+                onAuthorizationError(error)
+            }
+            response != null -> {
+                with(AuthorizationService(activity)) {
+                    performTokenRequest(response.createTokenExchangeRequest()) { tokenResponse, e ->
+                        authState.update(tokenResponse, e)
+                        onAuthorized()
+                    }
+                }
+            }
+            authState.needsTokenRefresh -> refreshToken(
+                context = activity,
+                withAccessToken = { onAuthorized() },
+                withError = onAuthorizationError
+            )
+            else -> {
+                onAuthorized()
+            }
+        }
+    }
+
+    fun refreshToken(
         context: Context,
         withAccessToken: (String) -> Unit,
         withError: (AuthorizationException) -> Unit
     ) {
-        with(AuthorizationService(context)) {
-            if (authState.needsTokenRefresh) {
-                authState.performActionWithFreshTokens(this) { accessToken, _, e ->
-                    accessToken?.let {
-                        withAccessToken("Bearer $it")
+        if (authState.needsTokenRefresh) {
+            with(AuthorizationService(context)) {
+                performTokenRequest(authState.createTokenRefreshRequest()) { response, error ->
+                    authState.update(response, error)
+
+                    error?.let {
+                        withError(error)
+                        return@performTokenRequest
                     }
-                    e?.let {
-                        withError(e)
-                    }
+
+                    withAccessToken("Bearer ${authState.accessToken}")
                 }
-            } else {
-                withAccessToken("Bearer ${authState.accessToken}")
             }
+        } else {
+            withAccessToken("Bearer ${authState.accessToken}")
         }
     }
 
@@ -92,31 +138,5 @@ class SpotifyAuthorization(
         ).apply {
             setScope("user-top-read, user-read-private, user-read-email")
         }.build()
-
-    @SuppressLint("UnspecifiedImmutableFlag")
-    fun <SuccessActivity : Activity, CancelActivity : Activity> authorize(
-        activity: Activity,
-        authorizationRequest: AuthorizationRequest,
-        activityOnSuccess: KClass<SuccessActivity>,
-        activityOnCancel: KClass<CancelActivity>
-    ) {
-        with(AuthorizationService(activity)) {
-            performAuthorizationRequest(
-                authorizationRequest,
-                PendingIntent.getActivity(
-                    activity,
-                    0,
-                    Intent(activity, activityOnSuccess.java),
-                    0
-                ),
-                PendingIntent.getActivity(
-                    activity,
-                    0,
-                    Intent(activity, activityOnCancel.java),
-                    0
-                )
-            )
-        }
-    }
 
 }

@@ -1,14 +1,11 @@
 package com.evanisnor.freshwaves
 
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
 import com.evanisnor.freshwaves.features.updater.UpdateWorker
-import java.util.concurrent.Executors
+import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,20 +21,5 @@ class MainActivity : AppCompatActivity() {
 
         WorkManager.getInstance(this)
             .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
-    }
-
-    fun onClickFetch(v: View) {
-        Executors.newSingleThreadExecutor().execute {
-            Log.i(
-                "MainActivity",
-                "\n---------------------------\nLATEST ALBUMS\n---------------------------"
-            )
-            spotifyRepository.getLatestAlbums().forEach {
-                Log.i(
-                    "MainActivity",
-                    "${it.name} by ${it.artist?.name ?: "UNKNOWN"}\t\tRelease Date: ${it.releaseDate}"
-                )
-            }
-        }
     }
 }

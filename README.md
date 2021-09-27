@@ -19,7 +19,6 @@ Show a list of the latest albums from your favorite artists
     - GET https://api.spotify.com/v1/artists/{id}/albums
 4. For each album, get each track
     - GET https://api.spotify.com/v1/albums/{id}/tracks
-5. Query for a list of new albums since the last update
 
 ### User Experience
 

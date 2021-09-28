@@ -41,6 +41,7 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
     val albumId = "${artist.name} - ${name.filter { it.isLetterOrDigit() }}".hashCode()
     return Album(
         id = albumId,
+        spotifyId = id,
         artist = artist,
         name = name,
         type = type,
@@ -86,5 +87,5 @@ fun TrackObject.mapToEntity(albumId: Int) = Track(
     trackNumber = trackNumber,
     name = name,
     uri = uri,
-    duration = duration
+    duration = duration ?: "0"
 )

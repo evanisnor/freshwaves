@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.util.Log
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyAPIService
 import com.evanisnor.freshwaves.spotify.network.enqueue
@@ -104,7 +105,7 @@ class SpotifyRepository(
     fun updateAlbums(
         artist: Artist,
         context: Context,
-        onFinished: () -> Unit,
+        onFinished: (List<Album>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         authorizedAction(
@@ -122,7 +123,7 @@ class SpotifyRepository(
                             Executors.newSingleThreadExecutor().execute {
                                 val albums = it.items.mapToEntity(artist)
                                 spotifyCacheDao.insertAlbums(albums)
-                                onFinished()
+                                onFinished(albums)
                             }
                         },
                         onError = onError
@@ -133,7 +134,36 @@ class SpotifyRepository(
         )
     }
 
+    fun updateTracks(
+        album: Album,
+        context: Context,
+        onFinished: () -> Unit,
+        onError: (Throwable) -> Unit
+    ) {
+        authorizedAction(
+            context = context,
+            withFreshAccessToken = { accessToken ->
+                spotifyAPIService.getAlbumTracks(
+                    accessToken = accessToken,
+                    albumId = album.spotifyId
+                ).enqueue(
+                    onResult = {
+
+                        Executors.newSingleThreadExecutor().execute {
+                            val tracks = it.items.mapToEntities(album.id)
+                            spotifyCacheDao.insertTracks(tracks)
+                            onFinished()
+                        }
+                    },
+                    onError = onError
+                )
+            }
+        )
+    }
+
     fun getLatestAlbums() = spotifyCacheDao.readAlbumsWithLimit(30)
+
+    fun getAlbumWithTracks(albumId: Int) = spotifyCacheDao.readAlbumWithTracks(albumId)
 
     // endregion
 

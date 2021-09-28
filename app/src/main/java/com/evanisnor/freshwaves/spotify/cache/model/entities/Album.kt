@@ -17,6 +17,7 @@ import java.time.Instant
 )
 data class Album(
     @PrimaryKey val id: Int,
+    val spotifyId: String,
     val artistId: String,
     val name: String,
     val type: String,
@@ -34,13 +35,14 @@ data class Album(
 
     constructor(
         id: Int,
+        spotifyId: String,
         artist: Artist,
         name: String,
         type: String,
         releaseDate: Instant,
         images: List<AlbumImage>,
         tracks: List<Track>
-    ) : this(id, artist.id, name, type, releaseDate) {
+    ) : this(id, spotifyId, artist.id, name, type, releaseDate) {
         this.artist = artist
         this.images = images
         this.tracks = tracks
@@ -48,9 +50,9 @@ data class Album(
 
     override fun toString() =
         if (artist == null) {
-            "Album(id=$id, name=$name, releaseDate=$releaseDate, artistId=$artistId, images=$images, tracks=$tracks)"
+            "Album(id=$id, spotifyId=$spotifyId, name=$name, releaseDate=$releaseDate, artistId=$artistId, images=$images, tracks=$tracks)"
         } else {
-            "Album(id=$id, name=$name, releaseDate=$releaseDate, artist=$artist, images=$images, tracks=$tracks)"
+            "Album(id=$id, spotifyId=$spotifyId, name=$name, releaseDate=$releaseDate, artist=$artist, images=$images, tracks=$tracks)"
         }
 }
 

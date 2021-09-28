@@ -14,13 +14,18 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-class FreshAlbumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class FreshAlbumViewHolder(
+    itemView: View,
+    private val listener: FreshAlbumsAdapter.OnAlbumSelectedListener?
+) :
+    RecyclerView.ViewHolder(itemView) {
 
     companion object {
-        fun create(parent: ViewGroup) =
+        fun create(parent: ViewGroup, listener: FreshAlbumsAdapter.OnAlbumSelectedListener?) =
             FreshAlbumViewHolder(
                 LayoutInflater.from(parent.context)
-                    .inflate(R.layout.fresh_album_card, parent, false)
+                    .inflate(R.layout.fresh_album_card, parent, false),
+                listener
             )
     }
 
@@ -31,8 +36,8 @@ class FreshAlbumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 albumImage.load(it.url)
             }
 
-            name.text = album.name
-            artist.text = album.artist?.name ?: "Unknown"
+            albumName.text = album.name
+            artistName.text = album.artist?.name ?: "Unknown"
 
             releaseDate.text = album.releaseDate
                 .atZone(ZoneId.systemDefault())
@@ -40,6 +45,10 @@ class FreshAlbumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 .format(
                     DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault())
                 )
+        }
+
+        itemView.setOnClickListener {
+            listener?.onAlbumSelected(album)
         }
     }
 
@@ -53,8 +62,14 @@ class AlbumDiffCallback : DiffUtil.ItemCallback<Album>() {
 
 class FreshAlbumsAdapter : ListAdapter<Album, FreshAlbumViewHolder>(AlbumDiffCallback()) {
 
+    interface OnAlbumSelectedListener {
+        fun onAlbumSelected(album: Album)
+    }
+
+    var listener: OnAlbumSelectedListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreshAlbumViewHolder {
-        return FreshAlbumViewHolder.create(parent)
+        return FreshAlbumViewHolder.create(parent, listener)
     }
 
     override fun onBindViewHolder(holder: FreshAlbumViewHolder, position: Int) {

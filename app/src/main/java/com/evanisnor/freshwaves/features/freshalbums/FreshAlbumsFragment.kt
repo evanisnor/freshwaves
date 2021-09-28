@@ -8,7 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.FreshWavesApp
+import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
+import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 
 class FreshAlbumsFragment : Fragment() {
 
@@ -57,6 +60,25 @@ class FreshAlbumsFragment : Fragment() {
                 freshAlbumsAdapter.submitList(albums)
             }
         }
+
+        freshAlbumsAdapter.listener = object : FreshAlbumsAdapter.OnAlbumSelectedListener {
+            override fun onAlbumSelected(album: Album) {
+                launchAlbumDetails(album)
+            }
+        }
+    }
+
+    private fun launchAlbumDetails(album: Album) {
+        val albumDetailsFragment = AlbumDetailsFragment().apply {
+            arguments = Bundle().apply {
+                putInt(AlbumDetailsFragment.albumIdArgument, album.id)
+            }
+        }
+        activity?.supportFragmentManager
+            ?.beginTransaction()
+            ?.add(R.id.freshAlbumsContainer, albumDetailsFragment)
+            ?.addToBackStack(AlbumDetailsFragment.TAG)
+            ?.commit()
     }
 
 }

@@ -1,6 +1,8 @@
 package com.evanisnor.freshwaves.spotify.network
 
 import com.evanisnor.freshwaves.spotify.network.model.*
+import okhttp3.Dispatcher
+import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -15,6 +17,17 @@ interface SpotifyAPIService {
         fun create(): SpotifyAPIService = Retrofit.Builder()
             .baseUrl("https://api.spotify.com/")
             .addConverterFactory(MoshiConverterFactory.create())
+            .client(
+                OkHttpClient.Builder()
+                    .dispatcher(Dispatcher().apply {
+                        maxRequestsPerHost = 1
+                    })
+                    .addNetworkInterceptor {
+                        Thread.sleep(100)
+                        it.proceed(it.request())
+                    }
+                    .build()
+            )
             .build()
             .create(SpotifyAPIService::class.java)
     }

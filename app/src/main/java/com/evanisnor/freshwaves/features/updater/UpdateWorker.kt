@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.evanisnor.freshwaves.FreshWavesApp
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 
 class UpdateWorker(
     applicationContext: Context,
@@ -16,9 +17,16 @@ class UpdateWorker(
     override fun doWork(): Result {
 
         updateUserProfile {
+            Log.i("UpdateWorker", "Updated user profile")
             updateArtists {
-                updateAlbums {
-                    // TODO Update Tracks
+                Log.i("UpdateWorker", "Updated top artists")
+                updateAlbums { albums ->
+                    Log.i("UpdateWorker", "Fetched ${albums.size} albums")
+                    albums.forEach { album ->
+                        updateTracks(album) {
+                            Log.i("UpdateWorker", "Fetched tracks for album ${album.name}")
+                        }
+                    }
                 }
             }
         }
@@ -46,7 +54,7 @@ class UpdateWorker(
         )
     }
 
-    private fun updateAlbums(onFinished: () -> Unit) {
+    private fun updateAlbums(onFinished: (List<Album>) -> Unit) {
         spotifyRepository.getTopArtists().forEach { artist ->
             spotifyRepository.updateAlbums(
                 artist = artist,
@@ -57,5 +65,16 @@ class UpdateWorker(
                 }
             )
         }
+    }
+
+    private fun updateTracks(album: Album, onFinished: () -> Unit) {
+        spotifyRepository.updateTracks(
+            album = album,
+            context = applicationContext,
+            onFinished = onFinished,
+            onError = {
+                Log.e("UpdateWorker", "Failed to update tracks for for $album: $it")
+            }
+        )
     }
 }

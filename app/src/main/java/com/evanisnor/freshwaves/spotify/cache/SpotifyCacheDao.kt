@@ -24,7 +24,7 @@ abstract class SpotifyCacheDao {
         it
     }
 
-    fun readAlbumWithTracks(albumId: String): Album = _readAlbum(albumId).let {
+    fun readAlbumWithTracks(albumId: Int): Album = _readAlbum(albumId).let {
         it.artist = _readArtist(it.artistId)
         it.images = _readAlbumImages(it.id)
         it.tracks = _readTracks(it.id)
@@ -106,7 +106,7 @@ abstract class SpotifyCacheDao {
     abstract fun _readAlbums(limit: Int): List<Album>
 
     @Query("SELECT * FROM Album WHERE Album.id = :albumId")
-    abstract fun _readAlbum(albumId: String): Album
+    abstract fun _readAlbum(albumId: Int): Album
 
     @Query("SELECT * FROM AlbumImage WHERE albumId = :albumId")
     abstract fun _readAlbumImages(albumId: Int): List<AlbumImage>

@@ -111,7 +111,7 @@ abstract class SpotifyCacheDao {
     @Query("SELECT * FROM AlbumImage WHERE albumId = :albumId")
     abstract fun _readAlbumImages(albumId: Int): List<AlbumImage>
 
-    @Query("SELECT * FROM Track WHERE Track.albumId = :albumId")
+    @Query("SELECT * FROM Track WHERE Track.albumId = :albumId ORDER BY discNumber,trackNumber")
     abstract fun _readTracks(albumId: Int): List<Track>
 
     // endregion

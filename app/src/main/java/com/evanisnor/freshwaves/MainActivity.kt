@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         spotifyAuthorization.authorize(
             activity = this,
             onAuthorized = {
-                WorkManager.getInstance(this)
-                    .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
+//                WorkManager.getInstance(this)
+//                    .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
             },
             onAuthorizationError = {}
         )

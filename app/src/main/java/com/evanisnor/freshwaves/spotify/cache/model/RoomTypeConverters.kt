@@ -1,6 +1,7 @@
 package com.evanisnor.freshwaves.spotify.cache.model
 
 import androidx.room.TypeConverter
+import java.time.Duration
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 
@@ -12,4 +13,10 @@ class RoomTypeConverters {
     @TypeConverter
     fun fromInstantToDateString(instant: Instant): String =
         DateTimeFormatter.ISO_INSTANT.format(instant)
+
+    @TypeConverter
+    fun fromMillisecondsToDuration(duration: Long): Duration = Duration.ofMillis(duration)
+
+    @TypeConverter
+    fun fromDurationToMilliseconds(duration: Duration): Long = duration.toMillis()
 }

@@ -1,9 +1,10 @@
 package com.evanisnor.freshwaves.spotify.cache.model.entities
 
 import androidx.room.Entity
+import java.time.Duration
 
 @Entity(
-    primaryKeys = ["id", "albumId", "trackNumber"],
+    primaryKeys = ["id"],
     foreignKeys = [
         androidx.room.ForeignKey(
             entity = Album::class,
@@ -13,10 +14,12 @@ import androidx.room.Entity
     ]
 )
 data class Track(
-    val id: String,
+    val id: Int,
+    val spotifyId: String,
     val albumId: Int,
+    val discNumber: Int,
     val trackNumber: Int,
     val name: String,
     val uri: String,
-    val duration: String,
+    val duration: Duration,
 )

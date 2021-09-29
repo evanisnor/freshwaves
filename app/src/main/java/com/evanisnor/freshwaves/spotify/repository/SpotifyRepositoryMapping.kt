@@ -6,6 +6,7 @@ import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
 import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
 import com.evanisnor.freshwaves.spotify.network.model.TrackObject
 import com.evanisnor.freshwaves.user.UserProfile
+import java.time.Duration
 import java.time.Instant
 
 fun PrivateUserObject.mapToUserProfile() = UserProfile(
@@ -38,7 +39,11 @@ fun ArtistObject.mapToEntity() = Artist(
 @JvmName("mapToEntitiesAlbumObject")
 fun List<AlbumObject>.mapToEntity(artist: Artist) = map { it.mapToEntity(artist) }
 fun AlbumObject.mapToEntity(artist: Artist): Album {
-    val albumId = "${artist.name} - ${name.filter { it.isLetterOrDigit() }}".hashCode()
+
+    val albumId = "${artist.name} - ${name.filter { it.isLetterOrDigit() }}"
+        .lowercase()
+        .hashCode()
+
     return Album(
         id = albumId,
         spotifyId = id,
@@ -68,24 +73,26 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
             )
         } ?: emptyList(),
         tracks?.map { trackObject ->
-            Track(
-                id = trackObject.id,
-                albumId = albumId,
-                trackNumber = trackObject.trackNumber,
-                name = trackObject.name,
-                uri = trackObject.uri,
-                duration = trackObject.duration
-            )
+            trackObject.mapToEntity(albumId)
         } ?: emptyList()
     )
 }
 
 fun List<TrackObject>.mapToEntities(albumId: Int) = map { it.mapToEntity(albumId) }
-fun TrackObject.mapToEntity(albumId: Int) = Track(
-    id = id,
-    albumId = albumId,
-    trackNumber = trackNumber,
-    name = name,
-    uri = uri,
-    duration = duration ?: "0"
-)
+fun TrackObject.mapToEntity(albumId: Int): Track {
+
+    val trackId = "$albumId - $discNumber - $trackNumber - ${name.filter { it.isLetterOrDigit() }}"
+        .lowercase()
+        .hashCode()
+
+    return Track(
+        id = trackId,
+        spotifyId = id,
+        albumId = albumId,
+        discNumber = discNumber,
+        trackNumber = trackNumber,
+        name = name,
+        uri = uri,
+        duration = Duration.ofMillis(durationMs)
+    )
+}

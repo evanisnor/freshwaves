@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.evanisnor.freshwaves">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".HiltTestActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

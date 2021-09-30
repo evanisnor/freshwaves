@@ -14,7 +14,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 object SpotifyNetworkModule {
 
     @Provides
-    fun spotifyAPIService() = Retrofit.Builder()
+    fun spotifyAPIService(): SpotifyAPIService = Retrofit.Builder()
         .baseUrl("https://api.spotify.com/")
         .addConverterFactory(MoshiConverterFactory.create())
         .client(

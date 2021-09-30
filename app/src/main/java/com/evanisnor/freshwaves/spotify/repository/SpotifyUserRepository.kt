@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import android.content.Context
 import android.content.SharedPreferences
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import java.util.concurrent.Executors

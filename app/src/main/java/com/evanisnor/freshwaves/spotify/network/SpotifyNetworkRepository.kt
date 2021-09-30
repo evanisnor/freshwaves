@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify.network
 
-import android.content.Context
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist

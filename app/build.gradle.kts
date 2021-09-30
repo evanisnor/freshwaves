@@ -16,7 +16,7 @@ android {
         versionCode = 1
         versionName = "0.1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.evanisnor.freshwaves.runner.HiltAndroidTestRunner"
     }
 
     buildFeatures {
@@ -52,6 +52,8 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
     implementation("androidx.hilt:hilt-work:1.0.0")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
 
     // Coil
     implementation("io.coil-kt:coil:1.3.2")
@@ -62,6 +64,7 @@ dependencies {
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    androidTestImplementation("com.squareup.retrofit2:retrofit-mock:2.9.0")
 
     // Room
     val roomVersion = "2.4.0-alpha04"
@@ -76,7 +79,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
 
     // Instrumentation Testing
+    androidTestImplementation("androidx.test:core-ktx:1.4.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
-    androidTestImplementation("androidx.fragment:fragment-testing:1.3.6")
+    debugImplementation("androidx.fragment:fragment-testing:1.3.6")
 }

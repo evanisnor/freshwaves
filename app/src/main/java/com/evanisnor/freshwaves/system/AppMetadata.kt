@@ -2,8 +2,9 @@ package com.evanisnor.freshwaves.system
 
 import android.content.Context
 import android.content.pm.PackageManager
+import javax.inject.Inject
 
-class AppMetadata {
+class AppMetadata @Inject constructor() {
 
     fun spotifyClientId(context: Context) = metaData(context, "spotifyClientId")
 

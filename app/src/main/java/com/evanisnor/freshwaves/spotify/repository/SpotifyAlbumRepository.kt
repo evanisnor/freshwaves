@@ -1,13 +1,13 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import android.content.Context
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import java.util.concurrent.Executors
+import javax.inject.Inject
 
-class SpotifyAlbumRepository(
+class SpotifyAlbumRepository @Inject constructor(
     private val spotifyUserRepository: SpotifyUserRepository,
     private val spotifyNetworkRepository: SpotifyNetworkRepository,
     private val spotifyCacheDao: SpotifyCacheDao
@@ -27,7 +27,6 @@ class SpotifyAlbumRepository(
 
     fun updateAlbums(
         artist: Artist,
-        context: Context,
         onFinished: (List<Album>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
@@ -36,7 +35,6 @@ class SpotifyAlbumRepository(
             spotifyNetworkRepository.getArtistAlbums(
                 artist = artist,
                 market = spotifyUserRepository.getUserMarket(),
-                context = context,
                 onResult = { albums ->
 
                     Executors.newSingleThreadExecutor().execute {
@@ -52,13 +50,11 @@ class SpotifyAlbumRepository(
 
     fun updateTracks(
         album: Album,
-        context: Context,
         onFinished: () -> Unit,
         onError: (Throwable) -> Unit
     ) {
         spotifyNetworkRepository.getAlbumTracks(
             album = album,
-            context = context,
             onResult = { tracks ->
 
                 Executors.newSingleThreadExecutor().execute {

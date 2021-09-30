@@ -9,11 +9,17 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import com.evanisnor.freshwaves.system.AppMetadata
+import dagger.hilt.android.qualifiers.ApplicationContext
 import net.openid.appauth.*
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Singleton
 import kotlin.reflect.KClass
 
-class SpotifyAuthorization(
-    userSettings: SharedPreferences
+@Singleton
+class SpotifyAuthorization @Inject constructor(
+    @ApplicationContext private val context: Context,
+    @Named("UserSettings") userSettings: SharedPreferences
 ) {
 
     companion object {
@@ -23,19 +29,17 @@ class SpotifyAuthorization(
         )
     }
 
-    private val authState: AuthState
+    private var authState: AuthState = AuthState(config)
 
     init {
         val authStateString = userSettings.getString("authState", null)
-        authState = if (authStateString == null) {
-            AuthState(config)
-        } else {
-            AuthState.jsonDeserialize(authStateString)
+        if (authStateString != null) {
+            authState = AuthState.jsonDeserialize(authStateString)
         }
     }
 
-    fun provideAccessToken(context: Context, withAccessToken: (String) -> Unit) {
-        refreshToken(context,
+    fun provideAccessToken(withAccessToken: (String) -> Unit) {
+        refreshToken(
             withAccessToken = withAccessToken,
             withError = {
                 Log.e("SpotifyRepository", "Authorization error: ${it.toJsonString()}")
@@ -104,7 +108,6 @@ class SpotifyAuthorization(
                 }
             }
             authState.needsTokenRefresh -> refreshToken(
-                context = activity,
                 withAccessToken = { onAuthorized() },
                 withError = onAuthorizationError
             )
@@ -114,8 +117,7 @@ class SpotifyAuthorization(
         }
     }
 
-    fun refreshToken(
-        context: Context,
+    private fun refreshToken(
         withAccessToken: (String) -> Unit,
         withError: (AuthorizationException) -> Unit
     ) {

@@ -5,20 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.evanisnor.freshwaves.FreshWavesApp
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
 
-    private var fragmentFreshAlbumsBinding: FreshAlbumsFragmentBinding? = null
-    private var freshAlbumsViewModel: FreshAlbumsViewModel? = null
+    private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
+
     private val freshAlbumsAdapter = FreshAlbumsAdapter()
 
+    private var fragmentFreshAlbumsBinding: FreshAlbumsFragmentBinding? = null
     private var _binding: FreshAlbumsFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -49,13 +51,7 @@ class FreshAlbumsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        freshAlbumsViewModel = ViewModelProvider(
-            this, FreshAlbumsViewModelFactory(
-                (context?.applicationContext as FreshWavesApp).spotifyAlbumRepository
-            )
-        ).get(FreshAlbumsViewModel::class.java)
-
-        freshAlbumsViewModel?.getLatestAlbums { albums ->
+        freshAlbumsViewModel.getLatestAlbums { albums ->
             activity?.runOnUiThread {
                 freshAlbumsAdapter.submitList(albums)
             }

@@ -4,23 +4,23 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import java.util.concurrent.Executors
+import javax.inject.Inject
+import javax.inject.Named
 
-class SpotifyUserRepository(
+class SpotifyUserRepository @Inject constructor(
     private val spotifyNetworkRepository: SpotifyNetworkRepository,
-    private val userSettings: SharedPreferences
+    @Named("UserSettings") private val userSettings: SharedPreferences
 ) {
 
     fun getUserMarket() = userSettings.getString("country", "") ?: ""
 
     fun updateUserProfile(
-        context: Context,
         onFinished: () -> Unit,
         onError: (Throwable) -> Unit
     ) {
         Executors.newSingleThreadExecutor().execute {
 
             spotifyNetworkRepository.getUserProfile(
-                context = context,
                 onResult = { userProfile ->
                     userSettings.edit()
                         .putString("id", userProfile.id)

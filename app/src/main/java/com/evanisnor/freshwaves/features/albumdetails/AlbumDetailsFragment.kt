@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
-import com.evanisnor.freshwaves.FreshWavesApp
 import com.evanisnor.freshwaves.databinding.AlbumDetailsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.adapter.AlbumDetailsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AlbumDetailsFragment : Fragment() {
 
     companion object {
@@ -20,9 +21,9 @@ class AlbumDetailsFragment : Fragment() {
             "com.evanisnor.freshwaves.features.albumdetails.arg.AlbumId"
     }
 
-    private var albumDetailsFragmentBinding: AlbumDetailsFragmentBinding? = null
-    private var albumDetailsViewModel: AlbumDetailsViewModel? = null
+    private val albumDetailsViewModel: AlbumDetailsViewModel by activityViewModels()
 
+    private var albumDetailsFragmentBinding: AlbumDetailsFragmentBinding? = null
     private var _binding: AlbumDetailsFragmentBinding? = null
     private val binding get() = _binding!!
 
@@ -33,12 +34,6 @@ class AlbumDetailsFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         albumId = arguments?.getInt(albumIdArgument)
-
-        albumDetailsViewModel = ViewModelProvider(
-            this, AlbumDetailsViewModelFactory(
-                spotifyAlbumRepository = (context?.applicationContext as FreshWavesApp).spotifyAlbumRepository
-            )
-        ).get(AlbumDetailsViewModel::class.java)
     }
 
     override fun onCreateView(

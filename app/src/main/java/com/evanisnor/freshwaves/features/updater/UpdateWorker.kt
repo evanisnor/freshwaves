@@ -2,19 +2,24 @@ package com.evanisnor.freshwaves.features.updater
 
 import android.content.Context
 import android.util.Log
+import androidx.hilt.work.HiltWorker
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.evanisnor.freshwaves.FreshWavesApp
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
+import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
+import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
 
-class UpdateWorker(
-    applicationContext: Context,
-    workerParameters: WorkerParameters
+@HiltWorker
+class UpdateWorker @AssistedInject constructor(
+    @Assisted applicationContext: Context,
+    @Assisted workerParameters: WorkerParameters,
+    private val spotifyUserRepository: SpotifyUserRepository,
+    private val spotifyArtistRepository: SpotifyArtistRepository,
+    private val spotifyAlbumRepository: SpotifyAlbumRepository
 ) : Worker(applicationContext, workerParameters) {
-
-    private val spotifyUserRepository = (applicationContext as FreshWavesApp).spotifyUserRepository
-    private val spotifyArtistRepository = (applicationContext as FreshWavesApp).spotifyArtistRepository
-    private val spotifyAlbumRepository = (applicationContext as FreshWavesApp).spotifyAlbumRepository
 
     override fun doWork(): Result {
 
@@ -38,7 +43,6 @@ class UpdateWorker(
 
     private fun updateUserProfile(onFinished: () -> Unit) {
         spotifyUserRepository.updateUserProfile(
-            context = applicationContext,
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update user profile: $it")
@@ -48,7 +52,6 @@ class UpdateWorker(
 
     private fun updateArtists(onFinished: () -> Unit) {
         spotifyArtistRepository.updateTopArtists(
-            context = applicationContext,
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update artists: $it")
@@ -60,7 +63,6 @@ class UpdateWorker(
         spotifyArtistRepository.getTopArtists().forEach { artist ->
             spotifyAlbumRepository.updateAlbums(
                 artist = artist,
-                context = applicationContext,
                 onFinished = onFinished,
                 onError = {
                     Log.e("UpdateWorker", "Failed to update albums for $artist: $it")
@@ -72,7 +74,6 @@ class UpdateWorker(
     private fun updateTracks(album: Album, onFinished: () -> Unit) {
         spotifyAlbumRepository.updateTracks(
             album = album,
-            context = applicationContext,
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update tracks for for $album: $it")

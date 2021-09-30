@@ -1,55 +1,19 @@
 package com.evanisnor.freshwaves
 
 import android.app.Application
-import androidx.room.Room
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
-import com.evanisnor.freshwaves.spotify.cache.SpotifyCache
-import com.evanisnor.freshwaves.spotify.network.SpotifyAPIService
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
+import androidx.hilt.work.HiltWorkerFactory
+import androidx.work.Configuration
+import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 
-class FreshWavesApp : Application() {
+@HiltAndroidApp
+class FreshWavesApp : Application(), Configuration.Provider {
 
-    lateinit var spotifyUserRepository: SpotifyUserRepository
-    lateinit var spotifyArtistRepository: SpotifyArtistRepository
-    lateinit var spotifyAlbumRepository: SpotifyAlbumRepository
+    @Inject
+    lateinit var workerFactory: HiltWorkerFactory
 
-    override fun onCreate() {
-        super.onCreate()
-
-        val userSettings = getSharedPreferences("userSettings", MODE_PRIVATE)
-
-
-        val spotifyAuthorization = SpotifyAuthorization(
-            userSettings = userSettings
-        )
-        val spotifyAPIService = SpotifyAPIService.create()
-        val spotifyCacheDao = Room.databaseBuilder(
-            this, SpotifyCache::class.java, "spotifyCache"
-        ).build().spotifyCacheDao()
-
-        val spotifyNetworkRepository = SpotifyNetworkRepository(
-            spotifyAuthorization = spotifyAuthorization,
-            spotifyAPIService = spotifyAPIService
-        )
-
-        spotifyUserRepository = SpotifyUserRepository(
-            spotifyNetworkRepository = spotifyNetworkRepository,
-            userSettings = userSettings
-        )
-
-        spotifyArtistRepository = SpotifyArtistRepository(
-            spotifyNetworkRepository = spotifyNetworkRepository,
-            spotifyCacheDao = spotifyCacheDao
-        )
-
-        spotifyAlbumRepository = SpotifyAlbumRepository(
-            spotifyUserRepository = spotifyUserRepository,
-            spotifyNetworkRepository = spotifyNetworkRepository,
-            spotifyCacheDao = spotifyCacheDao
-        )
-    }
+    override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
+        .setWorkerFactory(workerFactory)
+        .build()
 
 }

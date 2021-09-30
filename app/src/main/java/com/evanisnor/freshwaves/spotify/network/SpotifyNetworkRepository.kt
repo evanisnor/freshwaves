@@ -7,19 +7,18 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import com.evanisnor.freshwaves.user.UserProfile
 import java.util.concurrent.Executors
+import javax.inject.Inject
 
-class SpotifyNetworkRepository(
+class SpotifyNetworkRepository @Inject constructor(
     private val spotifyAuthorization: SpotifyAuthorization,
     private val spotifyAPIService: SpotifyAPIService
 ) {
 
     fun getUserProfile(
-        context: Context,
         onResult: (UserProfile) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         spotifyAuthorization.provideAccessToken(
-            context = context,
             withAccessToken = { accessToken ->
 
                 spotifyAPIService.getUserProfile(accessToken).enqueue(
@@ -34,13 +33,11 @@ class SpotifyNetworkRepository(
 
 
     fun getTopArtists(
-        context: Context,
         offset: Int,
         onResult: (List<Artist>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         spotifyAuthorization.provideAccessToken(
-            context = context,
             withAccessToken = { accessToken ->
 
                 spotifyAPIService.getTopArtists(accessToken, offset = offset).enqueue(
@@ -60,12 +57,10 @@ class SpotifyNetworkRepository(
     fun getArtistAlbums(
         artist: Artist,
         market: String,
-        context: Context,
         onResult: (List<Album>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         spotifyAuthorization.provideAccessToken(
-            context = context,
             withAccessToken = { accessToken ->
 
                 Executors.newSingleThreadExecutor().execute {
@@ -90,12 +85,10 @@ class SpotifyNetworkRepository(
 
     fun getAlbumTracks(
         album: Album,
-        context: Context,
         onResult: (List<Track>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
         spotifyAuthorization.provideAccessToken(
-            context = context,
             withAccessToken = { accessToken ->
 
                 spotifyAPIService.getAlbumTracks(

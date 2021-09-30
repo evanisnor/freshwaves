@@ -34,6 +34,14 @@ class SpotifyAuthorization(
         }
     }
 
+    fun provideAccessToken(context: Context, withAccessToken: (String) -> Unit) {
+        refreshToken(context,
+            withAccessToken = withAccessToken,
+            withError = {
+                Log.e("SpotifyRepository", "Authorization error: ${it.toJsonString()}")
+            })
+    }
+
     fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
         if (!authState.isAuthorized) {
             notLoggedIn()

@@ -12,7 +12,9 @@ class UpdateWorker(
     workerParameters: WorkerParameters
 ) : Worker(applicationContext, workerParameters) {
 
-    private val spotifyRepository = (applicationContext as FreshWavesApp).spotifyRepository
+    private val spotifyUserRepository = (applicationContext as FreshWavesApp).spotifyUserRepository
+    private val spotifyArtistRepository = (applicationContext as FreshWavesApp).spotifyArtistRepository
+    private val spotifyAlbumRepository = (applicationContext as FreshWavesApp).spotifyAlbumRepository
 
     override fun doWork(): Result {
 
@@ -35,7 +37,7 @@ class UpdateWorker(
     }
 
     private fun updateUserProfile(onFinished: () -> Unit) {
-        spotifyRepository.updateUserProfile(
+        spotifyUserRepository.updateUserProfile(
             context = applicationContext,
             onFinished = onFinished,
             onError = {
@@ -45,7 +47,7 @@ class UpdateWorker(
     }
 
     private fun updateArtists(onFinished: () -> Unit) {
-        spotifyRepository.updateTopArtists(
+        spotifyArtistRepository.updateTopArtists(
             context = applicationContext,
             onFinished = onFinished,
             onError = {
@@ -55,8 +57,8 @@ class UpdateWorker(
     }
 
     private fun updateAlbums(onFinished: (List<Album>) -> Unit) {
-        spotifyRepository.getTopArtists().forEach { artist ->
-            spotifyRepository.updateAlbums(
+        spotifyArtistRepository.getTopArtists().forEach { artist ->
+            spotifyAlbumRepository.updateAlbums(
                 artist = artist,
                 context = applicationContext,
                 onFinished = onFinished,
@@ -68,7 +70,7 @@ class UpdateWorker(
     }
 
     private fun updateTracks(album: Album, onFinished: () -> Unit) {
-        spotifyRepository.updateTracks(
+        spotifyAlbumRepository.updateTracks(
             album = album,
             context = applicationContext,
             onFinished = onFinished,

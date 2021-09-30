@@ -51,7 +51,7 @@ class FreshAlbumsFragment : Fragment() {
 
         freshAlbumsViewModel = ViewModelProvider(
             this, FreshAlbumsViewModelFactory(
-                (context?.applicationContext as FreshWavesApp).spotifyRepository
+                (context?.applicationContext as FreshWavesApp).spotifyAlbumRepository
             )
         ).get(FreshAlbumsViewModel::class.java)
 

@@ -1,4 +1,4 @@
-package com.evanisnor.freshwaves.spotify.repository
+package com.evanisnor.freshwaves.spotify.network
 
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
 import com.evanisnor.freshwaves.spotify.network.model.AlbumObject

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.evanisnor.freshwaves.FreshWavesApp
 import com.evanisnor.freshwaves.databinding.AlbumDetailsFragmentBinding
+import com.evanisnor.freshwaves.features.albumdetails.adapter.AlbumDetailsAdapter
 
 class AlbumDetailsFragment : Fragment() {
 
@@ -35,7 +36,7 @@ class AlbumDetailsFragment : Fragment() {
 
         albumDetailsViewModel = ViewModelProvider(
             this, AlbumDetailsViewModelFactory(
-                (context?.applicationContext as FreshWavesApp).spotifyRepository
+                spotifyAlbumRepository = (context?.applicationContext as FreshWavesApp).spotifyAlbumRepository
             )
         ).get(AlbumDetailsViewModel::class.java)
     }

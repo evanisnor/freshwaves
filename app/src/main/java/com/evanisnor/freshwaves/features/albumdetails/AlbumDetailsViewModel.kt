@@ -2,17 +2,13 @@ package com.evanisnor.freshwaves.features.albumdetails
 
 import androidx.lifecycle.ViewModel
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import com.evanisnor.freshwaves.spotify.repository.SpotifyRepository
-import java.util.concurrent.Executors
+import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 
 class AlbumDetailsViewModel(
-    private val spotifyRepository: SpotifyRepository
+    private val spotifyAlbumRepository: SpotifyAlbumRepository
 ) : ViewModel() {
 
-    fun getAlbumWithTracks(albumId: Int, onResult: (Album) -> Unit) {
-        Executors.newSingleThreadExecutor().execute {
-            onResult(spotifyRepository.getAlbumWithTracks(albumId))
-        }
-    }
+    fun getAlbumWithTracks(albumId: Int, onResult: (Album) -> Unit) =
+        spotifyAlbumRepository.getAlbumWithTracks(albumId, onResult)
 
 }

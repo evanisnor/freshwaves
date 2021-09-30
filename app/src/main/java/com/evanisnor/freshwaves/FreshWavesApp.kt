@@ -12,7 +12,6 @@ import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 
 class FreshWavesApp : Application() {
 
-    lateinit var spotifyAuthorization: SpotifyAuthorization
     lateinit var spotifyUserRepository: SpotifyUserRepository
     lateinit var spotifyArtistRepository: SpotifyArtistRepository
     lateinit var spotifyAlbumRepository: SpotifyAlbumRepository
@@ -22,14 +21,14 @@ class FreshWavesApp : Application() {
 
         val userSettings = getSharedPreferences("userSettings", MODE_PRIVATE)
 
+
+        val spotifyAuthorization = SpotifyAuthorization(
+            userSettings = userSettings
+        )
         val spotifyAPIService = SpotifyAPIService.create()
         val spotifyCacheDao = Room.databaseBuilder(
             this, SpotifyCache::class.java, "spotifyCache"
         ).build().spotifyCacheDao()
-
-        spotifyAuthorization = SpotifyAuthorization(
-            userSettings = userSettings
-        )
 
         val spotifyNetworkRepository = SpotifyNetworkRepository(
             spotifyAuthorization = spotifyAuthorization,

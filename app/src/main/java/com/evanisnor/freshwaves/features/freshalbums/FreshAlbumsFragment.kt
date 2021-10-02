@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -70,9 +69,10 @@ class FreshAlbumsFragment : Fragment() {
                 putInt(AlbumDetailsFragment.albumIdArgument, album.id)
             }
         }
+
         activity?.supportFragmentManager
             ?.beginTransaction()
-            ?.add(R.id.freshAlbumsContainer, albumDetailsFragment)
+            ?.add(android.R.id.content, albumDetailsFragment)
             ?.addToBackStack(AlbumDetailsFragment.TAG)
             ?.commit()
     }

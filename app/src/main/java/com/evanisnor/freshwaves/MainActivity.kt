@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import com.evanisnor.freshwaves.features.freshalbums.FreshAlbumsFragment
 import com.evanisnor.freshwaves.features.updater.UpdateWorker
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        spotifyAuthorization.authorize(
+        spotifyAuthorization.confirmAuthorization(
             activity = this,
             onAuthorized = {
                 WorkManager.getInstance(this)
@@ -28,5 +27,6 @@ class MainActivity : AppCompatActivity() {
             },
             onAuthorizationError = {}
         )
+
     }
 }

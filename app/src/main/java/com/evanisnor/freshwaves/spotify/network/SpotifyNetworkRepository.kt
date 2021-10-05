@@ -17,8 +17,8 @@ class SpotifyNetworkRepository @Inject constructor(
         onResult: (UserProfile) -> Unit,
         onError: (Throwable) -> Unit
     ) {
-        spotifyAuthorization.provideAccessToken(
-            withAccessToken = { accessToken ->
+        spotifyAuthorization.useBearerToken(
+            withBearerToken = { accessToken ->
 
                 spotifyAPIService.getUserProfile(accessToken).enqueue(
                     onResult = {
@@ -36,8 +36,8 @@ class SpotifyNetworkRepository @Inject constructor(
         onResult: (List<Artist>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
-        spotifyAuthorization.provideAccessToken(
-            withAccessToken = { accessToken ->
+        spotifyAuthorization.useBearerToken(
+            withBearerToken = { accessToken ->
 
                 spotifyAPIService.getTopArtists(accessToken, offset = offset).enqueue(
                     onResult = {
@@ -59,8 +59,8 @@ class SpotifyNetworkRepository @Inject constructor(
         onResult: (List<Album>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
-        spotifyAuthorization.provideAccessToken(
-            withAccessToken = { accessToken ->
+        spotifyAuthorization.useBearerToken(
+            withBearerToken = { accessToken ->
 
                 Executors.newSingleThreadExecutor().execute {
                     spotifyAPIService.getArtistAlbums(
@@ -87,8 +87,8 @@ class SpotifyNetworkRepository @Inject constructor(
         onResult: (List<Track>) -> Unit,
         onError: (Throwable) -> Unit
     ) {
-        spotifyAuthorization.provideAccessToken(
-            withAccessToken = { accessToken ->
+        spotifyAuthorization.useBearerToken(
+            withBearerToken = { accessToken ->
 
                 spotifyAPIService.getAlbumTracks(
                     accessToken = accessToken,

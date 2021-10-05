@@ -1,152 +1,115 @@
 package com.evanisnor.freshwaves.spotify.auth
 
-import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.PendingIntent
 import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
-import android.net.Uri
 import android.util.Log
-import com.evanisnor.freshwaves.system.AppMetadata
 import dagger.hilt.android.qualifiers.ApplicationContext
 import net.openid.appauth.*
 import javax.inject.Inject
-import javax.inject.Named
 import javax.inject.Singleton
 import kotlin.reflect.KClass
 
 @Singleton
 class SpotifyAuthorization @Inject constructor(
     @ApplicationContext private val context: Context,
-    @Named("UserSettings") userSettings: SharedPreferences
+    private val repository: SpotifyAuthorizationRepository
 ) {
 
-    companion object {
-        private val config = AuthorizationServiceConfiguration(
-            Uri.parse("https://accounts.spotify.com/authorize"),
-            Uri.parse("https://accounts.spotify.com/api/token"),
-        )
-    }
-
-    private var authState: AuthState = AuthState(config)
-
-    init {
-        val authStateString = userSettings.getString("authState", null)
-        if (authStateString != null) {
-            authState = AuthState.jsonDeserialize(authStateString)
-        }
-    }
-
-    fun provideAccessToken(withAccessToken: (String) -> Unit) {
-        refreshToken(
-            withAccessToken = withAccessToken,
-            withError = {
-                Log.e("SpotifyRepository", "Authorization error: ${it.toJsonString()}")
-            })
-    }
-
     fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
-        if (!authState.isAuthorized) {
+        if (!repository.isAuthorized) {
             notLoggedIn()
         } else {
             loggedIn()
         }
     }
 
-    @SuppressLint("UnspecifiedImmutableFlag")
+    fun useBearerToken(withBearerToken: (String) -> Unit) {
+        if (repository.needsTokenRefresh) {
+            refreshAccessToken(
+                withBearerToken = withBearerToken,
+                withError = {
+                    Log.e("SpotifyRepository", "Authorization error: ${it.toJsonString()}")
+                })
+        } else {
+            withBearerToken(repository.bearerToken)
+        }
+    }
+
     fun <SuccessActivity : Activity, CancelActivity : Activity> performLoginAuthorization(
         activity: Activity,
         activityOnSuccess: KClass<SuccessActivity>,
         activityOnCancel: KClass<CancelActivity>
     ) {
-        with(AppMetadata()) {
-            buildAuthorizationRequest(
-                clientId = spotifyClientId(activity),
-                redirectUri = spotifyRedirectUri(activity)
-            ).let { authorizationRequest ->
-                with(AuthorizationService(activity)) {
-                    performAuthorizationRequest(
-                        authorizationRequest,
-                        PendingIntent.getActivity(
-                            activity,
-                            0,
-                            Intent(activity, activityOnSuccess.java),
-                            0
-                        ),
-                        PendingIntent.getActivity(
-                            activity,
-                            0,
-                            Intent(activity, activityOnCancel.java),
-                            0
-                        )
-                    )
-                }
-            }
+        with(AuthorizationService(activity)) {
+            performAuthorizationRequest(
+                repository.authorizationRequest(activity),
+                repository.activityIntent(activity, activityOnSuccess),
+                repository.activityIntent(activity, activityOnCancel)
+            )
         }
     }
 
-    fun authorize(
+
+    fun confirmAuthorization(
         activity: Activity,
         onAuthorized: () -> Unit,
         onAuthorizationError: (AuthorizationException) -> Unit
     ) {
-        val response = AuthorizationResponse.fromIntent(activity.intent)
-        val error = AuthorizationException.fromIntent(activity.intent)
+        AuthorizationResponse.fromIntent(activity.intent)
+            ?.createTokenExchangeRequest()
+            ?.let { tokenRequest ->
+                exchangeAuthorizationCode(
+                    activity = activity,
+                    tokenRequest = tokenRequest,
+                    onAuthorized = onAuthorized,
+                    onAuthorizationError = onAuthorizationError
+                )
+            }
 
-        when {
-            error != null -> {
-                Log.e("SpotifyAuthorization", "Failed to authorize: ${error.toJsonString()}")
-                onAuthorizationError(error)
-            }
-            response != null -> {
-                with(AuthorizationService(activity)) {
-                    performTokenRequest(response.createTokenExchangeRequest()) { tokenResponse, e ->
-                        authState.update(tokenResponse, e)
-                        onAuthorized()
-                    }
+        AuthorizationException.fromIntent(activity.intent)?.let { error ->
+            Log.e("SpotifyAuthorization", "Failed to authorize: ${error.toJsonString()}")
+            onAuthorizationError(error)
+        }
+    }
+
+    private fun exchangeAuthorizationCode(
+        activity: Activity,
+        tokenRequest: TokenRequest,
+        onAuthorized: () -> Unit,
+        onAuthorizationError: (AuthorizationException) -> Unit
+    ) {
+        with(AuthorizationService(activity)) {
+            performTokenRequest(tokenRequest) { response, error ->
+                repository.update(response, error)
+
+                response?.let {
+                    onAuthorized()
                 }
-            }
-            authState.needsTokenRefresh -> refreshToken(
-                withAccessToken = { onAuthorized() },
-                withError = onAuthorizationError
-            )
-            else -> {
-                onAuthorized()
+
+                error?.let {
+                    onAuthorizationError(error)
+                }
             }
         }
     }
 
-    private fun refreshToken(
-        withAccessToken: (String) -> Unit,
+    private fun refreshAccessToken(
+        withBearerToken: (String) -> Unit,
         withError: (AuthorizationException) -> Unit
     ) {
-        if (authState.needsTokenRefresh) {
-            with(AuthorizationService(context)) {
-                performTokenRequest(authState.createTokenRefreshRequest()) { response, error ->
-                    authState.update(response, error)
+        with(AuthorizationService(context)) {
+            performTokenRequest(repository.refreshRequest()) { response, error ->
+                repository.update(response, error)
 
-                    error?.let {
-                        withError(error)
-                        return@performTokenRequest
-                    }
+                response?.let {
+                    withBearerToken(repository.bearerToken)
+                }
 
-                    withAccessToken("Bearer ${authState.accessToken}")
+                error?.let {
+                    withError(error)
                 }
             }
-        } else {
-            withAccessToken("Bearer ${authState.accessToken}")
         }
     }
-
-    private fun buildAuthorizationRequest(clientId: String, redirectUri: String) =
-        AuthorizationRequest.Builder(
-            config,
-            clientId,
-            ResponseTypeValues.CODE,
-            Uri.parse(redirectUri)
-        ).apply {
-            setScope("user-top-read, user-read-private, user-read-email")
-        }.build()
 
 }

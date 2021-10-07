@@ -18,11 +18,11 @@ class UpdateWorker @AssistedInject constructor(
     @Assisted workerParameters: WorkerParameters,
     private val spotifyUserRepository: SpotifyUserRepository,
     private val spotifyArtistRepository: SpotifyArtistRepository,
-    private val spotifyAlbumRepository: SpotifyAlbumRepository
+    private val spotifyAlbumRepository: SpotifyAlbumRepository,
+    private val updaterBootstrapper: UpdaterBootstrapper
 ) : Worker(applicationContext, workerParameters) {
 
     override fun doWork(): Result {
-
         updateUserProfile {
             Log.i("UpdateWorker", "Updated user profile")
             updateArtists {
@@ -38,6 +38,7 @@ class UpdateWorker @AssistedInject constructor(
             }
         }
 
+        updaterBootstrapper.scheduleNextUpdate(applicationContext)
         return Result.success()
     }
 

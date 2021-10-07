@@ -1,10 +1,8 @@
 package com.evanisnor.freshwaves
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
-import com.evanisnor.freshwaves.features.updater.UpdateWorker
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -19,14 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        spotifyAuthorization.confirmAuthorization(
-            activity = this,
-            onAuthorized = {
-                WorkManager.getInstance(this)
-                    .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
-            },
-            onAuthorizationError = {}
-        )
-
+        spotifyAuthorization.confirmAuthorization(this) {
+            Log.w("MainActivity", "Failed to authorize user: $it")
+        }
     }
 }

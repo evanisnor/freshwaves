@@ -62,7 +62,7 @@ class OpenIdAuthService(context: Context) : AuthService {
 
     override fun refreshTokens(authState: AuthState) {
         if (authState !is OpenIdAuthState) {
-            throw UnsupportedOperationException("Unable to create Token Refresh Request using another auth provider.")
+            throw UnsupportedOperationException("Unable to refresh tokens using another auth provider.")
         }
 
         authState.needsTokenRefresh = true

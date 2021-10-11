@@ -1,0 +1,295 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/4JIQYfd4ykl6Hk9xs2AHUu/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 151800,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1M4ZaLTLh70DR0S8YREvLA"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1M4ZaLTLh70DR0S8YREvLA",
+    "id" : "1M4ZaLTLh70DR0S8YREvLA",
+    "is_local" : false,
+    "name" : "Eyes On Me",
+    "preview_url" : "https://p.scdn.co/mp3-preview/026f786ba44ae7acc85b4d0c4c46ed6345e5653b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:1M4ZaLTLh70DR0S8YREvLA"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 203523,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1pftEmOY6mk7VkBpz1TKmD"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1pftEmOY6mk7VkBpz1TKmD",
+    "id" : "1pftEmOY6mk7VkBpz1TKmD",
+    "is_local" : false,
+    "name" : "Powers Back On",
+    "preview_url" : "https://p.scdn.co/mp3-preview/09234db46c0ce0911363fe1c99faf71954f8f419?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:1pftEmOY6mk7VkBpz1TKmD"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 262015,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/08edmNLQhAqaKkNeiRgBQM"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/08edmNLQhAqaKkNeiRgBQM",
+    "id" : "08edmNLQhAqaKkNeiRgBQM",
+    "is_local" : false,
+    "name" : "Out Of My Head",
+    "preview_url" : "https://p.scdn.co/mp3-preview/101d5acdea1c025677247c3197ad681a3a51d2e5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:08edmNLQhAqaKkNeiRgBQM"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 100114,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1dt6QriqIbdMFKj0GNMtI9"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1dt6QriqIbdMFKj0GNMtI9",
+    "id" : "1dt6QriqIbdMFKj0GNMtI9",
+    "is_local" : false,
+    "name" : "Tommy",
+    "preview_url" : "https://p.scdn.co/mp3-preview/050b69f7046b59ce0553a3bb71fecde42c11a638?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:1dt6QriqIbdMFKj0GNMtI9"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 177800,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3I96ckAIJNegaDfsghZTdi"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3I96ckAIJNegaDfsghZTdi",
+    "id" : "3I96ckAIJNegaDfsghZTdi",
+    "is_local" : false,
+    "name" : "Seeing Red",
+    "preview_url" : "https://p.scdn.co/mp3-preview/594251d07d65e27c22f84a3a5bdb60b6ebf21d54?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:3I96ckAIJNegaDfsghZTdi"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 104098,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0ftfr0275WKYnYntzUidad"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0ftfr0275WKYnYntzUidad",
+    "id" : "0ftfr0275WKYnYntzUidad",
+    "is_local" : false,
+    "name" : "Yap Man",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5fc1c1c502f29d128bf8587e3b44e3d4435dabbe?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:0ftfr0275WKYnYntzUidad"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 205761,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/40M1r2uuDvWMV6MjZxQsbJ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/40M1r2uuDvWMV6MjZxQsbJ",
+    "id" : "40M1r2uuDvWMV6MjZxQsbJ",
+    "is_local" : false,
+    "name" : "Velvet Johnny",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6455a5972d0e27a48128359287dd8689d271f068?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:40M1r2uuDvWMV6MjZxQsbJ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 164011,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3w5lN6GQaBLqwgTTafjyOs"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3w5lN6GQaBLqwgTTafjyOs",
+    "id" : "3w5lN6GQaBLqwgTTafjyOs",
+    "is_local" : false,
+    "name" : "Very Spooky",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7926d7c47a523cd35fa05f13737c85bae36e968f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:3w5lN6GQaBLqwgTTafjyOs"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 225013,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3eKZgh7jfBiXBLvt3vvFbx"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3eKZgh7jfBiXBLvt3vvFbx",
+    "id" : "3eKZgh7jfBiXBLvt3vvFbx",
+    "is_local" : false,
+    "name" : "Dave",
+    "preview_url" : "https://p.scdn.co/mp3-preview/eb853d0b7b3cbf1ef02b377adfcfe2247d3fb841?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:3eKZgh7jfBiXBLvt3vvFbx"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 147411,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4ppBd1MxJ38SAQFJfYTorf"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4ppBd1MxJ38SAQFJfYTorf",
+    "id" : "4ppBd1MxJ38SAQFJfYTorf",
+    "is_local" : false,
+    "name" : "Amp Rental",
+    "preview_url" : "https://p.scdn.co/mp3-preview/da5b78bd54a6229f85c2bb5af1f721c661ca040c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:4ppBd1MxJ38SAQFJfYTorf"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 105750,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4gUhCIyD2ponSWNeYVmmlA"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4gUhCIyD2ponSWNeYVmmlA",
+    "id" : "4gUhCIyD2ponSWNeYVmmlA",
+    "is_local" : false,
+    "name" : "New You",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6bd2684e730460f3519284257829b1d8f822ba06?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:4gUhCIyD2ponSWNeYVmmlA"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 11
+}

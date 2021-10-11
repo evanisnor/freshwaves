@@ -1,0 +1,243 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/5Bz2LxOp0wz7ov0T9WiRmc/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 236440,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0hy3f5LxZjH95QbuysY5OO"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0hy3f5LxZjH95QbuysY5OO",
+    "id" : "0hy3f5LxZjH95QbuysY5OO",
+    "is_local" : false,
+    "name" : "Planet B",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c2956ff2942e46d3f4940f5fb6e8bc40f45bd24a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:0hy3f5LxZjH95QbuysY5OO"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 251720,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4lV1tx0EdlIChOw7Kz7fP0"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4lV1tx0EdlIChOw7Kz7fP0",
+    "id" : "4lV1tx0EdlIChOw7Kz7fP0",
+    "is_local" : false,
+    "name" : "Mars For The Rich",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7c6ed1bdad5b9b5f770ef205d86ac16fe7d07ee5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:4lV1tx0EdlIChOw7Kz7fP0"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 159080,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4sJLWVtLug7LTsuFNqt82k"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4sJLWVtLug7LTsuFNqt82k",
+    "id" : "4sJLWVtLug7LTsuFNqt82k",
+    "is_local" : false,
+    "name" : "Organ Farmer",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6f4ae575c857adb0ad29cdfc819a1d0aa3d3df80?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:4sJLWVtLug7LTsuFNqt82k"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 403333,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2e9sPx5xxJFyCecgNpq3Zb"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2e9sPx5xxJFyCecgNpq3Zb",
+    "id" : "2e9sPx5xxJFyCecgNpq3Zb",
+    "is_local" : false,
+    "name" : "Superbug",
+    "preview_url" : "https://p.scdn.co/mp3-preview/091c06ad8509be9c96658158b684b3950f1ea67d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2e9sPx5xxJFyCecgNpq3Zb"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 200586,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/07emIvmVExzrUNRraeC3JJ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/07emIvmVExzrUNRraeC3JJ",
+    "id" : "07emIvmVExzrUNRraeC3JJ",
+    "is_local" : false,
+    "name" : "Venusian 1",
+    "preview_url" : "https://p.scdn.co/mp3-preview/345bb49db436bf3d67e812affa98f232f1278d02?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:07emIvmVExzrUNRraeC3JJ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 191320,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6Mxqj3ClyindysAxYqqrrg"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6Mxqj3ClyindysAxYqqrrg",
+    "id" : "6Mxqj3ClyindysAxYqqrrg",
+    "is_local" : false,
+    "name" : "Perihelion",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1772a3c5632b5f31bf23179634b51b015c06b850?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:6Mxqj3ClyindysAxYqqrrg"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 164386,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1VjyWxlrbNPF4ZtHZiw0Tp"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1VjyWxlrbNPF4ZtHZiw0Tp",
+    "id" : "1VjyWxlrbNPF4ZtHZiw0Tp",
+    "is_local" : false,
+    "name" : "Venusian 2",
+    "preview_url" : "https://p.scdn.co/mp3-preview/bacd5ae4cb1c8ea408c17a0142d6c6ba83a2482b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:1VjyWxlrbNPF4ZtHZiw0Tp"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 268520,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6BSstu7y08lkJT5dNlEOkN"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6BSstu7y08lkJT5dNlEOkN",
+    "id" : "6BSstu7y08lkJT5dNlEOkN",
+    "is_local" : false,
+    "name" : "Self-Immolate",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d87d22b1ed07d130ccdde6578028d50a27daaf91?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:6BSstu7y08lkJT5dNlEOkN"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 219592,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5bCxQhumlHXRjfyjOS2ib6"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5bCxQhumlHXRjfyjOS2ib6",
+    "id" : "5bCxQhumlHXRjfyjOS2ib6",
+    "is_local" : false,
+    "name" : "Hell",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5dbb903db5b736aa8f7bc900d954a7f6f881a5b4?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:5bCxQhumlHXRjfyjOS2ib6"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 9
+}

@@ -1,0 +1,243 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/7tg6tW1hDUr0OPzymBUk3d/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 341233,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6fv3qZq5bW2leaswur2thm"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6fv3qZq5bW2leaswur2thm",
+    "id" : "6fv3qZq5bW2leaswur2thm",
+    "is_local" : false,
+    "name" : "You Let My Tyres Down",
+    "preview_url" : "https://p.scdn.co/mp3-preview/ab57c2546e738249974961ad7d7a259a2c2def5a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:6fv3qZq5bW2leaswur2thm"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 314231,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4AeK6YBljCeyxm3sjNxVBt"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4AeK6YBljCeyxm3sjNxVBt",
+    "id" : "4AeK6YBljCeyxm3sjNxVBt",
+    "is_local" : false,
+    "name" : "Antimatter Animals",
+    "preview_url" : "https://p.scdn.co/mp3-preview/e293667effd785728f6956ca5035d809526551a4?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:4AeK6YBljCeyxm3sjNxVBt"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 269533,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5JDdCeRVRfQpkH4KEwfAoG"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5JDdCeRVRfQpkH4KEwfAoG",
+    "id" : "5JDdCeRVRfQpkH4KEwfAoG",
+    "is_local" : false,
+    "name" : "Chameleon Paint",
+    "preview_url" : "https://p.scdn.co/mp3-preview/129e24f740fd67da1aa5cc1767508067979ffe2e?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:5JDdCeRVRfQpkH4KEwfAoG"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 264752,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5jFpejtfhgti9obBnmQIS1"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5jFpejtfhgti9obBnmQIS1",
+    "id" : "5jFpejtfhgti9obBnmQIS1",
+    "is_local" : false,
+    "name" : "The Future Of History",
+    "preview_url" : "https://p.scdn.co/mp3-preview/71c52c8cc48d981fb0a743d67769c75b3f7bbc2c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:5jFpejtfhgti9obBnmQIS1"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 273336,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5CLl9GqahFxZoHJb48zbJW"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5CLl9GqahFxZoHJb48zbJW",
+    "id" : "5CLl9GqahFxZoHJb48zbJW",
+    "is_local" : false,
+    "name" : "Two Afternoons",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dbe9de97264e5fa5c9bcf4da97f9daaaad741bc3?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:5CLl9GqahFxZoHJb48zbJW"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 348083,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1g2woN4n1vEDSpVgC26GG9"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1g2woN4n1vEDSpVgC26GG9",
+    "id" : "1g2woN4n1vEDSpVgC26GG9",
+    "is_local" : false,
+    "name" : "Soft Power",
+    "preview_url" : "https://p.scdn.co/mp3-preview/ac7d19516a495c41de4a4ced1626829cca2195e5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:1g2woN4n1vEDSpVgC26GG9"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 335100,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2h5Bdy8DBsGYknlNnHKSQL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2h5Bdy8DBsGYknlNnHKSQL",
+    "id" : "2h5Bdy8DBsGYknlNnHKSQL",
+    "is_local" : false,
+    "name" : "Shellfish Toxin",
+    "preview_url" : "https://p.scdn.co/mp3-preview/82b0ff2a48e020a9f2db71702df5ec423c59b748?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:2h5Bdy8DBsGYknlNnHKSQL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 330415,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4OhpcSWwv8v2g9dtPDLSfu"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4OhpcSWwv8v2g9dtPDLSfu",
+    "id" : "4OhpcSWwv8v2g9dtPDLSfu",
+    "is_local" : false,
+    "name" : "A Laughing Death In Meatspace",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6f040317e191e7790c4f2fbf636fc4cef94ef7dd?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:4OhpcSWwv8v2g9dtPDLSfu"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 360744,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6ifwkEsbylUHVh1gqammcw"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6ifwkEsbylUHVh1gqammcw",
+    "id" : "6ifwkEsbylUHVh1gqammcw",
+    "is_local" : false,
+    "name" : "Rubber Bullies",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c8cfb67d1f61fc208a95cc8128ef1733af0934c5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:6ifwkEsbylUHVh1gqammcw"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 9
+}

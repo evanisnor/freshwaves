@@ -8,6 +8,8 @@ import dagger.hilt.components.SingletonComponent
 import dagger.hilt.testing.TestInstallIn
 import retrofit2.Retrofit
 import retrofit2.mock.MockRetrofit
+import retrofit2.mock.NetworkBehavior
+import javax.inject.Singleton
 
 @Module
 @TestInstallIn(
@@ -17,12 +19,20 @@ import retrofit2.mock.MockRetrofit
 object FakeSpotifyNetworkModule {
 
     @Provides
+    @Singleton
     fun spotifyAPIService(): SpotifyAPIService = FakeSpotifyAPIService(
         behaviorDelegate = MockRetrofit.Builder(
             Retrofit.Builder()
                 .baseUrl("https://api.spotify.com/")
                 .build()
-        ).build().create(SpotifyAPIService::class.java)
+        )
+            .networkBehavior(
+                NetworkBehavior.create().apply {
+                    setFailurePercent(0)
+                }
+            )
+            .build()
+            .create(SpotifyAPIService::class.java)
     )
 
 }

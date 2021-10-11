@@ -1,0 +1,529 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/1WMVvswNzB9i2UMh9svso5/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 163466,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/183Klch3PBWLz2S6zNUVxR"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/183Klch3PBWLz2S6zNUVxR",
+    "id" : "183Klch3PBWLz2S6zNUVxR",
+    "is_local" : false,
+    "name" : "Back In The U.S.S.R. - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f6c33176c54d45f4ea575b23278088615a1aa5ae?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:183Klch3PBWLz2S6zNUVxR"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 234973,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/21pC0RPgkThjHlwpmCtxGb"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/21pC0RPgkThjHlwpmCtxGb",
+    "id" : "21pC0RPgkThjHlwpmCtxGb",
+    "is_local" : false,
+    "name" : "Dear Prudence - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3a8e25d4adf2e9d73a0db596653d7a51818eb215?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:21pC0RPgkThjHlwpmCtxGb"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 137706,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0bYmYFbEAADKAlHdJqZ1gL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0bYmYFbEAADKAlHdJqZ1gL",
+    "id" : "0bYmYFbEAADKAlHdJqZ1gL",
+    "is_local" : false,
+    "name" : "Glass Onion - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5d7adc6a7f661fe5b262e781d5d683dd9010d844?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:0bYmYFbEAADKAlHdJqZ1gL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 188813,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/02FJNRUlB28e1F0R9uP2s1"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/02FJNRUlB28e1F0R9uP2s1",
+    "id" : "02FJNRUlB28e1F0R9uP2s1",
+    "is_local" : false,
+    "name" : "Ob-La-Di, Ob-La-Da - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c6e9418b35f92012ee7240ee828b7bf9efa39469?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:02FJNRUlB28e1F0R9uP2s1"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 53000,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/76YBf6AwWhPG62H2LZftFQ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/76YBf6AwWhPG62H2LZftFQ",
+    "id" : "76YBf6AwWhPG62H2LZftFQ",
+    "is_local" : false,
+    "name" : "Wild Honey Pie - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/cecafeab7cbc20d14ba9b53ca0a1f772527eb04a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:76YBf6AwWhPG62H2LZftFQ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 194186,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7KXaC0HCD4VoIZOzWfdirZ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7KXaC0HCD4VoIZOzWfdirZ",
+    "id" : "7KXaC0HCD4VoIZOzWfdirZ",
+    "is_local" : false,
+    "name" : "The Continuing Story Of Bungalow Bill - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dc1725700c4d4e6f236ba4fb58b279275cc0bfb7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:7KXaC0HCD4VoIZOzWfdirZ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 285280,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0ZqSsO2xoVvcrhpiRuqCmt"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0ZqSsO2xoVvcrhpiRuqCmt",
+    "id" : "0ZqSsO2xoVvcrhpiRuqCmt",
+    "is_local" : false,
+    "name" : "While My Guitar Gently Weeps - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c6b59e49dc33cf1016cf7e44da0241b17d08b96d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:0ZqSsO2xoVvcrhpiRuqCmt"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 164520,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3z2ngCk1Us5E0DtNGczXwJ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3z2ngCk1Us5E0DtNGczXwJ",
+    "id" : "3z2ngCk1Us5E0DtNGczXwJ",
+    "is_local" : false,
+    "name" : "Happiness Is A Warm Gun - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/42198bd35ca45b5449de87049ac0efe3d36e5cf8?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:3z2ngCk1Us5E0DtNGczXwJ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 148480,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4BtpBz9IIamSuYJ26Qoi8G"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4BtpBz9IIamSuYJ26Qoi8G",
+    "id" : "4BtpBz9IIamSuYJ26Qoi8G",
+    "is_local" : false,
+    "name" : "Martha My Dear - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/eb9ca2949f2e4274e3d108bc24288618bffa9672?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:4BtpBz9IIamSuYJ26Qoi8G"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 123400,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/52efrg776bHRucNKHRWwkE"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/52efrg776bHRucNKHRWwkE",
+    "id" : "52efrg776bHRucNKHRWwkE",
+    "is_local" : false,
+    "name" : "I'm So Tired - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/95823428997044a717b01a450b1dae1acb319fa7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:52efrg776bHRucNKHRWwkE"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 138360,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2oMVSmJx1l2FVXjVbx5DTc"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2oMVSmJx1l2FVXjVbx5DTc",
+    "id" : "2oMVSmJx1l2FVXjVbx5DTc",
+    "is_local" : false,
+    "name" : "Blackbird - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a615d3b050669f5161977ace8736471263588fa2?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:2oMVSmJx1l2FVXjVbx5DTc"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 124306,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1koFbbNy8BJvG63B0ExZEQ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1koFbbNy8BJvG63B0ExZEQ",
+    "id" : "1koFbbNy8BJvG63B0ExZEQ",
+    "is_local" : false,
+    "name" : "Piggies - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b3ef76e9f0800ea868c433bf93c8c4f7cbe57b5d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:1koFbbNy8BJvG63B0ExZEQ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 213080,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2MdBcgXwYcuXN3ekvhehN0"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2MdBcgXwYcuXN3ekvhehN0",
+    "id" : "2MdBcgXwYcuXN3ekvhehN0",
+    "is_local" : false,
+    "name" : "Rocky Raccoon - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7a710225b4eb109b7387175b89b3944c6ff6b66f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:2MdBcgXwYcuXN3ekvhehN0"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 230306,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/55scbyvCEL0prcaDKYqiRG"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/55scbyvCEL0prcaDKYqiRG",
+    "id" : "55scbyvCEL0prcaDKYqiRG",
+    "is_local" : false,
+    "name" : "Don't Pass Me By - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/0606a9dc3b5aae0b89f0244885ca8424434634b7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 14,
+    "type" : "track",
+    "uri" : "spotify:track:55scbyvCEL0prcaDKYqiRG"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 101733,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6CD4ZmCgYyiECTOWjm5LqC"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6CD4ZmCgYyiECTOWjm5LqC",
+    "id" : "6CD4ZmCgYyiECTOWjm5LqC",
+    "is_local" : false,
+    "name" : "Why Don't We Do It In The Road? - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f6a78acac75a6a9ca0c9a167452e4516061a4f9c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 15,
+    "type" : "track",
+    "uri" : "spotify:track:6CD4ZmCgYyiECTOWjm5LqC"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 105786,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5ZgypEwT8Mayum8GKG1KlG"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5ZgypEwT8Mayum8GKG1KlG",
+    "id" : "5ZgypEwT8Mayum8GKG1KlG",
+    "is_local" : false,
+    "name" : "I Will - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6f42755fbae9d71564113216e4e4be6e18caa948?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 16,
+    "type" : "track",
+    "uri" : "spotify:track:5ZgypEwT8Mayum8GKG1KlG"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 176133,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2fS3WRUilBxRoFMk3HVaoW"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2fS3WRUilBxRoFMk3HVaoW",
+    "id" : "2fS3WRUilBxRoFMk3HVaoW",
+    "is_local" : false,
+    "name" : "Julia - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f6c4786d82ed5bae62e0931061deb4b3523540ba?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 17,
+    "type" : "track",
+    "uri" : "spotify:track:2fS3WRUilBxRoFMk3HVaoW"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 2,
+    "duration_ms" : 161986,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1LT1LaG2hOR8VB2zzMcDjL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1LT1LaG2hOR8VB2zzMcDjL",
+    "id" : "1LT1LaG2hOR8VB2zzMcDjL",
+    "is_local" : false,
+    "name" : "Birthday - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9453f401ac7e98b0f7a44e1f342fa5f380b5bc70?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:1LT1LaG2hOR8VB2zzMcDjL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 2,
+    "duration_ms" : 241000,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6s16hVzIWDpv8w4BMCaZdw"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6s16hVzIWDpv8w4BMCaZdw",
+    "id" : "6s16hVzIWDpv8w4BMCaZdw",
+    "is_local" : false,
+    "name" : "Yer Blues - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c4faf416dff38a97614bddcc1884d59766e9a80b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:6s16hVzIWDpv8w4BMCaZdw"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id" : "3WrFJ7ztbogyGnTHbHJFl2",
+      "name" : "The Beatles",
+      "type" : "artist",
+      "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 2,
+    "duration_ms" : 167826,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/07SnYttUopjIFHnc1hZIMc"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/07SnYttUopjIFHnc1hZIMc",
+    "id" : "07SnYttUopjIFHnc1hZIMc",
+    "is_local" : false,
+    "name" : "Mother Nature's Son - 2018 Mix",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d429d6e5417912ad3a55c0faf38e1226799114e7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:07SnYttUopjIFHnc1hZIMc"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/albums/1WMVvswNzB9i2UMh9svso5/tracks?offset=20&limit=20",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 107
+}

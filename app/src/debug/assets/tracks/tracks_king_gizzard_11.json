@@ -1,0 +1,425 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/4C3YBIjkoOfR0ESIXMvWRG/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 129953,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5aw0bWD93CM6HmmGNhVHkv"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5aw0bWD93CM6HmmGNhVHkv",
+    "id" : "5aw0bWD93CM6HmmGNhVHkv",
+    "is_local" : false,
+    "name" : "Evil Star",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c483323f05540784ce9b36507aa91ba9741a166f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:5aw0bWD93CM6HmmGNhVHkv"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 578518,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6wJar5n2NnPMnE0HWny0dZ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6wJar5n2NnPMnE0HWny0dZ",
+    "id" : "6wJar5n2NnPMnE0HWny0dZ",
+    "is_local" : false,
+    "name" : "The River - Live In Luxembourg 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a460c4dd45e0df2023d4cc4c96b8d168d72d1b28?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:6wJar5n2NnPMnE0HWny0dZ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 204256,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4YSjSXmWvuJyyJsXi2QbbA"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4YSjSXmWvuJyyJsXi2QbbA",
+    "id" : "4YSjSXmWvuJyyJsXi2QbbA",
+    "is_local" : false,
+    "name" : "Wah Wah - Live in Madrid 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/af8f60f3fc0f3266ce280c3f8a701967ef68c15c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:4YSjSXmWvuJyyJsXi2QbbA"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 219057,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0V16LzZQIs9gTwR7Lkc3R5"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0V16LzZQIs9gTwR7Lkc3R5",
+    "id" : "0V16LzZQIs9gTwR7Lkc3R5",
+    "is_local" : false,
+    "name" : "Road Train - Live in Manchester 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dddb772845f67b7dc40e090206af04db9ccb9684?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:0V16LzZQIs9gTwR7Lkc3R5"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 304123,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/47CPxP00RVKkZk34c7U6Tn"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/47CPxP00RVKkZk34c7U6Tn",
+    "id" : "47CPxP00RVKkZk34c7U6Tn",
+    "is_local" : false,
+    "name" : "Murder Of The Universe - Live in Utrecht 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/85ae67fb7fc6182974559c4b4aea669f85874a71?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:47CPxP00RVKkZk34c7U6Tn"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 120799,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3sAoboE3lEcdFaOdzjrPEp"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3sAoboE3lEcdFaOdzjrPEp",
+    "id" : "3sAoboE3lEcdFaOdzjrPEp",
+    "is_local" : false,
+    "name" : "Quarantine",
+    "preview_url" : "https://p.scdn.co/mp3-preview/714e900eb3ebc3a7077d7694eac558ac698a20e3?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:3sAoboE3lEcdFaOdzjrPEp"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 362880,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0XBOru97xfUSbOd3QRpQso"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0XBOru97xfUSbOd3QRpQso",
+    "id" : "0XBOru97xfUSbOd3QRpQso",
+    "is_local" : false,
+    "name" : "Planet B - Live in London 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7c52e70c5a2f7fb114578c748e74fa86878ca35f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:0XBOru97xfUSbOd3QRpQso"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 122592,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/68nNsccAUrWRywuHETeZIF"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/68nNsccAUrWRywuHETeZIF",
+    "id" : "68nNsccAUrWRywuHETeZIF",
+    "is_local" : false,
+    "name" : "Parking - Live in Brussels 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/327040acf0d2748f9a799d501ba9e52eb96a896b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:68nNsccAUrWRywuHETeZIF"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 191377,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1pRdBjEWKIDX7nwvA4ucg4"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1pRdBjEWKIDX7nwvA4ucg4",
+    "id" : "1pRdBjEWKIDX7nwvA4ucg4",
+    "is_local" : false,
+    "name" : "Venusian 2 - Live in Milan 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/df68894b910af3ca6996c26a9c2d8f08968f34fc?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:1pRdBjEWKIDX7nwvA4ucg4"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 217253,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5Gdk5V694junMCPCjP1YDJ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5Gdk5V694junMCPCjP1YDJ",
+    "id" : "5Gdk5V694junMCPCjP1YDJ",
+    "is_local" : false,
+    "name" : "Hell - Live in Milan 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/8545c35971545fb4f486c15031ca4633bd350609?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:5Gdk5V694junMCPCjP1YDJ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 178148,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6Vfc3QZRoQRRt5b4VlO6Zy"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6Vfc3QZRoQRRt5b4VlO6Zy",
+    "id" : "6Vfc3QZRoQRRt5b4VlO6Zy",
+    "is_local" : false,
+    "name" : "Let Me Mend The Past - Live in Madrid 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/454bcd4af3e25ffb21d2299761b6bcb25a30e7a7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:6Vfc3QZRoQRRt5b4VlO6Zy"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 190493,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0BpdCewAxuiApQuzJqJqVu"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0BpdCewAxuiApQuzJqJqVu",
+    "id" : "0BpdCewAxuiApQuzJqJqVu",
+    "is_local" : false,
+    "name" : "Anamnesis",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f83060076062fef2cfc51c3d2834e6f77f8006c8?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:0BpdCewAxuiApQuzJqJqVu"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 229565,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7LDfyl1RNjf8RXtQD3wiFd"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7LDfyl1RNjf8RXtQD3wiFd",
+    "id" : "7LDfyl1RNjf8RXtQD3wiFd",
+    "is_local" : false,
+    "name" : "Inner Cell - Live in Utrecht 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dab2acd69cad766f32cb5081ec553520b62f09e1?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:7LDfyl1RNjf8RXtQD3wiFd"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 232553,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6kHScnlAdqe1iM1lKZQRip"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6kHScnlAdqe1iM1lKZQRip",
+    "id" : "6kHScnlAdqe1iM1lKZQRip",
+    "is_local" : false,
+    "name" : "Loyalty - Live in Utrecht 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c46928fcc222949a5ac2df72e0fbaa4d373cdce1?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 14,
+    "type" : "track",
+    "uri" : "spotify:track:6kHScnlAdqe1iM1lKZQRip"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 155584,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/17E7drhDreoN24bjem0YnB"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/17E7drhDreoN24bjem0YnB",
+    "id" : "17E7drhDreoN24bjem0YnB",
+    "is_local" : false,
+    "name" : "Horology - Live in Utrecht 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/39daec63ef0e3e9f0db4e6c230c1cd9605630c0b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 15,
+    "type" : "track",
+    "uri" : "spotify:track:17E7drhDreoN24bjem0YnB"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 1143896,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5th8Z49At0kx8gOkdH1V6q"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5th8Z49At0kx8gOkdH1V6q",
+    "id" : "5th8Z49At0kx8gOkdH1V6q",
+    "is_local" : false,
+    "name" : "A Brief History Of Planet Earth - Live in London, Berlin, Utrecht and Barcelona 2019",
+    "preview_url" : "https://p.scdn.co/mp3-preview/2efacc4509ce5a01096629f637dba1f8ac3c67fe?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 16,
+    "type" : "track",
+    "uri" : "spotify:track:5th8Z49At0kx8gOkdH1V6q"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 16
+}

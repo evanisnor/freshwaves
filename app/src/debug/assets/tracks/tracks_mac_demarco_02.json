@@ -1,0 +1,347 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/0Skv3s5A99n7dstiJOs0aA/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 161013,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0sXE78JmUFQCZNl4TQHjjp"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0sXE78JmUFQCZNl4TQHjjp",
+    "id" : "0sXE78JmUFQCZNl4TQHjjp",
+    "is_local" : false,
+    "name" : "Cooking Up Something Good",
+    "preview_url" : "https://p.scdn.co/mp3-preview/57ea86f8fafea9f1a1142bea5542cf1e7e64941f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:0sXE78JmUFQCZNl4TQHjjp"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 147320,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/31uL8Gach0QQjK1QwsrYvl"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/31uL8Gach0QQjK1QwsrYvl",
+    "id" : "31uL8Gach0QQjK1QwsrYvl",
+    "is_local" : false,
+    "name" : "Dreaming",
+    "preview_url" : "https://p.scdn.co/mp3-preview/70fc135bc24735e479e6a5cff835e147e6ab7e25?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:31uL8Gach0QQjK1QwsrYvl"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 173866,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0MgOsVty0YR1kas7x16yoS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0MgOsVty0YR1kas7x16yoS",
+    "id" : "0MgOsVty0YR1kas7x16yoS",
+    "is_local" : false,
+    "name" : "Freaking Out The Neighborhood",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9afb8a115ff6a6c27348a6e930998efe5015a671?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:0MgOsVty0YR1kas7x16yoS"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 190555,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/251isBi3o3xoGh1N5mn4We"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/251isBi3o3xoGh1N5mn4We",
+    "id" : "251isBi3o3xoGh1N5mn4We",
+    "is_local" : false,
+    "name" : "Annie",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f6fb761bd4242126ab9c08d93e74eb4467e3434d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:251isBi3o3xoGh1N5mn4We"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 233760,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7JIV9UYKpti5xWgq6lfNNJ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7JIV9UYKpti5xWgq6lfNNJ",
+    "id" : "7JIV9UYKpti5xWgq6lfNNJ",
+    "is_local" : false,
+    "name" : "Ode To Viceroy",
+    "preview_url" : "https://p.scdn.co/mp3-preview/0ff0bdcf83d0b9aac4d41f7f658c8339aed06b33?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:7JIV9UYKpti5xWgq6lfNNJ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 176013,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0KmIBYoobCs3FL2edLI5tm"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0KmIBYoobCs3FL2edLI5tm",
+    "id" : "0KmIBYoobCs3FL2edLI5tm",
+    "is_local" : false,
+    "name" : "Robson Girl",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7447e175fe81a3f073f7c2826a95eaa22cccd552?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:0KmIBYoobCs3FL2edLI5tm"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 142743,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2h3jMs4C6FAg7Ff8yvSfKa"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2h3jMs4C6FAg7Ff8yvSfKa",
+    "id" : "2h3jMs4C6FAg7Ff8yvSfKa",
+    "is_local" : false,
+    "name" : "The Stars Keep On Calling My Name",
+    "preview_url" : "https://p.scdn.co/mp3-preview/fce68f7d0b41eea9fa48c4e04c4d07c1d215539d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:2h3jMs4C6FAg7Ff8yvSfKa"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 190848,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4tXzPOr4UaBoA7k7pnpJI1"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4tXzPOr4UaBoA7k7pnpJI1",
+    "id" : "4tXzPOr4UaBoA7k7pnpJI1",
+    "is_local" : false,
+    "name" : "My Kind Of Woman",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f8917450a3a8c682e4a4f2b3987d2471f269a6ce?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:4tXzPOr4UaBoA7k7pnpJI1"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 101480,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3L0jzZX4k98R7BEECqWs7W"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3L0jzZX4k98R7BEECqWs7W",
+    "id" : "3L0jzZX4k98R7BEECqWs7W",
+    "is_local" : false,
+    "name" : "Boe Zaah",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f72f8ab5793c0a7b78521afc01fd3e817f58c589?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:3L0jzZX4k98R7BEECqWs7W"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 149533,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0yri37TQpnpapIbWI32yQ0"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0yri37TQpnpapIbWI32yQ0",
+    "id" : "0yri37TQpnpapIbWI32yQ0",
+    "is_local" : false,
+    "name" : "Sherrill",
+    "preview_url" : "https://p.scdn.co/mp3-preview/7251f0d66fd54369ab516d33efae6b364d3aff0a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:0yri37TQpnpapIbWI32yQ0"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 219373,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5bVFRVVFtgQEVALsHYw5BT"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5bVFRVVFtgQEVALsHYw5BT",
+    "id" : "5bVFRVVFtgQEVALsHYw5BT",
+    "is_local" : false,
+    "name" : "Still Together",
+    "preview_url" : "https://p.scdn.co/mp3-preview/79b8eab1fe1c737cf827b4d4bd57ebe52f99872a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:5bVFRVVFtgQEVALsHYw5BT"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 127500,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6T25NAIqGMivYWTF3OAB2k"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6T25NAIqGMivYWTF3OAB2k",
+    "id" : "6T25NAIqGMivYWTF3OAB2k",
+    "is_local" : false,
+    "name" : "Cooking Up Something Good - Demo",
+    "preview_url" : "https://p.scdn.co/mp3-preview/e5ae9a959feb3e84b6cfd24738c9cec5672a47d8?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:6T25NAIqGMivYWTF3OAB2k"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "name" : "Mac DeMarco",
+      "type" : "artist",
+      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 103500,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0jmYjwp5YekapVWo0bMfzc"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0jmYjwp5YekapVWo0bMfzc",
+    "id" : "0jmYjwp5YekapVWo0bMfzc",
+    "is_local" : false,
+    "name" : "Dreamin' Fast - Demo",
+    "preview_url" : "https://p.scdn.co/mp3-preview/cf0fd7c27aa8877ae7ac2123f565d8e99db12802?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:0jmYjwp5YekapVWo0bMfzc"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 13
+}

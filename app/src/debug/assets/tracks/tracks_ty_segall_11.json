@@ -1,0 +1,269 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/1Qnvso5kK0rSkAIdrsg8Kc/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 218240,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/49abFhvmqJVW6IzjB2ySJk"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/49abFhvmqJVW6IzjB2ySJk",
+    "id" : "49abFhvmqJVW6IzjB2ySJk",
+    "is_local" : false,
+    "name" : "Break a Guitar",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c813b08a52f5d09c1457f240485a55f03c7b32a2?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:49abFhvmqJVW6IzjB2ySJk"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 127080,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4MHCYKlXFRp7UiXkA8DGCV"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4MHCYKlXFRp7UiXkA8DGCV",
+    "id" : "4MHCYKlXFRp7UiXkA8DGCV",
+    "is_local" : false,
+    "name" : "Freedom",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f7dc3280736b1d7a22fc3ae564541111849ad0e5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:4MHCYKlXFRp7UiXkA8DGCV"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 621426,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3krWnYn3kpr9nzw1YYVbu2"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3krWnYn3kpr9nzw1YYVbu2",
+    "id" : "3krWnYn3kpr9nzw1YYVbu2",
+    "is_local" : false,
+    "name" : "Warm Hands (Freedom Returned)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1a866fe8f111ed748809b38d07573d86f89f4c1c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:3krWnYn3kpr9nzw1YYVbu2"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 231560,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2yg0i6yz4TL3XyVzDquUWE"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2yg0i6yz4TL3XyVzDquUWE",
+    "id" : "2yg0i6yz4TL3XyVzDquUWE",
+    "is_local" : false,
+    "name" : "Talkin'",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d8ecd05b36ecf6b8549fde4cfdb50303bf7497bc?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2yg0i6yz4TL3XyVzDquUWE"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 234626,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6G1ChGtnnO9NjCZPSY3pUa"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6G1ChGtnnO9NjCZPSY3pUa",
+    "id" : "6G1ChGtnnO9NjCZPSY3pUa",
+    "is_local" : false,
+    "name" : "The Only One",
+    "preview_url" : "https://p.scdn.co/mp3-preview/05974b8b7df7788844cb1d289c368281847a23df?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:6G1ChGtnnO9NjCZPSY3pUa"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 172760,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5P1M7acH7oZla7Xf8lamB4"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5P1M7acH7oZla7Xf8lamB4",
+    "id" : "5P1M7acH7oZla7Xf8lamB4",
+    "is_local" : false,
+    "name" : "Thank You Mr. K",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d2f4ddea0545dece8efd139476497c30ccff8d9b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:5P1M7acH7oZla7Xf8lamB4"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 184626,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1dwOGpLiZxi519AXLsIkTa"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1dwOGpLiZxi519AXLsIkTa",
+    "id" : "1dwOGpLiZxi519AXLsIkTa",
+    "is_local" : false,
+    "name" : "Orange Color Queen",
+    "preview_url" : "https://p.scdn.co/mp3-preview/ae9ed8a7aee58f1b7a91fefb795c93a1eba910a4?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:1dwOGpLiZxi519AXLsIkTa"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 180186,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0DbRT79xpSUFAePCy5BOA5"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0DbRT79xpSUFAePCy5BOA5",
+    "id" : "0DbRT79xpSUFAePCy5BOA5",
+    "is_local" : false,
+    "name" : "Papers",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9cf244c10942cc47a24313fc08fb552495127eb0?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:0DbRT79xpSUFAePCy5BOA5"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 187826,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1d8C6IJR84rPH4PIY7g9mM"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1d8C6IJR84rPH4PIY7g9mM",
+    "id" : "1d8C6IJR84rPH4PIY7g9mM",
+    "is_local" : false,
+    "name" : "Take Care (To Comb Your Hair)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/ead8eab957ac5c4e7e827be8980caca3b57aa683?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:1d8C6IJR84rPH4PIY7g9mM"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 12000,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7tcPfwckmWI5D57SXWVs2J"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7tcPfwckmWI5D57SXWVs2J",
+    "id" : "7tcPfwckmWI5D57SXWVs2J",
+    "is_local" : false,
+    "name" : "Untitled",
+    "preview_url" : "https://p.scdn.co/mp3-preview/4c9fd9643afd205a77dd54f2aa5b5e9319f0ee7a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:7tcPfwckmWI5D57SXWVs2J"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 10
+}

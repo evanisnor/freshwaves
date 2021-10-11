@@ -1,0 +1,184 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/5bw79tNjZS73fZyCvl2irH/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 89266,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4ukG7AaV5SM9QKM1fqTBcE"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4ukG7AaV5SM9QKM1fqTBcE",
+    "id" : "4ukG7AaV5SM9QKM1fqTBcE",
+    "is_local" : false,
+    "name" : "Saignant",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1e61200d00a54b3289303c42fefa98c04fd6acef?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:4ukG7AaV5SM9QKM1fqTBcE"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 116826,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1zspl0Za2yvsy6rbgnhZYl"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1zspl0Za2yvsy6rbgnhZYl",
+    "id" : "1zspl0Za2yvsy6rbgnhZYl",
+    "is_local" : false,
+    "name" : "Electric War",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d2fe9c552e9b7a9259d43e5f2a6b64f763363267?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:1zspl0Za2yvsy6rbgnhZYl"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 115320,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/71IXAFJPVkNcZXoyvJG9sr"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/71IXAFJPVkNcZXoyvJG9sr",
+    "id" : "71IXAFJPVkNcZXoyvJG9sr",
+    "is_local" : false,
+    "name" : "Weird and Wasted Connection",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6d587122074761e8bb9b3b4d886436b62af2cc00?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:71IXAFJPVkNcZXoyvJG9sr"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 851093,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/32yzDtLzZG2V4wE1k92inS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/32yzDtLzZG2V4wE1k92inS",
+    "id" : "32yzDtLzZG2V4wE1k92inS",
+    "is_local" : false,
+    "name" : "The Virologist",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1e1583cd07ea4f7209fc4388d5be4772028bacb9?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:32yzDtLzZG2V4wE1k92inS"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 1390266,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3aGLUez1eYf6D5dkksjwkN"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3aGLUez1eYf6D5dkksjwkN",
+    "id" : "3aGLUez1eYf6D5dkksjwkN",
+    "is_local" : false,
+    "name" : "I Got a Lot",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1d65ac257b6b10b2581ff8bac873dd4abc2a0d5d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:3aGLUez1eYf6D5dkksjwkN"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 5
+}

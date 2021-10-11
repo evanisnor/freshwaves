@@ -1,0 +1,269 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/6uuQKwM3fRETiscHqlnxuo/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 96548,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7sd7teUrIBBxNMGG9BDXic"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7sd7teUrIBBxNMGG9BDXic",
+    "id" : "7sd7teUrIBBxNMGG9BDXic",
+    "is_local" : false,
+    "name" : "K.G.L.W.",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9c409caa1e417f5df87676ac6dd47af8d822ce52?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:7sd7teUrIBBxNMGG9BDXic"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 209803,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/03CS8ifzdYuzNCyzshYl7Z"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/03CS8ifzdYuzNCyzshYl7Z",
+    "id" : "03CS8ifzdYuzNCyzshYl7Z",
+    "is_local" : false,
+    "name" : "Automation",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3ba1ba944e82ed4badd8e9d96059c2bdbced261e?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:03CS8ifzdYuzNCyzshYl7Z"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 258674,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7iNad5DstgVA6wJUHmN4LS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7iNad5DstgVA6wJUHmN4LS",
+    "id" : "7iNad5DstgVA6wJUHmN4LS",
+    "is_local" : false,
+    "name" : "Minimum Brain Size",
+    "preview_url" : "https://p.scdn.co/mp3-preview/02c4eae06c38347cb0aa787216266d7079180fc5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:7iNad5DstgVA6wJUHmN4LS"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 341662,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2w4OcWZCTQ5x4iqioo6qMW"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2w4OcWZCTQ5x4iqioo6qMW",
+    "id" : "2w4OcWZCTQ5x4iqioo6qMW",
+    "is_local" : false,
+    "name" : "Straws In The Wind",
+    "preview_url" : "https://p.scdn.co/mp3-preview/30a77d855676a0a9b27cfafcbf5339001e47099d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2w4OcWZCTQ5x4iqioo6qMW"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 232537,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/19tGNexxvP4HLSeOiuN32m"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/19tGNexxvP4HLSeOiuN32m",
+    "id" : "19tGNexxvP4HLSeOiuN32m",
+    "is_local" : false,
+    "name" : "Some Of Us",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dcb6b07edeabcb805aea89e9950dabc5978ed919?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:19tGNexxvP4HLSeOiuN32m"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 238199,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5Pys5Lcouq7xrXha5rgC2i"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5Pys5Lcouq7xrXha5rgC2i",
+    "id" : "5Pys5Lcouq7xrXha5rgC2i",
+    "is_local" : false,
+    "name" : "Ontology",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c1478ae4c1f527f7a87a0510546b072eb45fad5f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:5Pys5Lcouq7xrXha5rgC2i"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 252630,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/28c8ZDVltaCcs4OfIAuI8Z"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/28c8ZDVltaCcs4OfIAuI8Z",
+    "id" : "28c8ZDVltaCcs4OfIAuI8Z",
+    "is_local" : false,
+    "name" : "Intrasport",
+    "preview_url" : "https://p.scdn.co/mp3-preview/11a4c7f5a38beb2e5697270122dc4eac9f4d5c13?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:28c8ZDVltaCcs4OfIAuI8Z"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 297505,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2J2ffA3bkOMGtsQaQ6825Y"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2J2ffA3bkOMGtsQaQ6825Y",
+    "id" : "2J2ffA3bkOMGtsQaQ6825Y",
+    "is_local" : false,
+    "name" : "Oddlife",
+    "preview_url" : "https://p.scdn.co/mp3-preview/fd589533ce643bea39bebffa6e1c71b22085d095?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:2J2ffA3bkOMGtsQaQ6825Y"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 273854,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0nObOnIxnz6PlPf04tZh1g"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0nObOnIxnz6PlPf04tZh1g",
+    "id" : "0nObOnIxnz6PlPf04tZh1g",
+    "is_local" : false,
+    "name" : "Honey",
+    "preview_url" : "https://p.scdn.co/mp3-preview/4b1ee0e943cde0ebef990f151841ee9da64c7e65?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:0nObOnIxnz6PlPf04tZh1g"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 307969,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3s9cNgAYYh3jK4ZLbAPruH"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3s9cNgAYYh3jK4ZLbAPruH",
+    "id" : "3s9cNgAYYh3jK4ZLbAPruH",
+    "is_local" : false,
+    "name" : "The Hungry Wolf Of Fate",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a727cfa1c55b0d935fd801f52b319ae92aa1d604?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:3s9cNgAYYh3jK4ZLbAPruH"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 10
+}

@@ -78,9 +78,12 @@ class AtPositionOnViewAction(
     )
 
     override fun perform(uiController: UiController, view: View) {
-        with(view as RecyclerView) {
-            val holder = view.findViewHolderForAdapterPosition(position)
-            action.perform(uiController, holder?.itemView)
+        val holder = (view as RecyclerView).findViewHolderForAdapterPosition(position)
+
+        assert(holder != null) {
+            "Unable to find ViewHolder for position $position"
         }
+
+        action.perform(uiController, holder?.itemView)
     }
 }

@@ -1,0 +1,231 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items" : [ {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/292h3HHweYdGXKV0erbYaO"
+    },
+    "href" : "https://api.spotify.com/v1/albums/292h3HHweYdGXKV0erbYaO",
+    "id" : "292h3HHweYdGXKV0erbYaO",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27366de3b12dcd7e93d888c4aa3",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0266de3b12dcd7e93d888c4aa3",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485166de3b12dcd7e93d888c4aa3",
+      "width" : 64
+    } ],
+    "name" : "Deep States",
+    "release_date" : "2021-08-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:292h3HHweYdGXKV0erbYaO"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7uPrpLvtLEl1R57GLpDvoW"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7uPrpLvtLEl1R57GLpDvoW",
+    "id" : "7uPrpLvtLEl1R57GLpDvoW",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273d8ffb49dc869da78a405bebf",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02d8ffb49dc869da78a405bebf",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851d8ffb49dc869da78a405bebf",
+      "width" : 64
+    } ],
+    "name" : "Deep States",
+    "release_date" : "2021-08-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:7uPrpLvtLEl1R57GLpDvoW"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7iT31b0KC3BKWDGLXNuX21"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7iT31b0KC3BKWDGLXNuX21",
+    "id" : "7iT31b0KC3BKWDGLXNuX21",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27332c7b74365929d6b5a58c7ce",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0232c7b74365929d6b5a58c7ce",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485132c7b74365929d6b5a58c7ce",
+      "width" : 64
+    } ],
+    "name" : "Braindrops",
+    "release_date" : "2019-08-23",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:7iT31b0KC3BKWDGLXNuX21"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1WhMnmJcdXQUyXk2dDYesY"
+    },
+    "href" : "https://api.spotify.com/v1/albums/1WhMnmJcdXQUyXk2dDYesY",
+    "id" : "1WhMnmJcdXQUyXk2dDYesY",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27377444b3534c7b8101a7eb630",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0277444b3534c7b8101a7eb630",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485177444b3534c7b8101a7eb630",
+      "width" : 64
+    } ],
+    "name" : "Braindrops",
+    "release_date" : "2019-08-23",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:1WhMnmJcdXQUyXk2dDYesY"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7tg6tW1hDUr0OPzymBUk3d"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7tg6tW1hDUr0OPzymBUk3d",
+    "id" : "7tg6tW1hDUr0OPzymBUk3d",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273989046e1e7917cfd8a78cb27",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02989046e1e7917cfd8a78cb27",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851989046e1e7917cfd8a78cb27",
+      "width" : 64
+    } ],
+    "name" : "A Laughing Death in Meatspace",
+    "release_date" : "2018-05-04",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:7tg6tW1hDUr0OPzymBUk3d"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2Gbrm63qKXR2aaYEU80Rzs"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2Gbrm63qKXR2aaYEU80Rzs",
+    "id" : "2Gbrm63qKXR2aaYEU80Rzs",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273253634cd0b2b001a4b1681e6",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02253634cd0b2b001a4b1681e6",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851253634cd0b2b001a4b1681e6",
+      "width" : 64
+    } ],
+    "name" : "A Laughing Death in Meatspace",
+    "release_date" : "2018-05-04",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:2Gbrm63qKXR2aaYEU80Rzs"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 6
+}

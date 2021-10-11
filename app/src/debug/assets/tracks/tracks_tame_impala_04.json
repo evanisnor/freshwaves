@@ -1,0 +1,347 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/2PYZRakUH5TdOHjGKqKtWv/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 201960,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6MUb27KoqZYNpGRb2qe4ok"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6MUb27KoqZYNpGRb2qe4ok",
+    "id" : "6MUb27KoqZYNpGRb2qe4ok",
+    "is_local" : false,
+    "name" : "Be Above It",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5b9da08d76b8edff460dab2ee758b8f3c5e2c92a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:6MUb27KoqZYNpGRb2qe4ok"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 186640,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1DckYQDRGsnAmJQl4Hqjer"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1DckYQDRGsnAmJQl4Hqjer",
+    "id" : "1DckYQDRGsnAmJQl4Hqjer",
+    "is_local" : false,
+    "name" : "Endors Toi",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9bab8e78ca0016553bd5eff4b214c64661b9b95d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:1DckYQDRGsnAmJQl4Hqjer"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 356946,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/23lu4Y6pllOgJWh7QI8APU"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/23lu4Y6pllOgJWh7QI8APU",
+    "id" : "23lu4Y6pllOgJWh7QI8APU",
+    "is_local" : false,
+    "name" : "Apocalypse Dreams",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d1b132712fa546d110e19d804c2a7f50d18cf2ca?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:23lu4Y6pllOgJWh7QI8APU"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 271880,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0uNRrCx57QnNVr1uxBs50p"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0uNRrCx57QnNVr1uxBs50p",
+    "id" : "0uNRrCx57QnNVr1uxBs50p",
+    "is_local" : false,
+    "name" : "Mind Mischief",
+    "preview_url" : "https://p.scdn.co/mp3-preview/eba614b102aefb25e1ceda496e7372ad2edf12c9?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:0uNRrCx57QnNVr1uxBs50p"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 312213,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4hLX99HRtIcvHJtLGVCQuS"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4hLX99HRtIcvHJtLGVCQuS",
+    "id" : "4hLX99HRtIcvHJtLGVCQuS",
+    "is_local" : false,
+    "name" : "Music To Walk Home By",
+    "preview_url" : "https://p.scdn.co/mp3-preview/9486aca3003b078f3cde0ac5ce046f6765392507?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:4hLX99HRtIcvHJtLGVCQuS"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 286093,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/61rfBryBDUnQ1BiWBaiiUi"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/61rfBryBDUnQ1BiWBaiiUi",
+    "id" : "61rfBryBDUnQ1BiWBaiiUi",
+    "is_local" : false,
+    "name" : "Why Won't They Talk To Me?",
+    "preview_url" : "https://p.scdn.co/mp3-preview/596ddbdfb9315bb60dbfe0fb5e46ca843beda1e3?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:61rfBryBDUnQ1BiWBaiiUi"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 192960,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0jIj2113Ic7wZdRDQJH51G"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0jIj2113Ic7wZdRDQJH51G",
+    "id" : "0jIj2113Ic7wZdRDQJH51G",
+    "is_local" : false,
+    "name" : "Feels Like We Only Go Backwards",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6b26c453d9ba417979c26af6d93a742237e4d06a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:0jIj2113Ic7wZdRDQJH51G"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 353933,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4BFewpYYNSt1DsuUCqDVOL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4BFewpYYNSt1DsuUCqDVOL",
+    "id" : "4BFewpYYNSt1DsuUCqDVOL",
+    "is_local" : false,
+    "name" : "Keep On Lying",
+    "preview_url" : "https://p.scdn.co/mp3-preview/87f162fe2ac63ef3995e50e003e2294e3a14ae3e?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:4BFewpYYNSt1DsuUCqDVOL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 211026,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6V0iesU7t3NBbfcrmrhPpP"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6V0iesU7t3NBbfcrmrhPpP",
+    "id" : "6V0iesU7t3NBbfcrmrhPpP",
+    "is_local" : false,
+    "name" : "Elephant",
+    "preview_url" : "https://p.scdn.co/mp3-preview/79a7e06a4d89526da120102c311290074ee543ce?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:6V0iesU7t3NBbfcrmrhPpP"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 188373,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1IyhPTgBC9E5k25IbLxFNk"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1IyhPTgBC9E5k25IbLxFNk",
+    "id" : "1IyhPTgBC9E5k25IbLxFNk",
+    "is_local" : false,
+    "name" : "Led Zeppelin",
+    "preview_url" : "https://p.scdn.co/mp3-preview/32402ff68dd8f927f9180e417df4c584cf327c4d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:1IyhPTgBC9E5k25IbLxFNk"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 57173,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1lGmzjMYiG9q1zs3UEzuIj"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1lGmzjMYiG9q1zs3UEzuIj",
+    "id" : "1lGmzjMYiG9q1zs3UEzuIj",
+    "is_local" : false,
+    "name" : "She Just Won't Believe Me",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d1a22168b49064c3bd644e794c584d2854745527?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:1lGmzjMYiG9q1zs3UEzuIj"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 359946,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1batWRU09x7dj4iy3vjXDP"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1batWRU09x7dj4iy3vjXDP",
+    "id" : "1batWRU09x7dj4iy3vjXDP",
+    "is_local" : false,
+    "name" : "Nothing That Has Happened So Far Has Been Anything We Could Control",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5b781a5ca527a99430a7be180c122ff1a82d91b9?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:1batWRU09x7dj4iy3vjXDP"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id" : "5INjqkS1o8h1imAzPqGZBb",
+      "name" : "Tame Impala",
+      "type" : "artist",
+      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    } ],
+    "available_markets" : [ "JP", "PK" ],
+    "disc_number" : 1,
+    "duration_ms" : 320293,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3nf3P1CAVpCwyVAkdR0y7I"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3nf3P1CAVpCwyVAkdR0y7I",
+    "id" : "3nf3P1CAVpCwyVAkdR0y7I",
+    "is_local" : false,
+    "name" : "Sun's Coming Up",
+    "preview_url" : "https://p.scdn.co/mp3-preview/5c4073c235cd6988278bb9b9eccd6fa665f23bee?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:3nf3P1CAVpCwyVAkdR0y7I"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 13
+}

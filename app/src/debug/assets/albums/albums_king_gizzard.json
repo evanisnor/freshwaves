@@ -1,0 +1,749 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items" : [ {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2I0LPpmyvAwnXvCuBf3Pcy"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2I0LPpmyvAwnXvCuBf3Pcy",
+    "id" : "2I0LPpmyvAwnXvCuBf3Pcy",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273f50080f094264011260c3bbb",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02f50080f094264011260c3bbb",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851f50080f094264011260c3bbb",
+      "width" : 64
+    } ],
+    "name" : "Butterfly 3000",
+    "release_date" : "2021-06-11",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:2I0LPpmyvAwnXvCuBf3Pcy"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7mGW0YccQQZPCD1acHaClx"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7mGW0YccQQZPCD1acHaClx",
+    "id" : "7mGW0YccQQZPCD1acHaClx",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2731f0fd0835e055d96b82ccaf0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e021f0fd0835e055d96b82ccaf0",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048511f0fd0835e055d96b82ccaf0",
+      "width" : 64
+    } ],
+    "name" : "L.W.",
+    "release_date" : "2021-02-25",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:7mGW0YccQQZPCD1acHaClx"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7uAX8HInPIYskO4KDkskub"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7uAX8HInPIYskO4KDkskub",
+    "id" : "7uAX8HInPIYskO4KDkskub",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273c2287270ed624c3195a5d61c",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02c2287270ed624c3195a5d61c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851c2287270ed624c3195a5d61c",
+      "width" : 64
+    } ],
+    "name" : "L.W.",
+    "release_date" : "2021-02-25",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:7uAX8HInPIYskO4KDkskub"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6uuQKwM3fRETiscHqlnxuo"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6uuQKwM3fRETiscHqlnxuo",
+    "id" : "6uuQKwM3fRETiscHqlnxuo",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273237586c54940111fce760ff1",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02237586c54940111fce760ff1",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851237586c54940111fce760ff1",
+      "width" : 64
+    } ],
+    "name" : "K.G.",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:6uuQKwM3fRETiscHqlnxuo"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0jbjrhqnk0oyrykVCixPvf"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0jbjrhqnk0oyrykVCixPvf",
+    "id" : "0jbjrhqnk0oyrykVCixPvf",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2735be6937a0b1df762104304d8",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e025be6937a0b1df762104304d8",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048515be6937a0b1df762104304d8",
+      "width" : 64
+    } ],
+    "name" : "K.G.",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:0jbjrhqnk0oyrykVCixPvf"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6jK79OO4fLY3UzBBwIJXym"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6jK79OO4fLY3UzBBwIJXym",
+    "id" : "6jK79OO4fLY3UzBBwIJXym",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27370cc7a0635caae3ddaf05523",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0270cc7a0635caae3ddaf05523",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485170cc7a0635caae3ddaf05523",
+      "width" : 64
+    } ],
+    "name" : "Live In San Francisco '16",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:6jK79OO4fLY3UzBBwIJXym"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/58Do0JDi1RqZhG8dKxcoPc"
+    },
+    "href" : "https://api.spotify.com/v1/albums/58Do0JDi1RqZhG8dKxcoPc",
+    "id" : "58Do0JDi1RqZhG8dKxcoPc",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273a4f201e62e07195636afc6e3",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02a4f201e62e07195636afc6e3",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851a4f201e62e07195636afc6e3",
+      "width" : 64
+    } ],
+    "name" : "Live In San Francisco '16",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:58Do0JDi1RqZhG8dKxcoPc"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1PtqcMET4XMzsQrQx35Xed"
+    },
+    "href" : "https://api.spotify.com/v1/albums/1PtqcMET4XMzsQrQx35Xed",
+    "id" : "1PtqcMET4XMzsQrQx35Xed",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273a55ed28994d0a6cc97614092",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02a55ed28994d0a6cc97614092",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851a55ed28994d0a6cc97614092",
+      "width" : 64
+    } ],
+    "name" : "Live in San Francisco '16",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:1PtqcMET4XMzsQrQx35Xed"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5Lk83ZV1vp9gX6Bpx1cfm7"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5Lk83ZV1vp9gX6Bpx1cfm7",
+    "id" : "5Lk83ZV1vp9gX6Bpx1cfm7",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273e29bffa263873ed6684433dc",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02e29bffa263873ed6684433dc",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851e29bffa263873ed6684433dc",
+      "width" : 64
+    } ],
+    "name" : "Live In San Francisco ’16",
+    "release_date" : "2020-11-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:5Lk83ZV1vp9gX6Bpx1cfm7"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4C3YBIjkoOfR0ESIXMvWRG"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4C3YBIjkoOfR0ESIXMvWRG",
+    "id" : "4C3YBIjkoOfR0ESIXMvWRG",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2736cf37990705c54ffd493dfbf",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e026cf37990705c54ffd493dfbf",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048516cf37990705c54ffd493dfbf",
+      "width" : 64
+    } ],
+    "name" : "Chunky Shrapnel",
+    "release_date" : "2020-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:4C3YBIjkoOfR0ESIXMvWRG"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5nib1i921sWn4JvVftGbhC"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5nib1i921sWn4JvVftGbhC",
+    "id" : "5nib1i921sWn4JvVftGbhC",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273de84e85358312038307acb64",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02de84e85358312038307acb64",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851de84e85358312038307acb64",
+      "width" : 64
+    } ],
+    "name" : "Chunky Shrapnel",
+    "release_date" : "2020-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:5nib1i921sWn4JvVftGbhC"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3ij7XJlzH65aS7C5uGHyCE"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3ij7XJlzH65aS7C5uGHyCE",
+    "id" : "3ij7XJlzH65aS7C5uGHyCE",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2739a83f664f6cfbf93cb3d627b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e029a83f664f6cfbf93cb3d627b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048519a83f664f6cfbf93cb3d627b",
+      "width" : 64
+    } ],
+    "name" : "Chunky Shrapnel",
+    "release_date" : "2020-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:3ij7XJlzH65aS7C5uGHyCE"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5WEyTkaVXq4ZPW6CUOcgzC"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5WEyTkaVXq4ZPW6CUOcgzC",
+    "id" : "5WEyTkaVXq4ZPW6CUOcgzC",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2736381760cbf87d03e0dfc6dd6",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e026381760cbf87d03e0dfc6dd6",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048516381760cbf87d03e0dfc6dd6",
+      "width" : 64
+    } ],
+    "name" : "Chunky Shrapnel",
+    "release_date" : "2020-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:5WEyTkaVXq4ZPW6CUOcgzC"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6zoYX5ka877Adew87xGfdh"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6zoYX5ka877Adew87xGfdh",
+    "id" : "6zoYX5ka877Adew87xGfdh",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2736a0bf48b91d15be55e5d948b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e026a0bf48b91d15be55e5d948b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048516a0bf48b91d15be55e5d948b",
+      "width" : 64
+    } ],
+    "name" : "Chunky Shrapnel",
+    "release_date" : "2020-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:6zoYX5ka877Adew87xGfdh"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5Bz2LxOp0wz7ov0T9WiRmc"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5Bz2LxOp0wz7ov0T9WiRmc",
+    "id" : "5Bz2LxOp0wz7ov0T9WiRmc",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2739f20343552da5fab7cc4f897",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e029f20343552da5fab7cc4f897",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048519f20343552da5fab7cc4f897",
+      "width" : 64
+    } ],
+    "name" : "Infest The Rats' Nest",
+    "release_date" : "2019-08-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:5Bz2LxOp0wz7ov0T9WiRmc"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1xFKfTChl3w1dNFukSKW2X"
+    },
+    "href" : "https://api.spotify.com/v1/albums/1xFKfTChl3w1dNFukSKW2X",
+    "id" : "1xFKfTChl3w1dNFukSKW2X",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273550005a6664dbb522db7be35",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02550005a6664dbb522db7be35",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851550005a6664dbb522db7be35",
+      "width" : 64
+    } ],
+    "name" : "Infest The Rats’ Nest",
+    "release_date" : "2019-08-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:1xFKfTChl3w1dNFukSKW2X"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/612LP8ZkujVEbvAfD8huGz"
+    },
+    "href" : "https://api.spotify.com/v1/albums/612LP8ZkujVEbvAfD8huGz",
+    "id" : "612LP8ZkujVEbvAfD8huGz",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273c6253a5bc0544beb12cb4e6a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02c6253a5bc0544beb12cb4e6a",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851c6253a5bc0544beb12cb4e6a",
+      "width" : 64
+    } ],
+    "name" : "Infest The Rats' Nest",
+    "release_date" : "2019-08-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:612LP8ZkujVEbvAfD8huGz"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3SW2GxwbStVJ4jXgizJggx"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3SW2GxwbStVJ4jXgizJggx",
+    "id" : "3SW2GxwbStVJ4jXgizJggx",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2734320143642ebfe5276d25ec5",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e024320143642ebfe5276d25ec5",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048514320143642ebfe5276d25ec5",
+      "width" : 64
+    } ],
+    "name" : "Infest The Rats' Nest",
+    "release_date" : "2019-08-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:3SW2GxwbStVJ4jXgizJggx"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2S4y0rv7PQjsbVvXJ7ZZnS"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2S4y0rv7PQjsbVvXJ7ZZnS",
+    "id" : "2S4y0rv7PQjsbVvXJ7ZZnS",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2733ae1cd6f1fd1d66bc39ef5da",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e023ae1cd6f1fd1d66bc39ef5da",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048513ae1cd6f1fd1d66bc39ef5da",
+      "width" : 64
+    } ],
+    "name" : "Fishing For Fishies",
+    "release_date" : "2019-04-26",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:2S4y0rv7PQjsbVvXJ7ZZnS"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6aOGnfcwdAKmyWoThUe8Ep"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6aOGnfcwdAKmyWoThUe8Ep",
+    "id" : "6aOGnfcwdAKmyWoThUe8Ep",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2730b6ee9a2342ef2e79bd1bd4b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e020b6ee9a2342ef2e79bd1bd4b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048510b6ee9a2342ef2e79bd1bd4b",
+      "width" : 64
+    } ],
+    "name" : "Fishing for Fishies",
+    "release_date" : "2019-04-26",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:6aOGnfcwdAKmyWoThUe8Ep"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn/albums?offset=20&limit=20&include_groups=album&market=CA",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 61
+}

@@ -1,0 +1,295 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/4RjPdDwu91WD5a8s5BbZAI/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 203120,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1fatfF95ZuC1M46jpk3MPD"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1fatfF95ZuC1M46jpk3MPD",
+    "id" : "1fatfF95ZuC1M46jpk3MPD",
+    "is_local" : false,
+    "name" : "Problematic Subject",
+    "preview_url" : "https://p.scdn.co/mp3-preview/20b5966102b0db637a6aba26f82545830f6728f6?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:1fatfF95ZuC1M46jpk3MPD"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 193986,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5vnP4iGofF84jbYhsVb5wC"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5vnP4iGofF84jbYhsVb5wC",
+    "id" : "5vnP4iGofF84jbYhsVb5wC",
+    "is_local" : false,
+    "name" : "Withstand",
+    "preview_url" : "https://p.scdn.co/mp3-preview/35d5c919a452101f4bc9f7d3dcb9ad87ac72f5f5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:5vnP4iGofF84jbYhsVb5wC"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 219506,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4FpKel9L3BiK4otuUox1JV"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4FpKel9L3BiK4otuUox1JV",
+    "id" : "4FpKel9L3BiK4otuUox1JV",
+    "is_local" : false,
+    "name" : "Manic Candid Episode",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a5004fd1a0b88fca03f7cb67c60cc12c5f25e025?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:4FpKel9L3BiK4otuUox1JV"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 196586,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1695zZkwSiRe38KEedxbf8"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1695zZkwSiRe38KEedxbf8",
+    "id" : "1695zZkwSiRe38KEedxbf8",
+    "is_local" : false,
+    "name" : "Spun Gun",
+    "preview_url" : "https://p.scdn.co/mp3-preview/fab927e5ded8d637cc7f1f5b4608468403e73048?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:1695zZkwSiRe38KEedxbf8"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 239666,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/65Pb4npj0HZvMDnryc0YOR"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/65Pb4npj0HZvMDnryc0YOR",
+    "id" : "65Pb4npj0HZvMDnryc0YOR",
+    "is_local" : false,
+    "name" : "Comfort Zone",
+    "preview_url" : "https://p.scdn.co/mp3-preview/57460c225e64103be802dee5a777a7ee480266a2?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:65Pb4npj0HZvMDnryc0YOR"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 219586,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/03f6e6bms0lqmAIHq0D1Af"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/03f6e6bms0lqmAIHq0D1Af",
+    "id" : "03f6e6bms0lqmAIHq0D1Af",
+    "is_local" : false,
+    "name" : "Catch 22",
+    "preview_url" : "https://p.scdn.co/mp3-preview/8ca2c176b4dc9cf18941978dabf7a0462fd89cba?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:03f6e6bms0lqmAIHq0D1Af"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 189333,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/71XhCO4RJvMObamZlv94jn"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/71XhCO4RJvMObamZlv94jn",
+    "id" : "71XhCO4RJvMObamZlv94jn",
+    "is_local" : false,
+    "name" : "Bigger Picture",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dd89cf85251eba20d871b8578ff2714c25b48925?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:71XhCO4RJvMObamZlv94jn"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 223666,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7L4ciolNzzDoxN5bJQ2Ew4"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7L4ciolNzzDoxN5bJQ2Ew4",
+    "id" : "7L4ciolNzzDoxN5bJQ2Ew4",
+    "is_local" : false,
+    "name" : "Samsara Maya",
+    "preview_url" : "https://p.scdn.co/mp3-preview/de17c761ad5ee86e5a74dfcfc31df0d419ab908c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:7L4ciolNzzDoxN5bJQ2Ew4"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 262866,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3kj05CFXFPenAwISi2WSAL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3kj05CFXFPenAwISi2WSAL",
+    "id" : "3kj05CFXFPenAwISi2WSAL",
+    "is_local" : false,
+    "name" : "Buffoon",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dafd50bd47d417355ea1827241d20c3e316e9d1f?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:3kj05CFXFPenAwISi2WSAL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 224293,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0tMqq5nfbHsSIYYp3nZbD4"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0tMqq5nfbHsSIYYp3nZbD4",
+    "id" : "0tMqq5nfbHsSIYYp3nZbD4",
+    "is_local" : false,
+    "name" : "What If?",
+    "preview_url" : "https://p.scdn.co/mp3-preview/fbb6a18ccc0ab56b649ba23b41ec88624409e4cd?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:0tMqq5nfbHsSIYYp3nZbD4"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+      "id" : "0rH93aHDYyJfMAcPB9OKus",
+      "name" : "The Murlocs",
+      "type" : "artist",
+      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+    } ],
+    "available_markets" : [ "CA" ],
+    "disc_number" : 1,
+    "duration_ms" : 237693,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0LDRajOh1NFvnyJLuFy07P"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0LDRajOh1NFvnyJLuFy07P",
+    "id" : "0LDRajOh1NFvnyJLuFy07P",
+    "is_local" : false,
+    "name" : "My Compromise",
+    "preview_url" : "https://p.scdn.co/mp3-preview/d49d498ef0e2dbab1bb0ecc6f3e3eac3befba70a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:0LDRajOh1NFvnyJLuFy07P"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 11
+}

@@ -1,0 +1,321 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/1yBrf61TnaQnACsBb9pLtZ/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 249320,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6CXgeTXGNXIXnEIZC4eGwe"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6CXgeTXGNXIXnEIZC4eGwe",
+    "id" : "6CXgeTXGNXIXnEIZC4eGwe",
+    "is_local" : false,
+    "name" : "Hole in the Earth",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dd43c6fd774e49365640287ebe32c36a2b4db0cd?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:6CXgeTXGNXIXnEIZC4eGwe"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 205333,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7keaBigyl1xdB94Vy6ApMH"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7keaBigyl1xdB94Vy6ApMH",
+    "id" : "7keaBigyl1xdB94Vy6ApMH",
+    "is_local" : false,
+    "name" : "Rapture",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c2f94f3e6165864b4c71b5d2041982cdb4cad585?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:7keaBigyl1xdB94Vy6ApMH"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 360666,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2Bo3qOzyUyxx62NZXthhzM"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2Bo3qOzyUyxx62NZXthhzM",
+    "id" : "2Bo3qOzyUyxx62NZXthhzM",
+    "is_local" : false,
+    "name" : "Beware",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a47831ad0b0bd62bf43d9e13608c108f89cf17fd?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:2Bo3qOzyUyxx62NZXthhzM"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 317706,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/08cyos23nutQ1qnejI7R4B"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/08cyos23nutQ1qnejI7R4B",
+    "id" : "08cyos23nutQ1qnejI7R4B",
+    "is_local" : false,
+    "name" : "Cherry Waves",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f0eb2a994c07ceeed0590025094b864671252980?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:08cyos23nutQ1qnejI7R4B"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 238040,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2hdy2lVqla5IJIlWLKXimm"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2hdy2lVqla5IJIlWLKXimm",
+    "id" : "2hdy2lVqla5IJIlWLKXimm",
+    "is_local" : false,
+    "name" : "Mein",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b9d764281e8871ddb334f69f8c8e9428d3455ad9?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:2hdy2lVqla5IJIlWLKXimm"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 252520,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5hG9YbEysjy7tghjXK4cHN"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5hG9YbEysjy7tghjXK4cHN",
+    "id" : "5hG9YbEysjy7tghjXK4cHN",
+    "is_local" : false,
+    "name" : "U,U,D,D,L,R,L,R,A,B,Select,Start",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b26fe846499eeedf340f4dc18a1f028165239fe0?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:5hG9YbEysjy7tghjXK4cHN"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 221800,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3QstdNNHN2PKyhtZoz5pMF"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3QstdNNHN2PKyhtZoz5pMF",
+    "id" : "3QstdNNHN2PKyhtZoz5pMF",
+    "is_local" : false,
+    "name" : "Xerces",
+    "preview_url" : "https://p.scdn.co/mp3-preview/4ecbeaab6ae22efdd59f697f2841259a9bfa3820?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:3QstdNNHN2PKyhtZoz5pMF"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 240840,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7cDmg1h2jj6CJZuzYGCR2D"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7cDmg1h2jj6CJZuzYGCR2D",
+    "id" : "7cDmg1h2jj6CJZuzYGCR2D",
+    "is_local" : false,
+    "name" : "Rats!Rats!Rats!",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c228ade03a6d7e56a2399ba37d45bf596e82d389?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:7cDmg1h2jj6CJZuzYGCR2D"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 234453,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0E2ka3mae40raMaTaxq5Ym"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0E2ka3mae40raMaTaxq5Ym",
+    "id" : "0E2ka3mae40raMaTaxq5Ym",
+    "is_local" : false,
+    "name" : "Pink Cellphone",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f622069ddc0993d29f7392cc60ff530ccd955309?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:0E2ka3mae40raMaTaxq5Ym"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 286266,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4wj87yAdPNsQJiLNkKnN9m"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4wj87yAdPNsQJiLNkKnN9m",
+    "id" : "4wj87yAdPNsQJiLNkKnN9m",
+    "is_local" : false,
+    "name" : "Combat",
+    "preview_url" : "https://p.scdn.co/mp3-preview/4b56c70a4ac6b4fa8052ca934a669dc85d30ea46?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:4wj87yAdPNsQJiLNkKnN9m"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 194306,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6PNP9sIuOHYsEyZ11Sc07m"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6PNP9sIuOHYsEyZ11Sc07m",
+    "id" : "6PNP9sIuOHYsEyZ11Sc07m",
+    "is_local" : false,
+    "name" : "Kimdracula",
+    "preview_url" : "https://p.scdn.co/mp3-preview/67ef8c5a2306b53ebc7f0380e36874c4c519a662?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:6PNP9sIuOHYsEyZ11Sc07m"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+      "id" : "6Ghvu1VvMGScGpOUJBAHNH",
+      "name" : "Deftones",
+      "type" : "artist",
+      "uri" : "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+    } ],
+    "available_markets" : [ "BF", "BY", "CA", "IN", "NP", "UZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 225240,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2Ab3dv8bT1aEKUQVqm03ze"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2Ab3dv8bT1aEKUQVqm03ze",
+    "id" : "2Ab3dv8bT1aEKUQVqm03ze",
+    "is_local" : false,
+    "name" : "Rivière",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6cfc64ceb31096025dec2212806e53abe3ffe3c5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:2Ab3dv8bT1aEKUQVqm03ze"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 12
+}

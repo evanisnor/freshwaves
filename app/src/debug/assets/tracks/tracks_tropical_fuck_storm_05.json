@@ -1,0 +1,269 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/7uPrpLvtLEl1R57GLpDvoW/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 303973,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4qr0nxqlBBALZyUBMjqdXW"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4qr0nxqlBBALZyUBMjqdXW",
+    "id" : "4qr0nxqlBBALZyUBMjqdXW",
+    "is_local" : false,
+    "name" : "The Greatest Story Ever Told",
+    "preview_url" : "https://p.scdn.co/mp3-preview/54446add843eb356606e197989c91f020bbf9624?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:4qr0nxqlBBALZyUBMjqdXW"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 317373,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5W2HhtFMuO2PDmEKROXd4v"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5W2HhtFMuO2PDmEKROXd4v",
+    "id" : "5W2HhtFMuO2PDmEKROXd4v",
+    "is_local" : false,
+    "name" : "G.A.F.F.",
+    "preview_url" : "https://p.scdn.co/mp3-preview/84139d5ed0d5be8cd2bdb6af4b187eb5549f5745?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:5W2HhtFMuO2PDmEKROXd4v"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 308893,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1EHjjrAWfCitHRAcfKVrrh"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1EHjjrAWfCitHRAcfKVrrh",
+    "id" : "1EHjjrAWfCitHRAcfKVrrh",
+    "is_local" : false,
+    "name" : "Blue Beam Baby",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3399648bd708ccb8e66414b3e7e754f343e164ea?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:1EHjjrAWfCitHRAcfKVrrh"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 239546,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/51jSDNpLZfkWfhrHJ3W7Dn"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/51jSDNpLZfkWfhrHJ3W7Dn",
+    "id" : "51jSDNpLZfkWfhrHJ3W7Dn",
+    "is_local" : false,
+    "name" : "Suburbiopia",
+    "preview_url" : "https://p.scdn.co/mp3-preview/750d22ed3300386c56069c5b33eba58a8865c08d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:51jSDNpLZfkWfhrHJ3W7Dn"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 292760,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1VFJELsBsGggLp6C9s3QAa"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1VFJELsBsGggLp6C9s3QAa",
+    "id" : "1VFJELsBsGggLp6C9s3QAa",
+    "is_local" : false,
+    "name" : "Bumma Sanger",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c87a84c154fd2905095263af050f977196fcd5eb?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:1VFJELsBsGggLp6C9s3QAa"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 432520,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7KWPeN0fGufB6jdgkJNIyz"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7KWPeN0fGufB6jdgkJNIyz",
+    "id" : "7KWPeN0fGufB6jdgkJNIyz",
+    "is_local" : false,
+    "name" : "The Donkey",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3c63963aa157648effd05cdd4ce5f8e8d26e72f4?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:7KWPeN0fGufB6jdgkJNIyz"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 337786,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2SSRQIUofHFVsaIIqDsE5f"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2SSRQIUofHFVsaIIqDsE5f",
+    "id" : "2SSRQIUofHFVsaIIqDsE5f",
+    "is_local" : false,
+    "name" : "Reporting Of A Failed Campaign",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f01362396442c87873f61669d2c5091dd2dfa116?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:2SSRQIUofHFVsaIIqDsE5f"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 292720,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0Gnl2PhUYWF0umoxpH1JqL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0Gnl2PhUYWF0umoxpH1JqL",
+    "id" : "0Gnl2PhUYWF0umoxpH1JqL",
+    "is_local" : false,
+    "name" : "New Romeo Agent",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3046d930a88d5f8589d872f36d9df443d223329c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:0Gnl2PhUYWF0umoxpH1JqL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 365480,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5wDVFK9hWAE8oTb2mQqxtK"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5wDVFK9hWAE8oTb2mQqxtK",
+    "id" : "5wDVFK9hWAE8oTb2mQqxtK",
+    "is_local" : false,
+    "name" : "Legal Ghost",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1c03060370a7ed9983507aaf10a85c2852326a89?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:5wDVFK9hWAE8oTb2mQqxtK"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0mL6LBSQ4bHe6hWq90KzHL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0mL6LBSQ4bHe6hWq90KzHL",
+      "id" : "0mL6LBSQ4bHe6hWq90KzHL",
+      "name" : "Tropical Fuck Storm",
+      "type" : "artist",
+      "uri" : "spotify:artist:0mL6LBSQ4bHe6hWq90KzHL"
+    } ],
+    "available_markets" : [ "AD", "AE", "AG", "AL", "AM", "AO", "AR", "AT", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KW", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "OM", "PA", "PE", "PG", "PH", "PK", "PL", "PS", "PT", "PW", "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 145426,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0W67Fhg1FUhho6Rf16uQkh"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0W67Fhg1FUhho6Rf16uQkh",
+    "id" : "0W67Fhg1FUhho6Rf16uQkh",
+    "is_local" : false,
+    "name" : "The Confinement Of The Quarks",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dc8e2a0d1e482c9c669fa1ec24920c0e1bb5e4fa?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:0W67Fhg1FUhho6Rf16uQkh"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 10
+}

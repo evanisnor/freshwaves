@@ -1,0 +1,472 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/2nkto6YNI4rUYTLqEwWJ3o/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7pbDxGE6nQSZVfiFdq9lOL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/7pbDxGE6nQSZVfiFdq9lOL",
+      "id" : "7pbDxGE6nQSZVfiFdq9lOL",
+      "name" : "Rex Orange County",
+      "type" : "artist",
+      "uri" : "spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 194080,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/33i3xxHB4YSYGYbtJrwwO8"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/33i3xxHB4YSYGYbtJrwwO8",
+    "id" : "33i3xxHB4YSYGYbtJrwwO8",
+    "is_local" : false,
+    "name" : "Foreword (feat. Rex Orange County)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/1f4b5e8c8fd2f0afa00311695a2f567e2c178546?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:33i3xxHB4YSYGYbtJrwwO8"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
+      "id" : "2h93pZq0e7k5yf4dywlkpM",
+      "name" : "Frank Ocean",
+      "type" : "artist",
+      "uri" : "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 194933,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6KuXb26rHuRy3ZDse1VRmx"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6KuXb26rHuRy3ZDse1VRmx",
+    "id" : "6KuXb26rHuRy3ZDse1VRmx",
+    "is_local" : false,
+    "name" : "Where This Flower Blooms (feat. Frank Ocean)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/bb4bc51e1bd0b4cb806a108f6d68c8e42ac5a659?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:6KuXb26rHuRy3ZDse1VRmx"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 36160,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4KgTrzmfiWNcVneh2Dd1Ou"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4KgTrzmfiWNcVneh2Dd1Ou",
+    "id" : "4KgTrzmfiWNcVneh2Dd1Ou",
+    "is_local" : false,
+    "name" : "Sometimes...",
+    "preview_url" : "https://p.scdn.co/mp3-preview/cdb5d46b2a13d2b20f4a3d11217268f7aeb651b0?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:4KgTrzmfiWNcVneh2Dd1Ou"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1U1el3k54VvEUzo3ybLPlM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1U1el3k54VvEUzo3ybLPlM",
+      "id" : "1U1el3k54VvEUzo3ybLPlM",
+      "name" : "Kali Uchis",
+      "type" : "artist",
+      "uri" : "spotify:artist:1U1el3k54VvEUzo3ybLPlM"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 180386,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7KA4W4McWYRpgf0fWsJZWB",
+    "id" : "7KA4W4McWYRpgf0fWsJZWB",
+    "is_local" : false,
+    "name" : "See You Again (feat. Kali Uchis)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/e9e8d9fce04ab59c61ed9708d9bee03910d5e205?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:7KA4W4McWYRpgf0fWsJZWB"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca"
+      },
+      "href" : "https://api.spotify.com/v1/artists/13ubrt8QOOCPljQ2FL1Kca",
+      "id" : "13ubrt8QOOCPljQ2FL1Kca",
+      "name" : "A$AP Rocky",
+      "type" : "artist",
+      "uri" : "spotify:artist:13ubrt8QOOCPljQ2FL1Kca"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 205093,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/21yRtB6B8EMounImAfHRCP"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/21yRtB6B8EMounImAfHRCP",
+    "id" : "21yRtB6B8EMounImAfHRCP",
+    "is_local" : false,
+    "name" : "Who Dat Boy (feat. A$AP Rocky)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b150fc166941abb97b0c12d622ddbdcd54b00d11?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:21yRtB6B8EMounImAfHRCP"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0xOeVMOz2fVg5BJY3N6akT"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0xOeVMOz2fVg5BJY3N6akT",
+      "id" : "0xOeVMOz2fVg5BJY3N6akT",
+      "name" : "Jaden",
+      "type" : "artist",
+      "uri" : "spotify:artist:0xOeVMOz2fVg5BJY3N6akT"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 237000,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5SxlUF7J8tyFIEF22EomeP"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5SxlUF7J8tyFIEF22EomeP",
+    "id" : "5SxlUF7J8tyFIEF22EomeP",
+    "is_local" : false,
+    "name" : "Pothole (feat. Jaden Smith)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/add27c46555b937ce7139239e3e1f173be0db030?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:5SxlUF7J8tyFIEF22EomeP"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5T0MSzX9RC5NA6gAI6irSn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5T0MSzX9RC5NA6gAI6irSn",
+      "id" : "5T0MSzX9RC5NA6gAI6irSn",
+      "name" : "Estelle",
+      "type" : "artist",
+      "uri" : "spotify:artist:5T0MSzX9RC5NA6gAI6irSn"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 223946,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6ACiYjq5Q7e6BlhZEHz7cd"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6ACiYjq5Q7e6BlhZEHz7cd",
+    "id" : "6ACiYjq5Q7e6BlhZEHz7cd",
+    "is_local" : false,
+    "name" : "Garden Shed (feat. Estelle)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/f5a01310988bf8d24e9c398621d5a9f3a8586e73?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:6ACiYjq5Q7e6BlhZEHz7cd"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/7pbDxGE6nQSZVfiFdq9lOL"
+      },
+      "href" : "https://api.spotify.com/v1/artists/7pbDxGE6nQSZVfiFdq9lOL",
+      "id" : "7pbDxGE6nQSZVfiFdq9lOL",
+      "name" : "Rex Orange County",
+      "type" : "artist",
+      "uri" : "spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1mSJCvDX0W7Dn7S9C6vmvI"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1mSJCvDX0W7Dn7S9C6vmvI",
+      "id" : "1mSJCvDX0W7Dn7S9C6vmvI",
+      "name" : "Anna of the North",
+      "type" : "artist",
+      "uri" : "spotify:artist:1mSJCvDX0W7Dn7S9C6vmvI"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 320720,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5WNYg3usc6H8N3MBEp4zVk"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5WNYg3usc6H8N3MBEp4zVk",
+    "id" : "5WNYg3usc6H8N3MBEp4zVk",
+    "is_local" : false,
+    "name" : "Boredom (feat. Rex Orange County & Anna of the North)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/ee5750bdd065b2bab155601ca00994bcfeee1537?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:5WNYg3usc6H8N3MBEp4zVk"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 206266,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/430qNtapCS3Ue1yoSql1oV"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/430qNtapCS3Ue1yoSql1oV",
+    "id" : "430qNtapCS3Ue1yoSql1oV",
+    "is_local" : false,
+    "name" : "I Ain't Got Time!",
+    "preview_url" : "https://p.scdn.co/mp3-preview/91bcf8d0270ffc682bcce8b2c44677db5aa2eb72?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:430qNtapCS3Ue1yoSql1oV"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM"
+      },
+      "href" : "https://api.spotify.com/v1/artists/2h93pZq0e7k5yf4dywlkpM",
+      "id" : "2h93pZq0e7k5yf4dywlkpM",
+      "name" : "Frank Ocean",
+      "type" : "artist",
+      "uri" : "spotify:artist:2h93pZq0e7k5yf4dywlkpM"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/57vWImR43h4CaDao012Ofp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/57vWImR43h4CaDao012Ofp",
+      "id" : "57vWImR43h4CaDao012Ofp",
+      "name" : "Steve Lacy",
+      "type" : "artist",
+      "uri" : "spotify:artist:57vWImR43h4CaDao012Ofp"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 255653,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4bEcoz1OcfMgUbp2ft8ieQ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4bEcoz1OcfMgUbp2ft8ieQ",
+    "id" : "4bEcoz1OcfMgUbp2ft8ieQ",
+    "is_local" : false,
+    "name" : "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/002eb6aa7a732e4c44dc98d2a20f0828995b594a?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:4bEcoz1OcfMgUbp2ft8ieQ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865"
+      },
+      "href" : "https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865",
+      "id" : "55Aa2cqylxrFIXC767Z865",
+      "name" : "Lil Wayne",
+      "type" : "artist",
+      "uri" : "spotify:artist:55Aa2cqylxrFIXC767Z865"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 60000,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/39u2PsqrAZpZ0KPx6CjasV"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/39u2PsqrAZpZ0KPx6CjasV",
+    "id" : "39u2PsqrAZpZ0KPx6CjasV",
+    "is_local" : false,
+    "name" : "Droppin' Seeds (feat. Lil' Wayne)",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b935e2a6d96a9375d876faef784a2c40c8a2b18b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:39u2PsqrAZpZ0KPx6CjasV"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 225346,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4XDpeWqPADoWRKcUY3dC84"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4XDpeWqPADoWRKcUY3dC84",
+    "id" : "4XDpeWqPADoWRKcUY3dC84",
+    "is_local" : false,
+    "name" : "November",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3b479dc80f6de288e03b101996692c8806240a86?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:4XDpeWqPADoWRKcUY3dC84"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 224893,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0qtK3XwbuG153dmwB8iepL"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0qtK3XwbuG153dmwB8iepL",
+    "id" : "0qtK3XwbuG153dmwB8iepL",
+    "is_local" : false,
+    "name" : "Glitter",
+    "preview_url" : "https://p.scdn.co/mp3-preview/bb293cd36ed83b5efe47edcab74c10195cd68975?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:0qtK3XwbuG153dmwB8iepL"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "available_markets" : [ "AD", "AG", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BI", "BJ", "BN", "BO", "BR", "BS", "BT", "BW", "BY", "BZ", "CA", "CH", "CI", "CL", "CM", "CO", "CR", "CV", "CW", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "ES", "FI", "FJ", "FM", "FR", "GA", "GB", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "GY", "HK", "HN", "HR", "HT", "HU", "ID", "IE", "IL", "IN", "IS", "IT", "JM", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KR", "KZ", "LA", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "MA", "MC", "MD", "ME", "MG", "MH", "MK", "ML", "MN", "MO", "MR", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NP", "NR", "NZ", "PA", "PE", "PG", "PH", "PK", "PL", "PT", "PW", "PY", "RO", "RS", "RU", "RW", "SB", "SC", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "SR", "ST", "SV", "SZ", "TD", "TG", "TH", "TL", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "US", "UY", "UZ", "VC", "VN", "VU", "WS", "XK", "ZA", "ZM", "ZW" ],
+    "disc_number" : 1,
+    "duration_ms" : 235400,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3R1Vu4Ws7UitwDxDHTol0P"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3R1Vu4Ws7UitwDxDHTol0P",
+    "id" : "3R1Vu4Ws7UitwDxDHTol0P",
+    "is_local" : false,
+    "name" : "Enjoy Right Now, Today",
+    "preview_url" : "https://p.scdn.co/mp3-preview/84696f56a49a83e5e5f1da71ef219fc650e311a1?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 14,
+    "type" : "track",
+    "uri" : "spotify:track:3R1Vu4Ws7UitwDxDHTol0P"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 14
+}

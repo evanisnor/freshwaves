@@ -19,7 +19,6 @@ class FreshWavesApp : Application(), Configuration.Provider {
     override fun onCreate() {
         super.onCreate()
         updaterBootstrapper.register(this)
-//        updaterBootstrapper.updateNow(this)
     }
 
     override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()

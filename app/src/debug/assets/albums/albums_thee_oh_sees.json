@@ -1,0 +1,776 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items" : [ {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6tgTLVfeLl4v8u5BOzNqJG"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6tgTLVfeLl4v8u5BOzNqJG",
+    "id" : "6tgTLVfeLl4v8u5BOzNqJG",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2731eee930936e889efdd2fed74",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e021eee930936e889efdd2fed74",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048511eee930936e889efdd2fed74",
+      "width" : 64
+    } ],
+    "name" : "Levitation Sessions Vol. II (Live)",
+    "release_date" : "2021-04-23",
+    "release_date_precision" : "day",
+    "total_tracks" : 18,
+    "type" : "album",
+    "uri" : "spotify:album:6tgTLVfeLl4v8u5BOzNqJG"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3zSgGIpAGE9yuSvHdzBbJj"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3zSgGIpAGE9yuSvHdzBbJj",
+    "id" : "3zSgGIpAGE9yuSvHdzBbJj",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2734e818c6f1f16dd6da09ea770",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e024e818c6f1f16dd6da09ea770",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048514e818c6f1f16dd6da09ea770",
+      "width" : 64
+    } ],
+    "name" : "Live at Big Sur",
+    "release_date" : "2021-02-19",
+    "release_date_precision" : "day",
+    "total_tracks" : 20,
+    "type" : "album",
+    "uri" : "spotify:album:3zSgGIpAGE9yuSvHdzBbJj"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5xs8A5SBUsZwrQvq4c8be7"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5xs8A5SBUsZwrQvq4c8be7",
+    "id" : "5xs8A5SBUsZwrQvq4c8be7",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2737dc9ab9d529dc8d5e537acb3",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e027dc9ab9d529dc8d5e537acb3",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048517dc9ab9d529dc8d5e537acb3",
+      "width" : 64
+    } ],
+    "name" : "Weirdo Hairdo",
+    "release_date" : "2021-01-08",
+    "release_date_precision" : "day",
+    "total_tracks" : 3,
+    "type" : "album",
+    "uri" : "spotify:album:5xs8A5SBUsZwrQvq4c8be7"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/74cNFrEotN1EgfDVypvLKR"
+    },
+    "href" : "https://api.spotify.com/v1/albums/74cNFrEotN1EgfDVypvLKR",
+    "id" : "74cNFrEotN1EgfDVypvLKR",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2738622245178d52077791a33f1",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e028622245178d52077791a33f1",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048518622245178d52077791a33f1",
+      "width" : 64
+    } ],
+    "name" : "Panther Rotate",
+    "release_date" : "2020-12-11",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:74cNFrEotN1EgfDVypvLKR"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5bw79tNjZS73fZyCvl2irH"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5bw79tNjZS73fZyCvl2irH",
+    "id" : "5bw79tNjZS73fZyCvl2irH",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2733571733fcc3a0f410880cfb9",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e023571733fcc3a0f410880cfb9",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048513571733fcc3a0f410880cfb9",
+      "width" : 64
+    } ],
+    "name" : "Metamorphosed",
+    "release_date" : "2020-10-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 5,
+    "type" : "album",
+    "uri" : "spotify:album:5bw79tNjZS73fZyCvl2irH"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/0Ynh5WKqwbdYqJUpVpfEGS"
+      },
+      "href" : "https://api.spotify.com/v1/artists/0Ynh5WKqwbdYqJUpVpfEGS",
+      "id" : "0Ynh5WKqwbdYqJUpVpfEGS",
+      "name" : "Osees",
+      "type" : "artist",
+      "uri" : "spotify:artist:0Ynh5WKqwbdYqJUpVpfEGS"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/57MuWnA4Sns5ZfWnH03fQr"
+    },
+    "href" : "https://api.spotify.com/v1/albums/57MuWnA4Sns5ZfWnH03fQr",
+    "id" : "57MuWnA4Sns5ZfWnH03fQr",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273fd1ba350eb7d352f53c05931",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02fd1ba350eb7d352f53c05931",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851fd1ba350eb7d352f53c05931",
+      "width" : 64
+    } ],
+    "name" : "Levitation Sessions (Live)",
+    "release_date" : "2020-10-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 15,
+    "type" : "album",
+    "uri" : "spotify:album:57MuWnA4Sns5ZfWnH03fQr"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/16l3FJwjZooUHbU37sdeeI"
+    },
+    "href" : "https://api.spotify.com/v1/albums/16l3FJwjZooUHbU37sdeeI",
+    "id" : "16l3FJwjZooUHbU37sdeeI",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273ac85287fdf557a68fb576774",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02ac85287fdf557a68fb576774",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851ac85287fdf557a68fb576774",
+      "width" : 64
+    } ],
+    "name" : "Protean Threat",
+    "release_date" : "2020-09-18",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:16l3FJwjZooUHbU37sdeeI"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0lwP0YstKd6lGyYkQpVq59"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0lwP0YstKd6lGyYkQpVq59",
+    "id" : "0lwP0YstKd6lGyYkQpVq59",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27351f9d02a408a14c7883cdc5a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0251f9d02a408a14c7883cdc5a",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485151f9d02a408a14c7883cdc5a",
+      "width" : 64
+    } ],
+    "name" : "The 12\" Synth",
+    "release_date" : "2019-12-10",
+    "release_date_precision" : "day",
+    "total_tracks" : 2,
+    "type" : "album",
+    "uri" : "spotify:album:0lwP0YstKd6lGyYkQpVq59"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2asqm6ydqbRKZKbXfGIhrX"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2asqm6ydqbRKZKbXfGIhrX",
+    "id" : "2asqm6ydqbRKZKbXfGIhrX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2734fd6fbe0bd24291b01730e2b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e024fd6fbe0bd24291b01730e2b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048514fd6fbe0bd24291b01730e2b",
+      "width" : 64
+    } ],
+    "name" : "Face Stabber",
+    "release_date" : "2019-08-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 14,
+    "type" : "album",
+    "uri" : "spotify:album:2asqm6ydqbRKZKbXfGIhrX"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2C3Ra3VEttQOdzf4oYFTbn"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2C3Ra3VEttQOdzf4oYFTbn",
+    "id" : "2C3Ra3VEttQOdzf4oYFTbn",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273688b55c8a7c8b4094360d785",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02688b55c8a7c8b4094360d785",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851688b55c8a7c8b4094360d785",
+      "width" : 64
+    } ],
+    "name" : "Smote Reverser",
+    "release_date" : "2018-08-17",
+    "release_date_precision" : "day",
+    "total_tracks" : 11,
+    "type" : "album",
+    "uri" : "spotify:album:2C3Ra3VEttQOdzf4oYFTbn"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6UqkJtjad0HIClK1ndqCsd"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6UqkJtjad0HIClK1ndqCsd",
+    "id" : "6UqkJtjad0HIClK1ndqCsd",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273200ae446d443a6ac8d06b29c",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02200ae446d443a6ac8d06b29c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851200ae446d443a6ac8d06b29c",
+      "width" : 64
+    } ],
+    "name" : "Orc",
+    "release_date" : "2017-08-25",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:6UqkJtjad0HIClK1ndqCsd"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2c49IwWfBsMlrLSsyzPoBf"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2c49IwWfBsMlrLSsyzPoBf",
+    "id" : "2c49IwWfBsMlrLSsyzPoBf",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2735830fec56befee24135c67ea",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e025830fec56befee24135c67ea",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048515830fec56befee24135c67ea",
+      "width" : 64
+    } ],
+    "name" : "A Weird Exits",
+    "release_date" : "2016-08-12",
+    "release_date_precision" : "day",
+    "total_tracks" : 8,
+    "type" : "album",
+    "uri" : "spotify:album:2c49IwWfBsMlrLSsyzPoBf"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5KDMu6ty7UnbdmtrVtyGys"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5KDMu6ty7UnbdmtrVtyGys",
+    "id" : "5KDMu6ty7UnbdmtrVtyGys",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273f31295dc1b69759711844d29",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02f31295dc1b69759711844d29",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851f31295dc1b69759711844d29",
+      "width" : 64
+    } ],
+    "name" : "Live in San Francisco",
+    "release_date" : "2016-07-01",
+    "release_date_precision" : "day",
+    "total_tracks" : 11,
+    "type" : "album",
+    "uri" : "spotify:album:5KDMu6ty7UnbdmtrVtyGys"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/31e4Yq05lmd00H8Iardp17"
+    },
+    "href" : "https://api.spotify.com/v1/albums/31e4Yq05lmd00H8Iardp17",
+    "id" : "31e4Yq05lmd00H8Iardp17",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273c901c8b6c819d24b6089fd53",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02c901c8b6c819d24b6089fd53",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851c901c8b6c819d24b6089fd53",
+      "width" : 64
+    } ],
+    "name" : "Mutilator Defeated at Last",
+    "release_date" : "2015-05-26",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:31e4Yq05lmd00H8Iardp17"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0RLG8IUVfvk62YwBd5XdXc"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0RLG8IUVfvk62YwBd5XdXc",
+    "id" : "0RLG8IUVfvk62YwBd5XdXc",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2737d6941d7f615781a48cb1991",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e027d6941d7f615781a48cb1991",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048517d6941d7f615781a48cb1991",
+      "width" : 64
+    } ],
+    "name" : "Drop",
+    "release_date" : "2014-04-15",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:0RLG8IUVfvk62YwBd5XdXc"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6UpdRU3P0AAMA6MVCzsW3c"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6UpdRU3P0AAMA6MVCzsW3c",
+    "id" : "6UpdRU3P0AAMA6MVCzsW3c",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2738d7690f3377f61bfff8e0c03",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e028d7690f3377f61bfff8e0c03",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048518d7690f3377f61bfff8e0c03",
+      "width" : 64
+    } ],
+    "name" : "Floating Coffin",
+    "release_date" : "2013-04-16",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:6UpdRU3P0AAMA6MVCzsW3c"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4Mb4d8OrougDMQalZ1c90i"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4Mb4d8OrougDMQalZ1c90i",
+    "id" : "4Mb4d8OrougDMQalZ1c90i",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273422b5b87cba9f52b0620bf37",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02422b5b87cba9f52b0620bf37",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851422b5b87cba9f52b0620bf37",
+      "width" : 64
+    } ],
+    "name" : "Putrifiers II",
+    "release_date" : "2012-09-18",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:4Mb4d8OrougDMQalZ1c90i"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/7JC1vAUtlOwe8AJ3hLmr91"
+    },
+    "href" : "https://api.spotify.com/v1/albums/7JC1vAUtlOwe8AJ3hLmr91",
+    "id" : "7JC1vAUtlOwe8AJ3hLmr91",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2735030ed1aa0fc438ff3f9c67b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e025030ed1aa0fc438ff3f9c67b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048515030ed1aa0fc438ff3f9c67b",
+      "width" : 64
+    } ],
+    "name" : "Carrion Crawler / The Dream",
+    "release_date" : "2011-11-08",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:7JC1vAUtlOwe8AJ3hLmr91"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6uH6dFTdvfv8mDl5TWw21s"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6uH6dFTdvfv8mDl5TWw21s",
+    "id" : "6uH6dFTdvfv8mDl5TWw21s",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2738806d4d967f7cf0c3a2089bf",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e028806d4d967f7cf0c3a2089bf",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048518806d4d967f7cf0c3a2089bf",
+      "width" : 64
+    } ],
+    "name" : "Castlemania",
+    "release_date" : "2011-05-17",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:6uH6dFTdvfv8mDl5TWw21s"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id" : "3qYfqdVwX0fil71onLpLkh",
+      "name" : "Thee Oh Sees",
+      "type" : "artist",
+      "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/40EdRXXKeIWVpWkJ2MxeH5"
+    },
+    "href" : "https://api.spotify.com/v1/albums/40EdRXXKeIWVpWkJ2MxeH5",
+    "id" : "40EdRXXKeIWVpWkJ2MxeH5",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273bc7175e433f5143b988aea4d",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02bc7175e433f5143b988aea4d",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851bc7175e433f5143b988aea4d",
+      "width" : 64
+    } ],
+    "name" : "Warm Slime",
+    "release_date" : "2010-05-11",
+    "release_date_precision" : "day",
+    "total_tracks" : 7,
+    "type" : "album",
+    "uri" : "spotify:album:40EdRXXKeIWVpWkJ2MxeH5"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh/albums?offset=20&limit=20&include_groups=album&market=CA",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 27
+}

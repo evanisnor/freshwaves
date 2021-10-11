@@ -1,0 +1,243 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/3YyxCtvjoiTHbr9jbpzjS1/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 256839,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3kaN2ACtX6GM0Ie9veFnJf"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3kaN2ACtX6GM0Ie9veFnJf",
+    "id" : "3kaN2ACtX6GM0Ie9veFnJf",
+    "is_local" : false,
+    "name" : "FFunny FFriends",
+    "preview_url" : "https://p.scdn.co/mp3-preview/44273362208e4610c20fbb58c56873ff09e93a27?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:3kaN2ACtX6GM0Ie9veFnJf"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 285333,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5VuLx0MsBPoRHJCuS8mEV3"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5VuLx0MsBPoRHJCuS8mEV3",
+    "id" : "5VuLx0MsBPoRHJCuS8mEV3",
+    "is_local" : false,
+    "name" : "Bicycle",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6d09fdecdb4c546b9e36a00429c4351f74b13308?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:5VuLx0MsBPoRHJCuS8mEV3"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 250066,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0ypC8D5xHMnvKtJwHvSRS7"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0ypC8D5xHMnvKtJwHvSRS7",
+    "id" : "0ypC8D5xHMnvKtJwHvSRS7",
+    "is_local" : false,
+    "name" : "Thought Ballune",
+    "preview_url" : "https://p.scdn.co/mp3-preview/3afc7bbd725fe37bf90219e38722896746124dc7?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:0ypC8D5xHMnvKtJwHvSRS7"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 203653,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2sJtH1eiYV96OREHnCiZ7Q"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2sJtH1eiYV96OREHnCiZ7Q",
+    "id" : "2sJtH1eiYV96OREHnCiZ7Q",
+    "is_local" : false,
+    "name" : "Jello and Juggernauts",
+    "preview_url" : "https://p.scdn.co/mp3-preview/dc215f55df550edde04aa1a6d5dd9c2626ddb7d1?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:2sJtH1eiYV96OREHnCiZ7Q"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 207760,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5At5Wui7VlvxrZgWFL34Oh"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5At5Wui7VlvxrZgWFL34Oh",
+    "id" : "5At5Wui7VlvxrZgWFL34Oh",
+    "is_local" : false,
+    "name" : "How Can You Luv Me",
+    "preview_url" : "https://p.scdn.co/mp3-preview/e9157cb76f64b32d4a084628c4c66323e3e1525d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:5At5Wui7VlvxrZgWFL34Oh"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 134840,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3ahuRA09EFQzqw5P1HIiMb"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3ahuRA09EFQzqw5P1HIiMb",
+    "id" : "3ahuRA09EFQzqw5P1HIiMb",
+    "is_local" : false,
+    "name" : "Nerve Damage!",
+    "preview_url" : "https://p.scdn.co/mp3-preview/0fc7ba0cb26f99ddede069671ff8472db90f2126?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:3ahuRA09EFQzqw5P1HIiMb"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 180906,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6qVxaRUzqMt3JfCYmsCKV5"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6qVxaRUzqMt3JfCYmsCKV5",
+    "id" : "6qVxaRUzqMt3JfCYmsCKV5",
+    "is_local" : false,
+    "name" : "Little Blu House",
+    "preview_url" : "https://p.scdn.co/mp3-preview/8c437ff06e5e2e70101e1fd01c94dfa3658dda51?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:6qVxaRUzqMt3JfCYmsCKV5"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 144360,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6A4gJJjS0GOSCc0kGxtOMw"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6A4gJJjS0GOSCc0kGxtOMw",
+    "id" : "6A4gJJjS0GOSCc0kGxtOMw",
+    "is_local" : false,
+    "name" : "Strangers Are Strange",
+    "preview_url" : "https://p.scdn.co/mp3-preview/26ef29e2a6a7e143eae97dd77790370d45dd5281?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:6A4gJJjS0GOSCc0kGxtOMw"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+      },
+      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
+      "name" : "Unknown Mortal Orchestra",
+      "type" : "artist",
+      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 144760,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0Z7APvaqc0BKaMMS2tNtxe"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0Z7APvaqc0BKaMMS2tNtxe",
+    "id" : "0Z7APvaqc0BKaMMS2tNtxe",
+    "is_local" : false,
+    "name" : "Boy Witch",
+    "preview_url" : "https://p.scdn.co/mp3-preview/69a8d7e397f2ff4371cc2a3570e209943cea2ac6?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:0Z7APvaqc0BKaMMS2tNtxe"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 9
+}

@@ -1,0 +1,347 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/6jK79OO4fLY3UzBBwIJXym/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 261332,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4u6YfdK7G22gX426m3qgBH"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4u6YfdK7G22gX426m3qgBH",
+    "id" : "4u6YfdK7G22gX426m3qgBH",
+    "is_local" : false,
+    "name" : "Robot Stop - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/a1251024d7fb15a84a17d45703bd42c598ed5655?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:4u6YfdK7G22gX426m3qgBH"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 220760,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4TpKQgFh85NOqzVSYuMjg0"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4TpKQgFh85NOqzVSYuMjg0",
+    "id" : "4TpKQgFh85NOqzVSYuMjg0",
+    "is_local" : false,
+    "name" : "Hot Water - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b1f85f3b0a7c68e06fffb60e1bba974e3e7a6569?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:4TpKQgFh85NOqzVSYuMjg0"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 311133,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7qmRhtydvnnA0sWV5bjy0e"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7qmRhtydvnnA0sWV5bjy0e",
+    "id" : "7qmRhtydvnnA0sWV5bjy0e",
+    "is_local" : false,
+    "name" : "Big Fig Wasp - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/6513667d1bea99be6912c559205b7671bb3490e2?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:7qmRhtydvnnA0sWV5bjy0e"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 241160,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0kCGF0qNk83p6MHW5ISOuH"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0kCGF0qNk83p6MHW5ISOuH",
+    "id" : "0kCGF0qNk83p6MHW5ISOuH",
+    "is_local" : false,
+    "name" : "Gamma Knife - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/574745c32992b6fd18d7158e238c7fb6b8d82715?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:0kCGF0qNk83p6MHW5ISOuH"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 321440,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4up8qoctpM3uq8Y5PpcdBi"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4up8qoctpM3uq8Y5PpcdBi",
+    "id" : "4up8qoctpM3uq8Y5PpcdBi",
+    "is_local" : false,
+    "name" : "People-Vultures - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c2b7269fe771fc119d83139a11bc1122175fd791?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:4up8qoctpM3uq8Y5PpcdBi"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 202666,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4HeB7VLaREGpskdbUK0H8q"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4HeB7VLaREGpskdbUK0H8q",
+    "id" : "4HeB7VLaREGpskdbUK0H8q",
+    "is_local" : false,
+    "name" : "Trapdoor - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/cc19f81fe774c8a21408b9ed85017cee24821207?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:4HeB7VLaREGpskdbUK0H8q"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 201573,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4iHd2iqtEvfXQMW73rJhQk"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4iHd2iqtEvfXQMW73rJhQk",
+    "id" : "4iHd2iqtEvfXQMW73rJhQk",
+    "is_local" : false,
+    "name" : "I'm In Your Mind - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/be26b3cf87d982742d0bfbc02dd2f77b04df7057?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:4iHd2iqtEvfXQMW73rJhQk"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 202626,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4ZzuSXRnJPZ1RdBLCGntwQ"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4ZzuSXRnJPZ1RdBLCGntwQ",
+    "id" : "4ZzuSXRnJPZ1RdBLCGntwQ",
+    "is_local" : false,
+    "name" : "I'm Not In Your Mind - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/af28e6b63f191d46e2f399af4041de0b9e0616f8?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:4ZzuSXRnJPZ1RdBLCGntwQ"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 177293,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7mG4TgdqHfixXJOC0XOk6p"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7mG4TgdqHfixXJOC0XOk6p",
+    "id" : "7mG4TgdqHfixXJOC0XOk6p",
+    "is_local" : false,
+    "name" : "Cellophane - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/309706ee973c69e42215f7c0996a8d96b3ba960c?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:7mG4TgdqHfixXJOC0XOk6p"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 178533,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0v0hMkaXK8brFgwGwhGqKp"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0v0hMkaXK8brFgwGwhGqKp",
+    "id" : "0v0hMkaXK8brFgwGwhGqKp",
+    "is_local" : false,
+    "name" : "I'm In Your Mind Fuzz - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b0b839c95064372ff0bb524e17f8955d7cfa77a8?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:0v0hMkaXK8brFgwGwhGqKp"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 657773,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6m08YCKJGe9FULAP8NSOAz"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6m08YCKJGe9FULAP8NSOAz",
+    "id" : "6m08YCKJGe9FULAP8NSOAz",
+    "is_local" : false,
+    "name" : "The River - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/040ccddd1cba28fe26aa5472f4ed717e8b366e67?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 11,
+    "type" : "track",
+    "uri" : "spotify:track:6m08YCKJGe9FULAP8NSOAz"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 492346,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/2vGslGmjBz8NIarnOsNr4U"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/2vGslGmjBz8NIarnOsNr4U",
+    "id" : "2vGslGmjBz8NIarnOsNr4U",
+    "is_local" : false,
+    "name" : "Evil Death Roll - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/08415a3d6957d3b64938ae894634a4cf42b6e971?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 12,
+    "type" : "track",
+    "uri" : "spotify:track:2vGslGmjBz8NIarnOsNr4U"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "US" ],
+    "disc_number" : 1,
+    "duration_ms" : 1350626,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4b1e1N4Am6If5Ty18DLO67"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4b1e1N4Am6If5Ty18DLO67",
+    "id" : "4b1e1N4Am6If5Ty18DLO67",
+    "is_local" : false,
+    "name" : "Head On/Pill - Live In San Francisco / 2016",
+    "preview_url" : "https://p.scdn.co/mp3-preview/33179bfae8e32aec6b218089bcfd5a02d21adab5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 13,
+    "type" : "track",
+    "uri" : "spotify:track:4b1e1N4Am6If5Ty18DLO67"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 13
+}

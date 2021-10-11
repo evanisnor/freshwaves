@@ -1,0 +1,785 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items" : [ {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2UuUDTEWHRyGgIuzQReANA"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2UuUDTEWHRyGgIuzQReANA",
+    "id" : "2UuUDTEWHRyGgIuzQReANA",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2732dbc524060a068c542e9e746",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e022dbc524060a068c542e9e746",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048512dbc524060a068c542e9e746",
+      "width" : 64
+    } ],
+    "name" : "Harmonizer",
+    "release_date" : "2021-08-03",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:2UuUDTEWHRyGgIuzQReANA"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6B6Zaw2G4akhtCzvDVqKzX"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6B6Zaw2G4akhtCzvDVqKzX",
+      "id" : "6B6Zaw2G4akhtCzvDVqKzX",
+      "name" : "Wasted Shirt",
+      "type" : "artist",
+      "uri" : "spotify:artist:6B6Zaw2G4akhtCzvDVqKzX"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4C9qhOkWrX1N9vYvzrD5fe"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4C9qhOkWrX1N9vYvzrD5fe",
+      "id" : "4C9qhOkWrX1N9vYvzrD5fe",
+      "name" : "Black Pus",
+      "type" : "artist",
+      "uri" : "spotify:artist:4C9qhOkWrX1N9vYvzrD5fe"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3L0HzI7gftRMShZmXckNR6"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3L0HzI7gftRMShZmXckNR6",
+    "id" : "3L0HzI7gftRMShZmXckNR6",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2731bf2fcfee6ee323933f98c7b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e021bf2fcfee6ee323933f98c7b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048511bf2fcfee6ee323933f98c7b",
+      "width" : 64
+    } ],
+    "name" : "Fungus II",
+    "release_date" : "2020-02-28",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:3L0HzI7gftRMShZmXckNR6"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6yP38ocbRgVS6wFIhYPFcP"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6yP38ocbRgVS6wFIhYPFcP",
+    "id" : "6yP38ocbRgVS6wFIhYPFcP",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273f9396c8b6d513f4ec8c3c9b4",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02f9396c8b6d513f4ec8c3c9b4",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851f9396c8b6d513f4ec8c3c9b4",
+      "width" : 64
+    } ],
+    "name" : "Pig Man Lives: Volume 1",
+    "release_date" : "2019-11-01",
+    "release_date_precision" : "day",
+    "total_tracks" : 47,
+    "type" : "album",
+    "uri" : "spotify:album:6yP38ocbRgVS6wFIhYPFcP"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/68VSkHK4UvupiUB0g6Dbno"
+    },
+    "href" : "https://api.spotify.com/v1/albums/68VSkHK4UvupiUB0g6Dbno",
+    "id" : "68VSkHK4UvupiUB0g6Dbno",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27393ed935f03baf30504d94293",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0293ed935f03baf30504d94293",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485193ed935f03baf30504d94293",
+      "width" : 64
+    } ],
+    "name" : "First Taste",
+    "release_date" : "2019-08-02",
+    "release_date_precision" : "day",
+    "total_tracks" : 12,
+    "type" : "album",
+    "uri" : "spotify:album:68VSkHK4UvupiUB0g6Dbno"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5Wp2w6fVi7u9a2NKOtLOmM"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5Wp2w6fVi7u9a2NKOtLOmM",
+    "id" : "5Wp2w6fVi7u9a2NKOtLOmM",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273838109fd1b4b076e933cdd40",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02838109fd1b4b076e933cdd40",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851838109fd1b4b076e933cdd40",
+      "width" : 64
+    } ],
+    "name" : "First Taste",
+    "release_date" : "2019-08-02",
+    "release_date_precision" : "day",
+    "total_tracks" : 12,
+    "type" : "album",
+    "uri" : "spotify:album:5Wp2w6fVi7u9a2NKOtLOmM"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5Z9mAXNwsDCTYodz0fvBjH"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5Z9mAXNwsDCTYodz0fvBjH",
+    "id" : "5Z9mAXNwsDCTYodz0fvBjH",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2737356290e16e71df487e57173",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e027356290e16e71df487e57173",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048517356290e16e71df487e57173",
+      "width" : 64
+    } ],
+    "name" : "Deforming Lobes",
+    "release_date" : "2019-03-29",
+    "release_date_precision" : "day",
+    "total_tracks" : 8,
+    "type" : "album",
+    "uri" : "spotify:album:5Z9mAXNwsDCTYodz0fvBjH"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3DSA6rDV2HqxmPnjngocEw"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3DSA6rDV2HqxmPnjngocEw",
+    "id" : "3DSA6rDV2HqxmPnjngocEw",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2735725b69371cd71bcdc9e5c96",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e025725b69371cd71bcdc9e5c96",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048515725b69371cd71bcdc9e5c96",
+      "width" : 64
+    } ],
+    "name" : "Fudge Sandwich",
+    "release_date" : "2018-10-26",
+    "release_date_precision" : "day",
+    "total_tracks" : 11,
+    "type" : "album",
+    "uri" : "spotify:album:3DSA6rDV2HqxmPnjngocEw"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5gH9MJvoI7pN9bohESzYaA"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5gH9MJvoI7pN9bohESzYaA",
+      "id" : "5gH9MJvoI7pN9bohESzYaA",
+      "name" : "White Fence",
+      "type" : "artist",
+      "uri" : "spotify:artist:5gH9MJvoI7pN9bohESzYaA"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/39kWGJaqVqvJzoIXaabzQu"
+    },
+    "href" : "https://api.spotify.com/v1/albums/39kWGJaqVqvJzoIXaabzQu",
+    "id" : "39kWGJaqVqvJzoIXaabzQu",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27392168fcaa56550f3f8301816",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0292168fcaa56550f3f8301816",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485192168fcaa56550f3f8301816",
+      "width" : 64
+    } ],
+    "name" : "Joy",
+    "release_date" : "2018-07-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 15,
+    "type" : "album",
+    "uri" : "spotify:album:39kWGJaqVqvJzoIXaabzQu"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5BInay8c4KClHpYL94IBed"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5BInay8c4KClHpYL94IBed",
+    "id" : "5BInay8c4KClHpYL94IBed",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2733f0c6b55d1dbd64cba26bd5a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e023f0c6b55d1dbd64cba26bd5a",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048513f0c6b55d1dbd64cba26bd5a",
+      "width" : 64
+    } ],
+    "name" : "Freedom's Goblin",
+    "release_date" : "2018-01-26",
+    "release_date_precision" : "day",
+    "total_tracks" : 19,
+    "type" : "album",
+    "uri" : "spotify:album:5BInay8c4KClHpYL94IBed"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/1Qnvso5kK0rSkAIdrsg8Kc"
+    },
+    "href" : "https://api.spotify.com/v1/albums/1Qnvso5kK0rSkAIdrsg8Kc",
+    "id" : "1Qnvso5kK0rSkAIdrsg8Kc",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2736e9c6ae1e88905cca74349d1",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e026e9c6ae1e88905cca74349d1",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048516e9c6ae1e88905cca74349d1",
+      "width" : 64
+    } ],
+    "name" : "Ty Segall",
+    "release_date" : "2017-01-27",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:1Qnvso5kK0rSkAIdrsg8Kc"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5117nxIQNXWAERUh4xQ8A3"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5117nxIQNXWAERUh4xQ8A3",
+    "id" : "5117nxIQNXWAERUh4xQ8A3",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273c943ae445a1ae842ed67f8df",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02c943ae445a1ae842ed67f8df",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851c943ae445a1ae842ed67f8df",
+      "width" : 64
+    } ],
+    "name" : "Emotional Mugger",
+    "release_date" : "2016-01-22",
+    "release_date_precision" : "day",
+    "total_tracks" : 11,
+    "type" : "album",
+    "uri" : "spotify:album:5117nxIQNXWAERUh4xQ8A3"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/4l1dguE5eoTrKuyHZKVY40"
+    },
+    "href" : "https://api.spotify.com/v1/albums/4l1dguE5eoTrKuyHZKVY40",
+    "id" : "4l1dguE5eoTrKuyHZKVY40",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2739803d6b5087be8a8422c273f",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e029803d6b5087be8a8422c273f",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048519803d6b5087be8a8422c273f",
+      "width" : 64
+    } ],
+    "name" : "Ty Rex",
+    "release_date" : "2015-11-27",
+    "release_date_precision" : "day",
+    "total_tracks" : 9,
+    "type" : "album",
+    "uri" : "spotify:album:4l1dguE5eoTrKuyHZKVY40"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0ZcmcL9aVDv4qCLcov9dtr"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0ZcmcL9aVDv4qCLcov9dtr",
+    "id" : "0ZcmcL9aVDv4qCLcov9dtr",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27328f101ca3a99da9dab37e12a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0228f101ca3a99da9dab37e12a",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485128f101ca3a99da9dab37e12a",
+      "width" : 64
+    } ],
+    "name" : "Singles 2",
+    "release_date" : "2014-11-18",
+    "release_date_precision" : "day",
+    "total_tracks" : 12,
+    "type" : "album",
+    "uri" : "spotify:album:0ZcmcL9aVDv4qCLcov9dtr"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2pIFOXH6DxLbWcUO19mbXa"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2pIFOXH6DxLbWcUO19mbXa",
+    "id" : "2pIFOXH6DxLbWcUO19mbXa",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273da5e2fc014900836d430ea6b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02da5e2fc014900836d430ea6b",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851da5e2fc014900836d430ea6b",
+      "width" : 64
+    } ],
+    "name" : "Manipulator",
+    "release_date" : "2014-07-22",
+    "release_date_precision" : "day",
+    "total_tracks" : 17,
+    "type" : "album",
+    "uri" : "spotify:album:2pIFOXH6DxLbWcUO19mbXa"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0d1hQ4bIi7RnmffWRB5czk"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0d1hQ4bIi7RnmffWRB5czk",
+    "id" : "0d1hQ4bIi7RnmffWRB5czk",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2737473b819acf85cea29d946c0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e027473b819acf85cea29d946c0",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048517473b819acf85cea29d946c0",
+      "width" : 64
+    } ],
+    "name" : "Sleeper",
+    "release_date" : "2013-08-20",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:0d1hQ4bIi7RnmffWRB5czk"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/08Y3RQQYOLQLfx1fPHOaxQ"
+    },
+    "href" : "https://api.spotify.com/v1/albums/08Y3RQQYOLQLfx1fPHOaxQ",
+    "id" : "08Y3RQQYOLQLfx1fPHOaxQ",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273e5d7f1a5ae236fd9e49f494e",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02e5d7f1a5ae236fd9e49f494e",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851e5d7f1a5ae236fd9e49f494e",
+      "width" : 64
+    } ],
+    "name" : "Twins",
+    "release_date" : "2012-10-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 12,
+    "type" : "album",
+    "uri" : "spotify:album:08Y3RQQYOLQLfx1fPHOaxQ"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    }, {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/5gH9MJvoI7pN9bohESzYaA"
+      },
+      "href" : "https://api.spotify.com/v1/artists/5gH9MJvoI7pN9bohESzYaA",
+      "id" : "5gH9MJvoI7pN9bohESzYaA",
+      "name" : "White Fence",
+      "type" : "artist",
+      "uri" : "spotify:artist:5gH9MJvoI7pN9bohESzYaA"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0m42WBTtUKsrpasciolybQ"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0m42WBTtUKsrpasciolybQ",
+    "id" : "0m42WBTtUKsrpasciolybQ",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273f57365a943d0826d83ba5b13",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02f57365a943d0826d83ba5b13",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851f57365a943d0826d83ba5b13",
+      "width" : 64
+    } ],
+    "name" : "Hair",
+    "release_date" : "2012-04-24",
+    "release_date_precision" : "day",
+    "total_tracks" : 8,
+    "type" : "album",
+    "uri" : "spotify:album:0m42WBTtUKsrpasciolybQ"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/01mhQ5flpgrSLut3KInx0B"
+    },
+    "href" : "https://api.spotify.com/v1/albums/01mhQ5flpgrSLut3KInx0B",
+    "id" : "01mhQ5flpgrSLut3KInx0B",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273f41a9cc378b79998f54dcfce",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02f41a9cc378b79998f54dcfce",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851f41a9cc378b79998f54dcfce",
+      "width" : 64
+    } ],
+    "name" : "Goodbye Bread",
+    "release_date" : "2011-06-21",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:01mhQ5flpgrSLut3KInx0B"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/0X6bpnyBxoB1XTzMRztpMD"
+    },
+    "href" : "https://api.spotify.com/v1/albums/0X6bpnyBxoB1XTzMRztpMD",
+    "id" : "0X6bpnyBxoB1XTzMRztpMD",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2731cae91c5510d71dc185aafc8",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e021cae91c5510d71dc185aafc8",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048511cae91c5510d71dc185aafc8",
+      "width" : 64
+    } ],
+    "name" : "Goodbye Bread",
+    "release_date" : "2011-01-01",
+    "release_date_precision" : "day",
+    "total_tracks" : 10,
+    "type" : "album",
+    "uri" : "spotify:album:0X6bpnyBxoB1XTzMRztpMD"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+      },
+      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+      "id" : "58XGUNsRNu3cVOIOYk5chx",
+      "name" : "Ty Segall",
+      "type" : "artist",
+      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5P0LN9xrnLY1By7mlkKtkx"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5P0LN9xrnLY1By7mlkKtkx",
+    "id" : "5P0LN9xrnLY1By7mlkKtkx",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2731d99b68491ca47084bda0734",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e021d99b68491ca47084bda0734",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048511d99b68491ca47084bda0734",
+      "width" : 64
+    } ],
+    "name" : "Melted",
+    "release_date" : "2010-05-25",
+    "release_date_precision" : "day",
+    "total_tracks" : 11,
+    "type" : "album",
+    "uri" : "spotify:album:5P0LN9xrnLY1By7mlkKtkx"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx/albums?offset=20&limit=20&include_groups=album&market=CA",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 24
+}

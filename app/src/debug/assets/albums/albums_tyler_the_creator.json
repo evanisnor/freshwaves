@@ -1,0 +1,416 @@
+{
+  "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items" : [ {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9"
+    },
+    "href" : "https://api.spotify.com/v1/albums/45ba6QAtNrdv6Ke4MFOKk9",
+    "id" : "45ba6QAtNrdv6Ke4MFOKk9",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273696b4e67423edd64784bfbb4",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02696b4e67423edd64784bfbb4",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851696b4e67423edd64784bfbb4",
+      "width" : 64
+    } ],
+    "name" : "CALL ME IF YOU GET LOST",
+    "release_date" : "2021-06-25",
+    "release_date_precision" : "day",
+    "total_tracks" : 16,
+    "type" : "album",
+    "uri" : "spotify:album:45ba6QAtNrdv6Ke4MFOKk9"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5zi7WsKlIiUXv09tbGLKsE"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5zi7WsKlIiUXv09tbGLKsE",
+    "id" : "5zi7WsKlIiUXv09tbGLKsE",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2737005885df706891a3c182a57",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e027005885df706891a3c182a57",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048517005885df706891a3c182a57",
+      "width" : 64
+    } ],
+    "name" : "IGOR",
+    "release_date" : "2019-05-17",
+    "release_date_precision" : "day",
+    "total_tracks" : 12,
+    "type" : "album",
+    "uri" : "spotify:album:5zi7WsKlIiUXv09tbGLKsE"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/2nkto6YNI4rUYTLqEwWJ3o"
+    },
+    "href" : "https://api.spotify.com/v1/albums/2nkto6YNI4rUYTLqEwWJ3o",
+    "id" : "2nkto6YNI4rUYTLqEwWJ3o",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e028940ac99f49e44f59e6f7fb3",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048518940ac99f49e44f59e6f7fb3",
+      "width" : 64
+    } ],
+    "name" : "Flower Boy",
+    "release_date" : "2017-07-21",
+    "release_date_precision" : "day",
+    "total_tracks" : 14,
+    "type" : "album",
+    "uri" : "spotify:album:2nkto6YNI4rUYTLqEwWJ3o"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/621OhgnZJ7Pz8iUazct1In"
+    },
+    "href" : "https://api.spotify.com/v1/albums/621OhgnZJ7Pz8iUazct1In",
+    "id" : "621OhgnZJ7Pz8iUazct1In",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273e4bf0d3d9e0224a30ca5f665",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02e4bf0d3d9e0224a30ca5f665",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851e4bf0d3d9e0224a30ca5f665",
+      "width" : 64
+    } ],
+    "name" : "Cherry Bomb",
+    "release_date" : "2015-04-13",
+    "release_date_precision" : "day",
+    "total_tracks" : 13,
+    "type" : "album",
+    "uri" : "spotify:album:621OhgnZJ7Pz8iUazct1In"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5V3Chnpno9oTI7JSPXKUf3"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5V3Chnpno9oTI7JSPXKUf3",
+    "id" : "5V3Chnpno9oTI7JSPXKUf3",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27337906edcfbfde42b203097f2",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0237906edcfbfde42b203097f2",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485137906edcfbfde42b203097f2",
+      "width" : 64
+    } ],
+    "name" : "Cherry Bomb + Instrumentals",
+    "release_date" : "2015-04-13",
+    "release_date_precision" : "day",
+    "total_tracks" : 26,
+    "type" : "album",
+    "uri" : "spotify:album:5V3Chnpno9oTI7JSPXKUf3"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/6hSjwUPL9jSBtZPgyFWfjI"
+    },
+    "href" : "https://api.spotify.com/v1/albums/6hSjwUPL9jSBtZPgyFWfjI",
+    "id" : "6hSjwUPL9jSBtZPgyFWfjI",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27334b5ec384aece41bb4e1ec65",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0234b5ec384aece41bb4e1ec65",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485134b5ec384aece41bb4e1ec65",
+      "width" : 64
+    } ],
+    "name" : "Live At Splash!",
+    "release_date" : "2013-09-02",
+    "release_date_precision" : "day",
+    "total_tracks" : 31,
+    "type" : "album",
+    "uri" : "spotify:album:6hSjwUPL9jSBtZPgyFWfjI"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/40QTqOBBxCEIQlLNdSjFQB"
+    },
+    "href" : "https://api.spotify.com/v1/albums/40QTqOBBxCEIQlLNdSjFQB",
+    "id" : "40QTqOBBxCEIQlLNdSjFQB",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2736be6806a01c452f360cab678",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e026be6806a01c452f360cab678",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048516be6806a01c452f360cab678",
+      "width" : 64
+    } ],
+    "name" : "Wolf",
+    "release_date" : "2013-04-01",
+    "release_date_precision" : "day",
+    "total_tracks" : 18,
+    "type" : "album",
+    "uri" : "spotify:album:40QTqOBBxCEIQlLNdSjFQB"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3CxknRPQLbOJRwQrNekNyU"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3CxknRPQLbOJRwQrNekNyU",
+    "id" : "3CxknRPQLbOJRwQrNekNyU",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2735ea9799a88c0760ec03ac6b8",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e025ea9799a88c0760ec03ac6b8",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d000048515ea9799a88c0760ec03ac6b8",
+      "width" : 64
+    } ],
+    "name" : "Goblin",
+    "release_date" : "2011-05-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 18,
+    "type" : "album",
+    "uri" : "spotify:album:3CxknRPQLbOJRwQrNekNyU"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5dbCm8qaCdWnNdVyi3urUO"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5dbCm8qaCdWnNdVyi3urUO",
+    "id" : "5dbCm8qaCdWnNdVyi3urUO",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27328ae9a159d24cb0ab2552712",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e0228ae9a159d24cb0ab2552712",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d0000485128ae9a159d24cb0ab2552712",
+      "width" : 64
+    } ],
+    "name" : "Goblin",
+    "release_date" : "2011-05-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 18,
+    "type" : "album",
+    "uri" : "spotify:album:5dbCm8qaCdWnNdVyi3urUO"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/5nozPsVrPay3O2qGOd1pZg"
+    },
+    "href" : "https://api.spotify.com/v1/albums/5nozPsVrPay3O2qGOd1pZg",
+    "id" : "5nozPsVrPay3O2qGOd1pZg",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273619b3ed81cc266693f170c7c",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02619b3ed81cc266693f170c7c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851619b3ed81cc266693f170c7c",
+      "width" : 64
+    } ],
+    "name" : "Goblin",
+    "release_date" : "2011-05-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 15,
+    "type" : "album",
+    "uri" : "spotify:album:5nozPsVrPay3O2qGOd1pZg"
+  }, {
+    "album_group" : "album",
+    "album_type" : "album",
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF"
+      },
+      "href" : "https://api.spotify.com/v1/artists/4V8LLVI7PbaPR0K2TGSxFF",
+      "id" : "4V8LLVI7PbaPR0K2TGSxFF",
+      "name" : "Tyler, The Creator",
+      "type" : "artist",
+      "uri" : "spotify:artist:4V8LLVI7PbaPR0K2TGSxFF"
+    } ],
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/album/3scNeGKz8kAMDrYG5U971b"
+    },
+    "href" : "https://api.spotify.com/v1/albums/3scNeGKz8kAMDrYG5U971b",
+    "id" : "3scNeGKz8kAMDrYG5U971b",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273d8c1b5fc9a7b58bd3a1c0a7c",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://i.scdn.co/image/ab67616d00001e02d8c1b5fc9a7b58bd3a1c0a7c",
+      "width" : 300
+    }, {
+      "height" : 64,
+      "url" : "https://i.scdn.co/image/ab67616d00004851d8c1b5fc9a7b58bd3a1c0a7c",
+      "width" : 64
+    } ],
+    "name" : "Goblin",
+    "release_date" : "2011-05-09",
+    "release_date_precision" : "day",
+    "total_tracks" : 15,
+    "type" : "album",
+    "uri" : "spotify:album:3scNeGKz8kAMDrYG5U971b"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 11
+}

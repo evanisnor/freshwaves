@@ -69,8 +69,13 @@ dependencies {
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0") {
+        exclude(group = "com.squareup.moshi", module = "moshi")
+    }
     androidTestImplementation("com.squareup.retrofit2:retrofit-mock:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
+    implementation("com.squareup.moshi:moshi:1.12.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
 
     // Room
     val roomVersion = "2.4.0-alpha04"

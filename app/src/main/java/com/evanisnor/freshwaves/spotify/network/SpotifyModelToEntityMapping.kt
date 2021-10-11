@@ -17,7 +17,7 @@ fun PrivateUserObject.mapToUserProfile() = UserProfile(
 )
 
 @JvmName("mapToEntitiesArtistObject")
-fun List<ArtistObject>.mapToEntity() = map(ArtistObject::mapToEntity)
+fun Collection<ArtistObject>.mapToEntity() = map(ArtistObject::mapToEntity)
 fun ArtistObject.mapToEntity() = Artist(
     id = id,
     name = name,
@@ -37,7 +37,13 @@ fun ArtistObject.mapToEntity() = Artist(
 )
 
 @JvmName("mapToEntitiesAlbumObject")
-fun List<AlbumObject>.mapToEntity(artist: Artist) = map { it.mapToEntity(artist) }
+fun Collection<AlbumObject>.mapToEntity() = map {
+    val artist = it.artists.first().mapToEntity()
+    it.mapToEntity(artist)
+}
+
+@JvmName("mapToEntitiesAlbumObject")
+fun Collection<AlbumObject>.mapToEntity(artist: Artist) = map { it.mapToEntity(artist) }
 fun AlbumObject.mapToEntity(artist: Artist): Album {
 
     val albumId = "${artist.name} - ${name.filter { it.isLetterOrDigit() }}"
@@ -78,7 +84,7 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
     )
 }
 
-fun List<TrackObject>.mapToEntities(albumId: Int) = map { it.mapToEntity(albumId) }
+fun Collection<TrackObject>.mapToEntities(albumId: Int) = map { it.mapToEntity(albumId) }
 fun TrackObject.mapToEntity(albumId: Int): Track {
 
     val trackId = "$albumId - $discNumber - $trackNumber - ${name.filter { it.isLetterOrDigit() }}"

@@ -17,7 +17,7 @@ fun <T> Call<T>.enqueue(
                 call,
                 Exception(
                     "Received error code ${response.code()}\n${
-                        call.request().url()
+                        call.request().url
                     }\n${response.errorBody()!!.string()}"
                 )
             )

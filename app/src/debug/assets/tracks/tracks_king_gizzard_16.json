@@ -1,0 +1,269 @@
+{
+  "href" : "https://api.spotify.com/v1/albums/0jbjrhqnk0oyrykVCixPvf/tracks?offset=0&limit=20",
+  "items" : [ {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 96548,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3PioomYEJkIhhuy0oMWdEf"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3PioomYEJkIhhuy0oMWdEf",
+    "id" : "3PioomYEJkIhhuy0oMWdEf",
+    "is_local" : false,
+    "name" : "K.G.L.W.",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b7b95d75b6db8eb9b30ed10b340f210591e97599?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 1,
+    "type" : "track",
+    "uri" : "spotify:track:3PioomYEJkIhhuy0oMWdEf"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 209803,
+    "explicit" : true,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/7wt1eM1FAOPYG6PpU6q2hu"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/7wt1eM1FAOPYG6PpU6q2hu",
+    "id" : "7wt1eM1FAOPYG6PpU6q2hu",
+    "is_local" : false,
+    "name" : "Automation",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b765c24d72c88745c09692e5bbd777e9e9b43cd0?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 2,
+    "type" : "track",
+    "uri" : "spotify:track:7wt1eM1FAOPYG6PpU6q2hu"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 258674,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/1LRbdpC30jWyEWOWuJ8kkP"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/1LRbdpC30jWyEWOWuJ8kkP",
+    "id" : "1LRbdpC30jWyEWOWuJ8kkP",
+    "is_local" : false,
+    "name" : "Minimum Brain Size",
+    "preview_url" : "https://p.scdn.co/mp3-preview/2c1acb7b42e0f3be7f4e959b81ceab072fa9a0e5?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 3,
+    "type" : "track",
+    "uri" : "spotify:track:1LRbdpC30jWyEWOWuJ8kkP"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 341662,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/3pOaeB9khpiISrGoYBkJMb"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/3pOaeB9khpiISrGoYBkJMb",
+    "id" : "3pOaeB9khpiISrGoYBkJMb",
+    "is_local" : false,
+    "name" : "Straws In The Wind",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b46ed8edaf99f54ce9bbf04c30da94960c362230?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 4,
+    "type" : "track",
+    "uri" : "spotify:track:3pOaeB9khpiISrGoYBkJMb"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 232537,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/4dfMshUsFnMTrkVAwUpdqT"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/4dfMshUsFnMTrkVAwUpdqT",
+    "id" : "4dfMshUsFnMTrkVAwUpdqT",
+    "is_local" : false,
+    "name" : "Some Of Us",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c5880e719d8e89b866baa808ad1a21a417418bbd?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 5,
+    "type" : "track",
+    "uri" : "spotify:track:4dfMshUsFnMTrkVAwUpdqT"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 238199,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/67UYb8D96goDjJiPR2elIH"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/67UYb8D96goDjJiPR2elIH",
+    "id" : "67UYb8D96goDjJiPR2elIH",
+    "is_local" : false,
+    "name" : "Ontology",
+    "preview_url" : "https://p.scdn.co/mp3-preview/0a12cc518e6da49a599929d0cd4a9c8760c49d22?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 6,
+    "type" : "track",
+    "uri" : "spotify:track:67UYb8D96goDjJiPR2elIH"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 252630,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0rROxBvXRNCR7Gqjd3Duns"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0rROxBvXRNCR7Gqjd3Duns",
+    "id" : "0rROxBvXRNCR7Gqjd3Duns",
+    "is_local" : false,
+    "name" : "Intrasport",
+    "preview_url" : "https://p.scdn.co/mp3-preview/b7b08b3164d566f5800bc8cb991a9a01eea5b809?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 7,
+    "type" : "track",
+    "uri" : "spotify:track:0rROxBvXRNCR7Gqjd3Duns"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 297505,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/0MMCHSyp5h7ENvHcSiVDrE"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/0MMCHSyp5h7ENvHcSiVDrE",
+    "id" : "0MMCHSyp5h7ENvHcSiVDrE",
+    "is_local" : false,
+    "name" : "Oddlife",
+    "preview_url" : "https://p.scdn.co/mp3-preview/e65265da9e6d95e9ea95d6ee1da63def57303fa1?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 8,
+    "type" : "track",
+    "uri" : "spotify:track:0MMCHSyp5h7ENvHcSiVDrE"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 273854,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/5bClNfZ93mUHKVR6geHfho"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/5bClNfZ93mUHKVR6geHfho",
+    "id" : "5bClNfZ93mUHKVR6geHfho",
+    "is_local" : false,
+    "name" : "Honey",
+    "preview_url" : "https://p.scdn.co/mp3-preview/39e6a19fac09f61ea43934f6eb77224d8549901d?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 9,
+    "type" : "track",
+    "uri" : "spotify:track:5bClNfZ93mUHKVR6geHfho"
+  }, {
+    "artists" : [ {
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id" : "6XYvaoDGE0VmRt83Jss9Sn",
+      "name" : "King Gizzard & The Lizard Wizard",
+      "type" : "artist",
+      "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
+    } ],
+    "available_markets" : [ "AU", "NZ" ],
+    "disc_number" : 1,
+    "duration_ms" : 307969,
+    "explicit" : false,
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/track/6Yh9i1vuuL0ryTp8G3gfbB"
+    },
+    "href" : "https://api.spotify.com/v1/tracks/6Yh9i1vuuL0ryTp8G3gfbB",
+    "id" : "6Yh9i1vuuL0ryTp8G3gfbB",
+    "is_local" : false,
+    "name" : "The Hungry Wolf Of Fate",
+    "preview_url" : "https://p.scdn.co/mp3-preview/c194d53fd6ddce84a9ccd64b4b5a7d510058e59b?cid=3db837a49d3c4df0a277b0adaa748d87",
+    "track_number" : 10,
+    "type" : "track",
+    "uri" : "spotify:track:6Yh9i1vuuL0ryTp8G3gfbB"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 10
+}

@@ -11,6 +11,7 @@ import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
+import java.util.concurrent.CountDownLatch
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -21,6 +22,9 @@ class UpdateWorker @AssistedInject constructor(
     private val spotifyAlbumRepository: SpotifyAlbumRepository,
     private val updaterBootstrapper: UpdaterBootstrapper
 ) : Worker(applicationContext, workerParameters) {
+
+    private val latch = CountDownLatch(1)
+    private var result = Result.success()
 
     override fun doWork(): Result {
         updateUserProfile {
@@ -34,12 +38,14 @@ class UpdateWorker @AssistedInject constructor(
                             Log.i("UpdateWorker", "Fetched tracks for album ${album.name}")
                         }
                     }
+                    latch.countDown()
                 }
             }
         }
 
+        latch.await()
         updaterBootstrapper.scheduleNextUpdate(applicationContext)
-        return Result.success()
+        return result
     }
 
     private fun updateUserProfile(onFinished: () -> Unit) {
@@ -47,6 +53,8 @@ class UpdateWorker @AssistedInject constructor(
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update user profile: $it")
+                result = Result.failure()
+                latch.countDown()
             }
         )
     }
@@ -56,6 +64,8 @@ class UpdateWorker @AssistedInject constructor(
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update artists: $it")
+                result = Result.failure()
+                latch.countDown()
             }
         )
     }
@@ -67,6 +77,8 @@ class UpdateWorker @AssistedInject constructor(
                 onFinished = onFinished,
                 onError = {
                     Log.e("UpdateWorker", "Failed to update albums for $artist: $it")
+                    result = Result.failure()
+                    latch.countDown()
                 }
             )
         }
@@ -78,6 +90,8 @@ class UpdateWorker @AssistedInject constructor(
             onFinished = onFinished,
             onError = {
                 Log.e("UpdateWorker", "Failed to update tracks for for $album: $it")
+                result = Result.failure()
+                latch.countDown()
             }
         )
     }

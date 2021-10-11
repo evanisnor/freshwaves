@@ -56,19 +56,19 @@ class UpdaterTest {
         (spotifyAPIService as FakeSpotifyAPIService).apply {
 
             with(TestDataLoader(context)) {
-                loadData<PrivateUserObject>(TestData.User) {
+                loadAllByType<PrivateUserObject>(TestData.User) {
                     user = it
                 }
 
-                loadData<PagingObject<ArtistObject>>(TestData.Artists) {
+                loadAllByType<PagingObject<ArtistObject>>(TestData.Artists) {
                     queueArtists(it)
                 }
 
-                loadData<PagingObject<AlbumObject>>(TestData.Albums) {
+                loadAllByType<PagingObject<AlbumObject>>(TestData.Albums) {
                     queueAlbums(it)
                 }
 
-                loadData<PagingObject<TrackObject>>(TestData.Tracks) {
+                loadAllByType<PagingObject<TrackObject>>(TestData.Tracks) {
                     queueTracks(it)
                 }
             }

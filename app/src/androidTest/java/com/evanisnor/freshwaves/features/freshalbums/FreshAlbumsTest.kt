@@ -10,13 +10,8 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
-import com.evanisnor.freshwaves.spotify.network.mapToEntity
-import com.evanisnor.freshwaves.spotify.network.model.AlbumObject
-import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
-import com.evanisnor.freshwaves.spotify.network.model.PagingObject
 import com.evanisnor.freshwaves.tools.RecyclerViewUtils.Companion.atPositionOnView
 import com.evanisnor.freshwaves.tools.RecyclerViewUtils.Companion.scrollToPosition
-import com.evanisnor.freshwaves.tools.TestData
 import com.evanisnor.freshwaves.tools.TestDataLoader
 import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -46,13 +41,11 @@ class FreshAlbumsTest {
         hiltRule.inject()
 
         with(TestDataLoader(context)) {
-            loadData<PagingObject<ArtistObject>>(TestData.Artists) {
-                spotifyCacheDao.insertArtists(it.items.mapToEntity())
-            }
-
-            loadData<PagingObject<AlbumObject>>(TestData.Albums) {
-                spotifyCacheDao.insertAlbums(it.items.mapToEntity())
-            }
+            loadAllRelationally(
+                onArtists = { spotifyCacheDao.insertArtists(it) },
+                onAlbums = { spotifyCacheDao.insertAlbums(it) },
+                onTracks = { spotifyCacheDao.insertTracks(it) }
+            )
         }
     }
 

@@ -31,7 +31,7 @@ abstract class SpotifyCacheDao {
         it
     }
 
-    fun insertAlbums(albums: List<Album>) {
+    fun insertAlbums(albums: Collection<Album>) {
         albums.forEach { album ->
 
             _insertAlbum(album)
@@ -48,7 +48,7 @@ abstract class SpotifyCacheDao {
     @Query("SELECT * FROM Artist")
     abstract fun readArtists(): List<Artist>
 
-    fun insertArtists(artists: List<Artist>) {
+    fun insertArtists(artists: Collection<Artist>) {
         artists.forEach(this::insertArtist)
     }
 
@@ -76,7 +76,7 @@ abstract class SpotifyCacheDao {
 
     // region Tracks
 
-    fun insertTracks(tracks: List<Track>) {
+    fun insertTracks(tracks: Collection<Track>) {
         tracks.forEach {
             _insertTrack(it)
         }

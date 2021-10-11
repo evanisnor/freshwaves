@@ -60,13 +60,12 @@ class OpenIdAuthService(context: Context) : AuthService {
             .createTokenExchangeRequest()
             .toAuthTokenRequest()
 
-    override fun createTokenRefreshRequest(authState: AuthState): AuthTokenRequest {
+    override fun refreshTokens(authState: AuthState) {
         if (authState !is OpenIdAuthState) {
             throw UnsupportedOperationException("Unable to create Token Refresh Request using another auth provider.")
         }
 
-        val refreshRequest = authState.authState.createTokenRefreshRequest()
-        return refreshRequest.toAuthTokenRequest()
+        authState.needsTokenRefresh = true
     }
 
 }

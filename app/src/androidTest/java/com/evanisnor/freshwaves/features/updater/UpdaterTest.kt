@@ -79,7 +79,7 @@ class UpdaterTest {
     fun workerTest() {
         val updateWorker = createUpdateWorker()
         val result = updateWorker.doWork()
-        
+
         assertEquals(ListenableWorker.Result.success(), result)
     }
 

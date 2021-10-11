@@ -28,6 +28,6 @@ interface AuthService {
 
     fun createTokenExchangeRequest(authResponse: AuthAuthResponse): AuthTokenRequest
 
-    fun createTokenRefreshRequest(authState: AuthState): AuthTokenRequest
+    fun refreshTokens(authState: AuthState)
 
 }

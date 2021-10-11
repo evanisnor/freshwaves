@@ -27,6 +27,9 @@ class SpotifyAuthorization @Inject constructor(
     fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
         if (!repository.isAuthorized) {
             notLoggedIn()
+        } else if (repository.needsTokenRefresh) {
+            refreshTokens()
+            loggedIn()
         } else {
             loggedIn()
         }
@@ -34,14 +37,9 @@ class SpotifyAuthorization @Inject constructor(
 
     fun useBearerToken(withBearerToken: (String) -> Unit) {
         if (repository.needsTokenRefresh) {
-            refreshAccessToken(
-                withBearerToken = withBearerToken,
-                withError = { error ->
-                    Log.e("SpotifyRepository", "Authorization error: $error")
-                })
-        } else {
-            withBearerToken(repository.bearerToken)
+            refreshTokens()
         }
+        withBearerToken(repository.bearerToken)
     }
 
     fun <SuccessActivity : Activity, CancelActivity : Activity> performLoginAuthorization(
@@ -104,23 +102,9 @@ class SpotifyAuthorization @Inject constructor(
         }
     }
 
-    private fun refreshAccessToken(
-        withBearerToken: (String) -> Unit,
-        withError: (AuthError) -> Unit
-    ) {
+    private fun refreshTokens() {
         with(authServiceFactory.create(context)) {
-            val tokenRefreshRequest = createTokenRefreshRequest(repository.authState)
-            performTokenRequest(
-                tokenRequest = tokenRefreshRequest,
-                onTokenResponse = { response ->
-                    repository.update(tokenRefreshRequest, response)
-                    withBearerToken(repository.bearerToken)
-                },
-                onError = { error ->
-                    repository.update(error)
-                    withError(error)
-                }
-            )
+            refreshTokens(repository.authState)
         }
     }
 

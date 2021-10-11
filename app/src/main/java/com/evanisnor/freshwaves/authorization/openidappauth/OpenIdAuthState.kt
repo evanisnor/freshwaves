@@ -2,11 +2,11 @@ package com.evanisnor.freshwaves.authorization.openidappauth
 
 import com.evanisnor.freshwaves.authorization.*
 import net.openid.appauth.TokenResponse
-import net.openid.appauth.AuthState as ExternalAuthState
+import net.openid.appauth.AuthState as OpenIdAuthState
 
 class OpenIdAuthState(
     private val config: AuthServiceConfig,
-    internal val authState: ExternalAuthState = ExternalAuthState(config.toOpenIdAuthConfig())
+    internal val authState: OpenIdAuthState = OpenIdAuthState(config.toOpenIdAuthConfig())
 ) : AuthState {
 
     constructor(
@@ -14,14 +14,17 @@ class OpenIdAuthState(
         authStateJson: String
     ) : this(
         config,
-        ExternalAuthState.jsonDeserialize(authStateJson)
+        OpenIdAuthState.jsonDeserialize(authStateJson)
     )
 
     override val isAuthorized: Boolean
         get() = authState.isAuthorized
 
-    override val needsTokenRefresh: Boolean
+    override var needsTokenRefresh: Boolean
         get() = authState.needsTokenRefresh
+        set(value) {
+            authState.needsTokenRefresh = value
+        }
 
     override val accessToken: String?
         get() = authState.accessToken

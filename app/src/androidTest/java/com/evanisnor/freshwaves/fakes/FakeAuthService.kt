@@ -52,10 +52,6 @@ class FakeAuthService : AuthService {
             grantType = "fake_auth_exchange"
         )
 
-    override fun createTokenRefreshRequest(authState: AuthState) =
-        AuthTokenRequest(
-            config = fakeConfig,
-            clientId = "000000000000000000000",
-            grantType = "fake_auth_refresh"
-        )
+    override fun refreshTokens(authState: AuthState) {
+    }
 }

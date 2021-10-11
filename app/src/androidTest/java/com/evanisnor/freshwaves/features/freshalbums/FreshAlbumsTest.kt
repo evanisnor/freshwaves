@@ -16,6 +16,7 @@ import com.evanisnor.freshwaves.tools.TestDataLoader
 import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import org.hamcrest.CoreMatchers.`is`
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -61,11 +62,12 @@ class FreshAlbumsTest {
                 .perform(scrollToPosition(index))
                 .check(matches(atPositionOnView(index, R.id.albumName, withText(album.name))))
                 .check(
+                    matches(atPositionOnView(index, R.id.artistName, withText(album.artist!!.name)))
+                )
+                .check(
                     matches(
                         atPositionOnView(
-                            index,
-                            R.id.artistName,
-                            withText(album.artist!!.name)
+                            index, R.id.albumImage, withTagValue(`is`(album.images.first().url))
                         )
                     )
                 )

@@ -34,6 +34,7 @@ class FreshAlbumViewHolder(
 
             album.images.firstOrNull()?.let {
                 albumImage.load(it.url)
+                albumImage.tag = it.url
             }
 
             albumName.text = album.name

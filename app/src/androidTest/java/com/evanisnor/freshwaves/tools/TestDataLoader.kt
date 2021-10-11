@@ -27,7 +27,7 @@ enum class TestData(val base: KClass<*>, vararg val parameterized: KClass<*>) {
     Tracks(PagingObject::class, TrackObject::class);
 
     val directory: String = name.lowercase()
-    
+
     fun file(id: String) = "$directory${File.separator}$id.json"
 
     fun file(subdirectory: String, id: String) =

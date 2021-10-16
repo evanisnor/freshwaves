@@ -36,6 +36,9 @@ android {
     kotlinOptions {
         languageVersion = "1.5"
         jvmTarget = "11"
+        freeCompilerArgs = listOf(
+            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi,kotlinx.coroutines.FlowPreview"
+        )
     }
 
     testOptions {
@@ -56,7 +59,6 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
-
     implementation("androidx.hilt:hilt-work:1.0.0")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     kaptAndroidTest("androidx.hilt:hilt-compiler:1.0.0")
@@ -82,6 +84,9 @@ dependencies {
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
 
     // Datastore
     implementation("androidx.datastore:datastore-preferences:1.0.0")

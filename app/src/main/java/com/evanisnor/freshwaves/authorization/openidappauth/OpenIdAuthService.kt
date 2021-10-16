@@ -4,11 +4,15 @@ import android.app.Activity
 import android.app.PendingIntent
 import android.content.Context
 import com.evanisnor.freshwaves.authorization.*
-import net.openid.appauth.AuthorizationException
-import net.openid.appauth.AuthorizationResponse
-import net.openid.appauth.AuthorizationService
+import com.evanisnor.freshwaves.authorization.AuthState
+import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.broadcast
+import net.openid.appauth.*
 
-class OpenIdAuthService(context: Context) : AuthService {
+class OpenIdAuthService(
+    context: Context,
+    private val clientId: String
+) : AuthService {
 
     private val authService = AuthorizationService(context)
 
@@ -24,48 +28,49 @@ class OpenIdAuthService(context: Context) : AuthService {
         )
     }
 
-    override fun parseAuthResponse(
-        activity: Activity,
-        onAuthResponse: (AuthAuthResponse) -> Unit
-    ) {
+    override suspend fun parseAuthResponse(activity: Activity): AuthAuthResponse? {
         AuthorizationResponse.fromIntent(activity.intent)?.let { response ->
-            onAuthResponse(response.toAuthResponse())
+            return response.toAuthResponse()
         }
+        return null
     }
 
-    override fun parseAuthError(activity: Activity, onError: (AuthError) -> Unit) {
+    override suspend fun parseAuthError(activity: Activity): AuthError? {
         AuthorizationException.fromIntent(activity.intent)?.let { error ->
-            onError(error.toAuthError())
+            return error.toAuthError()
         }
+
+        return null
     }
 
-    override fun performTokenRequest(
-        tokenRequest: AuthTokenRequest,
-        onTokenResponse: (AuthTokenResponse) -> Unit,
-        onError: (AuthError) -> Unit
-    ) {
-        val request = tokenRequest.toOpenIdTokenRequest()
+    override suspend fun performTokenRequest(tokenRequest: AuthTokenRequest) =
+        suspendCancellableCoroutine<AuthTokenResponse> { continuation ->
+            val request = tokenRequest.toOpenIdTokenRequest()
 
-        authService.performTokenRequest(request) { response, ex ->
-            if (response != null) {
-                onTokenResponse(response.toAuthTokenResponse(tokenRequest))
-            } else if (ex != null) {
-                onError(ex.toAuthError())
+            authService.performTokenRequest(request) { response, ex ->
+                if (response != null) {
+                    continuation.resume(response.toAuthTokenResponse(tokenRequest)) {}
+                } else if (ex != null) {
+                    throw ex.toAuthError()
+                }
             }
         }
-    }
+
 
     override fun createTokenExchangeRequest(authResponse: AuthAuthResponse): AuthTokenRequest =
         authResponse.toOpenIdAuthResponse()
             .createTokenExchangeRequest()
             .toAuthTokenRequest()
 
-    override fun refreshTokens(authState: AuthState) {
-        if (authState !is OpenIdAuthState) {
-            throw UnsupportedOperationException("Unable to refresh tokens using another auth provider.")
-        }
-
-        authState.needsTokenRefresh = true
-    }
+    override fun createTokenRefreshRequest(
+        config: AuthServiceConfig,
+        authState: AuthState
+    ): AuthTokenRequest =
+        TokenRequest.Builder(config.toOpenIdAuthConfig(), clientId)
+            .setScope(null)
+            .setGrantType(GrantTypeValues.REFRESH_TOKEN)
+            .setRefreshToken(authState.refreshToken)
+            .build()
+            .toAuthTokenRequest()
 
 }

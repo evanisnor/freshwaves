@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
@@ -50,8 +53,8 @@ class FreshAlbumsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        freshAlbumsViewModel.getLatestAlbums { albums ->
-            activity?.runOnUiThread {
+        lifecycleScope.launch {
+            freshAlbumsViewModel.albums.collect { albums ->
                 freshAlbumsAdapter.submitList(albums)
             }
         }

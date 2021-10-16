@@ -10,6 +10,7 @@ class FakeAuthState : AuthState {
     override val isAuthorized: Boolean = true
     override val needsTokenRefresh: Boolean = false
     override val accessToken: String = "abcd1234"
+    override val refreshToken: String = "efgh5678"
 
     override fun update(authTokenRequest: AuthTokenRequest, authTokenResponse: AuthTokenResponse) {
     }

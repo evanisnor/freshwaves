@@ -27,20 +27,18 @@ class SpotifyAuthorization @Inject constructor(
     fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
         if (!repository.isAuthorized) {
             notLoggedIn()
-        } else if (repository.needsTokenRefresh) {
-            refreshTokens()
-            loggedIn()
         } else {
             loggedIn()
         }
     }
 
-    fun useBearerToken(withBearerToken: (String) -> Unit) {
+    suspend fun getBearerToken(): String =
         if (repository.needsTokenRefresh) {
-            refreshTokens()
+            refreshToken()
+        } else {
+            repository.bearerToken
         }
-        withBearerToken(repository.bearerToken)
-    }
+
 
     fun <SuccessActivity : Activity, CancelActivity : Activity> performLoginAuthorization(
         activity: Activity,
@@ -57,22 +55,17 @@ class SpotifyAuthorization @Inject constructor(
     }
 
 
-    fun confirmAuthorization(
-        activity: Activity,
-        onAuthorizationError: (AuthError) -> Unit
-    ) {
+    suspend fun confirmAuthorization(activity: Activity) {
         with(authServiceFactory.create(context)) {
-            parseAuthError(activity) { error ->
+            parseAuthError(activity)?.let { error ->
                 Log.e("SpotifyAuthorization", "Failed to authorize: $error")
-                onAuthorizationError(error)
+                throw error
             }
 
-            parseAuthResponse(activity) { response ->
-                exchangeAuthorizationCode(
-                    tokenExchangeRequest = createTokenExchangeRequest(response),
-                    onAuthorized = { sendSuccessfulAuthorizationBroadcast(context) },
-                    onAuthorizationError = onAuthorizationError
-                )
+            parseAuthResponse(activity)?.let { response ->
+                val exchangeRequest = createTokenExchangeRequest(response)
+                exchangeAuthorizationCode(exchangeRequest)
+                sendSuccessfulAuthorizationBroadcast(context)
             }
         }
     }
@@ -82,30 +75,34 @@ class SpotifyAuthorization @Inject constructor(
             .sendBroadcast(Intent(authorizationSuccessfulAction))
     }
 
-    private fun exchangeAuthorizationCode(
-        tokenExchangeRequest: AuthTokenRequest,
-        onAuthorized: () -> Unit,
-        onAuthorizationError: (AuthError) -> Unit
-    ) {
+    private suspend fun exchangeAuthorizationCode(tokenExchangeRequest: AuthTokenRequest) {
         with(authServiceFactory.create(context)) {
-            performTokenRequest(
-                tokenRequest = tokenExchangeRequest,
-                onTokenResponse = { response ->
-                    repository.update(tokenExchangeRequest, response)
-                    onAuthorized()
-                },
-                onError = { error ->
-                    repository.update(error)
-                    onAuthorizationError(error)
-                }
-            )
+            try {
+                val response = performTokenRequest(tokenExchangeRequest)
+                repository.update(tokenExchangeRequest, response)
+            } catch (authError: AuthError) {
+                repository.update(authError)
+            }
         }
     }
 
-    private fun refreshTokens() {
+    private suspend fun refreshToken(): String {
         with(authServiceFactory.create(context)) {
-            refreshTokens(repository.authState)
+            val tokenRefreshRequest = createTokenRefreshRequest(
+                SpotifyAuthorizationRepository.config,
+                repository.authState
+            )
+
+            try {
+                val response = performTokenRequest(tokenRefreshRequest)
+                repository.update(tokenRefreshRequest, response)
+                return repository.bearerToken
+            } catch (authError: AuthError) {
+                repository.update(authError)
+            }
         }
+
+        return repository.bearerToken
     }
 
 }

@@ -1,6 +1,12 @@
 package com.evanisnor.freshwaves.authorization.openidappauth
 
 import com.evanisnor.freshwaves.authorization.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.launch
+import net.openid.appauth.AuthorizationService
+import net.openid.appauth.TokenRequest
 import net.openid.appauth.TokenResponse
 import net.openid.appauth.AuthState as OpenIdAuthState
 
@@ -20,14 +26,14 @@ class OpenIdAuthState(
     override val isAuthorized: Boolean
         get() = authState.isAuthorized
 
-    override var needsTokenRefresh: Boolean
+    override val needsTokenRefresh: Boolean
         get() = authState.needsTokenRefresh
-        set(value) {
-            authState.needsTokenRefresh = value
-        }
 
     override val accessToken: String?
         get() = authState.accessToken
+
+    override val refreshToken: String?
+        get() = authState.refreshToken
 
     override fun update(authTokenRequest: AuthTokenRequest, authTokenResponse: AuthTokenResponse) {
         val response = authTokenResponse.toOpenIdTokenResponse(authTokenRequest)

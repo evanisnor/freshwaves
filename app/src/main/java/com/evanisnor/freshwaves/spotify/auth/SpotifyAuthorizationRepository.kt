@@ -24,7 +24,7 @@ class SpotifyAuthorizationRepository @Inject constructor(
     companion object {
         private const val userSettingsKey = "authState"
 
-        private val config = AuthServiceConfig(
+        internal val config = AuthServiceConfig(
             Uri.parse("https://accounts.spotify.com/authorize"),
             Uri.parse("https://accounts.spotify.com/api/token"),
         )

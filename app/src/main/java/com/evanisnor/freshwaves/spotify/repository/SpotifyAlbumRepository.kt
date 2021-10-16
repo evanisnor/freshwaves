@@ -1,69 +1,42 @@
 package com.evanisnor.freshwaves.spotify.repository
 
+import android.util.Log
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
-import java.util.concurrent.Executors
+import com.evanisnor.freshwaves.user.UserProfile
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
 class SpotifyAlbumRepository @Inject constructor(
-    private val spotifyUserRepository: SpotifyUserRepository,
     private val spotifyNetworkRepository: SpotifyNetworkRepository,
     private val spotifyCacheDao: SpotifyCacheDao
 ) {
 
-    fun getLatestAlbums(onResult: (List<Album>) -> Unit) {
-        Executors.newSingleThreadExecutor().execute {
-            onResult(spotifyCacheDao.readAlbumsWithLimit(30))
+    suspend fun getLatestAlbums(): Flow<List<Album>> =
+        spotifyCacheDao.readAlbumsWithImages(30)
+
+    suspend fun getAlbums(): List<Album> = spotifyCacheDao.readAlbums(30)
+
+    suspend fun getAlbumWithTracks(albumId: Int): Album =
+        spotifyCacheDao.readAlbumWithTracks(albumId)
+
+    suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) {
+        spotifyNetworkRepository.artistAlbums(
+            artist = artist,
+            userProfile = userProfile
+        ).collect { albums ->
+            spotifyCacheDao.insertAlbums(albums)
+            Log.i("SpotifyAlbumRepository", "Inserted ${albums.size} albums for ${artist.name}")
         }
     }
 
-    fun getAlbumWithTracks(albumId: Int, onResult: (Album) -> Unit) {
-        Executors.newSingleThreadExecutor().execute {
-            onResult(spotifyCacheDao.readAlbumWithTracks(albumId))
+    suspend fun updateTracks(album: Album) {
+        spotifyNetworkRepository.albumTracks(album).collect { tracks ->
+            spotifyCacheDao.insertTracks(tracks)
         }
     }
 
-    fun updateAlbums(
-        artist: Artist,
-        onFinished: (List<Album>) -> Unit,
-        onError: (Throwable) -> Unit
-    ) {
-        Executors.newSingleThreadExecutor().execute {
-
-            spotifyNetworkRepository.getArtistAlbums(
-                artist = artist,
-                market = spotifyUserRepository.getUserMarket(),
-                onResult = { albums ->
-
-                    Executors.newSingleThreadExecutor().execute {
-                        spotifyCacheDao.insertAlbums(albums)
-                        onFinished(albums)
-                    }
-                },
-                onError = onError
-            )
-
-        }
-    }
-
-    fun updateTracks(
-        album: Album,
-        onFinished: () -> Unit,
-        onError: (Throwable) -> Unit
-    ) {
-        spotifyNetworkRepository.getAlbumTracks(
-            album = album,
-            onResult = { tracks ->
-
-                Executors.newSingleThreadExecutor().execute {
-                    spotifyCacheDao.insertTracks(tracks)
-                    onFinished()
-                }
-
-            },
-            onError = onError
-        )
-    }
 }

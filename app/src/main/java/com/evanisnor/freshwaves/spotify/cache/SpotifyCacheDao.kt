@@ -5,6 +5,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.withContext
 
 @Suppress("FunctionName")
 @Dao
@@ -12,23 +18,43 @@ abstract class SpotifyCacheDao {
 
     // region Albums
 
-    fun readAlbumsWithLimit(limit: Int) = _readAlbums(limit).map {
-        it.artist = _readArtist(it.artistId)
-        it.images = _readAlbumImages(it.id)
-        it
+    suspend fun readAlbumsWithImages(limit: Int) =
+        _readAlbumsActive(limit).map { albums ->
+            albums.forEach { album ->
+                album.apply {
+                    artist = _readArtist(artistId)
+                    images = _readAlbumImages(id)
+                }
+            }
+            albums
+        }.flowOn(Dispatchers.Default)
+
+    suspend fun readAlbums(limit: Int): List<Album> = withContext(Dispatchers.Default) {
+        _readAlbums(limit).map { album ->
+            album.apply {
+                artist = _readArtist(artistId)
+            }
+        }
     }
 
-    fun readAlbumsForArtist(artistId: String): List<Album> = _readAlbums(artistId).map {
-        it.artist = _readArtist(it.artistId)
-        it.images = _readAlbumImages(it.id)
-        it
-    }
+    suspend fun readAlbumsWithImagesSync(limit: Int): List<Album> =
+        withContext(Dispatchers.Default) {
+            _readAlbums(limit).map { album ->
+                album.apply {
+                    artist = _readArtist(artistId)
+                    images = _readAlbumImages(id)
+                }
+            }
+        }
 
-    fun readAlbumWithTracks(albumId: Int): Album = _readAlbum(albumId).let {
-        it.artist = _readArtist(it.artistId)
-        it.images = _readAlbumImages(it.id)
-        it.tracks = _readTracks(it.id)
-        it
+    suspend fun readAlbumWithTracks(albumId: Int): Album = withContext(Dispatchers.Default) {
+        _readAlbum(albumId).let { album ->
+            album.apply {
+                artist = _readArtist(album.artistId)
+                images = _readAlbumImages(album.id)
+                tracks = _readTracks(album.id)
+            }
+        }
     }
 
     fun insertAlbums(albums: Collection<Album>) {
@@ -45,8 +71,12 @@ abstract class SpotifyCacheDao {
 
     // region Artists
 
+    suspend fun readArtists(): List<Artist> = withContext(Dispatchers.Default) {
+        _readArtists()
+    }
+
     @Query("SELECT * FROM Artist")
-    abstract fun readArtists(): List<Artist>
+    abstract suspend fun _readArtists(): List<Artist>
 
     fun insertArtists(artists: Collection<Artist>) {
         artists.forEach(this::insertArtist)
@@ -87,7 +117,7 @@ abstract class SpotifyCacheDao {
     // region Internal Read Methods
 
     @Query("SELECT * FROM Artist WHERE Artist.id = :artistId")
-    abstract fun _readArtist(artistId: String): Artist
+    abstract suspend fun _readArtist(artistId: String): Artist
 
     @Query(
         "SELECT * FROM Artist, Album" +
@@ -95,7 +125,7 @@ abstract class SpotifyCacheDao {
                 " AND Album.artistId = Artist.id" +
                 " ORDER BY releaseDate DESC"
     )
-    abstract fun _readAlbums(artistId: String): List<Album>
+    abstract fun _readAlbums(artistId: String): Flow<List<Album>>
 
     @Query(
         "SELECT * FROM Artist, Album" +
@@ -103,16 +133,24 @@ abstract class SpotifyCacheDao {
                 " ORDER BY releaseDate DESC" +
                 " LIMIT :limit"
     )
-    abstract fun _readAlbums(limit: Int): List<Album>
+    abstract suspend fun _readAlbums(limit: Int): List<Album>
+
+    @Query(
+        "SELECT * FROM Artist, Album" +
+                " WHERE Album.artistId = Artist.id" +
+                " ORDER BY releaseDate DESC" +
+                " LIMIT :limit"
+    )
+    abstract fun _readAlbumsActive(limit: Int): Flow<List<Album>>
 
     @Query("SELECT * FROM Album WHERE Album.id = :albumId")
-    abstract fun _readAlbum(albumId: Int): Album
+    abstract suspend fun _readAlbum(albumId: Int): Album
 
     @Query("SELECT * FROM AlbumImage WHERE albumId = :albumId")
-    abstract fun _readAlbumImages(albumId: Int): List<AlbumImage>
+    abstract suspend fun _readAlbumImages(albumId: Int): List<AlbumImage>
 
     @Query("SELECT * FROM Track WHERE Track.albumId = :albumId ORDER BY discNumber,trackNumber")
-    abstract fun _readTracks(albumId: Int): List<Track>
+    abstract suspend fun _readTracks(albumId: Int): List<Track>
 
     // endregion
 

@@ -6,6 +6,7 @@ import androidx.hilt.work.HiltWorkerFactory
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.work.Configuration
+import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.testing.SynchronousExecutor
 import androidx.work.testing.TestListenableWorkerBuilder
@@ -13,12 +14,13 @@ import androidx.work.testing.WorkManagerTestInitHelper
 import com.evanisnor.freshwaves.fakes.FakeSpotifyAPIService
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.network.SpotifyAPIService
-import com.evanisnor.freshwaves.spotify.network.model.*
+import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
 import com.evanisnor.freshwaves.tools.TestData
 import com.evanisnor.freshwaves.tools.TestDataLoader
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import junit.framework.Assert.assertEquals
+import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -59,33 +61,32 @@ class UpdaterTest {
                 loadAllByType<PrivateUserObject>(TestData.User) {
                     user = it
                 }
-
-                loadAllByType<PagingObject<ArtistObject>>(TestData.Artists) {
-                    queueArtists(it)
-                }
-
-                loadAllByType<PagingObject<AlbumObject>>(TestData.Albums) {
-                    queueAlbums(it)
-                }
-
-                loadAllByType<PagingObject<TrackObject>>(TestData.Tracks) {
-                    queueTracks(it)
-                }
+                loadNetworkModelRelationally(
+                    ::queueArtists,
+                    onAlbums = { artistObject, albumPage ->
+                        queueAlbums(artistObject.id, albumPage)
+                    },
+                    onTracks = { albumObject, _, trackPage ->
+                        queueTracks(albumObject.id, trackPage)
+                    }
+                )
             }
         }
     }
 
     @Test
     fun workerTest() {
-        val updateWorker = createUpdateWorker()
-        val result = updateWorker.doWork()
+        runBlocking {
+            val updateWorker = createUpdateWorker()
+            val result = updateWorker.doWork()
 
-        assertEquals(ListenableWorker.Result.success(), result)
+            assertEquals(ListenableWorker.Result.success(), result)
+        }
     }
 
     private fun createUpdateWorker() = TestListenableWorkerBuilder.from(
         ApplicationProvider.getApplicationContext(),
         UpdateWorker::class.java
     ).setWorkerFactory(workerFactory)
-        .build()
+        .build() as CoroutineWorker
 }

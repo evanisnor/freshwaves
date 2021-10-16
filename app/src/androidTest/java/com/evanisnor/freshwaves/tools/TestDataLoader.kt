@@ -47,37 +47,51 @@ class TestDataLoader(
         readAll(testData.directory, adapter, onRead)
     }
 
-    fun loadAllRelationally(
+    fun loadEntitiesRelationally(
         onArtists: (Collection<Artist>) -> Unit,
         onAlbums: (Collection<Album>) -> Unit,
         onTracks: (Collection<Track>) -> Unit
+    ) {
+        loadNetworkModelRelationally(
+            onArtists = { artistPage ->
+                onArtists(artistPage.items.mapToEntity())
+            },
+            onAlbums = { artist, albumsPage ->
+                onAlbums(albumsPage.items.mapToEntity(artist.id))
+            },
+            onTracks = { _, albumEntity, tracksPage ->
+                onTracks(tracksPage.items.mapToEntities(albumEntity.id))
+            }
+        )
+    }
+
+    fun loadNetworkModelRelationally(
+        onArtists: (PagingObject<ArtistObject>) -> Unit,
+        onAlbums: (ArtistObject, PagingObject<AlbumObject>) -> Unit,
+        onTracks: (AlbumObject, Album, PagingObject<TrackObject>) -> Unit
     ) {
         val artistAdapter = makeAdapter<PagingObject<ArtistObject>>(TestData.Artists)
         val albumAdapter = makeAdapter<PagingObject<AlbumObject>>(TestData.Albums)
         val trackAdapter = makeAdapter<PagingObject<TrackObject>>(TestData.Tracks)
 
         readAll(TestData.Artists.directory, artistAdapter) { artistsPage ->
-
-            val artists = artistsPage.items.mapToEntity()
-            onArtists(artists)
-
-            artists.forEach { artist ->
+            onArtists(artistsPage)
+            artistsPage.items.forEach { artist ->
                 val albumsPath = TestData.Albums.file(artist.id)
                 read(
                     albumsPath,
                     albumAdapter,
                     onRead = { albumsPage ->
+                        onAlbums(artist, albumsPage)
 
-                        val albums = albumsPage.items.mapToEntity(artist)
-                        onAlbums(albums)
-
-                        albums.forEach { album ->
-                            val tracksPath = TestData.Tracks.file(artist.id, "${album.id}")
+                        albumsPage.items.forEach { album ->
+                            val albumEntity = album.mapToEntity(artist.mapToEntity())
+                            val tracksPath = TestData.Tracks.file(artist.id, "${albumEntity.id}")
                             read(
                                 tracksPath,
                                 trackAdapter,
                                 onRead = { tracksPage ->
-                                    onTracks(tracksPage.items.mapToEntities(album.id))
+                                    onTracks(album, albumEntity, tracksPage)
                                 },
                                 onFileDoesNotExist = {
                                     Log.e(
@@ -106,10 +120,19 @@ class TestDataLoader(
         onRead: (T) -> Unit
     ) {
         with(context.assets) {
-            list(directory)?.forEach { filename ->
-                val path = "$directory${File.separator}$filename"
-                read(path, adapter, onRead) {
-                    Log.e("TestDataLoader", "File does not exist: $path")
+            list(directory)?.forEach { layer2file ->
+                val path = "$directory${File.separator}$layer2file"
+                val files = list(path)
+                if (files != null && files.isNotEmpty()) {
+                    files.forEach { layer3file ->
+                        read(path + "${File.separator}$layer3file", adapter, onRead) {
+                            Log.e("TestDataLoader", "File does not exist: $path")
+                        }
+                    }
+                } else {
+                    read(path, adapter, onRead) {
+                        Log.e("TestDataLoader", "File does not exist: $path")
+                    }
                 }
             }
         }

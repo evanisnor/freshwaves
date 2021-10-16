@@ -37,9 +37,9 @@ fun ArtistObject.mapToEntity() = Artist(
 )
 
 @JvmName("mapToEntitiesAlbumObject")
-fun Collection<AlbumObject>.mapToEntity() = map {
-    val artist = it.artists.first().mapToEntity()
-    it.mapToEntity(artist)
+fun Collection<AlbumObject>.mapToEntity(artistId: String) = map { albumObject ->
+    val artist = albumObject.artists.first { it.id == artistId }.mapToEntity()
+    albumObject.mapToEntity(artist)
 }
 
 @JvmName("mapToEntitiesAlbumObject")

@@ -1,7 +1,6 @@
 package com.evanisnor.freshwaves.spotify.network
 
 import com.evanisnor.freshwaves.spotify.network.model.*
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Path
@@ -10,28 +9,29 @@ import retrofit2.http.Query
 interface SpotifyAPIService {
 
     @GET("v1/me")
-    fun getUserProfile(
+    suspend fun getUserProfile(
         @Header("Authorization") accessToken: String
-    ): Call<PrivateUserObject>
+    ): PrivateUserObject
 
     @GET("v1/me/top/artists")
-    fun getTopArtists(
+    suspend fun getTopArtists(
         @Header("Authorization") accessToken: String,
         @Query("limit") limit: Int = 50,
         @Query("offset") offset: Int = 0
-    ): Call<PagingObject<ArtistObject>>
+    ): PagingObject<ArtistObject>
 
     @GET("v1/artists/{id}/albums")
-    fun getArtistAlbums(
+    suspend fun getArtistAlbums(
         @Header("Authorization") accessToken: String,
         @Path("id") artistId: String,
         @Query("market") market: String,
         @Query("include_groups") includeGroups: String = "album"
-    ): Call<PagingObject<AlbumObject>>
+    ): PagingObject<AlbumObject>
+
 
     @GET("v1/albums/{id}/tracks")
-    fun getAlbumTracks(
+    suspend fun getAlbumTracks(
         @Header("Authorization") accessToken: String,
         @Path("id") albumId: String
-    ): Call<PagingObject<TrackObject>>
+    ): PagingObject<TrackObject>
 }

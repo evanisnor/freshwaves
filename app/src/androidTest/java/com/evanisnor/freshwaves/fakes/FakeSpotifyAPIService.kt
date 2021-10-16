@@ -2,9 +2,9 @@ package com.evanisnor.freshwaves.fakes
 
 import com.evanisnor.freshwaves.spotify.network.SpotifyAPIService
 import com.evanisnor.freshwaves.spotify.network.model.*
-import retrofit2.Call
 import retrofit2.mock.BehaviorDelegate
 import java.util.*
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
 
 /**
@@ -14,58 +14,80 @@ class FakeSpotifyAPIService(
     private val behaviorDelegate: BehaviorDelegate<SpotifyAPIService>
 ) : SpotifyAPIService {
 
-    private val topArtists: Queue<PagingObject<ArtistObject>> = ConcurrentLinkedQueue()
-    private val artistAlbums: Queue<PagingObject<AlbumObject>> = ConcurrentLinkedQueue()
-    private val albumTracks: Queue<PagingObject<TrackObject>> = ConcurrentLinkedQueue()
+
+    // region UserProfile
 
     var user: PrivateUserObject? = null
+
+    override suspend fun getUserProfile(accessToken: String): PrivateUserObject =
+        behaviorDelegate.returningResponse(user).getUserProfile(accessToken)
+
+    // endregion
+
+    // region Artists
+
+    private val topArtists: Queue<PagingObject<ArtistObject>> = ConcurrentLinkedQueue()
 
     fun queueArtists(artistObjects: PagingObject<ArtistObject>) {
         topArtists.offer(artistObjects)
     }
 
-    fun queueAlbums(albumObjects: PagingObject<AlbumObject>) {
-        artistAlbums.offer(albumObjects)
-    }
-
-    fun queueTracks(trackObjects: PagingObject<TrackObject>) {
-        albumTracks.offer(trackObjects)
-    }
-
-    // region Behavior Delegate
-
-    override fun getUserProfile(accessToken: String): Call<PrivateUserObject> =
-        behaviorDelegate.returningResponse(user).getUserProfile(accessToken)
-
-    override fun getTopArtists(
+    override suspend fun getTopArtists(
         accessToken: String,
         limit: Int,
         offset: Int
-    ): Call<PagingObject<ArtistObject>> = if (topArtists.isEmpty()) {
+    ): PagingObject<ArtistObject> = if (topArtists.isEmpty()) {
         behaviorDelegate.returningResponse(PagingObject<ArtistObject>(emptyList()))
     } else {
         behaviorDelegate.returningResponse(topArtists.remove())
     }.getTopArtists(accessToken, limit, offset)
 
-    override fun getArtistAlbums(
+    // endregion
+
+    // region Albums
+
+    private val artistAlbums: ConcurrentHashMap<String, Queue<PagingObject<AlbumObject>>> =
+        ConcurrentHashMap()
+
+    fun queueAlbums(artistId: String, albumObjects: PagingObject<AlbumObject>) {
+        artistAlbums[artistId] = artistAlbums.getOrDefault(artistId, ConcurrentLinkedQueue())
+            .apply {
+                offer(albumObjects)
+            }
+    }
+
+    override suspend fun getArtistAlbums(
         accessToken: String,
         artistId: String,
         market: String,
         includeGroups: String
-    ): Call<PagingObject<AlbumObject>> = if (artistAlbums.isEmpty()) {
-        behaviorDelegate.returningResponse(PagingObject<AlbumObject>(emptyList()))
+    ): PagingObject<AlbumObject> = if (artistAlbums.containsKey(artistId)) {
+        behaviorDelegate.returningResponse(artistAlbums[artistId]?.remove())
     } else {
-        behaviorDelegate.returningResponse(artistAlbums.remove())
+        behaviorDelegate.returningResponse(PagingObject<AlbumObject>(emptyList()))
     }.getArtistAlbums(accessToken, artistId, market, includeGroups)
 
-    override fun getAlbumTracks(
+    // endregion
+
+    // region Tracks
+
+    private val albumTracks: ConcurrentHashMap<String, Queue<PagingObject<TrackObject>>> =
+        ConcurrentHashMap()
+
+    fun queueTracks(albumId: String, trackObjects: PagingObject<TrackObject>) {
+        albumTracks[albumId] = albumTracks.getOrDefault(albumId, ConcurrentLinkedQueue()).apply {
+            offer(trackObjects)
+        }
+    }
+
+    override suspend fun getAlbumTracks(
         accessToken: String,
         albumId: String
-    ): Call<PagingObject<TrackObject>> = if (albumTracks.isEmpty()) {
-        behaviorDelegate.returningResponse(PagingObject<TrackObject>(emptyList()))
+    ): PagingObject<TrackObject> = if (albumTracks.contains(albumId)) {
+        behaviorDelegate.returningResponse(albumTracks[albumId]?.remove())
     } else {
-        behaviorDelegate.returningResponse(albumTracks.remove())
+        behaviorDelegate.returningResponse(PagingObject<TrackObject>(emptyList()))
     }.getAlbumTracks(accessToken, albumId)
 
-    // endregion
+    // endregion Tracks
 }

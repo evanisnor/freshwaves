@@ -24,8 +24,9 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(album: Album) {
         AlbumDetailsOverviewItemBinding.bind(itemView).apply {
-            albumImage?.apply {
-                load(album.images.first().url)
+            album.images.firstOrNull()?.let {
+                albumImage?.load(it.url)
+                albumImage?.tag = it.url
             }
 
             albumName.text = album.name

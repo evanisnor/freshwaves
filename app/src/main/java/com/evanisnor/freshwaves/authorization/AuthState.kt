@@ -11,6 +11,7 @@ interface AuthState {
     val isAuthorized: Boolean
     val needsTokenRefresh: Boolean
     val accessToken: String?
+    val refreshToken: String?
 
     fun update(authTokenRequest: AuthTokenRequest, authTokenResponse: AuthTokenResponse)
 

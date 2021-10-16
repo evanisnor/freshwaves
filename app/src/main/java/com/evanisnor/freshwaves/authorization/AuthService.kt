@@ -16,18 +16,13 @@ interface AuthService {
         canceledIntent: PendingIntent
     )
 
-    fun parseAuthResponse(activity: Activity, onAuthResponse: (AuthAuthResponse) -> Unit)
+    suspend fun parseAuthResponse(activity: Activity): AuthAuthResponse?
 
-    fun parseAuthError(activity: Activity, onError: (AuthError) -> Unit)
+    suspend fun parseAuthError(activity: Activity): AuthError?
 
-    fun performTokenRequest(
-        tokenRequest: AuthTokenRequest,
-        onTokenResponse: (AuthTokenResponse) -> Unit,
-        onError: (AuthError) -> Unit
-    )
+    suspend fun performTokenRequest(tokenRequest: AuthTokenRequest): AuthTokenResponse
 
     fun createTokenExchangeRequest(authResponse: AuthAuthResponse): AuthTokenRequest
 
-    fun refreshTokens(authState: AuthState)
-
+    fun createTokenRefreshRequest(config: AuthServiceConfig, authState: AuthState): AuthTokenRequest
 }

@@ -1,45 +1,29 @@
 package com.evanisnor.freshwaves.spotify.repository
 
+import android.util.Log
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.Executors
 import javax.inject.Inject
+import kotlin.math.ceil
 
 class SpotifyArtistRepository @Inject constructor(
     private val spotifyNetworkRepository: SpotifyNetworkRepository,
     private val spotifyCacheDao: SpotifyCacheDao
 ) {
 
-    fun getTopArtists() = spotifyCacheDao.readArtists()
+    suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()
 
-    fun updateTopArtists(
-        onFinished: () -> Unit,
-        onError: (Throwable) -> Unit
-    ) {
+    suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int = 30) {
+        val pages = ceil(numberOfArtists / artistsPerPage.toFloat()).toInt()
+        var offset = 0
 
-        Executors.newSingleThreadExecutor().execute {
-            val pages = 4
-            var offset = 0
-            for (i in 0..pages) {
-                val latch = CountDownLatch(1)
-                spotifyNetworkRepository.getTopArtists(
-                    offset = offset,
-                    onResult = { artists ->
-                        offset += artists.size
-
-                        spotifyCacheDao.insertArtists(artists)
-                        latch.countDown()
-                    },
-                    onError = {
-                        latch.countDown()
-                        onError(it)
-                    }
-                )
-                latch.await()
-            }
-            onFinished()
+        for (i in 0..pages) {
+            val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
+            Log.i("SpotifyArtistRepository", "Fetched ${artists.size} artists")
+            spotifyCacheDao.insertArtists(artists)
+            Log.i("SpotifyArtistRepository", "Inserted ${artists.size} artists")
+            offset += artists.size
         }
-
     }
 }

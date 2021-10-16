@@ -3,6 +3,7 @@ package com.evanisnor.freshwaves.authorization
 import android.content.Context
 import com.evanisnor.freshwaves.authorization.openidappauth.OpenIdAuthService
 import com.evanisnor.freshwaves.authorization.openidappauth.OpenIdAuthState
+import com.evanisnor.freshwaves.system.AppMetadata
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,8 +28,10 @@ object OpenIdAppAuthModule {
     @Provides
     fun authorizationServiceFactory(): AuthService.Factory =
         object : AuthService.Factory {
-            override fun create(context: Context): AuthService {
-                return OpenIdAuthService(context)
+            override fun create(context: Context, ): AuthService {
+                with(AppMetadata()) {
+                    return OpenIdAuthService(context, spotifyClientId(context), )
+                }
             }
         }
 

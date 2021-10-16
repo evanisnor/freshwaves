@@ -3,15 +3,19 @@ package com.evanisnor.freshwaves.features.updater
 import android.content.Context
 import android.util.Log
 import androidx.hilt.work.HiltWorker
-import androidx.work.Worker
+import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import java.util.concurrent.CountDownLatch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.distinctUntilChanged
+import okhttp3.internal.wait
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -21,78 +25,52 @@ class UpdateWorker @AssistedInject constructor(
     private val spotifyArtistRepository: SpotifyArtistRepository,
     private val spotifyAlbumRepository: SpotifyAlbumRepository,
     private val updaterBootstrapper: UpdaterBootstrapper
-) : Worker(applicationContext, workerParameters) {
+) : CoroutineWorker(applicationContext, workerParameters) {
 
-    private val latch = CountDownLatch(1)
-    private var result = Result.success()
+    override suspend fun doWork(): Result {
+        var result = Result.success()
 
-    override fun doWork(): Result {
-        updateUserProfile {
-            Log.i("UpdateWorker", "Updated user profile")
-            updateArtists {
-                Log.i("UpdateWorker", "Updated top artists")
-                updateAlbums { albums ->
-                    Log.i("UpdateWorker", "Fetched ${albums.size} albums")
-                    albums.forEach { album ->
-                        updateTracks(album) {
-                            Log.i("UpdateWorker", "Fetched tracks for album ${album.name}")
-                        }
-                    }
-                    latch.countDown()
-                }
+        withContext(Dispatchers.Default) {
+            try {
+                update()
+            } catch (throwable: Throwable) {
+                Log.e(
+                    "UpdateWorker",
+                    "Failed to update cache: $throwable\n${throwable.stackTraceToString()}"
+                )
+                result = Result.failure()
             }
         }
 
-        latch.await()
         updaterBootstrapper.scheduleNextUpdate(applicationContext)
         return result
     }
 
-    private fun updateUserProfile(onFinished: () -> Unit) {
-        spotifyUserRepository.updateUserProfile(
-            onFinished = onFinished,
-            onError = {
-                Log.e("UpdateWorker", "Failed to update user profile: $it")
-                result = Result.failure()
-                latch.countDown()
-            }
-        )
-    }
+    private suspend fun update() {
+        Log.i("UpdateWorker", "Fetching user profile")
+        val userProfile = spotifyUserRepository.userProfile()
 
-    private fun updateArtists(onFinished: () -> Unit) {
-        spotifyArtistRepository.updateTopArtists(
-            onFinished = onFinished,
-            onError = {
-                Log.e("UpdateWorker", "Failed to update artists: $it")
-                result = Result.failure()
-                latch.countDown()
-            }
-        )
-    }
+        Log.i("UpdateWorker", "Fetching top artists")
+        spotifyArtistRepository.updateTopArtists(120)
 
-    private fun updateAlbums(onFinished: (List<Album>) -> Unit) {
-        spotifyArtistRepository.getTopArtists().forEach { artist ->
-            spotifyAlbumRepository.updateAlbums(
-                artist = artist,
-                onFinished = onFinished,
-                onError = {
-                    Log.e("UpdateWorker", "Failed to update albums for $artist: $it")
-                    result = Result.failure()
-                    latch.countDown()
-                }
-            )
+        Log.i("UpdateWorker", "Fetching albums...")
+        spotifyArtistRepository.getTopArtists().let { artists ->
+            artists.forEach { artist ->
+                Log.i("UpdateWorker", "Fetching albums for ${artist.name}")
+                spotifyAlbumRepository.updateAlbums(artist, userProfile)
+            }
+        }
+
+        Log.i("UpdateWorker", "Fetching tracks...")
+        spotifyAlbumRepository.getAlbums().let { albums ->
+            albums.forEach { album ->
+                Log.i(
+                    "UpdateWorker",
+                    "Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}"
+                )
+                spotifyAlbumRepository.updateTracks(album)
+            }
         }
     }
 
-    private fun updateTracks(album: Album, onFinished: () -> Unit) {
-        spotifyAlbumRepository.updateTracks(
-            album = album,
-            onFinished = onFinished,
-            onError = {
-                Log.e("UpdateWorker", "Failed to update tracks for for $album: $it")
-                result = Result.failure()
-                latch.countDown()
-            }
-        )
-    }
 }

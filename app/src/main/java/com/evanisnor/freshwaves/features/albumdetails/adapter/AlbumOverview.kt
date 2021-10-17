@@ -36,7 +36,7 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 .atZone(ZoneId.systemDefault())
                 .toLocalDate()
                 .format(
-                    DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault())
+                    DateTimeFormatter.ofPattern("YYYY", Locale.getDefault())
                 )
         }
     }

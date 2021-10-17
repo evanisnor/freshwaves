@@ -4,18 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/drawable/title_border.xml" value="0.17708333333333334" />
         <entry key="app/src/main/res/layout-land/album_details_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout-land/album_details_fragment_landscape.xml" value="0.21296296296296297" />
-        <entry key="app/src/main/res/layout-land/album_details_overview_item.xml" value="0.6119696967647675" />
+        <entry key="app/src/main/res/layout-land/album_details_overview_item.xml" value="0.5678160919540229" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/album_details_disc_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/album_details_fragment.xml" value="0.2515625" />
-        <entry key="app/src/main/res/layout/album_details_overview_item.xml" value="1.3334712455734294" />
-        <entry key="app/src/main/res/layout/album_details_track_item.xml" value="0.6598800743383798" />
+        <entry key="app/src/main/res/layout/album_details_overview_item.xml" value="0.45740740740740743" />
+        <entry key="app/src/main/res/layout/album_details_track_item.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_freshalbum.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_freshalbums.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fresh_album_card.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fresh_albums_fragment.xml" value="0.2515625" />
+        <entry key="app/src/main/res/layout/fresh_album_card.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fresh_albums_fragment.xml" value="0.23616236162361623" />
         <entry key="app/src/main/res/layout/item_freshalbum.xml" value="0.21197916666666666" />
       </map>
     </option>

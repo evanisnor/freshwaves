@@ -1,16 +1,67 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Theme.FreshWaves" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.FreshWaves" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+
+        <!-- Background -->
+        <item name="android:background">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+
+        <!-- Surface -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorPrimarySurface">@color/surface</item>
+        <item name="colorOnPrimarySurface">@color/onSurface</item>
+
+        <!-- Error -->
+        <item name="android:colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+
+        <!-- Cards -->
+        <item name="materialCardViewStyle">@style/FreshAlbumCardTheme</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/background</item>
+
+        <!-- ActionBar -->
+        <item name="actionBarStyle">@style/FreshAppBar</item>
+        <item name="toolbarStyle">@style/FreshToolbar</item>
+
+    </style>
+
+    <style name="FreshAppBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:elevation">0dp</item>
+        <item name="background">@color/secondary</item>
+    </style>
+
+    <style name="FreshToolbar">
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="FreshToolbar.Title">
+        <item name="android:background">@drawable/title_border</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="fontFamily">@font/bebas_neue_regular</item>
+    </style>
+
+
+    <style name="FreshAlbumCardTheme" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">@color/surface</item>
+        <item name="android:textColor">@color/onSurface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="textAppearanceBody1">@color/onSurface</item>
     </style>
 </resources>

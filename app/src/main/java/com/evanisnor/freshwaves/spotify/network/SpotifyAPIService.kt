@@ -25,6 +25,7 @@ interface SpotifyAPIService {
         @Header("Authorization") accessToken: String,
         @Path("id") artistId: String,
         @Query("market") market: String,
+        @Query("limit") limit: Int = 5,
         @Query("include_groups") includeGroups: String = "album"
     ): PagingObject<AlbumObject>
 

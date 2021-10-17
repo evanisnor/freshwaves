@@ -30,6 +30,7 @@ class UpdaterBootstrapper @Inject constructor() {
                 broadcastReceiver,
                 IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction)
             )
+        updateNow(context)
     }
 
     fun updateNow(context: Context) {

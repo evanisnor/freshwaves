@@ -18,7 +18,7 @@ class SpotifyAlbumRepository @Inject constructor(
     suspend fun getLatestAlbums(): Flow<List<Album>> =
         spotifyCacheDao.readAlbumsWithImages(30)
 
-    suspend fun getAlbums(): List<Album> = spotifyCacheDao.readAlbums(30)
+    suspend fun getLatestAlbumsMissingTracks(): List<Album> = spotifyCacheDao.readLatestAlbumsMissingTracks(30)
 
     suspend fun getAlbumWithTracks(albumId: Int): Album =
         spotifyCacheDao.readAlbumWithTracks(albumId)

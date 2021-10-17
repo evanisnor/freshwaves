@@ -5,17 +5,12 @@ import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.distinctUntilChanged
-import okhttp3.internal.wait
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -61,8 +56,8 @@ class UpdateWorker @AssistedInject constructor(
             }
         }
 
-        Log.i("UpdateWorker", "Fetching tracks...")
-        spotifyAlbumRepository.getAlbums().let { albums ->
+        Log.i("UpdateWorker", "Fetching missing tracks...")
+        spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->
             albums.forEach { album ->
                 Log.i(
                     "UpdateWorker",

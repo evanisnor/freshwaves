@@ -29,13 +29,16 @@ abstract class SpotifyCacheDao {
             albums
         }.flowOn(Dispatchers.Default)
 
-    suspend fun readAlbums(limit: Int): List<Album> = withContext(Dispatchers.Default) {
-        _readAlbums(limit).map { album ->
-            album.apply {
-                artist = _readArtist(artistId)
-            }
+    suspend fun readLatestAlbumsMissingTracks(limit: Int): List<Album> =
+        withContext(Dispatchers.Default) {
+            _readAlbums(limit)
+                .filter { album -> _countTracks(album.id) == 0 }
+                .map { album ->
+                    album.apply {
+                        artist = _readArtist(artistId)
+                    }
+                }
         }
-    }
 
     suspend fun readAlbumsWithImagesSync(limit: Int): List<Album> =
         withContext(Dispatchers.Default) {
@@ -151,6 +154,9 @@ abstract class SpotifyCacheDao {
 
     @Query("SELECT * FROM Track WHERE Track.albumId = :albumId ORDER BY discNumber,trackNumber")
     abstract suspend fun _readTracks(albumId: Int): List<Track>
+
+    @Query("SELECT count(*) FROM Track WHERE Track.albumId = :albumId")
+    abstract suspend fun _countTracks(albumId: Int): Int
 
     // endregion
 

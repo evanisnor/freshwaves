@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 
 class AlbumDetailsRobot {
-    private val dateTimeFormatter = DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault())
+    private val dateTimeFormatter = DateTimeFormatter.ofPattern("YYYY", Locale.getDefault())
 
     fun verifyAlbumOverview(expectedAlbum: Album) {
         onView(withId(R.id.details))

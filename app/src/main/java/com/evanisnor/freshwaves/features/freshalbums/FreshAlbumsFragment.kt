@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
@@ -43,8 +44,8 @@ class FreshAlbumsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            freshAlbumList.apply {
-                adapter = freshAlbumsAdapter
+            freshAlbumsList.apply {
+                adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
                 layoutManager = LinearLayoutManager(context)
             }
         }
@@ -71,10 +72,10 @@ class FreshAlbumsFragment : Fragment() {
         binding?.apply {
             if (showLoadingMessage) {
                 emptyMessage.loading.visibility = View.VISIBLE
-                freshAlbumList.visibility = View.INVISIBLE
+                freshAlbumsList.visibility = View.INVISIBLE
             } else {
                 emptyMessage.loading.visibility = View.GONE
-                freshAlbumList.visibility = View.VISIBLE
+                freshAlbumsList.visibility = View.VISIBLE
             }
         }
     }
@@ -82,11 +83,6 @@ class FreshAlbumsFragment : Fragment() {
     private suspend fun listenForUpdaterStatus() {
         freshAlbumsViewModel.updaterStatus.collect { result ->
             toggleLoadingMessage(result == UpdaterStatus.Running)
-
-            // I don't know why I have to do this
-            if (result == UpdaterStatus.Success) {
-                binding?.freshAlbumList?.scrollToPosition(0)
-            }
         }
     }
 

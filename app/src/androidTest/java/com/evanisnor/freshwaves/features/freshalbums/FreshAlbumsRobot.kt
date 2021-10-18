@@ -19,7 +19,7 @@ class FreshAlbumsRobot {
     private val dateTimeFormatter = DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault())
 
     fun verifyAlbumWithImage(index: Int, expectedAlbum: Album) {
-        onView(ViewMatchers.withId(R.id.freshAlbumList))
+        onView(ViewMatchers.withId(R.id.freshAlbumsList))
             .perform(RecyclerViewUtils.scrollToPosition(index))
             .check(matches(isDisplayed()))
             .check(albumNameMatches(index, expectedAlbum.name))
@@ -29,7 +29,7 @@ class FreshAlbumsRobot {
     }
 
     fun selectAlbumAt(index: Int) {
-        onView(ViewMatchers.withId(R.id.freshAlbumList))
+        onView(ViewMatchers.withId(R.id.freshAlbumsList))
             .perform(RecyclerViewUtils.scrollToPosition(index))
             .perform(RecyclerViewUtils.atPositionOnView(index, ViewActions.click()))
     }

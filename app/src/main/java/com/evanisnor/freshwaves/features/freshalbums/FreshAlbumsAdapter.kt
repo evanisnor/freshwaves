@@ -69,11 +69,10 @@ class FreshAlbumsAdapter : ListAdapter<Album, FreshAlbumViewHolder>(AlbumDiffCal
 
     var listener: OnAlbumSelectedListener? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreshAlbumViewHolder {
-        return FreshAlbumViewHolder.create(parent, listener)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreshAlbumViewHolder =
+        FreshAlbumViewHolder.create(parent, listener)
 
     override fun onBindViewHolder(holder: FreshAlbumViewHolder, position: Int) {
-        return holder.bind(getItem(position))
+        holder.bind(getItem(position))
     }
 }

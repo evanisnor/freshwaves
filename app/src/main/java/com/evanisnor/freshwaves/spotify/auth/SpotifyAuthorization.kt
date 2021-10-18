@@ -56,6 +56,10 @@ class SpotifyAuthorization @Inject constructor(
 
 
     suspend fun confirmAuthorization(activity: Activity) {
+        if (repository.isAuthorized) {
+            return
+        }
+
         with(authServiceFactory.create(context)) {
             parseAuthError(activity)?.let { error ->
                 Log.e("SpotifyAuthorization", "Failed to authorize: $error")

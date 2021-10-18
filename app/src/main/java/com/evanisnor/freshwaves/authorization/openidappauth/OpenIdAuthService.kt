@@ -51,7 +51,7 @@ class OpenIdAuthService(
                 if (response != null) {
                     continuation.resume(response.toAuthTokenResponse(tokenRequest)) {}
                 } else if (ex != null) {
-                    throw ex.toAuthError()
+                    continuation.cancel(ex)
                 }
             }
         }

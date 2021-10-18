@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
+import com.evanisnor.freshwaves.features.updater.UpdaterStatus
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -19,46 +20,83 @@ import kotlinx.coroutines.launch
 class FreshAlbumsFragment : Fragment() {
 
     private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
-
     private val freshAlbumsAdapter = FreshAlbumsAdapter()
-
-    private var fragmentFreshAlbumsBinding: FreshAlbumsFragmentBinding? = null
-    private var _binding: FreshAlbumsFragmentBinding? = null
-    private val binding get() = _binding!!
+    private var binding: FreshAlbumsFragmentBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FreshAlbumsFragmentBinding.inflate(inflater, container, false)
-        return binding.root
+        return FreshAlbumsFragmentBinding.inflate(inflater, container, false)
+            .apply {
+                binding = this
+            }.root
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding = null
+        binding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.apply {
-            freshAlbumList.adapter = freshAlbumsAdapter
-            freshAlbumList.layoutManager = LinearLayoutManager(context)
-            fragmentFreshAlbumsBinding = this
+        binding?.apply {
+            freshAlbumList.apply {
+                adapter = freshAlbumsAdapter
+                layoutManager = LinearLayoutManager(context)
+            }
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        registerAdapterClickListener()
+        freshAlbumsViewModel.registerForUpdaterStatus(requireContext())
 
         lifecycleScope.launch {
-            freshAlbumsViewModel.albums.collect { albums ->
-                freshAlbumsAdapter.submitList(albums)
+            listenForFreshAlbums()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launch {
+            listenForUpdaterStatus()
+        }
+    }
+
+    private fun toggleLoadingMessage(showLoadingMessage: Boolean) {
+        binding?.apply {
+            if (showLoadingMessage) {
+                emptyMessage.loading.visibility = View.VISIBLE
+                freshAlbumList.visibility = View.INVISIBLE
+            } else {
+                emptyMessage.loading.visibility = View.GONE
+                freshAlbumList.visibility = View.VISIBLE
             }
         }
+    }
 
+    private suspend fun listenForUpdaterStatus() {
+        freshAlbumsViewModel.updaterStatus.collect { result ->
+            toggleLoadingMessage(result == UpdaterStatus.Running)
+
+            // I don't know why I have to do this
+            if (result == UpdaterStatus.Success) {
+                binding?.freshAlbumList?.scrollToPosition(0)
+            }
+        }
+    }
+
+    private suspend fun listenForFreshAlbums() {
+        freshAlbumsViewModel.albums.collect { albums ->
+            freshAlbumsAdapter.submitList(albums)
+        }
+    }
+
+    private fun registerAdapterClickListener() {
         freshAlbumsAdapter.listener = object : FreshAlbumsAdapter.OnAlbumSelectedListener {
             override fun onAlbumSelected(album: Album) {
                 launchAlbumDetails(album)

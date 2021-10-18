@@ -24,6 +24,7 @@ class UpdateWorker @AssistedInject constructor(
 
     override suspend fun doWork(): Result {
         var result = Result.success()
+        updaterBootstrapper.broadcastStatus(applicationContext, UpdaterStatus.Running)
 
         withContext(Dispatchers.Default) {
             try {
@@ -37,7 +38,11 @@ class UpdateWorker @AssistedInject constructor(
             }
         }
 
-        updaterBootstrapper.scheduleNextUpdate(applicationContext)
+        with(applicationContext) {
+            updaterBootstrapper.scheduleNextUpdate(this)
+            updaterBootstrapper.broadcastStatus(this, result.toStatus())
+        }
+
         return result
     }
 

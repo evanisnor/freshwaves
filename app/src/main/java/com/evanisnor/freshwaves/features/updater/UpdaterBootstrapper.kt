@@ -16,6 +16,11 @@ import javax.inject.Inject
 
 class UpdaterBootstrapper @Inject constructor() {
 
+    companion object {
+        const val updaterStatusIntent = "updater-status-intent"
+        const val updaterStatusExtra = "updater-status-extra"
+    }
+
     private val broadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             context?.let {
@@ -30,12 +35,18 @@ class UpdaterBootstrapper @Inject constructor() {
                 broadcastReceiver,
                 IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction)
             )
-        updateNow(context)
     }
 
     fun updateNow(context: Context) {
         WorkManager.getInstance(context)
             .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
+    }
+
+    fun broadcastStatus(context: Context, status: UpdaterStatus) {
+        LocalBroadcastManager.getInstance(context)
+            .sendBroadcast(Intent(updaterStatusIntent).apply {
+                putExtra(updaterStatusExtra, status)
+            })
     }
 
     fun scheduleNextUpdate(context: Context) {

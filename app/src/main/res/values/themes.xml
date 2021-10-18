@@ -36,6 +36,9 @@
         <item name="actionBarStyle">@style/FreshAppBar</item>
         <item name="toolbarStyle">@style/FreshToolbar</item>
 
+        <!-- Progress Bar -->
+        <item name="progressBarStyle">@style/FreshLoadingSpinner</item>
+
     </style>
 
     <style name="FreshAppBar" parent="Widget.AppCompat.ActionBar">
@@ -58,11 +61,20 @@
         <item name="fontFamily">@font/bebas_neue_regular</item>
     </style>
 
-
     <style name="FreshAlbumCardTheme" parent="Widget.MaterialComponents.CardView">
         <item name="android:background">@color/surface</item>
         <item name="android:textColor">@color/onSurface</item>
         <item name="colorOnSurface">@color/onSurface</item>
         <item name="textAppearanceBody1">@color/onSurface</item>
+    </style>
+
+    <style name="FreshLoadingSpinner" parent="Widget.MaterialComponents.CircularProgressIndicator" />
+
+    <style name="FreshLoadingMessage">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:textColor">@color/onSurface</item>
+        <item name="background">@null</item>
+        <item name="android:padding">8dp</item>
     </style>
 </resources>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Fresh Waves</string>
+    <string name="loading_message">Checking for sounds…</string>
 </resources>

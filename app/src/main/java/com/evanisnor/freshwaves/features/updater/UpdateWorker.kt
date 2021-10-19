@@ -5,12 +5,14 @@ import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
+import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.*
+import java.time.Instant
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -19,8 +21,10 @@ class UpdateWorker @AssistedInject constructor(
     private val spotifyUserRepository: SpotifyUserRepository,
     private val spotifyArtistRepository: SpotifyArtistRepository,
     private val spotifyAlbumRepository: SpotifyAlbumRepository,
-    private val updaterBootstrapper: UpdaterBootstrapper
+    private val updaterBootstrapper: UpdaterBootstrapper,
+    private val freshAlbumNotifier: FreshAlbumNotifier
 ) : CoroutineWorker(applicationContext, workerParameters) {
+
 
     override suspend fun doWork(): Result {
         var result = Result.success()
@@ -37,6 +41,8 @@ class UpdateWorker @AssistedInject constructor(
                 result = Result.failure()
             }
         }
+
+        notifyOfNewAlbums()
 
         with(applicationContext) {
             updaterBootstrapper.scheduleNextUpdate(this)
@@ -70,6 +76,21 @@ class UpdateWorker @AssistedInject constructor(
                 )
                 spotifyAlbumRepository.updateTracks(album)
             }
+        }
+    }
+
+    private suspend fun notifyOfNewAlbums() {
+        val freshAlbums =
+            spotifyAlbumRepository.getAlbumsReleasedAfter(Instant.now().startOfDayUTC())
+
+        if (freshAlbums.isNotEmpty()) {
+            freshAlbums.forEach { album ->
+                val albumNotification = freshAlbumNotifier.buildAlbumNotification(album)
+                freshAlbumNotifier.send(album, albumNotification)
+            }
+
+            val messageNotification = freshAlbumNotifier.buildMessageNotification(freshAlbums)
+            freshAlbumNotifier.send(messageNotification)
         }
     }
 

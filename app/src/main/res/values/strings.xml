@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">Fresh Waves</string>
     <string name="loading_message">Checking for sounds…</string>
+
+    <string name="notification_channel_name">Fresh Albums</string>
+    <string name="notification_channel_description">Lets you know when new albums are released</string>
+    <string name="notification_unknown_artist">Unknown</string>
+
+    <plurals name="notification_fresh_albums_title">
+        <item quantity="one">%1$d fresh album for you this week!</item>
+        <item quantity="many">%1$d fresh albums for you this week!</item>
+        <item quantity="other">%1$d fresh albums for you this week!</item>
+    </plurals>
+    <string name="notification_fresh_albums_text">Tap to check it out</string>
+
+    <string name="notification_fresh_album_title">"%1$s" by %2$s</string>
+    <plurals name="notification_fresh_album_text">
+        <item quantity="one">%1$d track</item>
+        <item quantity="many">%1$d tracks</item>
+        <item quantity="other">%1$d tracks</item>
+    </plurals>
+
 </resources>

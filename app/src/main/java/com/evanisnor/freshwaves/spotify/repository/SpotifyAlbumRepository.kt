@@ -8,6 +8,7 @@ import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.user.UserProfile
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
+import java.time.Instant
 import javax.inject.Inject
 
 class SpotifyAlbumRepository @Inject constructor(
@@ -18,7 +19,10 @@ class SpotifyAlbumRepository @Inject constructor(
     suspend fun getLatestAlbums(): Flow<List<Album>> =
         spotifyCacheDao.readAlbumsWithImages(30)
 
-    suspend fun getLatestAlbumsMissingTracks(): List<Album> = spotifyCacheDao.readLatestAlbumsMissingTracks(30)
+    suspend fun getLatestAlbumsMissingTracks(): List<Album> =
+        spotifyCacheDao.readLatestAlbumsMissingTracks(30)
+
+    suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album> = spotifyCacheDao.readAlbumsReleasedAfter(instant)
 
     suspend fun getAlbumWithTracks(albumId: Int): Album =
         spotifyCacheDao.readAlbumWithTracks(albumId)

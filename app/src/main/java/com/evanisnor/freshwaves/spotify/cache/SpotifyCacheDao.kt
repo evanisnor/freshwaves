@@ -7,10 +7,11 @@ import androidx.room.Query
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
+import java.time.Instant
+import java.time.ZoneId
 
 @Suppress("FunctionName")
 @Dao
@@ -50,15 +51,27 @@ abstract class SpotifyCacheDao {
             }
         }
 
-    suspend fun readAlbumWithTracks(albumId: Int): Album = withContext(Dispatchers.Default) {
-        _readAlbum(albumId).let { album ->
-            album.apply {
-                artist = _readArtist(album.artistId)
-                images = _readAlbumImages(album.id)
-                tracks = _readTracks(album.id)
+    suspend fun readAlbumWithTracks(albumId: Int): Album =
+        withContext(Dispatchers.Default) {
+            _readAlbum(albumId).let { album ->
+                album.apply {
+                    artist = _readArtist(album.artistId)
+                    images = _readAlbumImages(album.id)
+                    tracks = _readTracks(album.id)
+                }
             }
         }
-    }
+
+    suspend fun readAlbumsReleasedAfter(instant: Instant): List<Album> =
+        withContext(Dispatchers.Default) {
+            _readAlbumsReleasedAfter(instant).onEach { album ->
+                album.apply {
+                    artist = _readArtist(artistId)
+                    images = _readAlbumImages(id)
+                    tracks = _readTracks(id)
+                }
+            }
+        }
 
     fun insertAlbums(albums: Collection<Album>) {
         albums.forEach { album ->
@@ -145,6 +158,9 @@ abstract class SpotifyCacheDao {
                 " LIMIT :limit"
     )
     abstract fun _readAlbumsActive(limit: Int): Flow<List<Album>>
+
+    @Query("SELECT * FROM Album WHERE releaseDate >= :instant ORDER BY releaseDate")
+    abstract suspend fun _readAlbumsReleasedAfter(instant: Instant): List<Album>
 
     @Query("SELECT * FROM Album WHERE Album.id = :albumId")
     abstract suspend fun _readAlbum(albumId: Int): Album

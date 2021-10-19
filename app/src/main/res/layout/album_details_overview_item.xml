@@ -46,7 +46,7 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-        android:textColor="?attr/colorPrimary"
+        android:textColor="?attr/colorSecondary"
         app:layout_constraintEnd_toStartOf="@+id/releaseDate"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

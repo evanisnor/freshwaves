@@ -1,10 +1,10 @@
 package com.evanisnor.freshwaves.features.albumdetails
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -14,7 +14,6 @@ import com.evanisnor.freshwaves.databinding.AlbumDetailsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.adapter.AlbumDetailsAdapter
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -69,8 +68,17 @@ class AlbumDetailsFragment : Fragment() {
     private fun update(album: Album) {
         (binding.details.adapter as AlbumDetailsAdapter).submit(album)
 
-        binding.albumImage?.apply {
-            load(album.images.first().url)
+        binding.apply {
+            albumImage?.apply {
+                load(album.images.first().url)
+            }
+
+            playWithSpotifyButton?.setOnClickListener {
+                startActivity(Intent(Intent.ACTION_VIEW).apply {
+                    data = album.spotifyUri
+                })
+            }
         }
+
     }
 }

@@ -17,6 +17,7 @@ import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.first
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -56,8 +57,8 @@ class FreshAlbumsTest {
         launchFragmentInHiltContainer<FreshAlbumsFragment> {}
 
         runBlocking {
-            spotifyCacheDao.readAlbumsWithImagesSync(30).forEachIndexed { index, album ->
-                freshAlbumsRobot.verifyAlbumWithImage(index, album)
+            spotifyCacheDao.readAlbumsWithImages(30).first().forEachIndexed { index, album ->
+                freshAlbumsRobot.verifyAlbumWithImage(index + 1, album)
             }
         }
     }
@@ -68,8 +69,8 @@ class FreshAlbumsTest {
 
         runBlocking {
 
-            spotifyCacheDao.readAlbumsWithImagesSync(30).forEachIndexed { index, album ->
-                freshAlbumsRobot.selectAlbumAt(index)
+            spotifyCacheDao.readAlbumsWithImages(30).first().forEachIndexed { index, album ->
+                freshAlbumsRobot.selectAlbumAt(index + 1)
                 albumDetailsRobot.verifyAlbumOverview(album)
                 pressBack()
             }

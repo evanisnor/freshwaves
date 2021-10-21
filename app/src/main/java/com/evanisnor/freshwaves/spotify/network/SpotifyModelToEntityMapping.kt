@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.spotify.network
 
+import android.net.Uri
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
 import com.evanisnor.freshwaves.spotify.network.model.AlbumObject
 import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
@@ -70,6 +71,7 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
                 Instant.MIN
             }
         },
+        spotifyUri = Uri.parse(externalUrls.spotify),
         images?.map { imageObject ->
             AlbumImage(
                 url = imageObject.url,

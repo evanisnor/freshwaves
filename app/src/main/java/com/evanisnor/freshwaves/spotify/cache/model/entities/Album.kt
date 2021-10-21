@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.spotify.cache.model.entities
 
+import android.net.Uri
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Ignore
@@ -21,7 +22,8 @@ data class Album(
     val artistId: String,
     val name: String,
     val type: String,
-    val releaseDate: Instant
+    val releaseDate: Instant,
+    val spotifyUri: Uri
 ) {
 
     @Ignore
@@ -40,9 +42,10 @@ data class Album(
         name: String,
         type: String,
         releaseDate: Instant,
+        spotifyUri: Uri,
         images: List<AlbumImage>,
         tracks: List<Track>
-    ) : this(id, spotifyId, artist.id, name, type, releaseDate) {
+    ) : this(id, spotifyId, artist.id, name, type, releaseDate, spotifyUri) {
         this.artist = artist
         this.images = images
         this.tracks = tracks

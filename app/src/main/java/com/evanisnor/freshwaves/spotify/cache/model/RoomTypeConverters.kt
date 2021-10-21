@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.spotify.cache.model
 
+import android.net.Uri
 import androidx.room.TypeConverter
 import java.time.Duration
 import java.time.Instant
@@ -19,4 +20,10 @@ class RoomTypeConverters {
 
     @TypeConverter
     fun fromDurationToMilliseconds(duration: Duration): Long = duration.toMillis()
+
+    @TypeConverter
+    fun fromUriStringToUri(uriString: String) : Uri = Uri.parse(uriString)
+
+    @TypeConverter
+    fun fromUriToUriString(uri: Uri) : String = uri.toString()
 }

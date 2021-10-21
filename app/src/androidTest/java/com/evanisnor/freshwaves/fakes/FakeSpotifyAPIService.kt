@@ -60,12 +60,13 @@ class FakeSpotifyAPIService(
         accessToken: String,
         artistId: String,
         market: String,
+        limit: Int,
         includeGroups: String
     ): PagingObject<AlbumObject> = if (artistAlbums.containsKey(artistId)) {
         behaviorDelegate.returningResponse(artistAlbums[artistId]?.remove())
     } else {
         behaviorDelegate.returningResponse(PagingObject<AlbumObject>(emptyList()))
-    }.getArtistAlbums(accessToken, artistId, market, includeGroups)
+    }.getArtistAlbums(accessToken, artistId, market, limit, includeGroups)
 
     // endregion
 

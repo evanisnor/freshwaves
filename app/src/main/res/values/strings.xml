@@ -20,4 +20,5 @@
         <item quantity="other">%1$d tracks</item>
     </plurals>
 
+    <string name="play_with_spotify">Play with Spotify</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.features.albumdetails.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,12 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 .format(
                     DateTimeFormatter.ofPattern("YYYY", Locale.getDefault())
                 )
+
+            playWithSpotifyButton?.setOnClickListener {
+                itemView.context.startActivity(Intent(Intent.ACTION_VIEW).apply {
+                    data = album.spotifyUri
+                })
+            }
         }
     }
 }

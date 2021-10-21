@@ -10,6 +10,7 @@ data class AlbumObject(
     val type: String,
     @field:Json(name = "release_date") val releaseDate: String?,
     @field:Json(name = "release_date_precision") val releaseDatePrecision: String?,
+    @field:Json(name = "external_urls") val externalUrls: ExternalUrls,
     val images: List<ImageObject>?,
     val artists: List<ArtistObject>,
     val tracks: List<TrackObject>?

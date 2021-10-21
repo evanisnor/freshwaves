@@ -41,16 +41,6 @@ abstract class SpotifyCacheDao {
                 }
         }
 
-    suspend fun readAlbumsWithImagesSync(limit: Int): List<Album> =
-        withContext(Dispatchers.Default) {
-            _readAlbums(limit).map { album ->
-                album.apply {
-                    artist = _readArtist(artistId)
-                    images = _readAlbumImages(id)
-                }
-            }
-        }
-
     suspend fun readAlbumWithTracks(albumId: Int): Album =
         withContext(Dispatchers.Default) {
             _readAlbum(albumId).let { album ->

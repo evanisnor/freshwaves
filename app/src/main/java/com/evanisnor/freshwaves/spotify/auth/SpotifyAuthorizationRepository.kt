@@ -1,12 +1,12 @@
 package com.evanisnor.freshwaves.spotify.auth
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
+import android.os.Build
 import com.evanisnor.freshwaves.authorization.*
 import com.evanisnor.freshwaves.system.AppMetadata
 import javax.inject.Inject
@@ -76,13 +76,12 @@ class SpotifyAuthorizationRepository @Inject constructor(
             )
         }
 
-    @SuppressLint("UnspecifiedImmutableFlag")
     fun <A : Activity> activityIntent(context: Context, activityClass: KClass<A>): PendingIntent =
         PendingIntent.getActivity(
             context,
             0,
             Intent(context, activityClass.java),
-            0
+            if (Build.VERSION.SDK_INT == Build.VERSION_CODES.S) PendingIntent.FLAG_MUTABLE else 0
         )
 
     // region Persistence

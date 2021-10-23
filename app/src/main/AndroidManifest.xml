@@ -31,7 +31,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
 
         <activity
             android:name="net.openid.appauth.RedirectUriReceiverActivity"
@@ -50,7 +52,7 @@
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
-            tools:node="remove" />
+            android:exported="false" />
     </application>
 
 </manifest>

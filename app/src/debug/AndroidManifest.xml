@@ -12,6 +12,46 @@
             android:name=".HiltTestActivity"
             android:exported="false" />
 
+        <!-- region androidx.test API 31 Workaround https://issuetracker.google.com/issues/182098106 -->
+
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme"
+            tools:node="replace">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme"
+            tools:node="replace">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme"
+            tools:node="replace">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- endregion -->
+
     </application>
 
 </manifest>

@@ -7,12 +7,12 @@ plugins {
 }
 
 android {
-    compileSdk = 30
+    compileSdk = 31
 
     defaultConfig {
         applicationId = "com.evanisnor.freshwaves"
         minSdk = 27
-        targetSdk = 30
+        targetSdk = 31
         versionCode = 1
         versionName = "0.1.0"
 
@@ -53,7 +53,7 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.3.6")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
-    implementation("androidx.work:work-runtime-ktx:2.6.0")
+    implementation("androidx.work:work-runtime-ktx:2.7.0")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.38.1")
@@ -101,5 +101,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     debugImplementation("androidx.test:monitor:1.4.0")
     debugImplementation("androidx.fragment:fragment-testing:1.3.6")
-    androidTestImplementation("androidx.work:work-testing:2.6.0")
+    androidTestImplementation("androidx.work:work-testing:2.7.0")
 }

@@ -16,7 +16,8 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.*
         ArtistImage::class,
         ArtistToGenre::class,
         Track::class,
-    ]
+    ],
+    exportSchema = false
 )
 @TypeConverters(RoomTypeConverters::class)
 abstract class SpotifyCache : RoomDatabase() {

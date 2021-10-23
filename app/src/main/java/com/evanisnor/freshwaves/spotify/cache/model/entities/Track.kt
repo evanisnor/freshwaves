@@ -1,6 +1,7 @@
 package com.evanisnor.freshwaves.spotify.cache.model.entities
 
 import androidx.room.Entity
+import androidx.room.Index
 import java.time.Duration
 
 @Entity(
@@ -11,6 +12,9 @@ import java.time.Duration
             parentColumns = ["id"],
             childColumns = ["albumId"]
         )
+    ],
+    indices = [
+        Index(value = ["albumId"])
     ]
 )
 data class Track(

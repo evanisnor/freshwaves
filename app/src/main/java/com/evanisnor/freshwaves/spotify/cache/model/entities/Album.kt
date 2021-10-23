@@ -1,10 +1,7 @@
 package com.evanisnor.freshwaves.spotify.cache.model.entities
 
 import android.net.Uri
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.Ignore
-import androidx.room.PrimaryKey
+import androidx.room.*
 import java.time.Instant
 
 @Entity(
@@ -14,6 +11,9 @@ import java.time.Instant
             parentColumns = ["id"],
             childColumns = ["artistId"]
         )
+    ],
+    indices = [
+        Index(value = ["artistId"])
     ]
 )
 data class Album(

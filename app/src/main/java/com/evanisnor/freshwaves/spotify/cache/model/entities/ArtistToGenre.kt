@@ -1,6 +1,7 @@
 package com.evanisnor.freshwaves.spotify.cache.model.entities
 
 import androidx.room.Entity
+import androidx.room.Index
 
 @Entity(
     primaryKeys = ["artistId", "genreId"],
@@ -15,6 +16,10 @@ import androidx.room.Entity
             parentColumns = ["id"],
             childColumns = ["genreId"]
         )
+    ],
+    indices = [
+        Index(value = ["artistId"]),
+        Index(value = ["genreId"])
     ]
 )
 data class ArtistToGenre(

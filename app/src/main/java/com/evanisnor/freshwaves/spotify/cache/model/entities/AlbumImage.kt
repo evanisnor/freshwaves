@@ -2,6 +2,7 @@ package com.evanisnor.freshwaves.spotify.cache.model.entities
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(
@@ -11,6 +12,9 @@ import androidx.room.PrimaryKey
             parentColumns = ["id"],
             childColumns = ["albumId"]
         )
+    ],
+    indices = [
+        Index(value = ["albumId"])
     ]
 )
 data class AlbumImage(

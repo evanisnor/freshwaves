@@ -53,6 +53,9 @@ class UpdaterBootstrapper @Inject constructor() {
         val targetStartTime = LocalDateTime.now()
             .with(TemporalAdjusters.next(DayOfWeek.FRIDAY))
             .withHour(6)
+            .withMinute(0)
+            .withSecond(0)
+            .withNano(0)
 
         val delay = Duration.between(LocalDateTime.now(), targetStartTime)
 

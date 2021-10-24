@@ -1,6 +1,6 @@
 package com.evanisnor.freshwaves.features.updater
 
-enum class UpdaterStatus {
+enum class UpdaterState {
     Idle,
     Running,
     Success,

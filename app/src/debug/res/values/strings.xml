@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug">Debug</string>
+    <string name="version_label">Version</string>
+    <string name="version_code">Version Code</string>
+    <string name="build_date_label">Built on</string>
+</resources>

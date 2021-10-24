@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.features.freshalbums
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,9 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
+import com.evanisnor.freshwaves.debugmenu.DebugMenuActivity
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
-import com.evanisnor.freshwaves.features.updater.UpdaterStatus
+import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -48,6 +51,16 @@ class FreshAlbumsFragment : Fragment() {
                 adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
                 layoutManager = LinearLayoutManager(context)
             }
+
+            toolbar.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.debug_menu_item -> startActivity(
+                        Intent(activity, DebugMenuActivity::class.java)
+                    )
+                }
+
+                false
+            }
         }
     }
 
@@ -81,8 +94,8 @@ class FreshAlbumsFragment : Fragment() {
     }
 
     private suspend fun listenForUpdaterStatus() {
-        freshAlbumsViewModel.updaterStatus.collect { result ->
-            toggleLoadingMessage(result == UpdaterStatus.Running)
+        freshAlbumsViewModel.updaterState.collect { result ->
+            toggleLoadingMessage(result == UpdaterState.Running)
         }
     }
 

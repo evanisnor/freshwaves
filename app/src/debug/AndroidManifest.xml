@@ -12,6 +12,10 @@
             android:name=".HiltTestActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".debugmenu.DebugMenuActivity"
+            android:exported="false" />
+
         <!-- region androidx.test API 31 Workaround https://issuetracker.google.com/issues/182098106 -->
 
         <activity

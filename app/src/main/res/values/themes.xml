@@ -33,7 +33,6 @@
         <item name="android:statusBarColor">@color/background</item>
 
         <!-- ActionBar -->
-        <item name="actionBarStyle">@style/FreshAppBar</item>
         <item name="toolbarStyle">@style/FreshToolbar</item>
 
         <!-- Progress Bar -->
@@ -41,17 +40,12 @@
 
     </style>
 
-    <style name="FreshAppBar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:elevation">0dp</item>
-        <item name="background">@color/secondary</item>
-    </style>
-
     <style name="FreshToolbar">
         <item name="android:elevation">0dp</item>
+        <item name="android:background">@drawable/title_border</item>
     </style>
 
     <style name="FreshToolbar.Title">
-        <item name="android:background">@drawable/title_border</item>
         <item name="android:textColor">@color/secondary</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
         </item>

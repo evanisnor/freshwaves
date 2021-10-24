@@ -1,3 +1,5 @@
+import java.time.*
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -18,10 +20,13 @@ android {
         versionCode = 1
         versionName = "0.1.0"
 
+        buildConfigField("Long", "BUILD_TIMESTAMP", "${Instant.now().toEpochMilli()}L")
+
         testInstrumentationRunner = "com.evanisnor.freshwaves.runner.HiltAndroidTestRunner"
     }
 
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 

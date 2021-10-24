@@ -42,10 +42,10 @@ class UpdaterBootstrapper @Inject constructor() {
             .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
     }
 
-    fun broadcastStatus(context: Context, status: UpdaterStatus) {
+    fun broadcastState(context: Context, state: UpdaterState) {
         LocalBroadcastManager.getInstance(context)
             .sendBroadcast(Intent(updaterStatusIntent).apply {
-                putExtra(updaterStatusExtra, status)
+                putExtra(updaterStatusExtra, state)
             })
     }
 

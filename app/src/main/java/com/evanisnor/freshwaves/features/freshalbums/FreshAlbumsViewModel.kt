@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
-import com.evanisnor.freshwaves.features.updater.UpdaterStatus
+import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,9 +23,9 @@ class FreshAlbumsViewModel @Inject constructor(
     private val spotifyAlbumRepository: SpotifyAlbumRepository
 ) : ViewModel() {
 
-    private val _updaterStatus: MutableStateFlow<UpdaterStatus> =
-        MutableStateFlow(UpdaterStatus.Idle)
-    val updaterStatus: StateFlow<UpdaterStatus> = _updaterStatus
+    private val _updaterState: MutableStateFlow<UpdaterState> =
+        MutableStateFlow(UpdaterState.Idle)
+    val updaterState: StateFlow<UpdaterState> = _updaterState
 
     private val _albums: MutableStateFlow<List<Album>> = MutableStateFlow(emptyList())
     val albums: StateFlow<List<Album>> = _albums
@@ -40,10 +40,10 @@ class FreshAlbumsViewModel @Inject constructor(
         override fun onReceive(context: Context?, intent: Intent?) {
             intent?.let {
                 val result =
-                    it.getSerializableExtra(UpdaterBootstrapper.updaterStatusExtra) as UpdaterStatus
+                    it.getSerializableExtra(UpdaterBootstrapper.updaterStatusExtra) as UpdaterState
 
                 viewModelScope.launch {
-                    _updaterStatus.emit(result)
+                    _updaterState.emit(result)
                 }
             }
         }

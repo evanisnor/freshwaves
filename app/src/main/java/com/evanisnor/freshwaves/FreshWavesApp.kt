@@ -22,7 +22,7 @@ class FreshWavesApp : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
-        updaterBootstrapper.register(this)
+        updaterBootstrapper.registerForSuccessfulAuthorization(this)
         freshAlbumNotifier.createNotificationChannel()
     }
 

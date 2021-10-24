@@ -67,7 +67,6 @@ class FreshAlbumsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registerAdapterClickListener()
-        freshAlbumsViewModel.registerForUpdaterStatus(requireContext())
 
         lifecycleScope.launch {
             listenForFreshAlbums()

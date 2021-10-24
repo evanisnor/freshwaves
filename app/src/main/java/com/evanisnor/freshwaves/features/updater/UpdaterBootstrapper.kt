@@ -29,7 +29,7 @@ class UpdaterBootstrapper @Inject constructor() {
         }
     }
 
-    fun register(context: Context) {
+    fun registerForSuccessfulAuthorization(context: Context) {
         LocalBroadcastManager.getInstance(context)
             .registerReceiver(
                 broadcastReceiver,
@@ -40,13 +40,6 @@ class UpdaterBootstrapper @Inject constructor() {
     fun updateNow(context: Context) {
         WorkManager.getInstance(context)
             .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
-    }
-
-    fun broadcastState(context: Context, state: UpdaterState) {
-        LocalBroadcastManager.getInstance(context)
-            .sendBroadcast(Intent(updaterStatusIntent).apply {
-                putExtra(updaterStatusExtra, state)
-            })
     }
 
     fun scheduleNextUpdate(context: Context) {

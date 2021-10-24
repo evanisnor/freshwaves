@@ -7,11 +7,10 @@ import com.evanisnor.freshwaves.databinding.DebugMenuItemUpdaterInformationBindi
 import com.evanisnor.freshwaves.debugmenu.BindingViewHolder
 import com.evanisnor.freshwaves.debugmenu.DebugMenuData
 import com.evanisnor.freshwaves.features.updater.UpdaterState
-import java.time.Instant
 
 data class UpdaterInformation(
     val state: UpdaterState,
-    val lastUpdateOn: Instant
+    val onUpdateNow: () -> Unit
 ) : DebugMenuData
 
 class UpdaterInformationViewHolder(
@@ -29,5 +28,15 @@ class UpdaterInformationViewHolder(
     }
 
     override fun bind(debugMenuData: UpdaterInformation) {
+        binding.apply {
+            status.text = debugMenuData.state.name
+
+            runUpdaterNowButton.apply {
+                isEnabled = debugMenuData.state == UpdaterState.Idle
+                setOnClickListener {
+                    debugMenuData.onUpdateNow()
+                }
+            }
+        }
     }
 }

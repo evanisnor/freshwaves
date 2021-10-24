@@ -2,6 +2,8 @@
 <resources>
     <string name="debug">Debug</string>
     <string name="version_label">Version</string>
-    <string name="version_code">Version Code</string>
+    <string name="version_code_label">Version Code</string>
     <string name="build_date_label">Built on</string>
+    <string name="updater_state_label">Updater State</string>
+    <string name="run_update_now_label">Run Update Now</string>
 </resources>

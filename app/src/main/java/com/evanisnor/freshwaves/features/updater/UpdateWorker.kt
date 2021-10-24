@@ -20,6 +20,7 @@ import java.time.Instant
 class UpdateWorker @AssistedInject constructor(
     @Assisted applicationContext: Context,
     @Assisted workerParameters: WorkerParameters,
+    private val updaterRepository: UpdaterRepository,
     private val spotifyUserRepository: SpotifyUserRepository,
     private val spotifyArtistRepository: SpotifyArtistRepository,
     private val spotifyAlbumRepository: SpotifyAlbumRepository,
@@ -28,31 +29,29 @@ class UpdateWorker @AssistedInject constructor(
 ) : CoroutineWorker(applicationContext, workerParameters) {
 
 
-    override suspend fun doWork(): Result {
+    override suspend fun doWork(): Result = withContext(Dispatchers.Default) {
         var result = Result.success()
-        updaterBootstrapper.broadcastState(applicationContext, UpdaterState.Running)
+        updaterRepository.updateState(UpdaterState.Running)
 
-        withContext(Dispatchers.Default) {
-            try {
-                update()
-            } catch (throwable: Throwable) {
-                Log.e(
-                    "UpdateWorker",
-                    "Failed to update cache: $throwable"
-                )
-                Firebase.crashlytics.recordException(throwable)
-                result = Result.failure()
-            }
+        try {
+            update()
+            notifyOfNewAlbums()
+        } catch (throwable: Throwable) {
+            Log.e(
+                "UpdateWorker",
+                "Failed to update cache: $throwable"
+            )
+            Firebase.crashlytics.recordException(throwable)
+            result = Result.failure()
         }
-
-        notifyOfNewAlbums()
 
         with(applicationContext) {
             updaterBootstrapper.scheduleNextUpdate(this)
-            updaterBootstrapper.broadcastState(this, result.toStatus())
+            updaterRepository.updateState(result.toStatus())
+            updaterRepository.updateState(UpdaterState.Idle)
         }
 
-        return result
+        result
     }
 
     private suspend fun update() {

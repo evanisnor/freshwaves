@@ -9,6 +9,8 @@ import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.*
@@ -36,8 +38,9 @@ class UpdateWorker @AssistedInject constructor(
             } catch (throwable: Throwable) {
                 Log.e(
                     "UpdateWorker",
-                    "Failed to update cache: $throwable\n${throwable.stackTraceToString()}"
+                    "Failed to update cache: $throwable"
                 )
+                Firebase.crashlytics.recordException(throwable)
                 result = Result.failure()
             }
         }

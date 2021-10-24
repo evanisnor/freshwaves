@@ -8,6 +8,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.evanisnor.freshwaves.authorization.AuthError
 import com.evanisnor.freshwaves.authorization.AuthService
 import com.evanisnor.freshwaves.authorization.AuthTokenRequest
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -63,7 +65,7 @@ class SpotifyAuthorization @Inject constructor(
         with(authServiceFactory.create(context)) {
             parseAuthError(activity)?.let { error ->
                 Log.e("SpotifyAuthorization", "Failed to authorize: $error")
-                throw error
+                Firebase.crashlytics.recordException(error)
             }
 
             parseAuthResponse(activity)?.let { response ->
@@ -86,6 +88,7 @@ class SpotifyAuthorization @Inject constructor(
                 repository.update(tokenExchangeRequest, response)
             } catch (authError: AuthError) {
                 repository.update(authError)
+                Firebase.crashlytics.recordException(authError)
             }
         }
     }
@@ -103,6 +106,7 @@ class SpotifyAuthorization @Inject constructor(
                 return repository.bearerToken
             } catch (authError: AuthError) {
                 repository.update(authError)
+                Firebase.crashlytics.recordException(authError)
             }
         }
 

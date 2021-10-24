@@ -1,7 +1,6 @@
 package com.evanisnor.freshwaves
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
@@ -20,11 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         lifecycleScope.launch {
-            try {
-                spotifyAuthorization.confirmAuthorization(this@MainActivity)
-            } catch (error: Throwable) {
-                Log.w("MainActivity", "Failed to authorize user: $error")
-            }
+            spotifyAuthorization.confirmAuthorization(this@MainActivity)
         }
     }
 }

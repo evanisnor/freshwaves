@@ -45,12 +45,7 @@ class UpdateWorker @AssistedInject constructor(
             result = Result.failure()
         }
 
-        with(applicationContext) {
-            updaterBootstrapper.scheduleNextUpdate(this)
-            updaterRepository.updateState(result.toStatus())
-            updaterRepository.updateState(UpdaterState.Idle)
-        }
-
+        finish(result)
         result
     }
 
@@ -93,6 +88,20 @@ class UpdateWorker @AssistedInject constructor(
 
             val messageNotification = freshAlbumNotifier.buildMessageNotification(freshAlbums)
             freshAlbumNotifier.send(messageNotification)
+        }
+    }
+
+    private suspend fun finish(result: Result) {
+        with(applicationContext) {
+            val nextRun = updaterBootstrapper.scheduleNextUpdate(this)
+
+            updaterRepository.apply {
+                val status = result.toStatus()
+                updateState(status)
+                updateLastRun(Instant.now())
+                updateNextRun(nextRun)
+                updateState(UpdaterState.Idle)
+            }
         }
     }
 

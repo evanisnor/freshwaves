@@ -22,5 +22,8 @@ class DebugMenuViewModel @Inject constructor(
     )
 
     suspend fun updaterStatus(): StateFlow<UpdaterState> = updaterRepository.state
+    suspend fun updaterLastKnownState(): UpdaterState = updaterRepository.lastKnownState()
+    suspend fun updaterLastRunOn(): Instant? = updaterRepository.lastRunOn()
+    suspend fun updaterNextRunOn(): Instant? = updaterRepository.nextRunOn()
 
 }

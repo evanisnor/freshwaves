@@ -7,9 +7,16 @@ import com.evanisnor.freshwaves.databinding.DebugMenuItemUpdaterInformationBindi
 import com.evanisnor.freshwaves.debugmenu.BindingViewHolder
 import com.evanisnor.freshwaves.debugmenu.DebugMenuData
 import com.evanisnor.freshwaves.features.updater.UpdaterState
+import java.time.Instant
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.util.*
 
 data class UpdaterInformation(
     val state: UpdaterState,
+    val lastRunState: UpdaterState,
+    val lastRunOn: Instant?,
+    val nextRunOn: Instant?,
     val onUpdateNow: () -> Unit
 ) : DebugMenuData
 
@@ -30,6 +37,21 @@ class UpdaterInformationViewHolder(
     override fun bind(debugMenuData: UpdaterInformation) {
         binding.apply {
             status.text = debugMenuData.state.name
+            lastStatus.text = debugMenuData.lastRunState.name
+            debugMenuData.lastRunOn?.let {
+                lastRunOn.text = it
+                    .atZone(ZoneId.systemDefault())
+                    .format(
+                        DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+                    )
+            }
+            debugMenuData.nextRunOn?.let {
+                nextRunOn.text = it
+                    .atZone(ZoneId.systemDefault())
+                    .format(
+                        DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+                    )
+            }
 
             runUpdaterNowButton.apply {
                 isEnabled = debugMenuData.state == UpdaterState.Idle

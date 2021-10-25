@@ -5,5 +5,8 @@
     <string name="version_code_label">Version Code</string>
     <string name="build_date_label">Built on</string>
     <string name="updater_state_label">Updater State</string>
+    <string name="last_run_status_label">Last update status</string>
+    <string name="last_run_on_label">Last update on</string>
+    <string name="next_run_on_label">Next update</string>
     <string name="run_update_now_label">Run Update Now</string>
 </resources>

@@ -44,6 +44,9 @@ class DebugMenuActivity : AppCompatActivity() {
                 debugMenuAdapter.submit(
                     UpdaterInformation(
                         state = status,
+                        lastRunState = debugMenuViewModel.updaterLastKnownState(),
+                        lastRunOn = debugMenuViewModel.updaterLastRunOn(),
+                        nextRunOn = debugMenuViewModel.updaterNextRunOn(),
                         onUpdateNow = { runUpdaterNow() }
                     )
                 )

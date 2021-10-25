@@ -26,8 +26,8 @@ class SpotifyAuthorization @Inject constructor(
         const val authorizationSuccessfulAction = "authorization-successful"
     }
 
-    fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
-        if (!repository.isAuthorized) {
+    suspend fun checkLogin(loggedIn: () -> Unit, notLoggedIn: () -> Unit) {
+        if (!repository.isAuthorized()) {
             notLoggedIn()
         } else {
             loggedIn()
@@ -35,10 +35,10 @@ class SpotifyAuthorization @Inject constructor(
     }
 
     suspend fun getBearerToken(): String =
-        if (repository.needsTokenRefresh) {
+        if (repository.needsTokenRefresh()) {
             refreshToken()
         } else {
-            repository.bearerToken
+            repository.bearerToken()
         }
 
 
@@ -58,7 +58,7 @@ class SpotifyAuthorization @Inject constructor(
 
 
     suspend fun confirmAuthorization(activity: Activity) {
-        if (repository.isAuthorized) {
+        if (repository.isAuthorized()) {
             return
         }
 
@@ -97,20 +97,20 @@ class SpotifyAuthorization @Inject constructor(
         with(authServiceFactory.create(context)) {
             val tokenRefreshRequest = createTokenRefreshRequest(
                 SpotifyAuthorizationRepository.config,
-                repository.authState
+                repository.authState()
             )
 
             try {
                 val response = performTokenRequest(tokenRefreshRequest)
                 repository.update(tokenRefreshRequest, response)
-                return repository.bearerToken
+                return repository.bearerToken()
             } catch (authError: AuthError) {
                 repository.update(authError)
                 Firebase.crashlytics.recordException(authError)
             }
         }
 
-        return repository.bearerToken
+        return repository.bearerToken()
     }
 
 }

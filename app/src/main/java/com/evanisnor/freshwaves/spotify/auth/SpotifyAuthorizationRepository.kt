@@ -4,11 +4,15 @@ import android.app.Activity
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Build
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
 import com.evanisnor.freshwaves.authorization.*
 import com.evanisnor.freshwaves.system.AppMetadata
+import kotlinx.coroutines.flow.firstOrNull
 import javax.inject.Inject
 import javax.inject.Named
 import javax.inject.Singleton
@@ -18,11 +22,11 @@ import kotlin.reflect.KClass
 @Singleton
 class SpotifyAuthorizationRepository @Inject constructor(
     private val authStateFactory: AuthState.Factory,
-    @Named("UserSettings") private val userSettings: SharedPreferences
+    @Named("UserSettings") private val userSettings: DataStore<Preferences>
 ) {
 
     companion object {
-        private const val userSettingsKey = "authState"
+        private val authStatePreferenceKey = stringPreferencesKey("authState")
 
         internal val config = AuthServiceConfig(
             Uri.parse("https://accounts.spotify.com/authorize"),
@@ -31,37 +35,32 @@ class SpotifyAuthorizationRepository @Inject constructor(
     }
 
     private var _authState: AuthState? = null
-    val authState: AuthState
-        get() {
-            return _authState ?: run {
-                _authState = load()
-                _authState!!
-            }
+
+    suspend fun authState(): AuthState =
+        _authState ?: run {
+            _authState = load()
+            _authState!!
         }
 
-    val isAuthorized: Boolean
-        get() = authState.isAuthorized
+    suspend fun isAuthorized(): Boolean = authState().isAuthorized
 
-    val needsTokenRefresh: Boolean
-        get() = authState.needsTokenRefresh
+    suspend fun needsTokenRefresh(): Boolean = authState().needsTokenRefresh
 
-    val accessToken: String?
-        get() = authState.accessToken
+    suspend fun accessToken(): String? = authState().accessToken
 
-    val bearerToken: String
-        get() = "Bearer ${authState.accessToken}"
+    suspend fun bearerToken(): String = "Bearer ${authState().accessToken}"
 
-    fun update(request: AuthTokenRequest, response: AuthTokenResponse?) {
+    suspend fun update(request: AuthTokenRequest, response: AuthTokenResponse?) {
         response?.let {
-            authState.update(request, it)
-            save(authState)
+            authState().update(request, it)
+            save(authState())
         }
     }
 
-    fun update(error: AuthError?) {
+    suspend fun update(error: AuthError?) {
         error?.let {
-            authState.update(it)
-            save(authState)
+            authState().update(it)
+            save(authState())
         }
     }
 
@@ -84,10 +83,10 @@ class SpotifyAuthorizationRepository @Inject constructor(
             if (Build.VERSION.SDK_INT == Build.VERSION_CODES.S) PendingIntent.FLAG_MUTABLE else 0
         )
 
-    // region Persistence
+// region Persistence
 
-    private fun load(): AuthState {
-        val authStateString = userSettings.getString(userSettingsKey, null)
+    private suspend fun load(): AuthState {
+        val authStateString = userSettings.data.firstOrNull()?.get(authStatePreferenceKey)
         val authState = if (authStateString != null) {
             authStateFactory.create(config, authStateString)
         } else {
@@ -96,9 +95,11 @@ class SpotifyAuthorizationRepository @Inject constructor(
         return authState
     }
 
-    private fun save(authState: AuthState) {
-        userSettings.edit().putString(userSettingsKey, authState.toJson()).apply()
+    private suspend fun save(authState: AuthState) {
+        userSettings.edit { preferences ->
+            preferences[authStatePreferenceKey] = authState.toJson()
+        }
     }
 
-    // endregion
+// endregion
 }

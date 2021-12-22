@@ -8,10 +8,8 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
-import java.time.Duration
-import java.time.Instant
-import java.time.ZoneId
-import java.time.ZonedDateTime
+import java.time.*
+import java.time.temporal.TemporalAdjusters
 import javax.inject.Inject
 
 class UpdaterBootstrapper @Inject constructor() {
@@ -39,8 +37,11 @@ class UpdaterBootstrapper @Inject constructor() {
 
     fun scheduleNextUpdate(context: Context): Instant {
         val targetStartTime = ZonedDateTime.now(ZoneId.systemDefault())
-            .plusHours(1)
-            .plusMinutes(1)
+            .with(TemporalAdjusters.next(DayOfWeek.FRIDAY))
+            .withHour(5)
+            .withMinute(0)
+            .withSecond(0)
+            .withNano(0)
 
         val delay = Duration.between(
             ZonedDateTime.now(ZoneId.systemDefault()),

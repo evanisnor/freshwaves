@@ -22,8 +22,7 @@
 
         <activity
             android:name=".LoginActivity"
-            android:exported="true"
-            android:noHistory="true">
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,20 +33,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
-        <activity
-            android:name="net.openid.appauth.RedirectUriReceiverActivity"
-            android:exported="true"
-            tools:node="replace">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="com.evanisnor.freshwaves" />
-            </intent-filter>
-        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"

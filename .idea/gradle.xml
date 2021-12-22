@@ -4,6 +4,19 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../handyauth" name="handyauth">
+                <projects>
+                  <project path="$PROJECT_DIR$/../handyauth" />
+                  <project path="$PROJECT_DIR$/../handyauth/client" />
+                  <project path="$PROJECT_DIR$/../handyauth/example-app" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -13,6 +26,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../handyauth" />
+            <option value="$PROJECT_DIR$/../handyauth/client" />
+            <option value="$PROJECT_DIR$/../handyauth/example-app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

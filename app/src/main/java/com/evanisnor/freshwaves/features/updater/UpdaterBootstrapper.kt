@@ -8,16 +8,13 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
-import java.time.*
-import java.time.temporal.TemporalAdjusters
+import java.time.Duration
+import java.time.Instant
+import java.time.ZoneId
+import java.time.ZonedDateTime
 import javax.inject.Inject
 
 class UpdaterBootstrapper @Inject constructor() {
-
-    companion object {
-        const val updaterStatusIntent = "updater-status-intent"
-        const val updaterStatusExtra = "updater-status-extra"
-    }
 
     private val broadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
@@ -41,14 +38,14 @@ class UpdaterBootstrapper @Inject constructor() {
     }
 
     fun scheduleNextUpdate(context: Context): Instant {
-        val targetStartTime = LocalDateTime.now()
-            .with(TemporalAdjusters.next(DayOfWeek.FRIDAY))
-            .withHour(6)
-            .withMinute(0)
-            .withSecond(0)
-            .withNano(0)
+        val targetStartTime = ZonedDateTime.now(ZoneId.systemDefault())
+            .plusHours(1)
+            .plusMinutes(1)
 
-        val delay = Duration.between(LocalDateTime.now(), targetStartTime)
+        val delay = Duration.between(
+            ZonedDateTime.now(ZoneId.systemDefault()),
+            targetStartTime
+        )
 
         WorkManager.getInstance(context)
             .enqueue(
@@ -57,7 +54,7 @@ class UpdaterBootstrapper @Inject constructor() {
                     .build()
             )
 
-        return targetStartTime.toInstant(ZoneOffset.UTC)
+        return targetStartTime.toInstant()
     }
 
 }

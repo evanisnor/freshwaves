@@ -9,6 +9,7 @@ import com.evanisnor.freshwaves.debugmenu.DebugMenuData
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import java.time.Instant
 import java.time.ZoneId
+import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -40,14 +41,14 @@ class UpdaterInformationViewHolder(
             lastStatus.text = debugMenuData.lastRunState.name
             debugMenuData.lastRunOn?.let {
                 lastRunOn.text = it
-                    .atZone(ZoneId.systemDefault())
+                    .atOffset(currentOffset())
                     .format(
                         DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
                     )
             }
             debugMenuData.nextRunOn?.let {
                 nextRunOn.text = it
-                    .atZone(ZoneId.systemDefault())
+                    .atOffset(currentOffset())
                     .format(
                         DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
                     )
@@ -61,4 +62,7 @@ class UpdaterInformationViewHolder(
             }
         }
     }
+
+    private fun currentOffset(): ZoneOffset =
+        ZoneOffset.of(ZoneId.systemDefault().rules.getOffset(Instant.now()).toString())
 }

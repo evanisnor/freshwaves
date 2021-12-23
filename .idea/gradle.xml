@@ -7,11 +7,11 @@
         <compositeConfiguration>
           <compositeBuild compositeDefinitionSource="SCRIPT">
             <builds>
-              <build path="$PROJECT_DIR$/../handyauth" name="handyauth">
+              <build path="$PROJECT_DIR$/submodules/handyauth" name="handyauth">
                 <projects>
-                  <project path="$PROJECT_DIR$/../handyauth" />
-                  <project path="$PROJECT_DIR$/../handyauth/client" />
-                  <project path="$PROJECT_DIR$/../handyauth/example-app" />
+                  <project path="$PROJECT_DIR$/submodules/handyauth" />
+                  <project path="$PROJECT_DIR$/submodules/handyauth/client" />
+                  <project path="$PROJECT_DIR$/submodules/handyauth/example-app" />
                 </projects>
               </build>
             </builds>
@@ -26,9 +26,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/../handyauth" />
-            <option value="$PROJECT_DIR$/../handyauth/client" />
-            <option value="$PROJECT_DIR$/../handyauth/example-app" />
+            <option value="$PROJECT_DIR$/submodules/handyauth" />
+            <option value="$PROJECT_DIR$/submodules/handyauth/client" />
+            <option value="$PROJECT_DIR$/submodules/handyauth/example-app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

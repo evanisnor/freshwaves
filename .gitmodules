@@ -1,0 +1,3 @@
+[submodule "submodules/handyauth"]
+	path = submodules/handyauth
+	url = git@github.com:evanisnor/handyauth.git

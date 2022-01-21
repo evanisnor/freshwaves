@@ -35,6 +35,20 @@ class FreshAlbumNotifier @Inject constructor(
 
     private val imageLoader = ImageLoader.invoke(context)
 
+    suspend fun send(freshAlbums: List<Album>) {
+        if (freshAlbums.isNotEmpty()) {
+            freshAlbums.forEach { album ->
+                val albumNotification = buildAlbumNotification(album)
+                send(album, albumNotification)
+            }
+
+            if (freshAlbums.size > 1) {
+                val messageNotification = buildMessageNotification(freshAlbums)
+                send(messageNotification)
+            }
+        }
+    }
+
     fun createNotificationChannel() {
         val name = context.getString(R.string.notification_channel_name)
         val description = context.getString(R.string.notification_channel_description)
@@ -48,7 +62,7 @@ class FreshAlbumNotifier @Inject constructor(
         notificationManager.createNotificationChannel(channel)
     }
 
-    fun buildMessageNotification(albums: List<Album>): Notification {
+    private fun buildMessageNotification(albums: List<Album>): Notification {
         val title = context.resources.getQuantityString(
             R.plurals.notification_fresh_albums_title,
             albums.size,
@@ -66,7 +80,7 @@ class FreshAlbumNotifier @Inject constructor(
             .build()
     }
 
-    suspend fun buildAlbumNotification(album: Album): Notification {
+    private suspend fun buildAlbumNotification(album: Album): Notification {
         val unknownArtist = context.getString(R.string.notification_unknown_artist)
 
         val title = context.getString(
@@ -89,15 +103,16 @@ class FreshAlbumNotifier @Inject constructor(
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentTitle(title)
             .setContentText(text)
-            .setContentIntent(launchMainActivityPendingIntent())
+            .setContentIntent(launchAlbumDetailsPendingIntent(album.id))
+            .setAutoCancel(true)
             .build()
     }
 
-    fun send(notification: Notification) {
+    private fun send(notification: Notification) {
         notificationManager.notify(freshAlbumsNotification, notification)
     }
 
-    suspend fun send(album: Album, notification: Notification) = withContext(Dispatchers.Main) {
+    private suspend fun send(album: Album, notification: Notification) = withContext(Dispatchers.Main) {
         notificationManager.notify(album.hashCode(), notification)
     }
 
@@ -107,6 +122,17 @@ class FreshAlbumNotifier @Inject constructor(
             0,
             Intent(context, MainActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            },
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+
+    private fun launchAlbumDetailsPendingIntent(albumId: Int): PendingIntent =
+        PendingIntent.getActivity(
+            context,
+            0,
+            Intent(context, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                putExtra(MainActivity.extraAlbumId, albumId)
             },
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )

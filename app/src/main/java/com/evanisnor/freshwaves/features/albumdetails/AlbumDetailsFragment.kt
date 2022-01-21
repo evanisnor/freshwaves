@@ -21,8 +21,15 @@ class AlbumDetailsFragment : Fragment() {
 
     companion object {
         const val TAG = "AlbumDetailsFragment"
-        const val albumIdArgument =
+
+        private const val albumIdArgument =
             "com.evanisnor.freshwaves.features.albumdetails.arg.AlbumId"
+
+        fun create(albumId: Int): AlbumDetailsFragment = AlbumDetailsFragment().apply {
+            arguments = Bundle().apply {
+                putInt(albumIdArgument, albumId)
+            }
+        }
     }
 
     private val albumDetailsViewModel: AlbumDetailsViewModel by activityViewModels()

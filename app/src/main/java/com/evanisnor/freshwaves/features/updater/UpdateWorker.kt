@@ -29,7 +29,6 @@ class UpdateWorker @AssistedInject constructor(
     private val freshAlbumNotifier: FreshAlbumNotifier
 ) : CoroutineWorker(applicationContext, workerParameters) {
 
-
     override suspend fun doWork(): Result = withContext(Dispatchers.Default) {
         var result = Result.success()
         updaterRepository.updateState(UpdaterState.Running)
@@ -80,16 +79,7 @@ class UpdateWorker @AssistedInject constructor(
     private suspend fun notifyOfNewAlbums() {
         val freshAlbums =
             spotifyAlbumRepository.getAlbumsReleasedAfter(Instant.now().startOfDayUTC())
-
-        if (freshAlbums.isNotEmpty()) {
-            freshAlbums.forEach { album ->
-                val albumNotification = freshAlbumNotifier.buildAlbumNotification(album)
-                freshAlbumNotifier.send(album, albumNotification)
-            }
-
-            val messageNotification = freshAlbumNotifier.buildMessageNotification(freshAlbums)
-            freshAlbumNotifier.send(messageNotification)
-        }
+        freshAlbumNotifier.send(freshAlbums)
     }
 
     private suspend fun finish(result: Result) {

@@ -113,17 +113,14 @@ class FreshAlbumsFragment : Fragment() {
     }
 
     private fun launchAlbumDetails(album: Album) {
-        val albumDetailsFragment = AlbumDetailsFragment().apply {
-            arguments = Bundle().apply {
-                putInt(AlbumDetailsFragment.albumIdArgument, album.id)
-            }
-        }
+        val albumDetailsFragment = AlbumDetailsFragment.create(album.id)
 
-        activity?.supportFragmentManager
-            ?.beginTransaction()
-            ?.add(android.R.id.content, albumDetailsFragment)
-            ?.addToBackStack(AlbumDetailsFragment.TAG)
-            ?.commit()
+        activity?.supportFragmentManager?.apply {
+            beginTransaction()
+                .add(android.R.id.content, albumDetailsFragment)
+                .addToBackStack(AlbumDetailsFragment.TAG)
+                .commit()
+        }
     }
 
 }

@@ -34,7 +34,7 @@ class SpotifyAuthorization @Inject constructor(
     ) {
         handyAuth.authorize(activity) { result ->
             when (result) {
-                is HandyAuth.Result.Success -> {
+                is HandyAuth.Result.Authorized -> {
                     sendSuccessfulAuthorizationBroadcast(activity)
                     onSuccess()
                 }

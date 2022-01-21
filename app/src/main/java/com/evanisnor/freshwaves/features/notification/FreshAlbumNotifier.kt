@@ -14,14 +14,11 @@ import coil.request.ImageRequest
 import coil.request.SuccessResult
 import com.evanisnor.freshwaves.MainActivity
 import com.evanisnor.freshwaves.R
-import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
-import kotlin.coroutines.CoroutineContext
 
 class FreshAlbumNotifier @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -36,16 +33,14 @@ class FreshAlbumNotifier @Inject constructor(
     private val imageLoader = ImageLoader.invoke(context)
 
     suspend fun send(freshAlbums: List<Album>) {
-        if (freshAlbums.isNotEmpty()) {
-            freshAlbums.forEach { album ->
-                val albumNotification = buildAlbumNotification(album)
-                send(album, albumNotification)
-            }
+        freshAlbums.forEach { album ->
+            val albumNotification = buildAlbumNotification(album)
+            send(album, albumNotification)
+        }
 
-            if (freshAlbums.size > 1) {
-                val messageNotification = buildMessageNotification(freshAlbums)
-                send(messageNotification)
-            }
+        if (freshAlbums.size > 1) {
+            val messageNotification = buildMessageNotification(freshAlbums)
+            send(messageNotification)
         }
     }
 
@@ -113,9 +108,10 @@ class FreshAlbumNotifier @Inject constructor(
         notificationManager.notify(freshAlbumsNotification, notification)
     }
 
-    private suspend fun send(album: Album, notification: Notification) = withContext(Dispatchers.Main) {
-        notificationManager.notify(album.hashCode(), notification)
-    }
+    private suspend fun send(album: Album, notification: Notification) =
+        withContext(Dispatchers.Main) {
+            notificationManager.notify(album.hashCode(), notification)
+        }
 
     private fun launchMainActivityPendingIntent(): PendingIntent =
         PendingIntent.getActivity(

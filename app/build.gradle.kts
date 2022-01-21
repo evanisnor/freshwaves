@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.resolve.compatibility
 import java.time.*
 
 plugins {
@@ -39,6 +40,11 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {

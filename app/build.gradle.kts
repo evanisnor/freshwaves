@@ -3,11 +3,12 @@ import java.time.*
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("com.google.devtools.ksp") version "1.5.31-1.0.0"
+    id("com.google.devtools.ksp") version "1.6.10-1.0.2"
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
+    id("com.github.ben-manes.versions")
 }
 
 android {
@@ -41,7 +42,7 @@ android {
     }
 
     kotlinOptions {
-        languageVersion = "1.5"
+        languageVersion = "1.6"
         jvmTarget = "11"
         freeCompilerArgs = listOf(
             "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi,kotlinx.coroutines.FlowPreview"
@@ -58,17 +59,17 @@ dependencies {
 
     // Google/Android
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.fragment:fragment-ktx:1.4.0")
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("com.google.android.material:material:1.5.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("androidx.work:work-runtime-ktx:2.7.1")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.38.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
-    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    implementation("com.google.dagger:hilt-android:2.40.5")
+    kapt("com.google.dagger:hilt-android-compiler:2.40.5")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.40.5")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.40.5")
     implementation("androidx.hilt:hilt-work:1.0.0")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     kaptAndroidTest("androidx.hilt:hilt-compiler:1.0.0")
@@ -82,24 +83,24 @@ dependencies {
         exclude(group = "com.squareup.moshi", module = "moshi")
     }
     androidTestImplementation("com.squareup.retrofit2:retrofit-mock:2.9.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3")
     implementation("com.squareup.moshi:moshi:1.13.0")
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.12.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
 
     // Room
-    val roomVersion = "2.4.0-alpha04"
+    val roomVersion = "2.4.1"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
 
     // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
 
     // Datastore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:28.4.2"))
+    implementation(platform("com.google.firebase:firebase-bom:29.0.4"))
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx")
 
@@ -107,7 +108,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
 
     // Leak Canary
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.7")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.8.1")
 
     // Instrumentation Testing
     debugImplementation("androidx.test:core:1.4.0")

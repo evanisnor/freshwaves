@@ -77,6 +77,7 @@ class FreshAlbumNotifier @Inject constructor(
             .setContentTitle(title)
             .setContentText(text)
             .setContentIntent(launchMainActivityPendingIntent())
+            .setAutoCancel(true)
             .build()
     }
 

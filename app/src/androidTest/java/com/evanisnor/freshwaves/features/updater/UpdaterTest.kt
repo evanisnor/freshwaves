@@ -75,13 +75,11 @@ class UpdaterTest {
     }
 
     @Test
-    fun workerTest() {
-        runBlocking {
-            val updateWorker = createUpdateWorker()
-            val result = updateWorker.doWork()
+    fun workerTest() = runBlocking {
+        val updateWorker = createUpdateWorker()
+        val result = updateWorker.doWork()
 
-            assertEquals(ListenableWorker.Result.success(), result)
-        }
+        assertEquals(ListenableWorker.Result.success(), result)
     }
 
     private fun createUpdateWorker() = TestListenableWorkerBuilder.from(

@@ -5,6 +5,8 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStoreFile
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
+import androidx.work.WorkManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +20,13 @@ import javax.inject.Named
 @Module
 @InstallIn(SingletonComponent::class)
 class UpdaterModule {
+
+    @Provides
+    fun workManager(@ApplicationContext context: Context) = WorkManager.getInstance(context)
+
+    @Provides
+    fun localBroadcastManager(@ApplicationContext context: Context) =
+        LocalBroadcastManager.getInstance(context)
 
     @Provides
     @Named("UpdaterMeta")

@@ -1,41 +1,38 @@
 package com.evanisnor.freshwaves.features.updater
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
 import android.content.IntentFilter
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
+import androidx.work.*
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
 import java.time.*
 import java.time.temporal.TemporalAdjusters
 import javax.inject.Inject
 
-class UpdaterBootstrapper @Inject constructor() {
+class UpdaterBootstrapper @Inject constructor(
+    private val workManager: WorkManager,
+    private val localBroadcastManager: LocalBroadcastManager
+) {
 
-    private val broadcastReceiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context?, intent: Intent?) {
-            context?.let {
-                updateNow(context)
+    companion object {
+        val constraints: Constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .build()
+    }
+
+    fun updateNow() {
+        enqueue(workRequest())
+    }
+
+    fun registerForSuccessfulAuthorization() {
+        localBroadcastManager.register(
+            intentFilter = IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction),
+            receiver = {
+                enqueue(workRequest())
             }
-        }
+        )
     }
 
-    fun registerForSuccessfulAuthorization(context: Context) {
-        LocalBroadcastManager.getInstance(context)
-            .registerReceiver(
-                broadcastReceiver,
-                IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction)
-            )
-    }
-
-    fun updateNow(context: Context) {
-        WorkManager.getInstance(context)
-            .enqueue(OneTimeWorkRequestBuilder<UpdateWorker>().build())
-    }
-
-    fun scheduleNextUpdate(context: Context): Instant {
+    fun scheduleNextUpdate(): Instant {
         val targetStartTime = ZonedDateTime.now(ZoneId.systemDefault())
             .with(TemporalAdjusters.next(DayOfWeek.FRIDAY))
             .withHour(5)
@@ -48,14 +45,17 @@ class UpdaterBootstrapper @Inject constructor() {
             targetStartTime
         )
 
-        WorkManager.getInstance(context)
-            .enqueue(
-                OneTimeWorkRequestBuilder<UpdateWorker>()
-                    .setInitialDelay(delay)
-                    .build()
-            )
+        enqueue(workRequest(delay))
 
         return targetStartTime.toInstant()
     }
+
+    private fun workRequest(delay: Duration = Duration.ZERO) =
+        OneTimeWorkRequestBuilder<UpdateWorker>()
+            .setConstraints(constraints)
+            .setInitialDelay(delay)
+            .build()
+
+    private fun enqueue(workRequest: WorkRequest) = workManager.enqueue(workRequest)
 
 }

@@ -47,14 +47,10 @@ class DebugMenuActivity : AppCompatActivity() {
                         lastRunState = debugMenuViewModel.updaterLastKnownState(),
                         lastRunOn = debugMenuViewModel.updaterLastRunOn(),
                         nextRunOn = debugMenuViewModel.updaterNextRunOn(),
-                        onUpdateNow = { runUpdaterNow() }
+                        onUpdateNow = { updaterBootstrapper.updateNow() }
                     )
                 )
             }
         }
-    }
-
-    private fun runUpdaterNow() {
-        updaterBootstrapper.updateNow(this)
     }
 }

@@ -13,7 +13,8 @@ import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.time.Instant
 
 @HiltWorker
@@ -92,16 +93,14 @@ class UpdateWorker @AssistedInject constructor(
     }
 
     private suspend fun finish(result: Result) {
-        with(applicationContext) {
-            val nextRun = updaterBootstrapper.scheduleNextUpdate(this)
+        val nextRun = updaterBootstrapper.scheduleNextUpdate()
 
-            updaterRepository.apply {
-                val status = result.toStatus()
-                updateState(status)
-                updateLastRun(Instant.now())
-                updateNextRun(nextRun)
-                updateState(UpdaterState.Idle)
-            }
+        updaterRepository.apply {
+            val status = result.toStatus()
+            updateState(status)
+            updateLastRun(Instant.now())
+            updateNextRun(nextRun)
+            updateState(UpdaterState.Idle)
         }
     }
 

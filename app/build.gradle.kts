@@ -22,6 +22,8 @@ android {
         versionCode = 1
         versionName = "0.1.0"
 
+        manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
+
         buildConfigField("Long", "BUILD_TIMESTAMP", "${Instant.now().toEpochMilli()}L")
 
         testInstrumentationRunner = "com.evanisnor.freshwaves.runner.HiltAndroidTestRunner"

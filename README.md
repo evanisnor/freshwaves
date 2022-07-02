@@ -1,8 +1,11 @@
-# Fresh Waves
+![](img/wave_icon_rounded.png)
 
+# Fresh Waves
 Stay up to date with the latest releases from your favorite artists.
 
-Powered by Spotify ![](img/spotify.png)
+Powered by Spotify
+
+![](img/spotify.png)
 
 ## Design
 

@@ -2,24 +2,16 @@ package com.evanisnor.freshwaves.features.freshalbums
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.espresso.Espresso
-import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.Espresso.pressBack
-import androidx.test.espresso.IdlingRegistry
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.idling.CountingIdlingResource
-import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import com.evanisnor.freshwaves.tools.*
+import com.evanisnor.freshwaves.tools.TestDataLoader
+import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
-import org.junit.After
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -56,7 +48,7 @@ class FreshAlbumsTest {
     @Test
     fun freshAlbumsAreDisplayed() {
         lateinit var albumList: List<Album>
-        runBlocking {
+        runTest {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 
@@ -70,7 +62,7 @@ class FreshAlbumsTest {
     @Test
     fun clickFreshAlbumLaunchesAlbumDetails() {
         lateinit var albumList: List<Album>
-        runBlocking {
+        runTest {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 

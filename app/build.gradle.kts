@@ -66,10 +66,10 @@ dependencies {
     implementation("com.evanisnor.handyauth:client:0.1.0")
 
     // Google/Android
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("androidx.fragment:fragment-ktx:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.core:core-ktx:1.8.0")
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("androidx.fragment:fragment-ktx:1.5.0")
+    implementation("com.google.android.material:material:1.6.1")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("androidx.work:work-runtime-ktx:2.7.1")
 
@@ -124,6 +124,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     debugImplementation("androidx.test:monitor:1.5.0")
-    debugImplementation("androidx.fragment:fragment-testing:1.4.1")
+    debugImplementation("androidx.fragment:fragment-testing:1.5.0")
     androidTestImplementation("androidx.work:work-testing:2.7.1")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
 }

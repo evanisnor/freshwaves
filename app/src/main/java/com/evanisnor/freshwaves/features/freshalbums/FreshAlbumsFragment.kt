@@ -14,6 +14,7 @@ import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.debugmenu.DebugMenuActivity
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
+import com.evanisnor.freshwaves.features.attribution.AttributionActivity
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,6 +54,9 @@ class FreshAlbumsFragment : Fragment() {
 
             toolbar.setOnMenuItemClickListener { item ->
                 when (item.itemId) {
+                    R.id.attribution_menu_item -> startActivity(
+                        Intent(activity, AttributionActivity::class.java)
+                    )
                     R.id.debug_menu_item -> startActivity(
                         Intent(activity, DebugMenuActivity::class.java)
                     )

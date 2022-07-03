@@ -21,4 +21,9 @@
     </plurals>
 
     <string name="play_with_spotify">Play with Spotify</string>
+
+    <string name="title_activity_attribution">Attribution</string>
+    <string name="attribution_modifications">Modifications: %1$s</string>
+    <string name="menu_open_source">Open Source Attribution</string>
+
 </resources>

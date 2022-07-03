@@ -43,6 +43,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             style="@style/FreshToolbar.AppBar"
             android:id="@+id/toolbar"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:menu="@menu/main_menu">

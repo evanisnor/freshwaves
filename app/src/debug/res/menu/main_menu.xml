@@ -3,10 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/attribution_menu_item"
+        android:icon="@drawable/ic_open_source"
+        android:title="@string/debug"
+        app:iconTint="@color/onBackground"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/debug_menu_item"
         android:icon="@drawable/debug_icon"
         android:title="@string/debug"
         app:iconTint="@color/onBackground"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
 </menu>

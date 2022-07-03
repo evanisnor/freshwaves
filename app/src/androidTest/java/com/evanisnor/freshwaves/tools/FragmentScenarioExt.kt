@@ -20,11 +20,14 @@ package com.evanisnor.freshwaves.tools
 import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
+import android.os.Looper
 import androidx.core.util.Preconditions
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import com.evanisnor.freshwaves.HiltTestActivity
+import com.evanisnor.freshwaves.R
 
 
 /**
@@ -49,17 +52,19 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
         )
     )
 
-    ActivityScenario.launch<HiltTestActivity>(startActivityIntent).onActivity { activity ->
-        val fragment: Fragment = activity.supportFragmentManager.fragmentFactory.instantiate(
-            Preconditions.checkNotNull(T::class.java.classLoader),
-            T::class.java.name
-        )
-        fragment.arguments = fragmentArgs
-        activity.supportFragmentManager
-            .beginTransaction()
-            .add(android.R.id.content, fragment, "")
-            .commitNow()
+    lateinit var fragment: Fragment
+    ActivityScenario.launch<HiltTestActivity>(startActivityIntent)
+        .onActivity { activity ->
+            fragment = activity.supportFragmentManager.fragmentFactory.instantiate(
+                Preconditions.checkNotNull(T::class.java.classLoader),
+                T::class.java.name
+            )
+            fragment.arguments = fragmentArgs
+            activity.supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragment, fragment)
+                .commitNow()
 
-        fragment.action()
-    }
+            fragment.action()
+        }
 }

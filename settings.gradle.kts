@@ -7,8 +7,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Fresh Waves"
 include(":app")
-includeBuild("submodules/handyauth") {
-    dependencySubstitution {
-        substitute(module("com.evanisnor.handyauth:client")).using(project(":client"))
-    }
-}
+includeBuild("submodules/handyauth")

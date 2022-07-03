@@ -1,0 +1,149 @@
+[
+  {
+    "name": "Spotify for Developers",
+    "author": "Spotify AB",
+    "license": "Spotify Developer Policy",
+    "licenseUrl": "https://developer.spotify.com/policy",
+    "usage": "User authentication, retrieving and caching metadata",
+    "sources": [
+      {
+        "artifactType": "api",
+        "name": "Web API",
+        "url": "https://developer.spotify.com/documentation/web-api"
+      }
+    ]
+  },
+  {
+    "name": "Wave Icon",
+    "author": "Maxicons",
+    "license": "CC BY 4.0",
+    "licenseText": "cc_by_4.0.license",
+    "usage": "App icon",
+    "sources": [
+      {
+        "artifactType": "svg",
+        "name": "Iconfinder.com",
+        "url": "https://www.iconfinder.com/sorasak21"
+      }
+    ],
+    "modifications": [
+      {
+        "description": "Color palette"
+      }
+    ]
+  },
+  {
+    "name": "Dagger",
+    "author": "Google, Dagger Authors",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Dependency injection",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "GitHub",
+        "url": "https://github.com/google/dagger"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Maven Central",
+        "url": "https://search.maven.org/artifact/com.google.dagger/dagger"
+      }
+    ]
+  },
+  {
+    "name": "Android Jetpack",
+    "author": "Google",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Usability enhancements",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "googlesource.com",
+        "url": "https://android.googlesource.com/platform/frameworks/support"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Google Maven",
+        "url": "https://maven.google.com"
+      }
+    ]
+  },
+  {
+    "name": "Retrofit",
+    "author": "Block, Inc.",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Communicating with remote services",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "GitHub",
+        "url": "https://github.com/square/retrofit"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Maven Central",
+        "url": "https://search.maven.org/artifact/com.squareup.retrofit2/retrofit"
+      }
+    ]
+  },
+  {
+    "name": "OkHttp",
+    "author": "Block, Inc.",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Communicating with remote services",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "GitHub",
+        "url": "https://github.com/square/okhttp"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Maven Central",
+        "url": "https://search.maven.org/artifact/com.squareup.okhttp3/okhttp"
+      }
+    ]
+  },
+  {
+    "name": "Moshi",
+    "author": "Block, Inc.",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Serializing and de-serializing of JSON-formatted information",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "GitHub",
+        "url": "https://github.com/square/moshi"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Maven Central",
+        "url": "https://search.maven.org/artifact/com.squareup.moshi/moshi"
+      }
+    ]
+  },
+  {
+    "name": "Coil",
+    "author": "Instacart",
+    "license": "Apache 2.0",
+    "licenseText": "apache_2.0.license",
+    "usage": "Fetching images from remote services for display to the user",
+    "sources": [
+      {
+        "artifactType": "code",
+        "name": "GitHub",
+        "url": "https://github.com/coil-kt/coil"
+      },
+      {
+        "artifactType": "binary",
+        "name": "Maven Central",
+        "url": "https://search.maven.org/artifact/io.coil-kt/coil"
+      }
+    ]
+  }
+]

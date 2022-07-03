@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1DB954</color>
-    <color name="primaryVariant">#CC1DB954</color>
+    <color name="primary">#61d482</color>
+    <color name="primaryVariant">#32996d</color>
     <color name="onPrimary">#FAFAFA</color>
-    <color name="secondary">#57dcbb</color>
+    <color name="secondary">#95d6b5</color>
     <color name="secondaryVariant">#4457dcbb</color>
     <color name="onSecondary">#7B7B7B</color>
     <color name="background">#172022</color>

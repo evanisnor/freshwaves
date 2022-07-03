@@ -11,7 +11,7 @@ import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.test.runTest
+import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -48,7 +48,7 @@ class FreshAlbumsTest {
     @Test
     fun freshAlbumsAreDisplayed() {
         lateinit var albumList: List<Album>
-        runTest {
+        runBlocking {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 
@@ -62,7 +62,7 @@ class FreshAlbumsTest {
     @Test
     fun clickFreshAlbumLaunchesAlbumDetails() {
         lateinit var albumList: List<Album>
-        runTest {
+        runBlocking {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 

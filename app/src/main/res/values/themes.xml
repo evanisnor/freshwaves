@@ -15,6 +15,7 @@
         <item name="android:background">@color/background</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="colorOnBackground">@color/onBackground</item>
+        <item name="colorControlNormal">@color/onBackground</item>
 
         <!-- Surface -->
         <item name="colorSurface">@color/surface</item>
@@ -40,27 +41,30 @@
 
     </style>
 
-    <style name="FreshToolbar">
-        <item name="android:elevation">0dp</item>
-    </style>
-
     <style name="FreshToolbar.AppBar">
         <item name="android:background">@drawable/title_border</item>
     </style>
 
+    <style name="FreshToolbar">
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/onBackground</item>
+        <item name="popupTheme">@style/Theme.PopupOverlay.Menu</item>
+    </style>
+
+    <style name="Theme.PopupOverlay.Menu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/onBackground</item>
+    </style>
+
     <style name="FreshToolbar.Icon">
         <item name="android:background">@null</item>
-        <item name="android:paddingBottom">2dp</item>
-        <item name="android:gravity">start</item>
+        <item name="android:layout_marginStart">0dp</item>
     </style>
 
     <style name="FreshToolbar.Title">
         <item name="android:textColor">@color/secondary</item>
         <item name="android:background">@null</item>
         <item name="autoSizeTextType">uniform</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
-        <item name="android:layout_margin">2dp</item>
+        <item name="android:padding">8dp</item>
         <item name="android:gravity">bottom|start</item>
         <item name="fontFamily">@font/bebas_neue_regular</item>
     </style>

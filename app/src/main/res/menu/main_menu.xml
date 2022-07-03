@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_open_source"
         android:title="@string/menu_open_source"
         app:iconTint="@color/onBackground"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="collapseActionView" />
 
     <item
         android:id="@+id/debug_menu_item"

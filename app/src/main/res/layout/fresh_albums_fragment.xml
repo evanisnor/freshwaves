@@ -41,20 +41,19 @@
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.appbar.MaterialToolbar
-            style="@style/FreshToolbar.AppBar"
             android:id="@+id/toolbar"
-            android:gravity="center"
+            style="@style/FreshToolbar.AppBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
             app:menu="@menu/main_menu">
 
             <ImageView
                 style="@style/FreshToolbar.Icon"
                 android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:src="@drawable/wave_green"
+                android:layout_height="74dp"
                 android:importantForAccessibility="no"
-                />
+                android:src="@drawable/wave_green" />
 
             <TextView
                 style="@style/FreshToolbar.Title"

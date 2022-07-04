@@ -16,6 +16,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.util.concurrent.CountDownLatch
 import javax.inject.Inject
 
 @HiltAndroidTest
@@ -52,8 +53,12 @@ class FreshAlbumsTest {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 
-        launchFragmentInHiltContainer<FreshAlbumsFragment>()
+        val latch = CountDownLatch(1)
+        launchFragmentInHiltContainer<FreshAlbumsFragment> {
+            latch.countDown()
+        }
 
+        latch.await()
         albumList.forEachIndexed { index, album ->
             freshAlbumsRobot.verifyAlbumWithImage(index + 1, album)
         }
@@ -66,8 +71,12 @@ class FreshAlbumsTest {
             albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
         }
 
-        launchFragmentInHiltContainer<FreshAlbumsFragment>()
+        val latch = CountDownLatch(1)
+        launchFragmentInHiltContainer<FreshAlbumsFragment> {
+            latch.countDown()
+        }
 
+        latch.await()
         albumList.forEachIndexed { index, album ->
             freshAlbumsRobot.selectAlbumAt(index + 1)
             albumDetailsRobot.verifyAlbumOverview(album)

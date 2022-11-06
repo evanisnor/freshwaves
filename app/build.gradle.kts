@@ -12,12 +12,12 @@ plugins {
 }
 
 android {
-    compileSdk = 31
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.evanisnor.freshwaves"
         minSdk = 27
-        targetSdk = 31
+        targetSdk = 33
         versionCode = 1
         versionName = "0.1.0"
 

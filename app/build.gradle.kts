@@ -73,9 +73,9 @@ dependencies {
     implementation("androidx.work:work-runtime-ktx:2.7.1")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.41")
-    kapt("com.google.dagger:hilt-android-compiler:2.41")
-    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.41")
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.41")
     implementation("androidx.hilt:hilt-work:1.0.0")
     kapt("androidx.hilt:hilt-compiler:1.0.0")

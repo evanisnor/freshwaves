@@ -3,6 +3,7 @@ import java.time.Instant
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    kotlin("kapt")
     id("com.google.devtools.ksp").version("1.7.20-1.0.8")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
@@ -73,12 +74,12 @@ dependencies {
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.44")
-    ksp("com.google.dagger:hilt-android-compiler:2.44")
-    kspAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.44")
     androidTestImplementation("com.google.dagger:hilt-android-testing:2.41")
     implementation("androidx.hilt:hilt-work:1.0.0")
-    ksp("androidx.hilt:hilt-compiler:1.0.0")
-    kspAndroidTest("androidx.hilt:hilt-compiler:1.0.0")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    kaptAndroidTest("androidx.hilt:hilt-compiler:1.0.0")
 
     // Coil
     implementation("io.coil-kt:coil:1.4.0")

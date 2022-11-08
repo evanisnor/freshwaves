@@ -3,7 +3,7 @@ import java.time.Instant
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("com.google.devtools.ksp").version("g")
+    id("com.google.devtools.ksp").version("1.7.20-1.0.8")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")

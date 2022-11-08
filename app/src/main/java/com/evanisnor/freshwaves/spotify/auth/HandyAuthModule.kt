@@ -9,6 +9,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.DelicateCoroutinesApi
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -24,6 +25,7 @@ object HandyAuthModule {
             scopes = listOf("user-top-read", "user-read-private", "user-read-email")
         )
 
+    @OptIn(DelicateCoroutinesApi::class)
     @Provides
     fun handyAuth(application: Application, handyAuthConfig: HandyAuthConfig): HandyAuth =
         HandyAuth.create(

@@ -51,9 +51,6 @@ android {
     kotlinOptions {
         languageVersion = "1.7"
         jvmTarget = "11"
-        freeCompilerArgs = listOf(
-            "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi,kotlinx.coroutines.FlowPreview"
-        )
     }
 
     testOptions {

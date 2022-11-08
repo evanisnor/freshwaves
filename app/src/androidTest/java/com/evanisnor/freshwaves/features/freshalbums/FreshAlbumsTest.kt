@@ -5,21 +5,21 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.pressBack
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
-import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.tools.TestDataLoader
 import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import java.util.concurrent.CountDownLatch
 import javax.inject.Inject
 
 @HiltAndroidTest
+@OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(AndroidJUnit4::class)
 class FreshAlbumsTest {
 
@@ -47,36 +47,22 @@ class FreshAlbumsTest {
     }
 
     @Test
-    fun freshAlbumsAreDisplayed() {
-        lateinit var albumList: List<Album>
-        runBlocking {
-            albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
-        }
+    fun freshAlbumsAreDisplayed() = runTest {
+        val albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
 
-        val latch = CountDownLatch(1)
-        launchFragmentInHiltContainer<FreshAlbumsFragment> {
-            latch.countDown()
-        }
+        launchFragmentInHiltContainer<FreshAlbumsFragment>()
 
-        latch.await()
         albumList.forEachIndexed { index, album ->
             freshAlbumsRobot.verifyAlbumWithImage(index + 1, album)
         }
     }
 
     @Test
-    fun clickFreshAlbumLaunchesAlbumDetails() {
-        lateinit var albumList: List<Album>
-        runBlocking {
-            albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
-        }
+    fun clickFreshAlbumLaunchesAlbumDetails() = runTest {
+        val albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
 
-        val latch = CountDownLatch(1)
-        launchFragmentInHiltContainer<FreshAlbumsFragment> {
-            latch.countDown()
-        }
+        launchFragmentInHiltContainer<FreshAlbumsFragment>()
 
-        latch.await()
         albumList.forEachIndexed { index, album ->
             freshAlbumsRobot.selectAlbumAt(index + 1)
             albumDetailsRobot.verifyAlbumOverview(album)

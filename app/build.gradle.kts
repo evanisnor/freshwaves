@@ -125,4 +125,5 @@ dependencies {
     debugImplementation("androidx.test:monitor:1.5.0")
     debugImplementation("androidx.fragment:fragment-testing:1.5.4")
     androidTestImplementation("androidx.work:work-testing:2.7.1")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 }

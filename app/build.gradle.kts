@@ -4,7 +4,6 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("com.google.devtools.ksp") version "1.6.20-1.0.5"
-    kotlin("kapt")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
@@ -91,8 +90,8 @@ dependencies {
     }
     androidTestImplementation("com.squareup.retrofit2:retrofit-mock:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6")
-    implementation("com.squareup.moshi:moshi:1.13.0")
-    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    implementation("com.squareup.moshi:moshi:1.14.0")
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
 
     // Room
     val roomVersion = "2.4.1"

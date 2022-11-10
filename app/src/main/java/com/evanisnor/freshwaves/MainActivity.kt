@@ -3,7 +3,7 @@ package com.evanisnor.freshwaves
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

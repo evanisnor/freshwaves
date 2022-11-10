@@ -3,7 +3,8 @@ package com.evanisnor.freshwaves
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
+import androidx.lifecycle.lifecycleScope
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -16,17 +17,20 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        spotifyAuthorization.checkLogin(
-            loggedIn = this::proceed,
-            notLoggedIn = {
-                spotifyAuthorization.performLoginAuthorization(
-                    activity = this,
-                    onSuccess = this::proceed,
-                    onCancel = this::backToLogin
-                )
-            }
-        )
+        lifecycleScope.launchWhenCreated {
+            checkLogin()
+        }
+    }
 
+    private suspend fun checkLogin() {
+        if (spotifyAuthorization.isAuthorized) {
+            proceed()
+        } else {
+            when(spotifyAuthorization.authorize(this)) {
+                is SpotifyAuthorization.Response.Success -> proceed()
+                is SpotifyAuthorization.Response.Failure -> backToLogin()
+            }
+        }
     }
 
     private fun proceed() {

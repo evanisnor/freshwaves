@@ -1,6 +1,6 @@
 package com.evanisnor.freshwaves.spotify.network
 
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.user.UserProfile
@@ -21,12 +21,12 @@ class SpotifyNetworkRepository @Inject constructor(
     }
 
     suspend fun userProfile(): UserProfile = withContext(Dispatchers.IO) {
-        val bearerToken = spotifyAuthorization.getBearerToken()
+        val bearerToken = spotifyAuthorization.getAuthorizationHeader()
         spotifyAPIService.getUserProfile(bearerToken).mapToUserProfile()
     }
 
     suspend fun topArtists(limit: Int, offset: Int): List<Artist> = withContext(Dispatchers.IO) {
-        val bearerToken = spotifyAuthorization.getBearerToken()
+        val bearerToken = spotifyAuthorization.getAuthorizationHeader()
         val topArtists = spotifyAPIService.getTopArtists(
             accessToken = bearerToken,
             limit = limit,
@@ -39,7 +39,7 @@ class SpotifyNetworkRepository @Inject constructor(
         artist: Artist,
         userProfile: UserProfile
     ) = flow {
-        val bearerToken = spotifyAuthorization.getBearerToken()
+        val bearerToken = spotifyAuthorization.getAuthorizationHeader()
         delay(delayMs)
         val albums = spotifyAPIService.getArtistAlbums(
             accessToken = bearerToken,
@@ -50,7 +50,7 @@ class SpotifyNetworkRepository @Inject constructor(
     }.flowOn(Dispatchers.IO)
 
     suspend fun albumTracks(album: Album) = flow {
-        val bearerToken = spotifyAuthorization.getBearerToken()
+        val bearerToken = spotifyAuthorization.getAuthorizationHeader()
         delay(delayMs)
         val tracks = spotifyAPIService.getAlbumTracks(
             accessToken = bearerToken,

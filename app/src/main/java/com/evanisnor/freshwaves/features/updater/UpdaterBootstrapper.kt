@@ -3,7 +3,7 @@ package com.evanisnor.freshwaves.features.updater
 import android.content.IntentFilter
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.work.*
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorization
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import java.time.*
 import java.time.temporal.TemporalAdjusters
 import javax.inject.Inject

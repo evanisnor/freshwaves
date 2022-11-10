@@ -22,9 +22,11 @@ google-dagger = "2.44"
 google-firebase = "29.3.1"
 google-material = "1.7.0"
 google-services = "4.3.14"
+google-truth = "1.1.3"
 handyauth = "0.1.0"
 jetbrains-coroutines = "1.6.4"
 junit = "4.13.2"
+robolectric = "4.8"
 square-leakcanary = "2.8.1"
 square-moshi = "1.14.0"
 square-okhttp = "5.0.0-alpha.6"
@@ -60,10 +62,12 @@ google-firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-cr
 google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
 google-services = { module = "com.google.gms:google-services", version.ref = "google-services" }
 google-test-dagger-hilt-android = { module = "com.google.dagger:hilt-android-testing", version.ref = "google-dagger" }
+google-test-truth = { module = "com.google.truth:truth", version.ref = "google-truth" }
 handyauth-client = { module = "com.evanisnor.handyauth:client", version.ref = "handyauth" }
 jetbrains-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "jetbrains-coroutines" }
 jetbrains-test-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "jetbrains-coroutines" }
 junit = { module = "junit:junit", version.ref = "junit" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 square-leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "square-leakcanary" }
 square-moshi = { module = "com.squareup.moshi:moshi", version.ref = "square-moshi" }
 square-moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "square-moshi" }

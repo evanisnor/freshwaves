@@ -80,7 +80,10 @@ dependencies {
     debugImplementation(libs.bundles.androidx.debug)
     debugImplementation(libs.square.leakcanary.android)
 
+    testImplementation(libs.google.test.truth)
+    testImplementation(libs.jetbrains.test.coroutines)
     testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
 
     androidTestImplementation(libs.bundles.androidx.instrumentationtest)
     androidTestImplementation(libs.google.test.dagger.hilt.android)

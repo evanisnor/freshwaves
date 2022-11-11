@@ -84,6 +84,7 @@ dependencies {
     testImplementation(libs.jetbrains.test.coroutines)
     testImplementation(libs.junit)
     testImplementation(libs.robolectric)
+    testImplementation(libs.turbine)
 
     androidTestImplementation(libs.bundles.androidx.instrumentationtest)
     androidTestImplementation(libs.google.test.dagger.hilt.android)

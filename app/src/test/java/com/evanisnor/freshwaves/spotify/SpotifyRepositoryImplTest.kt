@@ -1,8 +1,11 @@
 package com.evanisnor.freshwaves.spotify
 
+import android.net.Uri
+import app.cash.turbine.test
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
@@ -18,6 +21,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import java.time.Instant
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
@@ -122,5 +126,93 @@ class SpotifyRepositoryImplTest {
                 )
             )
         }
+
+    @Test
+    fun `getLatestAlbums - when albums are cached - returns latest albums`() = runTest {
+        val artist01 = Artist("01", "Artist 01")
+        spotifyCacheDao.insertArtists(listOf(artist01))
+        spotifyCacheDao.insertAlbums(
+            listOf(
+                Album(
+                    id = 0,
+                    spotifyId = "0",
+                    artist = artist01,
+                    name = "Album 0",
+                    type = "",
+                    releaseDate = Instant.ofEpochSecond(500L),
+                    spotifyUri = Uri.EMPTY,
+                    images = emptyList(),
+                    tracks = emptyList()
+                )
+            )
+        )
+
+        spotifyRepository.getLatestAlbums().test {
+            assertThat(awaitItem()).isEqualTo(
+                listOf(
+                    Album(
+                        id = 0,
+                        spotifyId = "0",
+                        artist = artist01,
+                        name = "Album 0",
+                        type = "",
+                        releaseDate = Instant.ofEpochSecond(500L),
+                        spotifyUri = Uri.EMPTY,
+                        images = emptyList(),
+                        tracks = emptyList()
+                    )
+                )
+            )
+        }
+    }
+
+    @Test
+    fun `getAlbumsReleasedAfter - when albums are cached - returns latest albums`() = runTest {
+        val artist01 = Artist("01", "Artist 01")
+        spotifyCacheDao.insertArtists(listOf(artist01))
+        spotifyCacheDao.insertAlbums(
+            listOf(
+                Album(
+                    id = 0,
+                    spotifyId = "0",
+                    artist = artist01,
+                    name = "Album 0",
+                    type = "",
+                    releaseDate = Instant.ofEpochSecond(500L),
+                    spotifyUri = Uri.EMPTY,
+                    images = emptyList(),
+                    tracks = emptyList()
+                ),
+                Album(
+                    id = 1,
+                    spotifyId = "1",
+                    artist = artist01,
+                    name = "Album 1",
+                    type = "",
+                    releaseDate = Instant.ofEpochSecond(600L),
+                    spotifyUri = Uri.EMPTY,
+                    images = emptyList(),
+                    tracks = emptyList()
+                )
+            )
+        )
+
+        val albums = spotifyRepository.getAlbumsReleasedAfter(Instant.ofEpochSecond(600L))
+        assertThat(albums).isEqualTo(
+            listOf(
+                Album(
+                    id = 1,
+                    spotifyId = "1",
+                    artist = artist01,
+                    name = "Album 1",
+                    type = "",
+                    releaseDate = Instant.ofEpochSecond(600L),
+                    spotifyUri = Uri.EMPTY,
+                    images = emptyList(),
+                    tracks = emptyList()
+                )
+            )
+        )
+    }
     
 }

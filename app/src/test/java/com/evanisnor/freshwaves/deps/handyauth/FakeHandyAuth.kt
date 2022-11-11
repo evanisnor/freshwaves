@@ -12,6 +12,14 @@ class FakeHandyAuth : HandyAuth {
     override val isAuthorized: Boolean
         get() = loggedIn && expectedAuthResult == HandyAuth.Result.Authorized
 
+    /**
+     * Used to simplify most tests
+     */
+    internal fun authorize() {
+        expectedAuthResult = HandyAuth.Result.Authorized
+        loggedIn = true
+    }
+
     override fun authorize(
         callingActivity: ComponentActivity,
         resultCallback: (HandyAuth.Result) -> Unit

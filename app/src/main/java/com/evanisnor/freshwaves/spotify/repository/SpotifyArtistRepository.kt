@@ -18,7 +18,7 @@ class SpotifyArtistRepository @Inject constructor(
         val pages = ceil(numberOfArtists / artistsPerPage.toFloat()).toInt()
         var offset = 0
 
-        for (i in 0..pages) {
+        for (i in 0 until pages) {
             val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
             Log.i("SpotifyArtistRepository", "Fetched ${artists.size} artists")
             spotifyCacheDao.insertArtists(artists)

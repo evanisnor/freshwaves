@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify
 
-import android.net.Uri
 import app.cash.turbine.test
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
@@ -135,14 +134,9 @@ class SpotifyRepositoryImplTest {
             listOf(
                 Album(
                     id = 0,
-                    spotifyId = "0",
                     artist = artist01,
                     name = "Album 0",
-                    type = "",
                     releaseDate = Instant.ofEpochSecond(500L),
-                    spotifyUri = Uri.EMPTY,
-                    images = emptyList(),
-                    tracks = emptyList()
                 )
             )
         )
@@ -152,14 +146,9 @@ class SpotifyRepositoryImplTest {
                 listOf(
                     Album(
                         id = 0,
-                        spotifyId = "0",
                         artist = artist01,
                         name = "Album 0",
-                        type = "",
                         releaseDate = Instant.ofEpochSecond(500L),
-                        spotifyUri = Uri.EMPTY,
-                        images = emptyList(),
-                        tracks = emptyList()
                     )
                 )
             )
@@ -174,25 +163,15 @@ class SpotifyRepositoryImplTest {
             listOf(
                 Album(
                     id = 0,
-                    spotifyId = "0",
                     artist = artist01,
                     name = "Album 0",
-                    type = "",
                     releaseDate = Instant.ofEpochSecond(500L),
-                    spotifyUri = Uri.EMPTY,
-                    images = emptyList(),
-                    tracks = emptyList()
                 ),
                 Album(
                     id = 1,
-                    spotifyId = "1",
                     artist = artist01,
                     name = "Album 1",
-                    type = "",
                     releaseDate = Instant.ofEpochSecond(600L),
-                    spotifyUri = Uri.EMPTY,
-                    images = emptyList(),
-                    tracks = emptyList()
                 )
             )
         )
@@ -202,14 +181,9 @@ class SpotifyRepositoryImplTest {
             listOf(
                 Album(
                     id = 1,
-                    spotifyId = "1",
                     artist = artist01,
                     name = "Album 1",
-                    type = "",
                     releaseDate = Instant.ofEpochSecond(600L),
-                    spotifyUri = Uri.EMPTY,
-                    images = emptyList(),
-                    tracks = emptyList()
                 )
             )
         )

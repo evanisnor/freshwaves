@@ -37,14 +37,14 @@ data class Album(
 
     constructor(
         id: Int,
-        spotifyId: String,
+        spotifyId: String = id.toString(),
         artist: Artist,
         name: String,
-        type: String,
+        type: String = "album",
         releaseDate: Instant,
-        spotifyUri: Uri,
-        images: List<AlbumImage>,
-        tracks: List<Track>
+        spotifyUri: Uri = Uri.EMPTY,
+        images: List<AlbumImage> = emptyList(),
+        tracks: List<Track> = emptyList()
     ) : this(id, spotifyId, artist.id, name, type, releaseDate, spotifyUri) {
         this.artist = artist
         this.images = images

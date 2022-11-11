@@ -14,17 +14,17 @@ import javax.inject.Singleton
 
 @Module
 @TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [SpotifyCacheModule::class]
+  components = [SingletonComponent::class],
+  replaces = [SpotifyCacheModule::class]
 )
 object FakeSpotifyCacheModule {
 
-    @Provides
-    @Singleton
-    fun spotifyCacheDao(@ApplicationContext context: Context): SpotifyCacheDao =
-        Room.inMemoryDatabaseBuilder(
-            context,
-            SpotifyCache::class.java
-        ).build().spotifyCacheDao()
+  @Provides
+  @Singleton
+  fun spotifyCacheDao(@ApplicationContext context: Context): SpotifyCacheDao =
+    Room.inMemoryDatabaseBuilder(
+      context,
+      SpotifyCache::class.java
+    ).build().spotifyCacheDao()
 
 }

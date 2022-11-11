@@ -5,12 +5,12 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class TrackObject(
-    val id: String,
-    val name: String,
-    @field:Json(name="disc_number") val discNumber: Int,
-    @field:Json(name = "track_number") val trackNumber: Int,
-    val uri: String,
-    @field:Json(name = "duration_ms") val durationMs: Long,
-    val artists: List<ArtistObject>
+  val id: String,
+  val name: String,
+  @field:Json(name = "disc_number") val discNumber: Int,
+  @field:Json(name = "track_number") val trackNumber: Int,
+  val uri: String,
+  @field:Json(name = "duration_ms") val durationMs: Long,
+  val artists: List<ArtistObject>,
 
-)
+  )

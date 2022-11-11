@@ -20,54 +20,54 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
 
-    @Inject
-    lateinit var attributionRepository: AttributionRepository
+  @Inject
+  lateinit var attributionRepository: AttributionRepository
 
-    private var binding: ThirdPartyUsageListFragmentBinding? = null
+  private var binding: ThirdPartyUsageListFragmentBinding? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return ThirdPartyUsageListFragmentBinding.inflate(inflater, container, false)
-            .apply {
-                binding = this
-            }.root
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?,
+  ): View {
+    return ThirdPartyUsageListFragmentBinding.inflate(inflater, container, false)
+      .apply {
+        binding = this
+      }.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    binding?.thirdPartyUsageList?.apply {
+      adapter = ThirdPartyUsageListAdapter(
+        attributionRepository.getAttributionList(),
+        this@ThirdPartyUsageListFragment
+      )
+      layoutManager = LinearLayoutManager(context)
     }
+  }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding?.thirdPartyUsageList?.apply {
-            adapter = ThirdPartyUsageListAdapter(
-                attributionRepository.getAttributionList(),
-                this@ThirdPartyUsageListFragment
-            )
-            layoutManager = LinearLayoutManager(context)
-        }
+  override fun onSelected(license: License) {
+    when (license.refType) {
+      LicenseReferenceType.url -> launchBrowser(license.source)
+      LicenseReferenceType.embedded -> launchLicenseViewer(license.source)
     }
+  }
 
-    override fun onSelected(license: License) {
-        when (license.refType) {
-            LicenseReferenceType.url -> launchBrowser(license.source)
-            LicenseReferenceType.embedded -> launchLicenseViewer(license.source)
-        }
+  private fun launchBrowser(source: String) {
+    startActivity(Intent(Intent.ACTION_VIEW).apply {
+      data = Uri.parse(source)
+    })
+  }
+
+  private fun launchLicenseViewer(source: String) {
+    val licenseViewerFragment = LicenseViewerFragment.create(source)
+
+    activity?.supportFragmentManager?.apply {
+      beginTransaction()
+        .replace(R.id.fragment, licenseViewerFragment)
+        .addToBackStack(LicenseViewerFragment.TAG)
+        .commit()
     }
-
-    private fun launchBrowser(source: String) {
-        startActivity(Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse(source)
-        })
-    }
-
-    private fun launchLicenseViewer(source: String) {
-        val licenseViewerFragment = LicenseViewerFragment.create(source)
-
-        activity?.supportFragmentManager?.apply {
-            beginTransaction()
-                .replace(R.id.fragment, licenseViewerFragment)
-                .addToBackStack(LicenseViewerFragment.TAG)
-                .commit()
-        }
-    }
+  }
 }

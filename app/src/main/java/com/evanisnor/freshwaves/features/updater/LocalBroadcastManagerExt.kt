@@ -8,15 +8,15 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
 
 fun LocalBroadcastManager.register(
-    intentFilter: IntentFilter,
-    receiver: () -> Unit
+  intentFilter: IntentFilter,
+  receiver: () -> Unit,
 ) {
-    registerReceiver(
-        object : BroadcastReceiver() {
-            override fun onReceive(context: Context, intent: Intent) {
-                receiver()
-            }
-        },
-        intentFilter
-    )
+  registerReceiver(
+    object : BroadcastReceiver() {
+      override fun onReceive(context: Context, intent: Intent) {
+        receiver()
+      }
+    },
+    intentFilter
+  )
 }

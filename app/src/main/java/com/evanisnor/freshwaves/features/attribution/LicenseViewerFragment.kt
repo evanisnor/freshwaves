@@ -12,41 +12,41 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class LicenseViewerFragment : Fragment() {
 
-    companion object {
-        const val TAG = "LicenseViewerFragment"
+  companion object {
+    const val TAG = "LicenseViewerFragment"
 
-        private const val sourceArgument =
-            "com.evanisnor.freshwaves.features.attribution.arg.Source"
+    private const val sourceArgument =
+      "com.evanisnor.freshwaves.features.attribution.arg.Source"
 
-        fun create(source: String): Fragment = LicenseViewerFragment().apply {
-            arguments = Bundle().apply {
-                putString(sourceArgument, source)
-            }
-        }
+    fun create(source: String): Fragment = LicenseViewerFragment().apply {
+      arguments = Bundle().apply {
+        putString(sourceArgument, source)
+      }
     }
+  }
 
-    @Inject
-    lateinit var attributionRepository: AttributionRepository
+  @Inject
+  lateinit var attributionRepository: AttributionRepository
 
-    private var binding: ThirdPartyLicenseFragmentBinding? = null
+  private var binding: ThirdPartyLicenseFragmentBinding? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return ThirdPartyLicenseFragmentBinding.inflate(inflater, container, false)
-            .apply {
-                binding = this
-            }.root
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?,
+  ): View {
+    return ThirdPartyLicenseFragmentBinding.inflate(inflater, container, false)
+      .apply {
+        binding = this
+      }.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    arguments?.getString(sourceArgument)?.let {
+      binding?.licenseText?.text = attributionRepository.getLicenseText(it)
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        arguments?.getString(sourceArgument)?.let {
-            binding?.licenseText?.text = attributionRepository.getLicenseText(it)
-        }
-    }
+  }
 
 
 }

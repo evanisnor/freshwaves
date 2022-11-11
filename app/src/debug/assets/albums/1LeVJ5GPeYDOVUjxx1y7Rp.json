@@ -1,305 +1,362 @@
 {
-  "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp/albums?offset=0&limit=20&include_groups=album&market=CA",
-  "items" : [ {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+  "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items": [
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1gmj1UwTm2mT6DoS8H4jke"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/1gmj1UwTm2mT6DoS8H4jke"
+      "href": "https://api.spotify.com/v1/albums/1gmj1UwTm2mT6DoS8H4jke",
+      "id": "1gmj1UwTm2mT6DoS8H4jke",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2735e4efb4d54655bf4bc6b8604",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e025e4efb4d54655bf4bc6b8604",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048515e4efb4d54655bf4bc6b8604",
+          "width": 64
+        }
+      ],
+      "name": "IC-01 Hanoi",
+      "release_date": "2018-10-26",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "type": "album",
+      "uri": "spotify:album:1gmj1UwTm2mT6DoS8H4jke"
     },
-    "href" : "https://api.spotify.com/v1/albums/1gmj1UwTm2mT6DoS8H4jke",
-    "id" : "1gmj1UwTm2mT6DoS8H4jke",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2735e4efb4d54655bf4bc6b8604",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e025e4efb4d54655bf4bc6b8604",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048515e4efb4d54655bf4bc6b8604",
-      "width" : 64
-    } ],
-    "name" : "IC-01 Hanoi",
-    "release_date" : "2018-10-26",
-    "release_date_precision" : "day",
-    "total_tracks" : 7,
-    "type" : "album",
-    "uri" : "spotify:album:1gmj1UwTm2mT6DoS8H4jke"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2swiA7ANSFyAHKJhkD4mNR"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2swiA7ANSFyAHKJhkD4mNR"
+      "href": "https://api.spotify.com/v1/albums/2swiA7ANSFyAHKJhkD4mNR",
+      "id": "2swiA7ANSFyAHKJhkD4mNR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2738b1ea10ca54961e5e5d94244",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e028b1ea10ca54961e5e5d94244",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048518b1ea10ca54961e5e5d94244",
+          "width": 64
+        }
+      ],
+      "name": "Sex & Food",
+      "release_date": "2018-04-06",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:2swiA7ANSFyAHKJhkD4mNR"
     },
-    "href" : "https://api.spotify.com/v1/albums/2swiA7ANSFyAHKJhkD4mNR",
-    "id" : "2swiA7ANSFyAHKJhkD4mNR",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2738b1ea10ca54961e5e5d94244",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e028b1ea10ca54961e5e5d94244",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048518b1ea10ca54961e5e5d94244",
-      "width" : 64
-    } ],
-    "name" : "Sex & Food",
-    "release_date" : "2018-04-06",
-    "release_date_precision" : "day",
-    "total_tracks" : 12,
-    "type" : "album",
-    "uri" : "spotify:album:2swiA7ANSFyAHKJhkD4mNR"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2aoI8tkPq9NBvGiARD0KoR"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2aoI8tkPq9NBvGiARD0KoR"
+      "href": "https://api.spotify.com/v1/albums/2aoI8tkPq9NBvGiARD0KoR",
+      "id": "2aoI8tkPq9NBvGiARD0KoR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273dad8074eb0c60a82d1d8973c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02dad8074eb0c60a82d1d8973c",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851dad8074eb0c60a82d1d8973c",
+          "width": 64
+        }
+      ],
+      "name": "Multi-Love",
+      "release_date": "2015-05-26",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "type": "album",
+      "uri": "spotify:album:2aoI8tkPq9NBvGiARD0KoR"
     },
-    "href" : "https://api.spotify.com/v1/albums/2aoI8tkPq9NBvGiARD0KoR",
-    "id" : "2aoI8tkPq9NBvGiARD0KoR",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273dad8074eb0c60a82d1d8973c",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02dad8074eb0c60a82d1d8973c",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851dad8074eb0c60a82d1d8973c",
-      "width" : 64
-    } ],
-    "name" : "Multi-Love",
-    "release_date" : "2015-05-26",
-    "release_date_precision" : "day",
-    "total_tracks" : 9,
-    "type" : "album",
-    "uri" : "spotify:album:2aoI8tkPq9NBvGiARD0KoR"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2pzteMl5K2IGh04qXN6phA"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2pzteMl5K2IGh04qXN6phA"
+      "href": "https://api.spotify.com/v1/albums/2pzteMl5K2IGh04qXN6phA",
+      "id": "2pzteMl5K2IGh04qXN6phA",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27347e2c2301df16a9c0236b45e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0247e2c2301df16a9c0236b45e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485147e2c2301df16a9c0236b45e",
+          "width": 64
+        }
+      ],
+      "name": "II (Deluxe Edition)",
+      "release_date": "2013-10-22",
+      "release_date_precision": "day",
+      "total_tracks": 15,
+      "type": "album",
+      "uri": "spotify:album:2pzteMl5K2IGh04qXN6phA"
     },
-    "href" : "https://api.spotify.com/v1/albums/2pzteMl5K2IGh04qXN6phA",
-    "id" : "2pzteMl5K2IGh04qXN6phA",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27347e2c2301df16a9c0236b45e",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0247e2c2301df16a9c0236b45e",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485147e2c2301df16a9c0236b45e",
-      "width" : 64
-    } ],
-    "name" : "II (Deluxe Edition)",
-    "release_date" : "2013-10-22",
-    "release_date_precision" : "day",
-    "total_tracks" : 15,
-    "type" : "album",
-    "uri" : "spotify:album:2pzteMl5K2IGh04qXN6phA"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2UrexGLK8RBKbv07j7ui19"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2UrexGLK8RBKbv07j7ui19"
+      "href": "https://api.spotify.com/v1/albums/2UrexGLK8RBKbv07j7ui19",
+      "id": "2UrexGLK8RBKbv07j7ui19",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273b3e4bd5cefedefd6d443e418",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02b3e4bd5cefedefd6d443e418",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851b3e4bd5cefedefd6d443e418",
+          "width": 64
+        }
+      ],
+      "name": "II",
+      "release_date": "2013-02-05",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:2UrexGLK8RBKbv07j7ui19"
     },
-    "href" : "https://api.spotify.com/v1/albums/2UrexGLK8RBKbv07j7ui19",
-    "id" : "2UrexGLK8RBKbv07j7ui19",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273b3e4bd5cefedefd6d443e418",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02b3e4bd5cefedefd6d443e418",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851b3e4bd5cefedefd6d443e418",
-      "width" : 64
-    } ],
-    "name" : "II",
-    "release_date" : "2013-02-05",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:2UrexGLK8RBKbv07j7ui19"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3YyxCtvjoiTHbr9jbpzjS1"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3YyxCtvjoiTHbr9jbpzjS1"
+      "href": "https://api.spotify.com/v1/albums/3YyxCtvjoiTHbr9jbpzjS1",
+      "id": "3YyxCtvjoiTHbr9jbpzjS1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737ddc3032752e9114a75196c1",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027ddc3032752e9114a75196c1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517ddc3032752e9114a75196c1",
+          "width": 64
+        }
+      ],
+      "name": "Unknown Mortal Orchestra",
+      "release_date": "2011-06-21",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "type": "album",
+      "uri": "spotify:album:3YyxCtvjoiTHbr9jbpzjS1"
     },
-    "href" : "https://api.spotify.com/v1/albums/3YyxCtvjoiTHbr9jbpzjS1",
-    "id" : "3YyxCtvjoiTHbr9jbpzjS1",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2737ddc3032752e9114a75196c1",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e027ddc3032752e9114a75196c1",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048517ddc3032752e9114a75196c1",
-      "width" : 64
-    } ],
-    "name" : "Unknown Mortal Orchestra",
-    "release_date" : "2011-06-21",
-    "release_date_precision" : "day",
-    "total_tracks" : 9,
-    "type" : "album",
-    "uri" : "spotify:album:3YyxCtvjoiTHbr9jbpzjS1"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5P4ipdl7UMu9MvVwjX1pHE"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/5P4ipdl7UMu9MvVwjX1pHE"
+      "href": "https://api.spotify.com/v1/albums/5P4ipdl7UMu9MvVwjX1pHE",
+      "id": "5P4ipdl7UMu9MvVwjX1pHE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273110090c137e40673e1466462",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02110090c137e40673e1466462",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851110090c137e40673e1466462",
+          "width": 64
+        }
+      ],
+      "name": "Unknown Mortal Orchestra",
+      "release_date": "2011-06-21",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "type": "album",
+      "uri": "spotify:album:5P4ipdl7UMu9MvVwjX1pHE"
     },
-    "href" : "https://api.spotify.com/v1/albums/5P4ipdl7UMu9MvVwjX1pHE",
-    "id" : "5P4ipdl7UMu9MvVwjX1pHE",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273110090c137e40673e1466462",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02110090c137e40673e1466462",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851110090c137e40673e1466462",
-      "width" : 64
-    } ],
-    "name" : "Unknown Mortal Orchestra",
-    "release_date" : "2011-06-21",
-    "release_date_precision" : "day",
-    "total_tracks" : 9,
-    "type" : "album",
-    "uri" : "spotify:album:5P4ipdl7UMu9MvVwjX1pHE"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp"
+          },
+          "href": "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
+          "id": "1LeVJ5GPeYDOVUjxx1y7Rp",
+          "name": "Unknown Mortal Orchestra",
+          "type": "artist",
+          "uri": "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5mHuDnyp8IQatt4CZv0QnG"
       },
-      "href" : "https://api.spotify.com/v1/artists/1LeVJ5GPeYDOVUjxx1y7Rp",
-      "id" : "1LeVJ5GPeYDOVUjxx1y7Rp",
-      "name" : "Unknown Mortal Orchestra",
-      "type" : "artist",
-      "uri" : "spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/5mHuDnyp8IQatt4CZv0QnG"
-    },
-    "href" : "https://api.spotify.com/v1/albums/5mHuDnyp8IQatt4CZv0QnG",
-    "id" : "5mHuDnyp8IQatt4CZv0QnG",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2734f8976c92b827d73f7f75e5a",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e024f8976c92b827d73f7f75e5a",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048514f8976c92b827d73f7f75e5a",
-      "width" : 64
-    } ],
-    "name" : "Unknown Mortal Orchestra",
-    "release_date" : "2011",
-    "release_date_precision" : "year",
-    "total_tracks" : 9,
-    "type" : "album",
-    "uri" : "spotify:album:5mHuDnyp8IQatt4CZv0QnG"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 8
+      "href": "https://api.spotify.com/v1/albums/5mHuDnyp8IQatt4CZv0QnG",
+      "id": "5mHuDnyp8IQatt4CZv0QnG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734f8976c92b827d73f7f75e5a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024f8976c92b827d73f7f75e5a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514f8976c92b827d73f7f75e5a",
+          "width": 64
+        }
+      ],
+      "name": "Unknown Mortal Orchestra",
+      "release_date": "2011",
+      "release_date_precision": "year",
+      "total_tracks": 9,
+      "type": "album",
+      "uri": "spotify:album:5mHuDnyp8IQatt4CZv0QnG"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 8
 }

@@ -7,19 +7,19 @@ import com.evanisnor.freshwaves.spotify.cache.model.RoomTypeConverters
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
 
 @Database(
-    version = 1,
-    entities = [
-        Album::class,
-        AlbumImage::class,
-        Artist::class,
-        ArtistGenre::class,
-        ArtistImage::class,
-        ArtistToGenre::class,
-        Track::class,
-    ],
-    exportSchema = false
+  version = 1,
+  entities = [
+    Album::class,
+    AlbumImage::class,
+    Artist::class,
+    ArtistGenre::class,
+    ArtistImage::class,
+    ArtistToGenre::class,
+    Track::class,
+  ],
+  exportSchema = false
 )
 @TypeConverters(RoomTypeConverters::class)
 abstract class SpotifyCache : RoomDatabase() {
-    abstract fun spotifyCacheDao(): SpotifyCacheDao
+  abstract fun spotifyCacheDao(): SpotifyCacheDao
 }

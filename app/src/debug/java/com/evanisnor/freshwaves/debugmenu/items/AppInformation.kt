@@ -9,39 +9,39 @@ import com.evanisnor.freshwaves.debugmenu.DebugMenuData
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
-import java.util.*
+import java.util.Locale
 
 
 data class AppInformation(
-    val version: String,
-    val versionCode: Int,
-    val builtOn: Instant
+  val version: String,
+  val versionCode: Int,
+  val builtOn: Instant,
 ) : DebugMenuData
 
 class AppInformationViewHolder(
-    private val binding: DebugMenuItemAppInformationBinding
+  private val binding: DebugMenuItemAppInformationBinding,
 ) :
-    RecyclerView.ViewHolder(binding.root),
-    BindingViewHolder<AppInformation> {
+  RecyclerView.ViewHolder(binding.root),
+  BindingViewHolder<AppInformation> {
 
-    companion object {
-        fun create(parent: ViewGroup): RecyclerView.ViewHolder {
-            val inflater = LayoutInflater.from(parent.context)
-            val binding = DebugMenuItemAppInformationBinding.inflate(inflater, parent, false)
-            return AppInformationViewHolder(binding)
-        }
+  companion object {
+    fun create(parent: ViewGroup): RecyclerView.ViewHolder {
+      val inflater = LayoutInflater.from(parent.context)
+      val binding = DebugMenuItemAppInformationBinding.inflate(inflater, parent, false)
+      return AppInformationViewHolder(binding)
     }
+  }
 
-    override fun bind(debugMenuData: AppInformation) {
-        binding.apply {
-            version.text = debugMenuData.version
-            versionCode.text = debugMenuData.versionCode.toString()
-            buildDate.text = debugMenuData.builtOn
-                .atZone(ZoneId.systemDefault())
-                .format(
-                    DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
-                )
-        }
+  override fun bind(debugMenuData: AppInformation) {
+    binding.apply {
+      version.text = debugMenuData.version
+      versionCode.text = debugMenuData.versionCode.toString()
+      buildDate.text = debugMenuData.builtOn
+        .atZone(ZoneId.systemDefault())
+        .format(
+          DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+        )
     }
+  }
 
 }

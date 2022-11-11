@@ -9,18 +9,18 @@ import com.evanisnor.freshwaves.databinding.AlbumDetailsDiscItemBinding
 
 class DiscHeader(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    companion object {
-        fun create(parent: ViewGroup) =
-            DiscHeader(
-                LayoutInflater.from(parent.context)
-                    .inflate(R.layout.album_details_disc_item, parent, false)
-            )
-    }
+  companion object {
+    fun create(parent: ViewGroup) =
+      DiscHeader(
+        LayoutInflater.from(parent.context)
+          .inflate(R.layout.album_details_disc_item, parent, false)
+      )
+  }
 
-    fun bind(disc: Disc) {
-        AlbumDetailsDiscItemBinding.bind(itemView).apply {
-            discLabel.text = "Disc ${disc.number}"
-        }
+  fun bind(disc: Disc) {
+    AlbumDetailsDiscItemBinding.bind(itemView).apply {
+      discLabel.text = "Disc ${disc.number}"
     }
+  }
 
 }

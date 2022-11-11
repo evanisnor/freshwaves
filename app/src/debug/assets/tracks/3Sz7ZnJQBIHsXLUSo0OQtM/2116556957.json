@@ -1,295 +1,362 @@
 {
-  "href" : "https://api.spotify.com/v1/albums/7xPhDaYZ2ejV04aNtdBdvj/tracks?offset=0&limit=20",
-  "items" : [ {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+  "href": "https://api.spotify.com/v1/albums/7xPhDaYZ2ejV04aNtdBdvj/tracks?offset=0&limit=20",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 145893,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2QilECqmzYBoI6yS5D8ftS"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 145893,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/2QilECqmzYBoI6yS5D8ftS"
+      "href": "https://api.spotify.com/v1/tracks/2QilECqmzYBoI6yS5D8ftS",
+      "id": "2QilECqmzYBoI6yS5D8ftS",
+      "is_local": false,
+      "name": "Salad Days",
+      "preview_url": "https://p.scdn.co/mp3-preview/30819544f6a8079a1e0e4175d9fb73d8f7f539c6?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:2QilECqmzYBoI6yS5D8ftS"
     },
-    "href" : "https://api.spotify.com/v1/tracks/2QilECqmzYBoI6yS5D8ftS",
-    "id" : "2QilECqmzYBoI6yS5D8ftS",
-    "is_local" : false,
-    "name" : "Salad Days",
-    "preview_url" : "https://p.scdn.co/mp3-preview/30819544f6a8079a1e0e4175d9fb73d8f7f539c6?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 1,
-    "type" : "track",
-    "uri" : "spotify:track:2QilECqmzYBoI6yS5D8ftS"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 126226,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6EcWBNVhDlGn8AiSpkUg6T"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 126226,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6EcWBNVhDlGn8AiSpkUg6T"
+      "href": "https://api.spotify.com/v1/tracks/6EcWBNVhDlGn8AiSpkUg6T",
+      "id": "6EcWBNVhDlGn8AiSpkUg6T",
+      "is_local": false,
+      "name": "Blue Boy",
+      "preview_url": "https://p.scdn.co/mp3-preview/17b71f93138fc5147c552c434aabbf02fb3a56cb?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:6EcWBNVhDlGn8AiSpkUg6T"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6EcWBNVhDlGn8AiSpkUg6T",
-    "id" : "6EcWBNVhDlGn8AiSpkUg6T",
-    "is_local" : false,
-    "name" : "Blue Boy",
-    "preview_url" : "https://p.scdn.co/mp3-preview/17b71f93138fc5147c552c434aabbf02fb3a56cb?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 2,
-    "type" : "track",
-    "uri" : "spotify:track:6EcWBNVhDlGn8AiSpkUg6T"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 212746,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/61bmo5vBtLghd3WYHZQGrY"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 212746,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/61bmo5vBtLghd3WYHZQGrY"
+      "href": "https://api.spotify.com/v1/tracks/61bmo5vBtLghd3WYHZQGrY",
+      "id": "61bmo5vBtLghd3WYHZQGrY",
+      "is_local": false,
+      "name": "Brother",
+      "preview_url": "https://p.scdn.co/mp3-preview/30b025fdd6859c227e7ec0c2b35ebfd01cae53c3?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:61bmo5vBtLghd3WYHZQGrY"
     },
-    "href" : "https://api.spotify.com/v1/tracks/61bmo5vBtLghd3WYHZQGrY",
-    "id" : "61bmo5vBtLghd3WYHZQGrY",
-    "is_local" : false,
-    "name" : "Brother",
-    "preview_url" : "https://p.scdn.co/mp3-preview/30b025fdd6859c227e7ec0c2b35ebfd01cae53c3?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 3,
-    "type" : "track",
-    "uri" : "spotify:track:61bmo5vBtLghd3WYHZQGrY"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 182613,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1oryhqQ4hxJzT5TfKGQTCc"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 182613,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/1oryhqQ4hxJzT5TfKGQTCc"
+      "href": "https://api.spotify.com/v1/tracks/1oryhqQ4hxJzT5TfKGQTCc",
+      "id": "1oryhqQ4hxJzT5TfKGQTCc",
+      "is_local": false,
+      "name": "Let Her Go",
+      "preview_url": "https://p.scdn.co/mp3-preview/8cb123315493753bf12a9b159d53c6a336a7ed92?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:1oryhqQ4hxJzT5TfKGQTCc"
     },
-    "href" : "https://api.spotify.com/v1/tracks/1oryhqQ4hxJzT5TfKGQTCc",
-    "id" : "1oryhqQ4hxJzT5TfKGQTCc",
-    "is_local" : false,
-    "name" : "Let Her Go",
-    "preview_url" : "https://p.scdn.co/mp3-preview/8cb123315493753bf12a9b159d53c6a336a7ed92?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 4,
-    "type" : "track",
-    "uri" : "spotify:track:1oryhqQ4hxJzT5TfKGQTCc"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 179760,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4NH57ZltUFAtAsUIKJDK3l"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 179760,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/4NH57ZltUFAtAsUIKJDK3l"
+      "href": "https://api.spotify.com/v1/tracks/4NH57ZltUFAtAsUIKJDK3l",
+      "id": "4NH57ZltUFAtAsUIKJDK3l",
+      "is_local": false,
+      "name": "Goodbye Weekend",
+      "preview_url": "https://p.scdn.co/mp3-preview/db63d0823e4a7158c0a4505ae1deba16a196ec6b?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:4NH57ZltUFAtAsUIKJDK3l"
     },
-    "href" : "https://api.spotify.com/v1/tracks/4NH57ZltUFAtAsUIKJDK3l",
-    "id" : "4NH57ZltUFAtAsUIKJDK3l",
-    "is_local" : false,
-    "name" : "Goodbye Weekend",
-    "preview_url" : "https://p.scdn.co/mp3-preview/db63d0823e4a7158c0a4505ae1deba16a196ec6b?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 5,
-    "type" : "track",
-    "uri" : "spotify:track:4NH57ZltUFAtAsUIKJDK3l"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 248173,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6TXPSDWAKyKw1rUYGdZw1F"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 248173,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6TXPSDWAKyKw1rUYGdZw1F"
+      "href": "https://api.spotify.com/v1/tracks/6TXPSDWAKyKw1rUYGdZw1F",
+      "id": "6TXPSDWAKyKw1rUYGdZw1F",
+      "is_local": false,
+      "name": "Let My Baby Stay",
+      "preview_url": "https://p.scdn.co/mp3-preview/de6fc04cc6b156f669d43c922a568066c552c9b4?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:6TXPSDWAKyKw1rUYGdZw1F"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6TXPSDWAKyKw1rUYGdZw1F",
-    "id" : "6TXPSDWAKyKw1rUYGdZw1F",
-    "is_local" : false,
-    "name" : "Let My Baby Stay",
-    "preview_url" : "https://p.scdn.co/mp3-preview/de6fc04cc6b156f669d43c922a568066c552c9b4?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 6,
-    "type" : "track",
-    "uri" : "spotify:track:6TXPSDWAKyKw1rUYGdZw1F"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 167093,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7m0HWMjdCYc2EodpKN4gaf"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 167093,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/7m0HWMjdCYc2EodpKN4gaf"
+      "href": "https://api.spotify.com/v1/tracks/7m0HWMjdCYc2EodpKN4gaf",
+      "id": "7m0HWMjdCYc2EodpKN4gaf",
+      "is_local": false,
+      "name": "Passing Out Pieces",
+      "preview_url": "https://p.scdn.co/mp3-preview/f3df0176103ae9a5d482c42639d89552421eb0d6?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:7m0HWMjdCYc2EodpKN4gaf"
     },
-    "href" : "https://api.spotify.com/v1/tracks/7m0HWMjdCYc2EodpKN4gaf",
-    "id" : "7m0HWMjdCYc2EodpKN4gaf",
-    "is_local" : false,
-    "name" : "Passing Out Pieces",
-    "preview_url" : "https://p.scdn.co/mp3-preview/f3df0176103ae9a5d482c42639d89552421eb0d6?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 7,
-    "type" : "track",
-    "uri" : "spotify:track:7m0HWMjdCYc2EodpKN4gaf"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 229120,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/50SIcPYb3sCrKweC6C4BQC"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 229120,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/50SIcPYb3sCrKweC6C4BQC"
+      "href": "https://api.spotify.com/v1/tracks/50SIcPYb3sCrKweC6C4BQC",
+      "id": "50SIcPYb3sCrKweC6C4BQC",
+      "is_local": false,
+      "name": "Treat Her Better",
+      "preview_url": "https://p.scdn.co/mp3-preview/a9805991bda2f97c9f04c1c4556fd29e7492a69f?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:50SIcPYb3sCrKweC6C4BQC"
     },
-    "href" : "https://api.spotify.com/v1/tracks/50SIcPYb3sCrKweC6C4BQC",
-    "id" : "50SIcPYb3sCrKweC6C4BQC",
-    "is_local" : false,
-    "name" : "Treat Her Better",
-    "preview_url" : "https://p.scdn.co/mp3-preview/a9805991bda2f97c9f04c1c4556fd29e7492a69f?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 8,
-    "type" : "track",
-    "uri" : "spotify:track:50SIcPYb3sCrKweC6C4BQC"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 231720,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5oeOWXjH8NZFOWP0SpSXqV"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 231720,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/5oeOWXjH8NZFOWP0SpSXqV"
+      "href": "https://api.spotify.com/v1/tracks/5oeOWXjH8NZFOWP0SpSXqV",
+      "id": "5oeOWXjH8NZFOWP0SpSXqV",
+      "is_local": false,
+      "name": "Chamber Of Reflection",
+      "preview_url": "https://p.scdn.co/mp3-preview/49c10a8b086aed13ff16fcdfcd946f49984aec35?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:5oeOWXjH8NZFOWP0SpSXqV"
     },
-    "href" : "https://api.spotify.com/v1/tracks/5oeOWXjH8NZFOWP0SpSXqV",
-    "id" : "5oeOWXjH8NZFOWP0SpSXqV",
-    "is_local" : false,
-    "name" : "Chamber Of Reflection",
-    "preview_url" : "https://p.scdn.co/mp3-preview/49c10a8b086aed13ff16fcdfcd946f49984aec35?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 9,
-    "type" : "track",
-    "uri" : "spotify:track:5oeOWXjH8NZFOWP0SpSXqV"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 204906,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1ZOPqVD7vdydwfY6faIsPT"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 204906,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/1ZOPqVD7vdydwfY6faIsPT"
+      "href": "https://api.spotify.com/v1/tracks/1ZOPqVD7vdydwfY6faIsPT",
+      "id": "1ZOPqVD7vdydwfY6faIsPT",
+      "is_local": false,
+      "name": "Go Easy",
+      "preview_url": "https://p.scdn.co/mp3-preview/6bdc8a82506517849c946879bf37dc64cb72422f?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:1ZOPqVD7vdydwfY6faIsPT"
     },
-    "href" : "https://api.spotify.com/v1/tracks/1ZOPqVD7vdydwfY6faIsPT",
-    "id" : "1ZOPqVD7vdydwfY6faIsPT",
-    "is_local" : false,
-    "name" : "Go Easy",
-    "preview_url" : "https://p.scdn.co/mp3-preview/6bdc8a82506517849c946879bf37dc64cb72422f?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 10,
-    "type" : "track",
-    "uri" : "spotify:track:1ZOPqVD7vdydwfY6faIsPT"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+          },
+          "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+          "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+          "name": "Mac DeMarco",
+          "type": "artist",
+          "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 158133,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3AK9zYXHCpxpjj8tbdjhar"
       },
-      "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-      "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-      "name" : "Mac DeMarco",
-      "type" : "artist",
-      "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 158133,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/3AK9zYXHCpxpjj8tbdjhar"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/3AK9zYXHCpxpjj8tbdjhar",
-    "id" : "3AK9zYXHCpxpjj8tbdjhar",
-    "is_local" : false,
-    "name" : "Jonny's Odyssey",
-    "preview_url" : "https://p.scdn.co/mp3-preview/7d23b8f4dc333fcad1f18bba54f53ddb3ab82369?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 11,
-    "type" : "track",
-    "uri" : "spotify:track:3AK9zYXHCpxpjj8tbdjhar"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 11
+      "href": "https://api.spotify.com/v1/tracks/3AK9zYXHCpxpjj8tbdjhar",
+      "id": "3AK9zYXHCpxpjj8tbdjhar",
+      "is_local": false,
+      "name": "Jonny's Odyssey",
+      "preview_url": "https://p.scdn.co/mp3-preview/7d23b8f4dc333fcad1f18bba54f53ddb3ab82369?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:3AK9zYXHCpxpjj8tbdjhar"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 11
 }

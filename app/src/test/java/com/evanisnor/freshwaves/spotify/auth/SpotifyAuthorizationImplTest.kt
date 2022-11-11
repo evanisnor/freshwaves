@@ -16,78 +16,78 @@ import org.robolectric.RobolectricTestRunner
 @RunWith(RobolectricTestRunner::class)
 class SpotifyAuthorizationImplTest {
 
-    private val activity = Robolectric.buildActivity(ComponentActivity::class.java).get()
+  private val activity = Robolectric.buildActivity(ComponentActivity::class.java).get()
 
-    @Test
-    fun `isAuthorized - when HandyAuth is authorized - returns true`() = runTest {
-        val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Authorized
-        })
+  @Test
+  fun `isAuthorized - when HandyAuth is authorized - returns true`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Authorized
+    })
 
-        spotifyAuthorization.authorize(activity)
+    spotifyAuthorization.authorize(activity)
 
-        assertThat(spotifyAuthorization.isAuthorized).isTrue()
+    assertThat(spotifyAuthorization.isAuthorized).isTrue()
+  }
+
+  @Test
+  fun `isAuthorized - when HandyAuth is not authorized - returns false`() = runTest {
+    val handyAuth = FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Error.Denied
+    }
+    val spotifyAuthorization = SpotifyAuthorizationImpl(handyAuth)
+
+    spotifyAuthorization.authorize(activity)
+
+    assertThat(spotifyAuthorization.isAuthorized).isFalse()
+  }
+
+  @Test
+  fun `authorize - when authorization granted - returns Success`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Authorized
+    })
+
+    val response = spotifyAuthorization.authorize(activity)
+
+    assertThat(response).isEqualTo(SpotifyAuthorization.Response.Success)
+  }
+
+  @Test
+  fun `authorize - when authorization denied - returns Failure`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Error.Denied
+    })
+
+    val response = spotifyAuthorization.authorize(activity)
+
+    assertThat(response).isEqualTo(SpotifyAuthorization.Response.Failure)
+  }
+
+  @Test
+  fun `getAuthorizationHeader - when authorized - returns auth header`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Authorized
+    })
+
+    spotifyAuthorization.authorize(activity)
+
+    assertThat(spotifyAuthorization.getAuthorizationHeader()).isEqualTo("Fake test-token")
+  }
+
+  @Test
+  fun `getAuthorizationHeader - when not authorized - throws an error`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Error.Denied
+    })
+
+    spotifyAuthorization.authorize(activity)
+
+    try {
+      spotifyAuthorization.getAuthorizationHeader()
+      assert(false) { "Expected error not thrown" }
+    } catch (e: Throwable) {
+      assert(true)
     }
 
-    @Test
-    fun `isAuthorized - when HandyAuth is not authorized - returns false`() = runTest {
-        val handyAuth = FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Error.Denied
-        }
-        val spotifyAuthorization = SpotifyAuthorizationImpl(handyAuth)
-
-        spotifyAuthorization.authorize(activity)
-
-        assertThat(spotifyAuthorization.isAuthorized).isFalse()
-    }
-
-    @Test
-    fun `authorize - when authorization granted - returns Success`() = runTest {
-        val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Authorized
-        })
-
-        val response = spotifyAuthorization.authorize(activity)
-
-        assertThat(response).isEqualTo(SpotifyAuthorization.Response.Success)
-    }
-
-    @Test
-    fun `authorize - when authorization denied - returns Failure`() = runTest {
-        val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Error.Denied
-        })
-
-        val response = spotifyAuthorization.authorize(activity)
-
-        assertThat(response).isEqualTo(SpotifyAuthorization.Response.Failure)
-    }
-
-    @Test
-    fun `getAuthorizationHeader - when authorized - returns auth header`() = runTest {
-        val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Authorized
-        })
-
-        spotifyAuthorization.authorize(activity)
-
-        assertThat(spotifyAuthorization.getAuthorizationHeader()).isEqualTo("Fake test-token")
-    }
-
-    @Test
-    fun `getAuthorizationHeader - when not authorized - throws an error`() = runTest {
-        val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-            expectedAuthResult = HandyAuth.Result.Error.Denied
-        })
-
-        spotifyAuthorization.authorize(activity)
-
-        try {
-            spotifyAuthorization.getAuthorizationHeader()
-            assert(false) { "Expected error not thrown" }
-        } catch (e: Throwable) {
-            assert(true)
-        }
-
-    }
+  }
 }

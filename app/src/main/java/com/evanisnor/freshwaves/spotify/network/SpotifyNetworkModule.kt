@@ -13,18 +13,18 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 @InstallIn(SingletonComponent::class)
 object SpotifyNetworkModule {
 
-    @Provides
-    fun spotifyAPIService(): SpotifyAPIService = Retrofit.Builder()
-        .baseUrl("https://api.spotify.com/")
-        .addConverterFactory(MoshiConverterFactory.create())
-        .client(
-            OkHttpClient.Builder()
-                .dispatcher(Dispatcher().apply {
-                    maxRequestsPerHost = 1
-                })
-                .build()
-        )
+  @Provides
+  fun spotifyAPIService(): SpotifyAPIService = Retrofit.Builder()
+    .baseUrl("https://api.spotify.com/")
+    .addConverterFactory(MoshiConverterFactory.create())
+    .client(
+      OkHttpClient.Builder()
+        .dispatcher(Dispatcher().apply {
+          maxRequestsPerHost = 1
+        })
         .build()
-        .create(SpotifyAPIService::class.java)
+    )
+    .build()
+    .create(SpotifyAPIService::class.java)
 
 }

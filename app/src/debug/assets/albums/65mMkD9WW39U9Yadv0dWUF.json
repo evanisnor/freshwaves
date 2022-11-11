@@ -1,194 +1,230 @@
 {
-  "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF/albums?offset=0&limit=20&include_groups=album&market=CA",
-  "items" : [ {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+  "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items": [
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/7vv2Gi0XzyV0rl9iUILjbs"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/7vv2Gi0XzyV0rl9iUILjbs"
+      "href": "https://api.spotify.com/v1/albums/7vv2Gi0XzyV0rl9iUILjbs",
+      "id": "7vv2Gi0XzyV0rl9iUILjbs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273aaca3dd09d123ee14e4efa8d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02aaca3dd09d123ee14e4efa8d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851aaca3dd09d123ee14e4efa8d",
+          "width": 64
+        }
+      ],
+      "name": "Sideways To New Italy",
+      "release_date": "2020-06-05",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:7vv2Gi0XzyV0rl9iUILjbs"
     },
-    "href" : "https://api.spotify.com/v1/albums/7vv2Gi0XzyV0rl9iUILjbs",
-    "id" : "7vv2Gi0XzyV0rl9iUILjbs",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273aaca3dd09d123ee14e4efa8d",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02aaca3dd09d123ee14e4efa8d",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851aaca3dd09d123ee14e4efa8d",
-      "width" : 64
-    } ],
-    "name" : "Sideways To New Italy",
-    "release_date" : "2020-06-05",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:7vv2Gi0XzyV0rl9iUILjbs"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1ZchhBaJxZLfkZKRwLF7NC"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/1ZchhBaJxZLfkZKRwLF7NC"
+      "href": "https://api.spotify.com/v1/albums/1ZchhBaJxZLfkZKRwLF7NC",
+      "id": "1ZchhBaJxZLfkZKRwLF7NC",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273bb472e9dd747bff90e4579bb",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02bb472e9dd747bff90e4579bb",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851bb472e9dd747bff90e4579bb",
+          "width": 64
+        }
+      ],
+      "name": "Sideways to New Italy",
+      "release_date": "2020-06-05",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:1ZchhBaJxZLfkZKRwLF7NC"
     },
-    "href" : "https://api.spotify.com/v1/albums/1ZchhBaJxZLfkZKRwLF7NC",
-    "id" : "1ZchhBaJxZLfkZKRwLF7NC",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273bb472e9dd747bff90e4579bb",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02bb472e9dd747bff90e4579bb",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851bb472e9dd747bff90e4579bb",
-      "width" : 64
-    } ],
-    "name" : "Sideways to New Italy",
-    "release_date" : "2020-06-05",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:1ZchhBaJxZLfkZKRwLF7NC"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0zL1ncgS3vbeh8iQ2qywwY"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/0zL1ncgS3vbeh8iQ2qywwY"
+      "href": "https://api.spotify.com/v1/albums/0zL1ncgS3vbeh8iQ2qywwY",
+      "id": "0zL1ncgS3vbeh8iQ2qywwY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27346657e3c4403688076c94b94",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0246657e3c4403688076c94b94",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485146657e3c4403688076c94b94",
+          "width": 64
+        }
+      ],
+      "name": "Hope Downs",
+      "release_date": "2018-06-15",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:0zL1ncgS3vbeh8iQ2qywwY"
     },
-    "href" : "https://api.spotify.com/v1/albums/0zL1ncgS3vbeh8iQ2qywwY",
-    "id" : "0zL1ncgS3vbeh8iQ2qywwY",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27346657e3c4403688076c94b94",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0246657e3c4403688076c94b94",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485146657e3c4403688076c94b94",
-      "width" : 64
-    } ],
-    "name" : "Hope Downs",
-    "release_date" : "2018-06-15",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:0zL1ncgS3vbeh8iQ2qywwY"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3WY9DL0lOboUU0YekTnuOY"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3WY9DL0lOboUU0YekTnuOY"
+      "href": "https://api.spotify.com/v1/albums/3WY9DL0lOboUU0YekTnuOY",
+      "id": "3WY9DL0lOboUU0YekTnuOY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27318db4fa729d555610fdae076",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0218db4fa729d555610fdae076",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485118db4fa729d555610fdae076",
+          "width": 64
+        }
+      ],
+      "name": "Hope Downs",
+      "release_date": "2018-06-15",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:3WY9DL0lOboUU0YekTnuOY"
     },
-    "href" : "https://api.spotify.com/v1/albums/3WY9DL0lOboUU0YekTnuOY",
-    "id" : "3WY9DL0lOboUU0YekTnuOY",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27318db4fa729d555610fdae076",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0218db4fa729d555610fdae076",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485118db4fa729d555610fdae076",
-      "width" : 64
-    } ],
-    "name" : "Hope Downs",
-    "release_date" : "2018-06-15",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:3WY9DL0lOboUU0YekTnuOY"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2f82IGXPtzatEdWsNCnVi0"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2f82IGXPtzatEdWsNCnVi0"
-    },
-    "href" : "https://api.spotify.com/v1/albums/2f82IGXPtzatEdWsNCnVi0",
-    "id" : "2f82IGXPtzatEdWsNCnVi0",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2730f55a9af2ad9ced12cd3b9d8",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e020f55a9af2ad9ced12cd3b9d8",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048510f55a9af2ad9ced12cd3b9d8",
-      "width" : 64
-    } ],
-    "name" : "Talk Tight",
-    "release_date" : "2016-11-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 7,
-    "type" : "album",
-    "uri" : "spotify:album:2f82IGXPtzatEdWsNCnVi0"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 5
+      "href": "https://api.spotify.com/v1/albums/2f82IGXPtzatEdWsNCnVi0",
+      "id": "2f82IGXPtzatEdWsNCnVi0",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730f55a9af2ad9ced12cd3b9d8",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020f55a9af2ad9ced12cd3b9d8",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510f55a9af2ad9ced12cd3b9d8",
+          "width": 64
+        }
+      ],
+      "name": "Talk Tight",
+      "release_date": "2016-11-25",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "type": "album",
+      "uri": "spotify:album:2f82IGXPtzatEdWsNCnVi0"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 5
 }

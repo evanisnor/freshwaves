@@ -13,12 +13,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object SpotifyCacheModule {
 
-    @Provides
-    @Singleton
-    fun spotifyCacheDao(@ApplicationContext context: Context) = Room.databaseBuilder(
-        context,
-        SpotifyCache::class.java,
-        "spotifyCache"
-    ).build().spotifyCacheDao()
+  @Provides
+  @Singleton
+  fun spotifyCacheDao(@ApplicationContext context: Context) = Room.databaseBuilder(
+    context,
+    SpotifyCache::class.java,
+    "spotifyCache"
+  ).build().spotifyCacheDao()
 
 }

@@ -12,78 +12,78 @@ import org.hamcrest.Matchers
 
 class RecyclerViewUtils {
 
-    companion object {
+  companion object {
 
-        fun scrollToPosition(position: Int): ViewAction = ScrollToPositionViewAction(position)
+    fun scrollToPosition(position: Int): ViewAction = ScrollToPositionViewAction(position)
 
-        fun atPositionOnView(position: Int, id: Int, matcher: Matcher<View>) =
-            AtPositionOnViewMatcher(position, id, matcher)
+    fun atPositionOnView(position: Int, id: Int, matcher: Matcher<View>) =
+      AtPositionOnViewMatcher(position, id, matcher)
 
-        fun atPositionOnView(position: Int, action: ViewAction) =
-            AtPositionOnViewAction(position, action)
-    }
+    fun atPositionOnView(position: Int, action: ViewAction) =
+      AtPositionOnViewAction(position, action)
+  }
 
 }
 
 class ScrollToPositionViewAction(
-    private val position: Int
+  private val position: Int,
 ) : ViewAction {
 
-    override fun getDescription() = "Scroll RecyclerView to position $position"
+  override fun getDescription() = "Scroll RecyclerView to position $position"
 
-    override fun getConstraints(): Matcher<View> = Matchers.allOf(
-        ViewMatchers.isEnabled(),
-        ViewMatchers.isDisplayed(),
-        ViewMatchers.isAssignableFrom(RecyclerView::class.java)
-    )
+  override fun getConstraints(): Matcher<View> = Matchers.allOf(
+    ViewMatchers.isEnabled(),
+    ViewMatchers.isDisplayed(),
+    ViewMatchers.isAssignableFrom(RecyclerView::class.java)
+  )
 
-    override fun perform(uiController: UiController, view: View) {
-        with(view as RecyclerView) {
-            scrollToPosition(position)
-        }
+  override fun perform(uiController: UiController, view: View) {
+    with(view as RecyclerView) {
+      scrollToPosition(position)
     }
+  }
 }
 
 class AtPositionOnViewMatcher(
-    private val position: Int,
-    private val id: Int,
-    private val matcher: Matcher<View>
+  private val position: Int,
+  private val id: Int,
+  private val matcher: Matcher<View>,
 ) : BoundedMatcher<View, RecyclerView>(RecyclerView::class.java) {
 
-    override fun describeTo(description: Description) {
-        description.appendText("has $matcher at position $position")
-    }
+  override fun describeTo(description: Description) {
+    description.appendText("has $matcher at position $position")
+  }
 
-    override fun matchesSafely(recyclerView: RecyclerView): Boolean {
-        return matcher.matches(
-            recyclerView.findViewHolderForAdapterPosition(position)
-                ?.itemView
-                ?.findViewById(id)
-        )
-    }
+  override fun matchesSafely(recyclerView: RecyclerView): Boolean {
+    return matcher.matches(
+      recyclerView.findViewHolderForAdapterPosition(position)
+        ?.itemView
+        ?.findViewById(id)
+    )
+  }
 
 }
 
 class AtPositionOnViewAction(
-    private val position: Int,
-    private val action: ViewAction
+  private val position: Int,
+  private val action: ViewAction,
 ) : ViewAction {
 
-    override fun getDescription() = "perform action $action at position $position"
+  override fun getDescription() = "perform action $action at position $position"
 
-    override fun getConstraints(): Matcher<View> = Matchers.allOf(
-        ViewMatchers.isEnabled(),
-        ViewMatchers.isDisplayed(),
-        ViewMatchers.isAssignableFrom(RecyclerView::class.java)
-    )
+  override fun getConstraints(): Matcher<View> = Matchers.allOf(
+    ViewMatchers.isEnabled(),
+    ViewMatchers.isDisplayed(),
+    ViewMatchers.isAssignableFrom(RecyclerView::class.java)
+  )
 
-    override fun perform(uiController: UiController, view: View) {
-        val holder = (view as RecyclerView).findViewHolderForAdapterPosition(position)
+  override fun perform(uiController: UiController, view: View) {
+    val holder = (view as RecyclerView).findViewHolderForAdapterPosition(position)
 
-        assert(holder != null) {
-            "Unable to find ViewHolder for position $position"
-        }
-
-        action.perform(uiController, holder?.itemView)
+    assert(holder != null) {
+      "Unable to find ViewHolder for position $position"
     }
+
+    action.perform(uiController, holder?.itemView)
+  }
 }

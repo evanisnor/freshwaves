@@ -8,31 +8,31 @@ import retrofit2.http.Query
 
 interface SpotifyAPIService {
 
-    @GET("v1/me")
-    suspend fun getUserProfile(
-        @Header("Authorization") accessToken: String
-    ): PrivateUserObject
+  @GET("v1/me")
+  suspend fun getUserProfile(
+      @Header("Authorization") accessToken: String,
+  ): PrivateUserObject
 
-    @GET("v1/me/top/artists")
-    suspend fun getTopArtists(
-        @Header("Authorization") accessToken: String,
-        @Query("limit") limit: Int = 50,
-        @Query("offset") offset: Int = 0
-    ): PagingObject<ArtistObject>
+  @GET("v1/me/top/artists")
+  suspend fun getTopArtists(
+      @Header("Authorization") accessToken: String,
+      @Query("limit") limit: Int = 50,
+      @Query("offset") offset: Int = 0,
+  ): PagingObject<ArtistObject>
 
-    @GET("v1/artists/{id}/albums")
-    suspend fun getArtistAlbums(
-        @Header("Authorization") accessToken: String,
-        @Path("id") artistId: String,
-        @Query("market") market: String,
-        @Query("limit") limit: Int = 5,
-        @Query("include_groups") includeGroups: String = "album"
-    ): PagingObject<AlbumObject>
+  @GET("v1/artists/{id}/albums")
+  suspend fun getArtistAlbums(
+      @Header("Authorization") accessToken: String,
+      @Path("id") artistId: String,
+      @Query("market") market: String,
+      @Query("limit") limit: Int = 5,
+      @Query("include_groups") includeGroups: String = "album",
+  ): PagingObject<AlbumObject>
 
 
-    @GET("v1/albums/{id}/tracks")
-    suspend fun getAlbumTracks(
-        @Header("Authorization") accessToken: String,
-        @Path("id") albumId: String
-    ): PagingObject<TrackObject>
+  @GET("v1/albums/{id}/tracks")
+  suspend fun getAlbumTracks(
+      @Header("Authorization") accessToken: String,
+      @Path("id") albumId: String,
+  ): PagingObject<TrackObject>
 }

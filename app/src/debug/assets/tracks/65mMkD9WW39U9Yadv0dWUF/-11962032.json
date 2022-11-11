@@ -1,269 +1,330 @@
 {
-  "href" : "https://api.spotify.com/v1/albums/3WY9DL0lOboUU0YekTnuOY/tracks?offset=0&limit=20",
-  "items" : [ {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+  "href": "https://api.spotify.com/v1/albums/3WY9DL0lOboUU0YekTnuOY/tracks?offset=0&limit=20",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 291965,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3PEM2hKqw2Cz9bVtnOuMeU"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 291965,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/3PEM2hKqw2Cz9bVtnOuMeU"
+      "href": "https://api.spotify.com/v1/tracks/3PEM2hKqw2Cz9bVtnOuMeU",
+      "id": "3PEM2hKqw2Cz9bVtnOuMeU",
+      "is_local": false,
+      "name": "An Air Conditioned Man",
+      "preview_url": "https://p.scdn.co/mp3-preview/5721a0d2bd7f2d92ef47503ed683f0a09f9f80c4?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:3PEM2hKqw2Cz9bVtnOuMeU"
     },
-    "href" : "https://api.spotify.com/v1/tracks/3PEM2hKqw2Cz9bVtnOuMeU",
-    "id" : "3PEM2hKqw2Cz9bVtnOuMeU",
-    "is_local" : false,
-    "name" : "An Air Conditioned Man",
-    "preview_url" : "https://p.scdn.co/mp3-preview/5721a0d2bd7f2d92ef47503ed683f0a09f9f80c4?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 1,
-    "type" : "track",
-    "uri" : "spotify:track:3PEM2hKqw2Cz9bVtnOuMeU"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 224525,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/50Q7epCWYwSuqoQ8DbLq41"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 224525,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/50Q7epCWYwSuqoQ8DbLq41"
+      "href": "https://api.spotify.com/v1/tracks/50Q7epCWYwSuqoQ8DbLq41",
+      "id": "50Q7epCWYwSuqoQ8DbLq41",
+      "is_local": false,
+      "name": "Talking Straight",
+      "preview_url": "https://p.scdn.co/mp3-preview/c0270c8a54962762e3cef881407e39f9129f9b91?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:50Q7epCWYwSuqoQ8DbLq41"
     },
-    "href" : "https://api.spotify.com/v1/tracks/50Q7epCWYwSuqoQ8DbLq41",
-    "id" : "50Q7epCWYwSuqoQ8DbLq41",
-    "is_local" : false,
-    "name" : "Talking Straight",
-    "preview_url" : "https://p.scdn.co/mp3-preview/c0270c8a54962762e3cef881407e39f9129f9b91?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 2,
-    "type" : "track",
-    "uri" : "spotify:track:50Q7epCWYwSuqoQ8DbLq41"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 254832,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6GuehMqfhfPGO60Baj7mGE"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 254832,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6GuehMqfhfPGO60Baj7mGE"
+      "href": "https://api.spotify.com/v1/tracks/6GuehMqfhfPGO60Baj7mGE",
+      "id": "6GuehMqfhfPGO60Baj7mGE",
+      "is_local": false,
+      "name": "Mainland",
+      "preview_url": "https://p.scdn.co/mp3-preview/1dc0f8572d9d87b681eb368ef2a55930b75815bf?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:6GuehMqfhfPGO60Baj7mGE"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6GuehMqfhfPGO60Baj7mGE",
-    "id" : "6GuehMqfhfPGO60Baj7mGE",
-    "is_local" : false,
-    "name" : "Mainland",
-    "preview_url" : "https://p.scdn.co/mp3-preview/1dc0f8572d9d87b681eb368ef2a55930b75815bf?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 3,
-    "type" : "track",
-    "uri" : "spotify:track:6GuehMqfhfPGO60Baj7mGE"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 124852,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2SqHNReXziBXw6B5PB39Hw"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 124852,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/2SqHNReXziBXw6B5PB39Hw"
+      "href": "https://api.spotify.com/v1/tracks/2SqHNReXziBXw6B5PB39Hw",
+      "id": "2SqHNReXziBXw6B5PB39Hw",
+      "is_local": false,
+      "name": "Time In Common",
+      "preview_url": "https://p.scdn.co/mp3-preview/78da975446fd957564d25a63485d163c84e5c777?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:2SqHNReXziBXw6B5PB39Hw"
     },
-    "href" : "https://api.spotify.com/v1/tracks/2SqHNReXziBXw6B5PB39Hw",
-    "id" : "2SqHNReXziBXw6B5PB39Hw",
-    "is_local" : false,
-    "name" : "Time In Common",
-    "preview_url" : "https://p.scdn.co/mp3-preview/78da975446fd957564d25a63485d163c84e5c777?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 4,
-    "type" : "track",
-    "uri" : "spotify:track:2SqHNReXziBXw6B5PB39Hw"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 196173,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6yLhAmpUWW5GImg2a9Et4R"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 196173,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6yLhAmpUWW5GImg2a9Et4R"
+      "href": "https://api.spotify.com/v1/tracks/6yLhAmpUWW5GImg2a9Et4R",
+      "id": "6yLhAmpUWW5GImg2a9Et4R",
+      "is_local": false,
+      "name": "Sister’s Jeans",
+      "preview_url": "https://p.scdn.co/mp3-preview/d078fa5ad84127f4f60f28285b46fb50ad259f09?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:6yLhAmpUWW5GImg2a9Et4R"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6yLhAmpUWW5GImg2a9Et4R",
-    "id" : "6yLhAmpUWW5GImg2a9Et4R",
-    "is_local" : false,
-    "name" : "Sister’s Jeans",
-    "preview_url" : "https://p.scdn.co/mp3-preview/d078fa5ad84127f4f60f28285b46fb50ad259f09?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 5,
-    "type" : "track",
-    "uri" : "spotify:track:6yLhAmpUWW5GImg2a9Et4R"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 174665,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7C88Sie7L1tP74kNei4IHN"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 174665,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/7C88Sie7L1tP74kNei4IHN"
+      "href": "https://api.spotify.com/v1/tracks/7C88Sie7L1tP74kNei4IHN",
+      "id": "7C88Sie7L1tP74kNei4IHN",
+      "is_local": false,
+      "name": "Bellarine",
+      "preview_url": "https://p.scdn.co/mp3-preview/63a9a1419cb5027ce0ae449c7c7453a4150e5687?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:7C88Sie7L1tP74kNei4IHN"
     },
-    "href" : "https://api.spotify.com/v1/tracks/7C88Sie7L1tP74kNei4IHN",
-    "id" : "7C88Sie7L1tP74kNei4IHN",
-    "is_local" : false,
-    "name" : "Bellarine",
-    "preview_url" : "https://p.scdn.co/mp3-preview/63a9a1419cb5027ce0ae449c7c7453a4150e5687?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 6,
-    "type" : "track",
-    "uri" : "spotify:track:7C88Sie7L1tP74kNei4IHN"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 174176,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6nm1YnOmBc2jtxFjYfelbK"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 174176,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6nm1YnOmBc2jtxFjYfelbK"
+      "href": "https://api.spotify.com/v1/tracks/6nm1YnOmBc2jtxFjYfelbK",
+      "id": "6nm1YnOmBc2jtxFjYfelbK",
+      "is_local": false,
+      "name": "Cappuccino City",
+      "preview_url": "https://p.scdn.co/mp3-preview/39727034425fcb98a072a919c36a0ed10adac543?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:6nm1YnOmBc2jtxFjYfelbK"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6nm1YnOmBc2jtxFjYfelbK",
-    "id" : "6nm1YnOmBc2jtxFjYfelbK",
-    "is_local" : false,
-    "name" : "Cappuccino City",
-    "preview_url" : "https://p.scdn.co/mp3-preview/39727034425fcb98a072a919c36a0ed10adac543?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 7,
-    "type" : "track",
-    "uri" : "spotify:track:6nm1YnOmBc2jtxFjYfelbK"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 226559,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6aq0uDylSN2MXcJ66SMyyz"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 226559,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6aq0uDylSN2MXcJ66SMyyz"
+      "href": "https://api.spotify.com/v1/tracks/6aq0uDylSN2MXcJ66SMyyz",
+      "id": "6aq0uDylSN2MXcJ66SMyyz",
+      "is_local": false,
+      "name": "Exclusive Grave",
+      "preview_url": "https://p.scdn.co/mp3-preview/ff1552e5ff8a6ee5f7c9ef63d531acca26fc3342?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:6aq0uDylSN2MXcJ66SMyyz"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6aq0uDylSN2MXcJ66SMyyz",
-    "id" : "6aq0uDylSN2MXcJ66SMyyz",
-    "is_local" : false,
-    "name" : "Exclusive Grave",
-    "preview_url" : "https://p.scdn.co/mp3-preview/ff1552e5ff8a6ee5f7c9ef63d531acca26fc3342?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 8,
-    "type" : "track",
-    "uri" : "spotify:track:6aq0uDylSN2MXcJ66SMyyz"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 186636,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6NLlZLS3Qx97dHB95Jdxlq"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 186636,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6NLlZLS3Qx97dHB95Jdxlq"
+      "href": "https://api.spotify.com/v1/tracks/6NLlZLS3Qx97dHB95Jdxlq",
+      "id": "6NLlZLS3Qx97dHB95Jdxlq",
+      "is_local": false,
+      "name": "How Long?",
+      "preview_url": "https://p.scdn.co/mp3-preview/eeb23f02ede802cb7a422aedb81f03eaff529120?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:6NLlZLS3Qx97dHB95Jdxlq"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6NLlZLS3Qx97dHB95Jdxlq",
-    "id" : "6NLlZLS3Qx97dHB95Jdxlq",
-    "is_local" : false,
-    "name" : "How Long?",
-    "preview_url" : "https://p.scdn.co/mp3-preview/eeb23f02ede802cb7a422aedb81f03eaff529120?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 9,
-    "type" : "track",
-    "uri" : "spotify:track:6NLlZLS3Qx97dHB95Jdxlq"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/65mMkD9WW39U9Yadv0dWUF"
+          },
+          "href": "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
+          "id": "65mMkD9WW39U9Yadv0dWUF",
+          "name": "Rolling Blackouts Coastal Fever",
+          "type": "artist",
+          "uri": "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
+        }
+      ],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 268984,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4Is2DFWnQMC7AOh4gcaTlo"
       },
-      "href" : "https://api.spotify.com/v1/artists/65mMkD9WW39U9Yadv0dWUF",
-      "id" : "65mMkD9WW39U9Yadv0dWUF",
-      "name" : "Rolling Blackouts Coastal Fever",
-      "type" : "artist",
-      "uri" : "spotify:artist:65mMkD9WW39U9Yadv0dWUF"
-    } ],
-    "available_markets" : [ "AU", "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 268984,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/4Is2DFWnQMC7AOh4gcaTlo"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/4Is2DFWnQMC7AOh4gcaTlo",
-    "id" : "4Is2DFWnQMC7AOh4gcaTlo",
-    "is_local" : false,
-    "name" : "The Hammer",
-    "preview_url" : "https://p.scdn.co/mp3-preview/784010db33fe36781d758f4d335fa82af95594ac?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 10,
-    "type" : "track",
-    "uri" : "spotify:track:4Is2DFWnQMC7AOh4gcaTlo"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 10
+      "href": "https://api.spotify.com/v1/tracks/4Is2DFWnQMC7AOh4gcaTlo",
+      "id": "4Is2DFWnQMC7AOh4gcaTlo",
+      "is_local": false,
+      "name": "The Hammer",
+      "preview_url": "https://p.scdn.co/mp3-preview/784010db33fe36781d758f4d335fa82af95594ac?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:4Is2DFWnQMC7AOh4gcaTlo"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 10
 }

@@ -5,8 +5,8 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class PrivateUserObject(
-    val id: String,
-    val email: String,
-    @field:Json(name = "display_name") val displayName: String,
-    val country: String
+  val id: String,
+  val email: String,
+  @field:Json(name = "display_name") val displayName: String,
+  val country: String,
 )

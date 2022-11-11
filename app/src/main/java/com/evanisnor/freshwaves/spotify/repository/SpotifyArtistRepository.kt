@@ -9,21 +9,21 @@ import kotlin.math.ceil
 
 class SpotifyArtistRepository @Inject constructor(
     private val spotifyNetworkRepository: SpotifyNetworkRepository,
-    private val spotifyCacheDao: SpotifyCacheDao
+    private val spotifyCacheDao: SpotifyCacheDao,
 ) {
 
-    suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()
+  suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()
 
-    suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int = 30) {
-        val pages = ceil(numberOfArtists / artistsPerPage.toFloat()).toInt()
-        var offset = 0
+  suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int = 30) {
+    val pages = ceil(numberOfArtists / artistsPerPage.toFloat()).toInt()
+    var offset = 0
 
-        for (i in 0 until pages) {
-            val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
-            Log.i("SpotifyArtistRepository", "Fetched ${artists.size} artists")
-            spotifyCacheDao.insertArtists(artists)
-            Log.i("SpotifyArtistRepository", "Inserted ${artists.size} artists")
-            offset += artists.size
-        }
+    for (i in 0 until pages) {
+      val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
+      Log.i("SpotifyArtistRepository", "Fetched ${artists.size} artists")
+      spotifyCacheDao.insertArtists(artists)
+      Log.i("SpotifyArtistRepository", "Inserted ${artists.size} artists")
+      offset += artists.size
     }
+  }
 }

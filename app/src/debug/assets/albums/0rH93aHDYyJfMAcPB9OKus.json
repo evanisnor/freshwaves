@@ -1,453 +1,538 @@
 {
-  "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus/albums?offset=0&limit=20&include_groups=album&market=CA",
-  "items" : [ {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+  "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items": [
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6uKk0mHGXlpr5w8mr7VNA6"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/6uKk0mHGXlpr5w8mr7VNA6"
+      "href": "https://api.spotify.com/v1/albums/6uKk0mHGXlpr5w8mr7VNA6",
+      "id": "6uKk0mHGXlpr5w8mr7VNA6",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27385af0b4add0a0ec479468e74",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0285af0b4add0a0ec479468e74",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485185af0b4add0a0ec479468e74",
+          "width": 64
+        }
+      ],
+      "name": "Bittersweet Demons",
+      "release_date": "2021-06-25",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:6uKk0mHGXlpr5w8mr7VNA6"
     },
-    "href" : "https://api.spotify.com/v1/albums/6uKk0mHGXlpr5w8mr7VNA6",
-    "id" : "6uKk0mHGXlpr5w8mr7VNA6",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27385af0b4add0a0ec479468e74",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0285af0b4add0a0ec479468e74",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485185af0b4add0a0ec479468e74",
-      "width" : 64
-    } ],
-    "name" : "Bittersweet Demons",
-    "release_date" : "2021-06-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:6uKk0mHGXlpr5w8mr7VNA6"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3ZZsMRzZOJI1UBmI2Jad0J"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3ZZsMRzZOJI1UBmI2Jad0J"
+      "href": "https://api.spotify.com/v1/albums/3ZZsMRzZOJI1UBmI2Jad0J",
+      "id": "3ZZsMRzZOJI1UBmI2Jad0J",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273bb2ac1b8628d7f9ef291712f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02bb2ac1b8628d7f9ef291712f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851bb2ac1b8628d7f9ef291712f",
+          "width": 64
+        }
+      ],
+      "name": "Bittersweet Demons",
+      "release_date": "2021-06-25",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:3ZZsMRzZOJI1UBmI2Jad0J"
     },
-    "href" : "https://api.spotify.com/v1/albums/3ZZsMRzZOJI1UBmI2Jad0J",
-    "id" : "3ZZsMRzZOJI1UBmI2Jad0J",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273bb2ac1b8628d7f9ef291712f",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02bb2ac1b8628d7f9ef291712f",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851bb2ac1b8628d7f9ef291712f",
-      "width" : 64
-    } ],
-    "name" : "Bittersweet Demons",
-    "release_date" : "2021-06-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:3ZZsMRzZOJI1UBmI2Jad0J"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4ROuu4IQUdAukYsK2xqQX8"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/4ROuu4IQUdAukYsK2xqQX8"
+      "href": "https://api.spotify.com/v1/albums/4ROuu4IQUdAukYsK2xqQX8",
+      "id": "4ROuu4IQUdAukYsK2xqQX8",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273564447c417d37d18d1ea0d22",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02564447c417d37d18d1ea0d22",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851564447c417d37d18d1ea0d22",
+          "width": 64
+        }
+      ],
+      "name": "Bittersweet Demons",
+      "release_date": "2021-06-25",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:4ROuu4IQUdAukYsK2xqQX8"
     },
-    "href" : "https://api.spotify.com/v1/albums/4ROuu4IQUdAukYsK2xqQX8",
-    "id" : "4ROuu4IQUdAukYsK2xqQX8",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273564447c417d37d18d1ea0d22",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02564447c417d37d18d1ea0d22",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851564447c417d37d18d1ea0d22",
-      "width" : 64
-    } ],
-    "name" : "Bittersweet Demons",
-    "release_date" : "2021-06-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:4ROuu4IQUdAukYsK2xqQX8"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3y64gC7LgsJSIyrMhKKEWw"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3y64gC7LgsJSIyrMhKKEWw"
+      "href": "https://api.spotify.com/v1/albums/3y64gC7LgsJSIyrMhKKEWw",
+      "id": "3y64gC7LgsJSIyrMhKKEWw",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27388763ac1ec1a542a42c559b1",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0288763ac1ec1a542a42c559b1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485188763ac1ec1a542a42c559b1",
+          "width": 64
+        }
+      ],
+      "name": "Bittersweet Demons",
+      "release_date": "2021-06-25",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:3y64gC7LgsJSIyrMhKKEWw"
     },
-    "href" : "https://api.spotify.com/v1/albums/3y64gC7LgsJSIyrMhKKEWw",
-    "id" : "3y64gC7LgsJSIyrMhKKEWw",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27388763ac1ec1a542a42c559b1",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0288763ac1ec1a542a42c559b1",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485188763ac1ec1a542a42c559b1",
-      "width" : 64
-    } ],
-    "name" : "Bittersweet Demons",
-    "release_date" : "2021-06-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:3y64gC7LgsJSIyrMhKKEWw"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4mqWjDjA6NRo2m82b83ve7"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/4mqWjDjA6NRo2m82b83ve7"
+      "href": "https://api.spotify.com/v1/albums/4mqWjDjA6NRo2m82b83ve7",
+      "id": "4mqWjDjA6NRo2m82b83ve7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273617b8f369cb5afbb69e9e428",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02617b8f369cb5afbb69e9e428",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851617b8f369cb5afbb69e9e428",
+          "width": 64
+        }
+      ],
+      "name": "Bittersweet Demons",
+      "release_date": "2021-06-25",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:4mqWjDjA6NRo2m82b83ve7"
     },
-    "href" : "https://api.spotify.com/v1/albums/4mqWjDjA6NRo2m82b83ve7",
-    "id" : "4mqWjDjA6NRo2m82b83ve7",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273617b8f369cb5afbb69e9e428",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02617b8f369cb5afbb69e9e428",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851617b8f369cb5afbb69e9e428",
-      "width" : 64
-    } ],
-    "name" : "Bittersweet Demons",
-    "release_date" : "2021-06-25",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:4mqWjDjA6NRo2m82b83ve7"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/33D2R7RBY0lPMgl6UKIqeO"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/33D2R7RBY0lPMgl6UKIqeO"
+      "href": "https://api.spotify.com/v1/albums/33D2R7RBY0lPMgl6UKIqeO",
+      "id": "33D2R7RBY0lPMgl6UKIqeO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737d2e22f71ecadc135b4d09c1",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027d2e22f71ecadc135b4d09c1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517d2e22f71ecadc135b4d09c1",
+          "width": 64
+        }
+      ],
+      "name": "Manic Candid Episode",
+      "release_date": "2019-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:33D2R7RBY0lPMgl6UKIqeO"
     },
-    "href" : "https://api.spotify.com/v1/albums/33D2R7RBY0lPMgl6UKIqeO",
-    "id" : "33D2R7RBY0lPMgl6UKIqeO",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2737d2e22f71ecadc135b4d09c1",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e027d2e22f71ecadc135b4d09c1",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048517d2e22f71ecadc135b4d09c1",
-      "width" : 64
-    } ],
-    "name" : "Manic Candid Episode",
-    "release_date" : "2019-03-22",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:33D2R7RBY0lPMgl6UKIqeO"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4ZAEzaOVMasXLBQeFjeRDT"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/4ZAEzaOVMasXLBQeFjeRDT"
+      "href": "https://api.spotify.com/v1/albums/4ZAEzaOVMasXLBQeFjeRDT",
+      "id": "4ZAEzaOVMasXLBQeFjeRDT",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273fde01fdf88f4afc629bf6a5a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02fde01fdf88f4afc629bf6a5a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851fde01fdf88f4afc629bf6a5a",
+          "width": 64
+        }
+      ],
+      "name": "Manic Candid Episode",
+      "release_date": "2019-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:4ZAEzaOVMasXLBQeFjeRDT"
     },
-    "href" : "https://api.spotify.com/v1/albums/4ZAEzaOVMasXLBQeFjeRDT",
-    "id" : "4ZAEzaOVMasXLBQeFjeRDT",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273fde01fdf88f4afc629bf6a5a",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02fde01fdf88f4afc629bf6a5a",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851fde01fdf88f4afc629bf6a5a",
-      "width" : 64
-    } ],
-    "name" : "Manic Candid Episode",
-    "release_date" : "2019-03-22",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:4ZAEzaOVMasXLBQeFjeRDT"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4RjPdDwu91WD5a8s5BbZAI"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/4RjPdDwu91WD5a8s5BbZAI"
+      "href": "https://api.spotify.com/v1/albums/4RjPdDwu91WD5a8s5BbZAI",
+      "id": "4RjPdDwu91WD5a8s5BbZAI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27360e7534f166171181463eb02",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0260e7534f166171181463eb02",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485160e7534f166171181463eb02",
+          "width": 64
+        }
+      ],
+      "name": "Manic Candid Episode",
+      "release_date": "2019-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:4RjPdDwu91WD5a8s5BbZAI"
     },
-    "href" : "https://api.spotify.com/v1/albums/4RjPdDwu91WD5a8s5BbZAI",
-    "id" : "4RjPdDwu91WD5a8s5BbZAI",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27360e7534f166171181463eb02",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0260e7534f166171181463eb02",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485160e7534f166171181463eb02",
-      "width" : 64
-    } ],
-    "name" : "Manic Candid Episode",
-    "release_date" : "2019-03-22",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:4RjPdDwu91WD5a8s5BbZAI"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6diZIiSJTQZCBUxKcA8IVM"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/6diZIiSJTQZCBUxKcA8IVM"
+      "href": "https://api.spotify.com/v1/albums/6diZIiSJTQZCBUxKcA8IVM",
+      "id": "6diZIiSJTQZCBUxKcA8IVM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27396a30de4295e046163dc7ea0",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0296a30de4295e046163dc7ea0",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485196a30de4295e046163dc7ea0",
+          "width": 64
+        }
+      ],
+      "name": "Manic Candid Episode",
+      "release_date": "2019-03-22",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:6diZIiSJTQZCBUxKcA8IVM"
     },
-    "href" : "https://api.spotify.com/v1/albums/6diZIiSJTQZCBUxKcA8IVM",
-    "id" : "6diZIiSJTQZCBUxKcA8IVM",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27396a30de4295e046163dc7ea0",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0296a30de4295e046163dc7ea0",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485196a30de4295e046163dc7ea0",
-      "width" : 64
-    } ],
-    "name" : "Manic Candid Episode",
-    "release_date" : "2019-03-22",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:6diZIiSJTQZCBUxKcA8IVM"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/71MIPzM3cwZRMnftTRlICM"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/71MIPzM3cwZRMnftTRlICM"
+      "href": "https://api.spotify.com/v1/albums/71MIPzM3cwZRMnftTRlICM",
+      "id": "71MIPzM3cwZRMnftTRlICM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27375ce8842904f88331a6211d2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0275ce8842904f88331a6211d2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485175ce8842904f88331a6211d2",
+          "width": 64
+        }
+      ],
+      "name": "Old Locomotive",
+      "release_date": "2017-07-28",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "type": "album",
+      "uri": "spotify:album:71MIPzM3cwZRMnftTRlICM"
     },
-    "href" : "https://api.spotify.com/v1/albums/71MIPzM3cwZRMnftTRlICM",
-    "id" : "71MIPzM3cwZRMnftTRlICM",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27375ce8842904f88331a6211d2",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0275ce8842904f88331a6211d2",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485175ce8842904f88331a6211d2",
-      "width" : 64
-    } ],
-    "name" : "Old Locomotive",
-    "release_date" : "2017-07-28",
-    "release_date_precision" : "day",
-    "total_tracks" : 13,
-    "type" : "album",
-    "uri" : "spotify:album:71MIPzM3cwZRMnftTRlICM"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0GAkVVh5o6SvHAuxg2YMuO"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/0GAkVVh5o6SvHAuxg2YMuO"
+      "href": "https://api.spotify.com/v1/albums/0GAkVVh5o6SvHAuxg2YMuO",
+      "id": "0GAkVVh5o6SvHAuxg2YMuO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730e9a29b99d777586d1c3af40",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020e9a29b99d777586d1c3af40",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510e9a29b99d777586d1c3af40",
+          "width": 64
+        }
+      ],
+      "name": "Young Blindness",
+      "release_date": "2016-03-18",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:0GAkVVh5o6SvHAuxg2YMuO"
     },
-    "href" : "https://api.spotify.com/v1/albums/0GAkVVh5o6SvHAuxg2YMuO",
-    "id" : "0GAkVVh5o6SvHAuxg2YMuO",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2730e9a29b99d777586d1c3af40",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e020e9a29b99d777586d1c3af40",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048510e9a29b99d777586d1c3af40",
-      "width" : 64
-    } ],
-    "name" : "Young Blindness",
-    "release_date" : "2016-03-18",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:0GAkVVh5o6SvHAuxg2YMuO"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus"
+          },
+          "href": "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
+          "id": "0rH93aHDYyJfMAcPB9OKus",
+          "name": "The Murlocs",
+          "type": "artist",
+          "uri": "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3Jwlm2yPSjIld9S1sCNw4G"
       },
-      "href" : "https://api.spotify.com/v1/artists/0rH93aHDYyJfMAcPB9OKus",
-      "id" : "0rH93aHDYyJfMAcPB9OKus",
-      "name" : "The Murlocs",
-      "type" : "artist",
-      "uri" : "spotify:artist:0rH93aHDYyJfMAcPB9OKus"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3Jwlm2yPSjIld9S1sCNw4G"
-    },
-    "href" : "https://api.spotify.com/v1/albums/3Jwlm2yPSjIld9S1sCNw4G",
-    "id" : "3Jwlm2yPSjIld9S1sCNw4G",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2731e6c43ff6a44fd8b10c3eb55",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e021e6c43ff6a44fd8b10c3eb55",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048511e6c43ff6a44fd8b10c3eb55",
-      "width" : 64
-    } ],
-    "name" : "Loopholes",
-    "release_date" : "2014-04-17",
-    "release_date_precision" : "day",
-    "total_tracks" : 10,
-    "type" : "album",
-    "uri" : "spotify:album:3Jwlm2yPSjIld9S1sCNw4G"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 12
+      "href": "https://api.spotify.com/v1/albums/3Jwlm2yPSjIld9S1sCNw4G",
+      "id": "3Jwlm2yPSjIld9S1sCNw4G",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731e6c43ff6a44fd8b10c3eb55",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021e6c43ff6a44fd8b10c3eb55",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511e6c43ff6a44fd8b10c3eb55",
+          "width": 64
+        }
+      ],
+      "name": "Loopholes",
+      "release_date": "2014-04-17",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "type": "album",
+      "uri": "spotify:album:3Jwlm2yPSjIld9S1sCNw4G"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 12
 }

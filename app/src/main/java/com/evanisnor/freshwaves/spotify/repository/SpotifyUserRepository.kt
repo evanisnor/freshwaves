@@ -5,9 +5,9 @@ import com.evanisnor.freshwaves.user.UserProfile
 import javax.inject.Inject
 
 class SpotifyUserRepository @Inject constructor(
-    private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyNetworkRepository: SpotifyNetworkRepository,
 ) {
 
-    suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
+  suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
 
 }

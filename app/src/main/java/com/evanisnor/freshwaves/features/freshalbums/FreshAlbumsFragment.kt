@@ -23,107 +23,107 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
 
-    private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
-    private val freshAlbumsAdapter = FreshAlbumsAdapter()
-    private var binding: FreshAlbumsFragmentBinding? = null
+  private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
+  private val freshAlbumsAdapter = FreshAlbumsAdapter()
+  private var binding: FreshAlbumsFragmentBinding? = null
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return FreshAlbumsFragmentBinding.inflate(inflater, container, false)
-            .apply {
-                binding = this
-            }.root
-    }
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?,
+  ): View {
+    return FreshAlbumsFragmentBinding.inflate(inflater, container, false)
+      .apply {
+        binding = this
+      }.root
+  }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
-    }
+  override fun onDestroy() {
+    super.onDestroy()
+    binding = null
+  }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
 
-        binding?.apply {
-            freshAlbumsList.apply {
-                adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
-                layoutManager = LinearLayoutManager(context)
-            }
+    binding?.apply {
+      freshAlbumsList.apply {
+        adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
+        layoutManager = LinearLayoutManager(context)
+      }
 
-            toolbar.setOnMenuItemClickListener { item ->
-                when (item.itemId) {
-                    R.id.attribution_menu_item -> startActivity(
-                        Intent(activity, AttributionActivity::class.java)
-                    )
-                    R.id.debug_menu_item -> startActivity(
-                        Intent(activity, DebugMenuActivity::class.java)
-                    )
-                }
-
-                false
-            }
+      toolbar.setOnMenuItemClickListener { item ->
+        when (item.itemId) {
+          R.id.attribution_menu_item -> startActivity(
+            Intent(activity, AttributionActivity::class.java)
+          )
+          R.id.debug_menu_item -> startActivity(
+            Intent(activity, DebugMenuActivity::class.java)
+          )
         }
+
+        false
+      }
     }
+  }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        registerAdapterClickListener()
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    registerAdapterClickListener()
 
-        lifecycleScope.launch {
-            listenForFreshAlbums()
-        }
+    lifecycleScope.launch {
+      listenForFreshAlbums()
     }
+  }
 
-    override fun onResume() {
-        super.onResume()
-        lifecycleScope.launch {
-            listenForUpdaterStatus()
-        }
+  override fun onResume() {
+    super.onResume()
+    lifecycleScope.launch {
+      listenForUpdaterStatus()
     }
+  }
 
-    private fun toggleLoadingMessage(showLoadingMessage: Boolean) {
-        binding?.apply {
-            if (showLoadingMessage) {
-                emptyMessage.loading.visibility = View.VISIBLE
-                freshAlbumsList.visibility = View.INVISIBLE
-            } else {
-                emptyMessage.loading.visibility = View.GONE
-                freshAlbumsList.visibility = View.VISIBLE
-            }
-        }
+  private fun toggleLoadingMessage(showLoadingMessage: Boolean) {
+    binding?.apply {
+      if (showLoadingMessage) {
+        emptyMessage.loading.visibility = View.VISIBLE
+        freshAlbumsList.visibility = View.INVISIBLE
+      } else {
+        emptyMessage.loading.visibility = View.GONE
+        freshAlbumsList.visibility = View.VISIBLE
+      }
     }
+  }
 
-    private suspend fun listenForUpdaterStatus() {
-        freshAlbumsViewModel.updaterState.collect { result ->
-            toggleLoadingMessage(result == UpdaterState.Running)
-        }
+  private suspend fun listenForUpdaterStatus() {
+    freshAlbumsViewModel.updaterState.collect { result ->
+      toggleLoadingMessage(result == UpdaterState.Running)
     }
+  }
 
-    private suspend fun listenForFreshAlbums() {
-        freshAlbumsViewModel.albums.collect { albums ->
-            freshAlbumsAdapter.submitList(albums)
-        }
+  private suspend fun listenForFreshAlbums() {
+    freshAlbumsViewModel.albums.collect { albums ->
+      freshAlbumsAdapter.submitList(albums)
     }
+  }
 
-    private fun registerAdapterClickListener() {
-        freshAlbumsAdapter.listener = object : FreshAlbumsAdapter.OnAlbumSelectedListener {
-            override fun onAlbumSelected(album: Album) {
-                launchAlbumDetails(album)
-            }
-        }
+  private fun registerAdapterClickListener() {
+    freshAlbumsAdapter.listener = object : FreshAlbumsAdapter.OnAlbumSelectedListener {
+      override fun onAlbumSelected(album: Album) {
+        launchAlbumDetails(album)
+      }
     }
+  }
 
-    private fun launchAlbumDetails(album: Album) {
-        val albumDetailsFragment = AlbumDetailsFragment.create(album.id)
+  private fun launchAlbumDetails(album: Album) {
+    val albumDetailsFragment = AlbumDetailsFragment.create(album.id)
 
-        activity?.supportFragmentManager?.apply {
-            beginTransaction()
-                .add(android.R.id.content, albumDetailsFragment)
-                .addToBackStack(AlbumDetailsFragment.TAG)
-                .commit()
-        }
+    activity?.supportFragmentManager?.apply {
+      beginTransaction()
+        .add(android.R.id.content, albumDetailsFragment)
+        .addToBackStack(AlbumDetailsFragment.TAG)
+        .commit()
     }
+  }
 
 }

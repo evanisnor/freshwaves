@@ -40,29 +40,29 @@ import com.evanisnor.freshwaves.R
  * From: https://github.com/android/architecture-samples/blob/dev-hilt/app/src/androidTest/java/com/example/android/architecture/blueprints/todoapp/HiltExt.kt
  */
 inline fun <reified T : Fragment> launchFragmentInHiltContainer(
-    fragmentArgs: Bundle? = null,
-    crossinline action: Fragment.() -> Unit = {}
+  fragmentArgs: Bundle? = null,
+  crossinline action: Fragment.() -> Unit = {},
 ) {
-    val startActivityIntent = Intent.makeMainActivity(
-        ComponentName(
-            ApplicationProvider.getApplicationContext(),
-            HiltTestActivity::class.java
-        )
+  val startActivityIntent = Intent.makeMainActivity(
+    ComponentName(
+      ApplicationProvider.getApplicationContext(),
+      HiltTestActivity::class.java
     )
+  )
 
-    lateinit var fragment: Fragment
-    ActivityScenario.launch<HiltTestActivity>(startActivityIntent)
-        .onActivity { activity ->
-            fragment = activity.supportFragmentManager.fragmentFactory.instantiate(
-                Preconditions.checkNotNull(T::class.java.classLoader),
-                T::class.java.name
-            )
-            fragment.arguments = fragmentArgs
-            activity.supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fragment, fragment)
-                .commitNow()
+  lateinit var fragment: Fragment
+  ActivityScenario.launch<HiltTestActivity>(startActivityIntent)
+    .onActivity { activity ->
+      fragment = activity.supportFragmentManager.fragmentFactory.instantiate(
+        Preconditions.checkNotNull(T::class.java.classLoader),
+        T::class.java.name
+      )
+      fragment.arguments = fragmentArgs
+      activity.supportFragmentManager
+        .beginTransaction()
+        .replace(R.id.fragment, fragment)
+        .commitNow()
 
-            fragment.action()
-        }
+      fragment.action()
+    }
 }

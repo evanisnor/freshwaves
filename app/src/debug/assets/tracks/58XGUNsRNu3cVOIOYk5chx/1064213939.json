@@ -1,269 +1,320 @@
 {
-  "href" : "https://api.spotify.com/v1/albums/0X6bpnyBxoB1XTzMRztpMD/tracks?offset=0&limit=20",
-  "items" : [ {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+  "href": "https://api.spotify.com/v1/albums/0X6bpnyBxoB1XTzMRztpMD/tracks?offset=0&limit=20",
+  "items": [
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 204733,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/56S0OcaiIbtsNYhNwa1Ekg"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 204733,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/56S0OcaiIbtsNYhNwa1Ekg"
+      "href": "https://api.spotify.com/v1/tracks/56S0OcaiIbtsNYhNwa1Ekg",
+      "id": "56S0OcaiIbtsNYhNwa1Ekg",
+      "is_local": false,
+      "name": "Goodbye Bread",
+      "preview_url": "https://p.scdn.co/mp3-preview/817d5eac8bb035a58e372adc763a10bedb4f5a12?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:56S0OcaiIbtsNYhNwa1Ekg"
     },
-    "href" : "https://api.spotify.com/v1/tracks/56S0OcaiIbtsNYhNwa1Ekg",
-    "id" : "56S0OcaiIbtsNYhNwa1Ekg",
-    "is_local" : false,
-    "name" : "Goodbye Bread",
-    "preview_url" : "https://p.scdn.co/mp3-preview/817d5eac8bb035a58e372adc763a10bedb4f5a12?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 1,
-    "type" : "track",
-    "uri" : "spotify:track:56S0OcaiIbtsNYhNwa1Ekg"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 78226,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7gAUSpAZSnibzph0Z01qGV"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 78226,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/7gAUSpAZSnibzph0Z01qGV"
+      "href": "https://api.spotify.com/v1/tracks/7gAUSpAZSnibzph0Z01qGV",
+      "id": "7gAUSpAZSnibzph0Z01qGV",
+      "is_local": false,
+      "name": "California Commercial",
+      "preview_url": "https://p.scdn.co/mp3-preview/92cdcbe742086a10e7ecb3df4e9f25ba8be36ae6?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 2,
+      "type": "track",
+      "uri": "spotify:track:7gAUSpAZSnibzph0Z01qGV"
     },
-    "href" : "https://api.spotify.com/v1/tracks/7gAUSpAZSnibzph0Z01qGV",
-    "id" : "7gAUSpAZSnibzph0Z01qGV",
-    "is_local" : false,
-    "name" : "California Commercial",
-    "preview_url" : "https://p.scdn.co/mp3-preview/92cdcbe742086a10e7ecb3df4e9f25ba8be36ae6?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 2,
-    "type" : "track",
-    "uri" : "spotify:track:7gAUSpAZSnibzph0Z01qGV"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 138906,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2JbCCvgAGA6KwWsSHGMXfp"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 138906,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/2JbCCvgAGA6KwWsSHGMXfp"
+      "href": "https://api.spotify.com/v1/tracks/2JbCCvgAGA6KwWsSHGMXfp",
+      "id": "2JbCCvgAGA6KwWsSHGMXfp",
+      "is_local": false,
+      "name": "Comfortable Home (A True Story)",
+      "preview_url": "https://p.scdn.co/mp3-preview/322bc75c74328f56c718ecd21e5fda30e5aec057?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:2JbCCvgAGA6KwWsSHGMXfp"
     },
-    "href" : "https://api.spotify.com/v1/tracks/2JbCCvgAGA6KwWsSHGMXfp",
-    "id" : "2JbCCvgAGA6KwWsSHGMXfp",
-    "is_local" : false,
-    "name" : "Comfortable Home (A True Story)",
-    "preview_url" : "https://p.scdn.co/mp3-preview/322bc75c74328f56c718ecd21e5fda30e5aec057?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 3,
-    "type" : "track",
-    "uri" : "spotify:track:2JbCCvgAGA6KwWsSHGMXfp"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 151000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6gTBk0RyLKHoZWggKEJ2Zf"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 151000,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/6gTBk0RyLKHoZWggKEJ2Zf"
+      "href": "https://api.spotify.com/v1/tracks/6gTBk0RyLKHoZWggKEJ2Zf",
+      "id": "6gTBk0RyLKHoZWggKEJ2Zf",
+      "is_local": false,
+      "name": "You Make The Sun Fry",
+      "preview_url": "https://p.scdn.co/mp3-preview/522e46eb87000c169187924f6890fb3e7d7baa47?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:6gTBk0RyLKHoZWggKEJ2Zf"
     },
-    "href" : "https://api.spotify.com/v1/tracks/6gTBk0RyLKHoZWggKEJ2Zf",
-    "id" : "6gTBk0RyLKHoZWggKEJ2Zf",
-    "is_local" : false,
-    "name" : "You Make The Sun Fry",
-    "preview_url" : "https://p.scdn.co/mp3-preview/522e46eb87000c169187924f6890fb3e7d7baa47?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 4,
-    "type" : "track",
-    "uri" : "spotify:track:6gTBk0RyLKHoZWggKEJ2Zf"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 244746,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0nzBg5QF8EXXFFCAXzkgIE"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 244746,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/0nzBg5QF8EXXFFCAXzkgIE"
+      "href": "https://api.spotify.com/v1/tracks/0nzBg5QF8EXXFFCAXzkgIE",
+      "id": "0nzBg5QF8EXXFFCAXzkgIE",
+      "is_local": false,
+      "name": "I Can't Feel It",
+      "preview_url": "https://p.scdn.co/mp3-preview/4d8393eb85e3c7007cf40e009debfe6579920540?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 5,
+      "type": "track",
+      "uri": "spotify:track:0nzBg5QF8EXXFFCAXzkgIE"
     },
-    "href" : "https://api.spotify.com/v1/tracks/0nzBg5QF8EXXFFCAXzkgIE",
-    "id" : "0nzBg5QF8EXXFFCAXzkgIE",
-    "is_local" : false,
-    "name" : "I Can't Feel It",
-    "preview_url" : "https://p.scdn.co/mp3-preview/4d8393eb85e3c7007cf40e009debfe6579920540?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 5,
-    "type" : "track",
-    "uri" : "spotify:track:0nzBg5QF8EXXFFCAXzkgIE"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 190546,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0UTUp8dN1ScemcI07Yphy3"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 190546,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/0UTUp8dN1ScemcI07Yphy3"
+      "href": "https://api.spotify.com/v1/tracks/0UTUp8dN1ScemcI07Yphy3",
+      "id": "0UTUp8dN1ScemcI07Yphy3",
+      "is_local": false,
+      "name": "My Head Explodes",
+      "preview_url": "https://p.scdn.co/mp3-preview/67c3b62e2b44538eb81405b38812688af2f8f451?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:0UTUp8dN1ScemcI07Yphy3"
     },
-    "href" : "https://api.spotify.com/v1/tracks/0UTUp8dN1ScemcI07Yphy3",
-    "id" : "0UTUp8dN1ScemcI07Yphy3",
-    "is_local" : false,
-    "name" : "My Head Explodes",
-    "preview_url" : "https://p.scdn.co/mp3-preview/67c3b62e2b44538eb81405b38812688af2f8f451?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 6,
-    "type" : "track",
-    "uri" : "spotify:track:0UTUp8dN1ScemcI07Yphy3"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 217000,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2qFQKkYIKeAtK6nYhjxgYm"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 217000,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/2qFQKkYIKeAtK6nYhjxgYm"
+      "href": "https://api.spotify.com/v1/tracks/2qFQKkYIKeAtK6nYhjxgYm",
+      "id": "2qFQKkYIKeAtK6nYhjxgYm",
+      "is_local": false,
+      "name": "The Floor",
+      "preview_url": "https://p.scdn.co/mp3-preview/6dda1f7b2268f54610ea380cc151735a6bd1cb69?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:2qFQKkYIKeAtK6nYhjxgYm"
     },
-    "href" : "https://api.spotify.com/v1/tracks/2qFQKkYIKeAtK6nYhjxgYm",
-    "id" : "2qFQKkYIKeAtK6nYhjxgYm",
-    "is_local" : false,
-    "name" : "The Floor",
-    "preview_url" : "https://p.scdn.co/mp3-preview/6dda1f7b2268f54610ea380cc151735a6bd1cb69?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 7,
-    "type" : "track",
-    "uri" : "spotify:track:2qFQKkYIKeAtK6nYhjxgYm"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 254093,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7qnduaGpNR4GZ5LanEa0XB"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 254093,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/7qnduaGpNR4GZ5LanEa0XB"
+      "href": "https://api.spotify.com/v1/tracks/7qnduaGpNR4GZ5LanEa0XB",
+      "id": "7qnduaGpNR4GZ5LanEa0XB",
+      "is_local": false,
+      "name": "Where Your Head Goes",
+      "preview_url": "https://p.scdn.co/mp3-preview/1a6cecf6bea4fe30270ffbc14bd889f61cbd980a?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:7qnduaGpNR4GZ5LanEa0XB"
     },
-    "href" : "https://api.spotify.com/v1/tracks/7qnduaGpNR4GZ5LanEa0XB",
-    "id" : "7qnduaGpNR4GZ5LanEa0XB",
-    "is_local" : false,
-    "name" : "Where Your Head Goes",
-    "preview_url" : "https://p.scdn.co/mp3-preview/1a6cecf6bea4fe30270ffbc14bd889f61cbd980a?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 8,
-    "type" : "track",
-    "uri" : "spotify:track:7qnduaGpNR4GZ5LanEa0XB"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 278973,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4LLz70wy727cddzEsgoZFa"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 278973,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/4LLz70wy727cddzEsgoZFa"
+      "href": "https://api.spotify.com/v1/tracks/4LLz70wy727cddzEsgoZFa",
+      "id": "4LLz70wy727cddzEsgoZFa",
+      "is_local": false,
+      "name": "I Am Fine With You",
+      "preview_url": "https://p.scdn.co/mp3-preview/61097578ec7791326cba7f8f07d64c1f2f261d7c?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:4LLz70wy727cddzEsgoZFa"
     },
-    "href" : "https://api.spotify.com/v1/tracks/4LLz70wy727cddzEsgoZFa",
-    "id" : "4LLz70wy727cddzEsgoZFa",
-    "is_local" : false,
-    "name" : "I Am Fine With You",
-    "preview_url" : "https://p.scdn.co/mp3-preview/61097578ec7791326cba7f8f07d64c1f2f261d7c?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 9,
-    "type" : "track",
-    "uri" : "spotify:track:4LLz70wy727cddzEsgoZFa"
-  }, {
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+    {
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/58XGUNsRNu3cVOIOYk5chx"
+          },
+          "href": "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
+          "id": "58XGUNsRNu3cVOIOYk5chx",
+          "name": "Ty Segall",
+          "type": "artist",
+          "uri": "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
+        }
+      ],
+      "available_markets": [
+        "NZ"
+      ],
+      "disc_number": 1,
+      "duration_ms": 266173,
+      "explicit": false,
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0lRg02TZRTVtkmW7gnfQlZ"
       },
-      "href" : "https://api.spotify.com/v1/artists/58XGUNsRNu3cVOIOYk5chx",
-      "id" : "58XGUNsRNu3cVOIOYk5chx",
-      "name" : "Ty Segall",
-      "type" : "artist",
-      "uri" : "spotify:artist:58XGUNsRNu3cVOIOYk5chx"
-    } ],
-    "available_markets" : [ "NZ" ],
-    "disc_number" : 1,
-    "duration_ms" : 266173,
-    "explicit" : false,
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/track/0lRg02TZRTVtkmW7gnfQlZ"
-    },
-    "href" : "https://api.spotify.com/v1/tracks/0lRg02TZRTVtkmW7gnfQlZ",
-    "id" : "0lRg02TZRTVtkmW7gnfQlZ",
-    "is_local" : false,
-    "name" : "Fine",
-    "preview_url" : "https://p.scdn.co/mp3-preview/444c937edb4804eb9b8985a42245f680bae0bdb4?cid=3db837a49d3c4df0a277b0adaa748d87",
-    "track_number" : 10,
-    "type" : "track",
-    "uri" : "spotify:track:0lRg02TZRTVtkmW7gnfQlZ"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 10
+      "href": "https://api.spotify.com/v1/tracks/0lRg02TZRTVtkmW7gnfQlZ",
+      "id": "0lRg02TZRTVtkmW7gnfQlZ",
+      "is_local": false,
+      "name": "Fine",
+      "preview_url": "https://p.scdn.co/mp3-preview/444c937edb4804eb9b8985a42245f680bae0bdb4?cid=3db837a49d3c4df0a277b0adaa748d87",
+      "track_number": 10,
+      "type": "track",
+      "uri": "spotify:track:0lRg02TZRTVtkmW7gnfQlZ"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 10
 }

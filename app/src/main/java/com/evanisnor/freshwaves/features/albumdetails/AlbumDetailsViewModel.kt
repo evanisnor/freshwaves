@@ -7,10 +7,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AlbumDetailsViewModel @Inject constructor(
-    private val spotifyAlbumRepository: SpotifyAlbumRepository
+  private val spotifyAlbumRepository: SpotifyAlbumRepository,
 ) : ViewModel() {
 
-    suspend fun getAlbumWithTracks(albumId: Int) =
-        spotifyAlbumRepository.getAlbumWithTracks(albumId)
+  suspend fun getAlbumWithTracks(albumId: Int) =
+    spotifyAlbumRepository.getAlbumWithTracks(albumId)
 
 }

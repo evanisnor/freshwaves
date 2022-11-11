@@ -11,23 +11,23 @@ import javax.inject.Inject
 @HiltAndroidApp
 class FreshWavesApp : Application(), Configuration.Provider {
 
-    @Inject
-    lateinit var workerFactory: HiltWorkerFactory
+  @Inject
+  lateinit var workerFactory: HiltWorkerFactory
 
-    @Inject
-    lateinit var updaterBootstrapper: UpdaterBootstrapper
+  @Inject
+  lateinit var updaterBootstrapper: UpdaterBootstrapper
 
-    @Inject
-    lateinit var freshAlbumNotifier: FreshAlbumNotifier
+  @Inject
+  lateinit var freshAlbumNotifier: FreshAlbumNotifier
 
-    override fun onCreate() {
-        super.onCreate()
-        updaterBootstrapper.registerForSuccessfulAuthorization()
-        freshAlbumNotifier.createNotificationChannel()
-    }
+  override fun onCreate() {
+    super.onCreate()
+    updaterBootstrapper.registerForSuccessfulAuthorization()
+    freshAlbumNotifier.createNotificationChannel()
+  }
 
-    override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
-        .setWorkerFactory(workerFactory)
-        .build()
+  override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
+    .setWorkerFactory(workerFactory)
+    .build()
 
 }

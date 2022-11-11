@@ -13,11 +13,11 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 class SystemModule {
 
-    @Provides
-    fun notificationManager(@ApplicationContext context: Context): NotificationManagerCompat =
-        NotificationManagerCompat.from(context)
+  @Provides
+  fun notificationManager(@ApplicationContext context: Context): NotificationManagerCompat =
+    NotificationManagerCompat.from(context)
 
-    @Provides
-    fun moshi(): Moshi = Moshi.Builder().build()
+  @Provides
+  fun moshi(): Moshi = Moshi.Builder().build()
 
 }

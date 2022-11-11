@@ -15,60 +15,60 @@ import com.evanisnor.freshwaves.features.attribution.model.ThirdPartySource
 import com.evanisnor.freshwaves.features.attribution.model.ThirdPartyUsage
 
 class ThirdPartyUsageViewHolder(
-    itemView: View
+  itemView: View,
 ) : RecyclerView.ViewHolder(itemView) {
 
-    companion object {
-        fun create(parent: ViewGroup) = ThirdPartyUsageViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.third_party_usage_card, parent, false)
-        )
-    }
+  companion object {
+    fun create(parent: ViewGroup) = ThirdPartyUsageViewHolder(
+      LayoutInflater.from(parent.context)
+        .inflate(R.layout.third_party_usage_card, parent, false)
+    )
+  }
 
-    fun bind(
-        thirdPartyUsage: ThirdPartyUsage,
-        onLicenseButtonSelected: (License) -> Unit = {}
-    ) {
+  fun bind(
+    thirdPartyUsage: ThirdPartyUsage,
+    onLicenseButtonSelected: (License) -> Unit = {},
+  ) {
 
-        ThirdPartyUsageCardBinding.bind(itemView).apply {
-            thirdPartyUsageName.text = thirdPartyUsage.name
-            thirdPartyUsageAuthor.text = thirdPartyUsage.author
-            thirdPartyUsageLicenceButton.apply {
-                text = thirdPartyUsage.license.name
-                setOnClickListener {
-                    onLicenseButtonSelected(thirdPartyUsage.license)
-                }
-            }
-
-            thirdPartyUsageModifications.apply {
-                isVisible = thirdPartyUsage.modifications.isNotEmpty()
-                text = context.resources.getString(
-                    R.string.attribution_modifications,
-                    thirdPartyUsage.modifications.joinToString(",") { it.description }
-                )
-            }
-
-            thirdPartyUsageInformation.removeAllViews()
-            thirdPartyUsage.sources.forEach { source ->
-                createInformationLineItem(thirdPartyUsageInformation, source)
-            }
+    ThirdPartyUsageCardBinding.bind(itemView).apply {
+      thirdPartyUsageName.text = thirdPartyUsage.name
+      thirdPartyUsageAuthor.text = thirdPartyUsage.author
+      thirdPartyUsageLicenceButton.apply {
+        text = thirdPartyUsage.license.name
+        setOnClickListener {
+          onLicenseButtonSelected(thirdPartyUsage.license)
         }
-    }
+      }
 
-    private fun createInformationLineItem(
-        parent: ViewGroup,
-        source: ThirdPartySource
-    ): ThirdPartyUsageCardItemBinding {
-        val inflater: LayoutInflater = LayoutInflater.from(itemView.context)
-        return ThirdPartyUsageCardItemBinding.inflate(inflater, parent, true)
-            .apply {
-                usageSourceLabel.text = source.artifactType.name
-                usageSource.text = source.name
-                usageSource.setOnClickListener {
-                    itemView.context.startActivity(Intent(Intent.ACTION_VIEW).apply {
-                        data = Uri.parse(source.url)
-                    })
-                }
-            }
+      thirdPartyUsageModifications.apply {
+        isVisible = thirdPartyUsage.modifications.isNotEmpty()
+        text = context.resources.getString(
+          R.string.attribution_modifications,
+          thirdPartyUsage.modifications.joinToString(",") { it.description }
+        )
+      }
+
+      thirdPartyUsageInformation.removeAllViews()
+      thirdPartyUsage.sources.forEach { source ->
+        createInformationLineItem(thirdPartyUsageInformation, source)
+      }
     }
+  }
+
+  private fun createInformationLineItem(
+    parent: ViewGroup,
+    source: ThirdPartySource,
+  ): ThirdPartyUsageCardItemBinding {
+    val inflater: LayoutInflater = LayoutInflater.from(itemView.context)
+    return ThirdPartyUsageCardItemBinding.inflate(inflater, parent, true)
+      .apply {
+        usageSourceLabel.text = source.artifactType.name
+        usageSource.text = source.name
+        usageSource.setOnClickListener {
+          itemView.context.startActivity(Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse(source.url)
+          })
+        }
+      }
+  }
 }

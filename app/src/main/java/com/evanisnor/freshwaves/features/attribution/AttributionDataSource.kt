@@ -5,21 +5,21 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
 class AttributionDataSource @Inject constructor(
-    @ApplicationContext private val context: Context
+  @ApplicationContext private val context: Context,
 ) {
 
-    fun readAttributionListJson(): String = readAssetFileText(attributionFileName)
+  fun readAttributionListJson(): String = readAssetFileText(attributionFileName)
 
-    fun readLicenseText(fileName: String): String = readAssetFileText("$attributionDir/$fileName")
+  fun readLicenseText(fileName: String): String = readAssetFileText("$attributionDir/$fileName")
 
-    private fun readAssetFileText(fileName: String): String =
-        context.assets.open(fileName).bufferedReader().use {
-            it.readText()
-        }
-
-    companion object {
-        private const val attributionDir = "attribution"
-        private const val attributionFileName = "$attributionDir/attribution.json"
+  private fun readAssetFileText(fileName: String): String =
+    context.assets.open(fileName).bufferedReader().use {
+      it.readText()
     }
+
+  companion object {
+    private const val attributionDir = "attribution"
+    private const val attributionFileName = "$attributionDir/attribution.json"
+  }
 
 }

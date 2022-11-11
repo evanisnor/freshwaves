@@ -7,27 +7,26 @@ import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class FreshAlbumsViewModel @Inject constructor(
-    updaterRepository: UpdaterRepository,
-    private val spotifyAlbumRepository: SpotifyAlbumRepository
+  updaterRepository: UpdaterRepository,
+  private val spotifyAlbumRepository: SpotifyAlbumRepository,
 ) : ViewModel() {
 
-    val updaterState: StateFlow<UpdaterState> = updaterRepository.state
+  val updaterState: StateFlow<UpdaterState> = updaterRepository.state
 
-    private val _albums: MutableStateFlow<List<Album>> = MutableStateFlow(emptyList())
-    val albums: StateFlow<List<Album>> = _albums
+  private val _albums: MutableStateFlow<List<Album>> = MutableStateFlow(emptyList())
+  val albums: StateFlow<List<Album>> = _albums
 
-    init {
-        viewModelScope.launch {
-            spotifyAlbumRepository.getLatestAlbums().collect(_albums::emit)
-        }
+  init {
+    viewModelScope.launch {
+      spotifyAlbumRepository.getLatestAlbums().collect(_albums::emit)
     }
+  }
 
 }

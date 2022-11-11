@@ -1,305 +1,362 @@
 {
-  "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb/albums?offset=0&limit=20&include_groups=album&market=CA",
-  "items" : [ {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+  "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb/albums?offset=0&limit=20&include_groups=album&market=CA",
+  "items": [
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/65BL1WmHblGCNmhzfgYEyD"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/65BL1WmHblGCNmhzfgYEyD"
+      "href": "https://api.spotify.com/v1/albums/65BL1WmHblGCNmhzfgYEyD",
+      "id": "65BL1WmHblGCNmhzfgYEyD",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273703add8a8bef1eb6a0fad4f7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02703add8a8bef1eb6a0fad4f7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851703add8a8bef1eb6a0fad4f7",
+          "width": 64
+        }
+      ],
+      "name": "InnerSpeaker (10 Year Anniversary Edition)",
+      "release_date": "2021-04-30",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "type": "album",
+      "uri": "spotify:album:65BL1WmHblGCNmhzfgYEyD"
     },
-    "href" : "https://api.spotify.com/v1/albums/65BL1WmHblGCNmhzfgYEyD",
-    "id" : "65BL1WmHblGCNmhzfgYEyD",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273703add8a8bef1eb6a0fad4f7",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02703add8a8bef1eb6a0fad4f7",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851703add8a8bef1eb6a0fad4f7",
-      "width" : 64
-    } ],
-    "name" : "InnerSpeaker (10 Year Anniversary Edition)",
-    "release_date" : "2021-04-30",
-    "release_date_precision" : "day",
-    "total_tracks" : 13,
-    "type" : "album",
-    "uri" : "spotify:album:65BL1WmHblGCNmhzfgYEyD"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/31qVWUdRrlb8thMvts0yYL"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/31qVWUdRrlb8thMvts0yYL"
+      "href": "https://api.spotify.com/v1/albums/31qVWUdRrlb8thMvts0yYL",
+      "id": "31qVWUdRrlb8thMvts0yYL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27358267bd34420a00d5cf83a49",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0258267bd34420a00d5cf83a49",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485158267bd34420a00d5cf83a49",
+          "width": 64
+        }
+      ],
+      "name": "The Slow Rush",
+      "release_date": "2020-02-14",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:31qVWUdRrlb8thMvts0yYL"
     },
-    "href" : "https://api.spotify.com/v1/albums/31qVWUdRrlb8thMvts0yYL",
-    "id" : "31qVWUdRrlb8thMvts0yYL",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27358267bd34420a00d5cf83a49",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0258267bd34420a00d5cf83a49",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485158267bd34420a00d5cf83a49",
-      "width" : 64
-    } ],
-    "name" : "The Slow Rush",
-    "release_date" : "2020-02-14",
-    "release_date_precision" : "day",
-    "total_tracks" : 12,
-    "type" : "album",
-    "uri" : "spotify:album:31qVWUdRrlb8thMvts0yYL"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/79dL7FLiJFOO0EoehUHQBv"
+      "href": "https://api.spotify.com/v1/albums/79dL7FLiJFOO0EoehUHQBv",
+      "id": "79dL7FLiJFOO0EoehUHQBv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
+          "width": 64
+        }
+      ],
+      "name": "Currents",
+      "release_date": "2015-07-17",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "type": "album",
+      "uri": "spotify:album:79dL7FLiJFOO0EoehUHQBv"
     },
-    "href" : "https://api.spotify.com/v1/albums/79dL7FLiJFOO0EoehUHQBv",
-    "id" : "79dL7FLiJFOO0EoehUHQBv",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2739e1cfc756886ac782e363d79",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e029e1cfc756886ac782e363d79",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048519e1cfc756886ac782e363d79",
-      "width" : 64
-    } ],
-    "name" : "Currents",
-    "release_date" : "2015-07-17",
-    "release_date_precision" : "day",
-    "total_tracks" : 13,
-    "type" : "album",
-    "uri" : "spotify:album:79dL7FLiJFOO0EoehUHQBv"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/44RrnCW7pMIEiiAR3LIAVL"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/44RrnCW7pMIEiiAR3LIAVL"
+      "href": "https://api.spotify.com/v1/albums/44RrnCW7pMIEiiAR3LIAVL",
+      "id": "44RrnCW7pMIEiiAR3LIAVL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2735ffecc5ae83629c80685c6c5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e025ffecc5ae83629c80685c6c5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048515ffecc5ae83629c80685c6c5",
+          "width": 64
+        }
+      ],
+      "name": "Live Versions",
+      "release_date": "2014-05-16",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "type": "album",
+      "uri": "spotify:album:44RrnCW7pMIEiiAR3LIAVL"
     },
-    "href" : "https://api.spotify.com/v1/albums/44RrnCW7pMIEiiAR3LIAVL",
-    "id" : "44RrnCW7pMIEiiAR3LIAVL",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b2735ffecc5ae83629c80685c6c5",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e025ffecc5ae83629c80685c6c5",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d000048515ffecc5ae83629c80685c6c5",
-      "width" : 64
-    } ],
-    "name" : "Live Versions",
-    "release_date" : "2014-05-16",
-    "release_date_precision" : "day",
-    "total_tracks" : 9,
-    "type" : "album",
-    "uri" : "spotify:album:44RrnCW7pMIEiiAR3LIAVL"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2PYZRakUH5TdOHjGKqKtWv"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/2PYZRakUH5TdOHjGKqKtWv"
+      "href": "https://api.spotify.com/v1/albums/2PYZRakUH5TdOHjGKqKtWv",
+      "id": "2PYZRakUH5TdOHjGKqKtWv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27386534bb667dfa3e69ef20128",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0286534bb667dfa3e69ef20128",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485186534bb667dfa3e69ef20128",
+          "width": 64
+        }
+      ],
+      "name": "Lonerism",
+      "release_date": "2012-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "type": "album",
+      "uri": "spotify:album:2PYZRakUH5TdOHjGKqKtWv"
     },
-    "href" : "https://api.spotify.com/v1/albums/2PYZRakUH5TdOHjGKqKtWv",
-    "id" : "2PYZRakUH5TdOHjGKqKtWv",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b27386534bb667dfa3e69ef20128",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e0286534bb667dfa3e69ef20128",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d0000485186534bb667dfa3e69ef20128",
-      "width" : 64
-    } ],
-    "name" : "Lonerism",
-    "release_date" : "2012-01-01",
-    "release_date_precision" : "day",
-    "total_tracks" : 13,
-    "type" : "album",
-    "uri" : "spotify:album:2PYZRakUH5TdOHjGKqKtWv"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3C2MFZ2iHotUQOSBzdSvM7"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/3C2MFZ2iHotUQOSBzdSvM7"
+      "href": "https://api.spotify.com/v1/albums/3C2MFZ2iHotUQOSBzdSvM7",
+      "id": "3C2MFZ2iHotUQOSBzdSvM7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273370c12f82872c9cfaee80193",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02370c12f82872c9cfaee80193",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851370c12f82872c9cfaee80193",
+          "width": 64
+        }
+      ],
+      "name": "Lonerism",
+      "release_date": "2012-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "type": "album",
+      "uri": "spotify:album:3C2MFZ2iHotUQOSBzdSvM7"
     },
-    "href" : "https://api.spotify.com/v1/albums/3C2MFZ2iHotUQOSBzdSvM7",
-    "id" : "3C2MFZ2iHotUQOSBzdSvM7",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273370c12f82872c9cfaee80193",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02370c12f82872c9cfaee80193",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851370c12f82872c9cfaee80193",
-      "width" : 64
-    } ],
-    "name" : "Lonerism",
-    "release_date" : "2012-01-01",
-    "release_date_precision" : "day",
-    "total_tracks" : 12,
-    "type" : "album",
-    "uri" : "spotify:album:3C2MFZ2iHotUQOSBzdSvM7"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1DNSmmRLfv97Yjq7MTFWng"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/1DNSmmRLfv97Yjq7MTFWng"
+      "href": "https://api.spotify.com/v1/albums/1DNSmmRLfv97Yjq7MTFWng",
+      "id": "1DNSmmRLfv97Yjq7MTFWng",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273176e82d09ac75d62810f0056",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02176e82d09ac75d62810f0056",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851176e82d09ac75d62810f0056",
+          "width": 64
+        }
+      ],
+      "name": "InnerSpeaker",
+      "release_date": "2010-05-21",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:1DNSmmRLfv97Yjq7MTFWng"
     },
-    "href" : "https://api.spotify.com/v1/albums/1DNSmmRLfv97Yjq7MTFWng",
-    "id" : "1DNSmmRLfv97Yjq7MTFWng",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273176e82d09ac75d62810f0056",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02176e82d09ac75d62810f0056",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851176e82d09ac75d62810f0056",
-      "width" : 64
-    } ],
-    "name" : "InnerSpeaker",
-    "release_date" : "2010-05-21",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:1DNSmmRLfv97Yjq7MTFWng"
-  }, {
-    "album_group" : "album",
-    "album_type" : "album",
-    "artists" : [ {
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+    {
+      "album_group": "album",
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+          },
+          "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+          "id": "5INjqkS1o8h1imAzPqGZBb",
+          "name": "Tame Impala",
+          "type": "artist",
+          "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5RA5hhLlbw31QfQRX11pwo"
       },
-      "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-      "id" : "5INjqkS1o8h1imAzPqGZBb",
-      "name" : "Tame Impala",
-      "type" : "artist",
-      "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-    } ],
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/album/5RA5hhLlbw31QfQRX11pwo"
-    },
-    "href" : "https://api.spotify.com/v1/albums/5RA5hhLlbw31QfQRX11pwo",
-    "id" : "5RA5hhLlbw31QfQRX11pwo",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab67616d0000b273cd6ec171d9acdb315ff81610",
-      "width" : 640
-    }, {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ab67616d00001e02cd6ec171d9acdb315ff81610",
-      "width" : 300
-    }, {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/ab67616d00004851cd6ec171d9acdb315ff81610",
-      "width" : 64
-    } ],
-    "name" : "InnerSpeaker",
-    "release_date" : "2010-05-21",
-    "release_date_precision" : "day",
-    "total_tracks" : 11,
-    "type" : "album",
-    "uri" : "spotify:album:5RA5hhLlbw31QfQRX11pwo"
-  } ],
-  "limit" : 20,
-  "next" : null,
-  "offset" : 0,
-  "previous" : null,
-  "total" : 8
+      "href": "https://api.spotify.com/v1/albums/5RA5hhLlbw31QfQRX11pwo",
+      "id": "5RA5hhLlbw31QfQRX11pwo",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273cd6ec171d9acdb315ff81610",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02cd6ec171d9acdb315ff81610",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851cd6ec171d9acdb315ff81610",
+          "width": 64
+        }
+      ],
+      "name": "InnerSpeaker",
+      "release_date": "2010-05-21",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "type": "album",
+      "uri": "spotify:album:5RA5hhLlbw31QfQRX11pwo"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 8
 }

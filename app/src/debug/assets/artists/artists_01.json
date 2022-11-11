@@ -1,93 +1,137 @@
 {
-  "items" : [ {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn"
+      },
+      "followers": {
+        "href": null,
+        "total": 701180
+      },
+      "genres": [
+        "australian indie",
+        "australian psych",
+        "double drumming",
+        "microtonal",
+        "neo-psychedelic"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
+      "id": "6XYvaoDGE0VmRt83Jss9Sn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebae21e90221e814c50033133a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ae21e90221e814c50033133a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ae21e90221e814c50033133a",
+          "width": 160
+        }
+      ],
+      "name": "King Gizzard & The Lizard Wizard",
+      "popularity": 65,
+      "type": "artist",
+      "uri": "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
     },
-    "followers" : {
-      "href" : null,
-      "total" : 701180
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "followers": {
+        "href": null,
+        "total": 20743925
+      },
+      "genres": [
+        "beatlesque",
+        "british invasion",
+        "classic rock",
+        "merseybeat",
+        "psychedelic rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id": "3WrFJ7ztbogyGnTHbHJFl2",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe9348cc01ff5d55971b22433",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e9348cc01ff5d55971b22433",
+          "width": 160
+        }
+      ],
+      "name": "The Beatles",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
     },
-    "genres" : [ "australian indie", "australian psych", "double drumming", "microtonal", "neo-psychedelic" ],
-    "href" : "https://api.spotify.com/v1/artists/6XYvaoDGE0VmRt83Jss9Sn",
-    "id" : "6XYvaoDGE0VmRt83Jss9Sn",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5ebae21e90221e814c50033133a",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab67616100005174ae21e90221e814c50033133a",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f178ae21e90221e814c50033133a",
-      "width" : 160
-    } ],
-    "name" : "King Gizzard & The Lizard Wizard",
-    "popularity" : 65,
-    "type" : "artist",
-    "uri" : "spotify:artist:6XYvaoDGE0VmRt83Jss9Sn"
-  }, {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
-    },
-    "followers" : {
-      "href" : null,
-      "total" : 20743925
-    },
-    "genres" : [ "beatlesque", "british invasion", "classic rock", "merseybeat", "psychedelic rock", "rock" ],
-    "href" : "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
-    "id" : "3WrFJ7ztbogyGnTHbHJFl2",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5ebe9348cc01ff5d55971b22433",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab67616100005174e9348cc01ff5d55971b22433",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f178e9348cc01ff5d55971b22433",
-      "width" : 160
-    } ],
-    "name" : "The Beatles",
-    "popularity" : 86,
-    "type" : "artist",
-    "uri" : "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
-  }, {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
-    },
-    "followers" : {
-      "href" : null,
-      "total" : 249431
-    },
-    "genres" : [ "alternative rock", "bay area indie", "double drumming", "freak folk", "garage pop", "garage psych", "garage rock", "indie garage rock", "indie rock", "modern rock", "neo-psychedelic", "noise pop", "psychedelic punk", "punk blues" ],
-    "href" : "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
-    "id" : "3qYfqdVwX0fil71onLpLkh",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5eb5df4cbb47f552f5418cac9d7",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab676161000051745df4cbb47f552f5418cac9d7",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f1785df4cbb47f552f5418cac9d7",
-      "width" : 160
-    } ],
-    "name" : "Thee Oh Sees",
-    "popularity" : 53,
-    "type" : "artist",
-    "uri" : "spotify:artist:3qYfqdVwX0fil71onLpLkh"
-  } ],
-  "total" : 50,
-  "limit" : 3,
-  "offset" : 0,
-  "previous" : null,
-  "href" : "https://api.spotify.com/v1/me/top/artists?limit=3&offset=0",
-  "next" : "https://api.spotify.com/v1/me/top/artists?limit=3&offset=3"
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3qYfqdVwX0fil71onLpLkh"
+      },
+      "followers": {
+        "href": null,
+        "total": 249431
+      },
+      "genres": [
+        "alternative rock",
+        "bay area indie",
+        "double drumming",
+        "freak folk",
+        "garage pop",
+        "garage psych",
+        "garage rock",
+        "indie garage rock",
+        "indie rock",
+        "modern rock",
+        "neo-psychedelic",
+        "noise pop",
+        "psychedelic punk",
+        "punk blues"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3qYfqdVwX0fil71onLpLkh",
+      "id": "3qYfqdVwX0fil71onLpLkh",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb5df4cbb47f552f5418cac9d7",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051745df4cbb47f552f5418cac9d7",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1785df4cbb47f552f5418cac9d7",
+          "width": 160
+        }
+      ],
+      "name": "Thee Oh Sees",
+      "popularity": 53,
+      "type": "artist",
+      "uri": "spotify:artist:3qYfqdVwX0fil71onLpLkh"
+    }
+  ],
+  "total": 50,
+  "limit": 3,
+  "offset": 0,
+  "previous": null,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=3&offset=0",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=3&offset=3"
 }

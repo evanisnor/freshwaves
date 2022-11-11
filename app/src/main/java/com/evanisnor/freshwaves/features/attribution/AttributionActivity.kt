@@ -8,9 +8,9 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class AttributionActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.attribution_activity)
-    }
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.attribution_activity)
+  }
 
 }

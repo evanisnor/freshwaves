@@ -5,191 +5,190 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.evanisnor.freshwaves.spotify.cache.model.entities.*
+import java.time.Instant
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import java.time.Instant
-import java.time.ZoneId
 
 @Suppress("FunctionName")
 @Dao
 abstract class SpotifyCacheDao {
 
-    // region Albums
+  // region Albums
 
-    suspend fun readAlbumsWithImages(limit: Int) =
-        _readAlbumsActive(limit).map { albums ->
-            albums.forEach { album ->
-                album.apply {
-                    artist = _readArtist(artistId)
-                    images = _readAlbumImages(id)
-                }
-            }
-            albums
-        }.flowOn(Dispatchers.Default)
-
-    suspend fun readLatestAlbumsMissingTracks(limit: Int): List<Album> =
-        withContext(Dispatchers.Default) {
-            _readAlbums(limit)
-                .filter { album -> _countTracks(album.id) == 0 }
-                .map { album ->
-                    album.apply {
-                        artist = _readArtist(artistId)
-                    }
-                }
+  suspend fun readAlbumsWithImages(limit: Int) =
+    _readAlbumsActive(limit).map { albums ->
+      albums.forEach { album ->
+        album.apply {
+          artist = _readArtist(artistId)
+          images = _readAlbumImages(id)
         }
+      }
+      albums
+    }.flowOn(Dispatchers.Default)
 
-    suspend fun readAlbumWithTracks(albumId: Int): Album =
-        withContext(Dispatchers.Default) {
-            _readAlbum(albumId).let { album ->
-                album.apply {
-                    artist = _readArtist(album.artistId)
-                    images = _readAlbumImages(album.id)
-                    tracks = _readTracks(album.id)
-                }
-            }
-        }
-
-    suspend fun readAlbumsReleasedAfter(instant: Instant): List<Album> =
-        withContext(Dispatchers.Default) {
-            _readAlbumsReleasedAfter(instant).onEach { album ->
-                album.apply {
-                    artist = _readArtist(artistId)
-                    images = _readAlbumImages(id)
-                    tracks = _readTracks(id)
-                }
-            }
-        }
-
-    fun insertAlbums(albums: Collection<Album>) {
-        albums.forEach { album ->
-
-            _insertAlbum(album)
-
-            album.images.forEach(this::_insertAlbumImage)
-            album.tracks.forEach(this::_insertTrack)
+  suspend fun readLatestAlbumsMissingTracks(limit: Int): List<Album> =
+    withContext(Dispatchers.Default) {
+      _readAlbums(limit)
+        .filter { album -> _countTracks(album.id) == 0 }
+        .map { album ->
+          album.apply {
+            artist = _readArtist(artistId)
+          }
         }
     }
 
-    // endregion
-
-    // region Artists
-
-    suspend fun readArtists(): List<Artist> = withContext(Dispatchers.Default) {
-        _readArtists()
-    }
-
-    @Query("SELECT * FROM Artist")
-    abstract suspend fun _readArtists(): List<Artist>
-
-    fun insertArtists(artists: Collection<Artist>) {
-        artists.forEach(this::insertArtist)
-    }
-
-    private fun insertArtist(artist: Artist) {
-        _insertArtist(artist)
-
-        artist.genres.forEach { genre ->
-            val genreId = _insertArtistGenre(genre)
-
-            _insertArtistToGenre(
-                ArtistToGenre(
-                    artistId = artist.id,
-                    genreId = genreId
-                )
-            )
+  suspend fun readAlbumWithTracks(albumId: Int): Album =
+    withContext(Dispatchers.Default) {
+      _readAlbum(albumId).let { album ->
+        album.apply {
+          artist = _readArtist(album.artistId)
+          images = _readAlbumImages(album.id)
+          tracks = _readTracks(album.id)
         }
-
-        artist.images.forEach { artistImage ->
-            artistImage.artistId = artist.id
-            _insertArtistImage(artistImage)
-        }
+      }
     }
 
-    // endregion
-
-    // region Tracks
-
-    fun insertTracks(tracks: Collection<Track>) {
-        tracks.forEach {
-            _insertTrack(it)
+  suspend fun readAlbumsReleasedAfter(instant: Instant): List<Album> =
+    withContext(Dispatchers.Default) {
+      _readAlbumsReleasedAfter(instant).onEach { album ->
+        album.apply {
+          artist = _readArtist(artistId)
+          images = _readAlbumImages(id)
+          tracks = _readTracks(id)
         }
+      }
     }
 
-    // endregion
+  fun insertAlbums(albums: Collection<Album>) {
+    albums.forEach { album ->
 
-    // region Internal Read Methods
+      _insertAlbum(album)
 
-    @Query("SELECT * FROM Artist WHERE Artist.id = :artistId")
-    abstract suspend fun _readArtist(artistId: String): Artist
+      album.images.forEach(this::_insertAlbumImage)
+      album.tracks.forEach(this::_insertTrack)
+    }
+  }
 
-    @Query(
-        "SELECT * FROM Artist, Album" +
-                " WHERE Artist.id = :artistId" +
-                " AND Album.artistId = Artist.id" +
-                " ORDER BY releaseDate DESC"
-    )
-    abstract fun _readAlbums(artistId: String): Flow<List<Album>>
+  // endregion
 
-    @Query(
-        "SELECT * FROM Artist, Album" +
-                " WHERE Album.artistId = Artist.id" +
-                " ORDER BY releaseDate DESC" +
-                " LIMIT :limit"
-    )
-    abstract suspend fun _readAlbums(limit: Int): List<Album>
+  // region Artists
 
-    @Query(
-        "SELECT * FROM Artist, Album" +
-                " WHERE Album.artistId = Artist.id" +
-                " ORDER BY releaseDate DESC" +
-                " LIMIT :limit"
-    )
-    abstract fun _readAlbumsActive(limit: Int): Flow<List<Album>>
+  suspend fun readArtists(): List<Artist> = withContext(Dispatchers.Default) {
+    _readArtists()
+  }
 
-    @Query("SELECT * FROM Album WHERE releaseDate >= :instant ORDER BY releaseDate")
-    abstract suspend fun _readAlbumsReleasedAfter(instant: Instant): List<Album>
+  @Query("SELECT * FROM Artist")
+  abstract suspend fun _readArtists(): List<Artist>
 
-    @Query("SELECT * FROM Album WHERE Album.id = :albumId")
-    abstract suspend fun _readAlbum(albumId: Int): Album
+  fun insertArtists(artists: Collection<Artist>) {
+    artists.forEach(this::insertArtist)
+  }
 
-    @Query("SELECT * FROM AlbumImage WHERE albumId = :albumId")
-    abstract suspend fun _readAlbumImages(albumId: Int): List<AlbumImage>
+  private fun insertArtist(artist: Artist) {
+    _insertArtist(artist)
 
-    @Query("SELECT * FROM Track WHERE Track.albumId = :albumId ORDER BY discNumber,trackNumber")
-    abstract suspend fun _readTracks(albumId: Int): List<Track>
+    artist.genres.forEach { genre ->
+      val genreId = _insertArtistGenre(genre)
 
-    @Query("SELECT count(*) FROM Track WHERE Track.albumId = :albumId")
-    abstract suspend fun _countTracks(albumId: Int): Int
+      _insertArtistToGenre(
+        ArtistToGenre(
+          artistId = artist.id,
+          genreId = genreId
+        )
+      )
+    }
 
-    // endregion
+    artist.images.forEach { artistImage ->
+      artistImage.artistId = artist.id
+      _insertArtistImage(artistImage)
+    }
+  }
 
-    // region Internal Insert Methods
+  // endregion
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun _insertAlbum(album: Album)
+  // region Tracks
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun _insertAlbumImage(image: AlbumImage)
+  fun insertTracks(tracks: Collection<Track>) {
+    tracks.forEach {
+      _insertTrack(it)
+    }
+  }
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun _insertArtist(artist: Artist)
+  // endregion
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun _insertArtistImage(image: ArtistImage)
+  // region Internal Read Methods
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun _insertArtistGenre(artistGenre: ArtistGenre): Long
+  @Query("SELECT * FROM Artist WHERE Artist.id = :artistId")
+  abstract suspend fun _readArtist(artistId: String): Artist
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun _insertArtistToGenre(artistToGenre: ArtistToGenre)
+  @Query(
+    "SELECT * FROM Artist, Album" +
+        " WHERE Artist.id = :artistId" +
+        " AND Album.artistId = Artist.id" +
+        " ORDER BY releaseDate DESC"
+  )
+  abstract fun _readAlbums(artistId: String): Flow<List<Album>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun _insertTrack(track: Track)
+  @Query(
+    "SELECT * FROM Artist, Album" +
+        " WHERE Album.artistId = Artist.id" +
+        " ORDER BY releaseDate DESC" +
+        " LIMIT :limit"
+  )
+  abstract suspend fun _readAlbums(limit: Int): List<Album>
 
-    // endregion
+  @Query(
+    "SELECT * FROM Artist, Album" +
+        " WHERE Album.artistId = Artist.id" +
+        " ORDER BY releaseDate DESC" +
+        " LIMIT :limit"
+  )
+  abstract fun _readAlbumsActive(limit: Int): Flow<List<Album>>
+
+  @Query("SELECT * FROM Album WHERE releaseDate >= :instant ORDER BY releaseDate")
+  abstract suspend fun _readAlbumsReleasedAfter(instant: Instant): List<Album>
+
+  @Query("SELECT * FROM Album WHERE Album.id = :albumId")
+  abstract suspend fun _readAlbum(albumId: Int): Album
+
+  @Query("SELECT * FROM AlbumImage WHERE albumId = :albumId")
+  abstract suspend fun _readAlbumImages(albumId: Int): List<AlbumImage>
+
+  @Query("SELECT * FROM Track WHERE Track.albumId = :albumId ORDER BY discNumber,trackNumber")
+  abstract suspend fun _readTracks(albumId: Int): List<Track>
+
+  @Query("SELECT count(*) FROM Track WHERE Track.albumId = :albumId")
+  abstract suspend fun _countTracks(albumId: Int): Int
+
+  // endregion
+
+  // region Internal Insert Methods
+
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  abstract fun _insertAlbum(album: Album)
+
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
+  abstract fun _insertAlbumImage(image: AlbumImage)
+
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  abstract fun _insertArtist(artist: Artist)
+
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
+  abstract fun _insertArtistImage(image: ArtistImage)
+
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
+  abstract fun _insertArtistGenre(artistGenre: ArtistGenre): Long
+
+  @Insert(onConflict = OnConflictStrategy.IGNORE)
+  abstract fun _insertArtistToGenre(artistToGenre: ArtistToGenre)
+
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
+  abstract fun _insertTrack(track: Track)
+
+  // endregion
 
 
 }

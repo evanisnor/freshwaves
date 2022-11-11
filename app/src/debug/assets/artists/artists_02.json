@@ -1,93 +1,123 @@
 {
-  "items" : [ {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
+      },
+      "followers": {
+        "href": null,
+        "total": 2075160
+      },
+      "genres": [
+        "edmonton indie",
+        "lo-fi indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
+      "id": "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc7a7b191db13668f1a6d863d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174c7a7b191db13668f1a6d863d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178c7a7b191db13668f1a6d863d",
+          "width": 160
+        }
+      ],
+      "name": "Mac DeMarco",
+      "popularity": 77,
+      "type": "artist",
+      "uri": "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
     },
-    "followers" : {
-      "href" : null,
-      "total" : 2075160
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8"
+      },
+      "followers": {
+        "href": null,
+        "total": 2271323
+      },
+      "genres": [
+        "alternative metal",
+        "alternative rock",
+        "art rock",
+        "nu metal",
+        "progressive metal",
+        "progressive rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2yEwvVSSSUkcLeSTNyHKh8",
+      "id": "2yEwvVSSSUkcLeSTNyHKh8",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb13f5472b709101616c87cba3",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517413f5472b709101616c87cba3",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17813f5472b709101616c87cba3",
+          "width": 160
+        }
+      ],
+      "name": "TOOL",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:2yEwvVSSSUkcLeSTNyHKh8"
     },
-    "genres" : [ "edmonton indie", "lo-fi indie" ],
-    "href" : "https://api.spotify.com/v1/artists/3Sz7ZnJQBIHsXLUSo0OQtM",
-    "id" : "3Sz7ZnJQBIHsXLUSo0OQtM",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5ebc7a7b191db13668f1a6d863d",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab67616100005174c7a7b191db13668f1a6d863d",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f178c7a7b191db13668f1a6d863d",
-      "width" : 160
-    } ],
-    "name" : "Mac DeMarco",
-    "popularity" : 77,
-    "type" : "artist",
-    "uri" : "spotify:artist:3Sz7ZnJQBIHsXLUSo0OQtM"
-  }, {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8"
-    },
-    "followers" : {
-      "href" : null,
-      "total" : 2271323
-    },
-    "genres" : [ "alternative metal", "alternative rock", "art rock", "nu metal", "progressive metal", "progressive rock", "rock" ],
-    "href" : "https://api.spotify.com/v1/artists/2yEwvVSSSUkcLeSTNyHKh8",
-    "id" : "2yEwvVSSSUkcLeSTNyHKh8",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5eb13f5472b709101616c87cba3",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab6761610000517413f5472b709101616c87cba3",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f17813f5472b709101616c87cba3",
-      "width" : 160
-    } ],
-    "name" : "TOOL",
-    "popularity" : 73,
-    "type" : "artist",
-    "uri" : "spotify:artist:2yEwvVSSSUkcLeSTNyHKh8"
-  }, {
-    "external_urls" : {
-      "spotify" : "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
-    },
-    "followers" : {
-      "href" : null,
-      "total" : 5162011
-    },
-    "genres" : [ "australian psych", "neo-psychedelic" ],
-    "href" : "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
-    "id" : "5INjqkS1o8h1imAzPqGZBb",
-    "images" : [ {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/ab6761610000e5eb5a2dadeff50fa5c9ad9365c9",
-      "width" : 640
-    }, {
-      "height" : 320,
-      "url" : "https://i.scdn.co/image/ab676161000051745a2dadeff50fa5c9ad9365c9",
-      "width" : 320
-    }, {
-      "height" : 160,
-      "url" : "https://i.scdn.co/image/ab6761610000f1785a2dadeff50fa5c9ad9365c9",
-      "width" : 160
-    } ],
-    "name" : "Tame Impala",
-    "popularity" : 80,
-    "type" : "artist",
-    "uri" : "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
-  } ],
-  "total" : 50,
-  "limit" : 3,
-  "offset" : 3,
-  "previous" : "https://api.spotify.com/v1/me/top/artists?limit=3&offset=0",
-  "href" : "https://api.spotify.com/v1/me/top/artists?limit=3&offset=3",
-  "next" : "https://api.spotify.com/v1/me/top/artists?limit=3&offset=6"
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+      },
+      "followers": {
+        "href": null,
+        "total": 5162011
+      },
+      "genres": [
+        "australian psych",
+        "neo-psychedelic"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+      "id": "5INjqkS1o8h1imAzPqGZBb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb5a2dadeff50fa5c9ad9365c9",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051745a2dadeff50fa5c9ad9365c9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1785a2dadeff50fa5c9ad9365c9",
+          "width": 160
+        }
+      ],
+      "name": "Tame Impala",
+      "popularity": 80,
+      "type": "artist",
+      "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb"
+    }
+  ],
+  "total": 50,
+  "limit": 3,
+  "offset": 3,
+  "previous": "https://api.spotify.com/v1/me/top/artists?limit=3&offset=0",
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=3&offset=3",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=3&offset=6"
 }

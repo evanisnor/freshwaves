@@ -9,12 +9,12 @@ import dagger.hilt.testing.TestInstallIn
 
 @Module
 @TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [HandyAuthModule::class]
+  components = [SingletonComponent::class],
+  replaces = [HandyAuthModule::class]
 )
 object FakeAuthorizationModule {
 
-    @Provides
-    fun handyAuth(): HandyAuth = FakeHandyAuth()
+  @Provides
+  fun handyAuth(): HandyAuth = FakeHandyAuth()
 
 }

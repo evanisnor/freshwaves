@@ -12,30 +12,30 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import javax.inject.Named
 
 @Module
 @InstallIn(SingletonComponent::class)
 class UpdaterModule {
 
-    @Provides
-    fun workManager(@ApplicationContext context: Context) = WorkManager.getInstance(context)
+  @Provides
+  fun workManager(@ApplicationContext context: Context) = WorkManager.getInstance(context)
 
-    @Provides
-    fun localBroadcastManager(@ApplicationContext context: Context) =
-        LocalBroadcastManager.getInstance(context)
+  @Provides
+  fun localBroadcastManager(@ApplicationContext context: Context) =
+    LocalBroadcastManager.getInstance(context)
 
-    @Provides
-    @Named("UpdaterMeta")
-    fun updaterMetaDataStore(@ApplicationContext context: Context): DataStore<Preferences> =
-        PreferenceDataStoreFactory.create(
-            corruptionHandler = null,
-            migrations = listOf(),
-            scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
-        ) {
-            context.preferencesDataStoreFile("UpdaterMeta")
-        }
+  @Provides
+  @Named("UpdaterMeta")
+  fun updaterMetaDataStore(@ApplicationContext context: Context): DataStore<Preferences> =
+    PreferenceDataStoreFactory.create(
+      corruptionHandler = null,
+      migrations = listOf(),
+      scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+    ) {
+      context.preferencesDataStoreFile("UpdaterMeta")
+    }
 }

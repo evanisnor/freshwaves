@@ -91,9 +91,9 @@ class SpotifyRepositoryImplTest {
     fun `updateTopArtists - when querying single page of results - returns top artists`() =
         runTest {
             spotifyAPIService.topArtists = listOf(
-                ArtistObject("01", "Artist 01", null, null),
-                ArtistObject("02", "Artist 02", null, null),
-                ArtistObject("03", "Artist 03", null, null),
+                ArtistObject("01", "Artist 01"),
+                ArtistObject("02", "Artist 02"),
+                ArtistObject("03", "Artist 03"),
             )
 
             spotifyRepository.updateTopArtists(numberOfArtists = 2, artistsPerPage = 2)
@@ -111,9 +111,9 @@ class SpotifyRepositoryImplTest {
     fun `updateTopArtists - when querying two pages of results - returns top artists`() =
         runTest {
             spotifyAPIService.topArtists = listOf(
-                ArtistObject("01", "Artist 01", null, null),
-                ArtistObject("02", "Artist 02", null, null),
-                ArtistObject("03", "Artist 03", null, null),
+                ArtistObject("01", "Artist 01"),
+                ArtistObject("02", "Artist 02"),
+                ArtistObject("03", "Artist 03"),
             )
 
             spotifyRepository.updateTopArtists(numberOfArtists = 2, artistsPerPage = 1)
@@ -214,5 +214,5 @@ class SpotifyRepositoryImplTest {
             )
         )
     }
-    
+
 }

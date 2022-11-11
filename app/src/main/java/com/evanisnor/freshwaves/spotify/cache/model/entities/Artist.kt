@@ -19,8 +19,8 @@ data class Artist(
     constructor(
         id: String,
         name: String,
-        images: List<ArtistImage>,
-        genres: List<ArtistGenre>
+        images: List<ArtistImage> = emptyList(),
+        genres: List<ArtistGenre> = emptyList()
     ) : this(id, name) {
         this.images = images
         this.genres = genres

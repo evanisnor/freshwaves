@@ -6,6 +6,6 @@ import com.squareup.moshi.JsonClass
 data class ArtistObject(
     val id: String,
     val name: String,
-    val images: List<ImageObject>?,
-    val genres: List<String>?
+    val images: List<ImageObject>? = null,
+    val genres: List<String>? = null
 )

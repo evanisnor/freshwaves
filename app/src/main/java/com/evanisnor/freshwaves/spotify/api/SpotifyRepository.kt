@@ -20,6 +20,8 @@ interface SpotifyRepository {
 
   suspend fun getLatestAlbumsMissingTracks(): List<Album>
 
+  suspend fun getAlbumWithTracks(albumId: Int): Album
+
   suspend fun updateAlbums(artist: Artist, userProfile: UserProfile)
 
   suspend fun updateTracks(album: Album)

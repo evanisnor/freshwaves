@@ -1,8 +1,6 @@
 package com.evanisnor.freshwaves.spotify
 
-import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
-import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
@@ -47,6 +45,9 @@ class SpotifyRepositoryImpl @Inject constructor(
 
   override suspend fun getLatestAlbumsMissingTracks(): List<Album> =
     spotifyAlbumRepository.getLatestAlbumsMissingTracks()
+
+  override suspend fun getAlbumWithTracks(albumId: Int): Album =
+    spotifyAlbumRepository.getAlbumWithTracks(albumId)
 
   override suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) =
     spotifyAlbumRepository.updateAlbums(artist, userProfile)

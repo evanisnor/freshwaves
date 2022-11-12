@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.spotify
 
+import android.util.Log
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
@@ -29,6 +30,33 @@ class SpotifyRepositoryImpl @Inject constructor(
   private val spotifyArtistRepository: SpotifyArtistRepository,
   private val spotifyAlbumRepository: SpotifyAlbumRepository,
 ) : SpotifyRepository {
+
+  override suspend fun update() {
+    Log.i("UpdateWorker", "Fetching user profile")
+    val userProfile = spotifyUserRepository.userProfile()
+
+    Log.i("UpdateWorker", "Fetching top artists")
+    spotifyArtistRepository.updateTopArtists(120)
+
+    Log.i("UpdateWorker", "Fetching albums...")
+    spotifyArtistRepository.getTopArtists().let { artists ->
+      artists.forEach { artist ->
+        Log.i("UpdateWorker", "Fetching albums for ${artist.name}")
+        spotifyAlbumRepository.updateAlbums(artist, userProfile)
+      }
+    }
+
+    Log.i("UpdateWorker", "Fetching missing tracks...")
+    spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->
+      albums.forEach { album ->
+        Log.i(
+          "UpdateWorker",
+          "Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}"
+        )
+        spotifyAlbumRepository.updateTracks(album)
+      }
+    }
+  }
 
   override suspend fun userProfile(): UserProfile = spotifyUserRepository.userProfile()
 

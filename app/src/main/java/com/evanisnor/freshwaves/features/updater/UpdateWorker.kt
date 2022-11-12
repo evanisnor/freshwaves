@@ -33,7 +33,7 @@ class UpdateWorker @AssistedInject constructor(
     updaterRepository.updateState(UpdaterState.Running)
 
     try {
-      update()
+      spotifyRepository.update()
       notifyOfNewAlbums()
     } catch (throwable: Throwable) {
       Log.e(
@@ -46,33 +46,6 @@ class UpdateWorker @AssistedInject constructor(
 
     finish(result)
     result
-  }
-
-  private suspend fun update() {
-    Log.i("UpdateWorker", "Fetching user profile")
-    val userProfile = spotifyRepository.userProfile()
-
-    Log.i("UpdateWorker", "Fetching top artists")
-    spotifyRepository.updateTopArtists(120)
-
-    Log.i("UpdateWorker", "Fetching albums...")
-    spotifyRepository.getTopArtists().let { artists ->
-      artists.forEach { artist ->
-        Log.i("UpdateWorker", "Fetching albums for ${artist.name}")
-        spotifyRepository.updateAlbums(artist, userProfile)
-      }
-    }
-
-    Log.i("UpdateWorker", "Fetching missing tracks...")
-    spotifyRepository.getLatestAlbumsMissingTracks().let { albums ->
-      albums.forEach { album ->
-        Log.i(
-          "UpdateWorker",
-          "Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}"
-        )
-        spotifyRepository.updateTracks(album)
-      }
-    }
   }
 
   private suspend fun notifyOfNewAlbums() {

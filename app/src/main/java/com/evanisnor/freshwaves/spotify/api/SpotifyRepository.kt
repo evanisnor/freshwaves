@@ -8,19 +8,22 @@ import kotlinx.coroutines.flow.Flow
 
 interface SpotifyRepository {
 
+  suspend fun update()
+
+  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>>
+
+  suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album>
+
+  suspend fun getAlbumWithTracks(albumId: Int): Album
+
+  // TODO remove these:
   suspend fun userProfile(): UserProfile
 
   suspend fun getTopArtists(): List<Artist>
 
   suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int = 30)
 
-  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>>
-
-  suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album>
-
   suspend fun getLatestAlbumsMissingTracks(): List<Album>
-
-  suspend fun getAlbumWithTracks(albumId: Int): Album
 
   suspend fun updateAlbums(artist: Artist, userProfile: UserProfile)
 

@@ -3,11 +3,9 @@ package com.evanisnor.freshwaves.spotify
 import android.util.Log
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
-import com.evanisnor.freshwaves.user.UserProfile
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -58,27 +56,12 @@ class SpotifyRepositoryImpl @Inject constructor(
     }
   }
 
-  override suspend fun userProfile(): UserProfile = spotifyUserRepository.userProfile()
-
-  override suspend fun getTopArtists(): List<Artist> = spotifyArtistRepository.getTopArtists()
-
-  override suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int) =
-    spotifyArtistRepository.updateTopArtists(numberOfArtists, artistsPerPage)
-
   override suspend fun getLatestAlbums(limit: Int): Flow<List<Album>> =
     spotifyAlbumRepository.getLatestAlbums(limit)
 
   override suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album> =
     spotifyAlbumRepository.getAlbumsReleasedAfter(instant)
 
-  override suspend fun getLatestAlbumsMissingTracks(): List<Album> =
-    spotifyAlbumRepository.getLatestAlbumsMissingTracks()
-
   override suspend fun getAlbumWithTracks(albumId: Int): Album =
     spotifyAlbumRepository.getAlbumWithTracks(albumId)
-
-  override suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) =
-    spotifyAlbumRepository.updateAlbums(artist, userProfile)
-
-  override suspend fun updateTracks(album: Album) = spotifyAlbumRepository.updateTracks(album)
 }

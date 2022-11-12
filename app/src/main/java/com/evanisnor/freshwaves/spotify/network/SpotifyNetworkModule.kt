@@ -22,6 +22,7 @@ object SpotifyNetworkModule {
         .dispatcher(Dispatcher().apply {
           maxRequestsPerHost = 1
         })
+        .addNetworkInterceptor(RateLimitInterceptor(delayMs = 500))
         .build()
     )
     .build()

@@ -11,12 +11,12 @@ import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 
 class SpotifyAlbumRepository @Inject constructor(
-    private val spotifyNetworkRepository: SpotifyNetworkRepository,
-    private val spotifyCacheDao: SpotifyCacheDao,
+  private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyCacheDao: SpotifyCacheDao,
 ) {
 
-  suspend fun getLatestAlbums(): Flow<List<Album>> =
-    spotifyCacheDao.readAlbumsWithImages(30)
+  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>> =
+    spotifyCacheDao.readAlbumsWithImages(limit)
 
   suspend fun getLatestAlbumsMissingTracks(): List<Album> =
     spotifyCacheDao.readLatestAlbumsMissingTracks(30)

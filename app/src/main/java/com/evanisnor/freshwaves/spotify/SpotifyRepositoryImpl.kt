@@ -24,8 +24,8 @@ class SpotifyRepositoryImpl @Inject constructor(
   override suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int) =
     spotifyArtistRepository.updateTopArtists(numberOfArtists, artistsPerPage)
 
-  override suspend fun getLatestAlbums(): Flow<List<Album>> =
-    spotifyAlbumRepository.getLatestAlbums()
+  override suspend fun getLatestAlbums(limit: Int): Flow<List<Album>> =
+    spotifyAlbumRepository.getLatestAlbums(limit)
 
   override suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album> =
     spotifyAlbumRepository.getAlbumsReleasedAfter(instant)

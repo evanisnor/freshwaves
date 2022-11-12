@@ -137,19 +137,25 @@ class SpotifyRepositoryImplTest {
           artist = artist01,
           name = "Album 0",
           releaseDate = Instant.ofEpochSecond(500L),
+        ),
+        Album(
+          id = 1,
+          artist = artist01,
+          name = "Album 1",
+          releaseDate = Instant.ofEpochSecond(600L),
         )
       )
     )
 
-    spotifyRepository.getLatestAlbums().test {
+    spotifyRepository.getLatestAlbums(limit = 1).test {
       assertThat(awaitItem()).isEqualTo(
         listOf(
           Album(
-            id = 0,
+            id = 1,
             artist = artist01,
-            name = "Album 0",
-            releaseDate = Instant.ofEpochSecond(500L),
-          )
+            name = "Album 1",
+            releaseDate = Instant.ofEpochSecond(600L),
+          ),
         )
       )
     }

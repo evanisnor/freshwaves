@@ -14,7 +14,7 @@ interface SpotifyRepository {
 
   suspend fun updateTopArtists(numberOfArtists: Int, artistsPerPage: Int = 30)
 
-  suspend fun getLatestAlbums(): Flow<List<Album>>
+  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>>
 
   suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album>
 

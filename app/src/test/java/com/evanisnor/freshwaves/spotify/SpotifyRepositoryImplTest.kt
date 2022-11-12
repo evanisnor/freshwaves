@@ -6,6 +6,7 @@ import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
 import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
@@ -14,6 +15,7 @@ import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import com.evanisnor.freshwaves.user.UserProfile
 import com.google.common.truth.Truth.assertThat
+import java.time.Duration
 import java.time.Instant
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -194,5 +196,48 @@ class SpotifyRepositoryImplTest {
       )
     )
   }
+
+  @Test
+  fun `getLatestAlbumsMissingTracks - when some albums don't have tracks - return albums missing tracks`() =
+    runTest {
+      val artist01 = Artist("01", "Artist 01")
+      spotifyCacheDao.insertArtists(listOf(artist01))
+      spotifyCacheDao.insertAlbums(
+        listOf(
+          Album(
+            id = 0,
+            artist = artist01,
+            name = "Album 0",
+            releaseDate = Instant.ofEpochSecond(500L),
+          ),
+          Album(
+            id = 1,
+            artist = artist01,
+            name = "Album 1",
+            releaseDate = Instant.ofEpochSecond(600L),
+          )
+        ),
+      )
+      spotifyCacheDao.insertTracks(listOf(Track(0,
+        "0",
+        1,
+        0,
+        1,
+        "A song",
+        "",
+        Duration.ofMinutes(3L)
+      )))
+
+      val albumsMissingTracks = spotifyRepository.getLatestAlbumsMissingTracks()
+
+      assertThat(albumsMissingTracks).isEqualTo(listOf(
+        Album(
+          id = 0,
+          artist = artist01,
+          name = "Album 0",
+          releaseDate = Instant.ofEpochSecond(500L),
+        ),
+      ))
+    }
 
 }

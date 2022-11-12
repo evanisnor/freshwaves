@@ -6,6 +6,7 @@ import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
+import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
@@ -22,9 +23,7 @@ class UpdateWorker @AssistedInject constructor(
   @Assisted applicationContext: Context,
   @Assisted workerParameters: WorkerParameters,
   private val updaterRepository: UpdaterRepository,
-  private val spotifyUserRepository: SpotifyUserRepository,
-  private val spotifyArtistRepository: SpotifyArtistRepository,
-  private val spotifyAlbumRepository: SpotifyAlbumRepository,
+  private val spotifyRepository: SpotifyRepository,
   private val updaterBootstrapper: UpdaterBootstrapper,
   private val freshAlbumNotifier: FreshAlbumNotifier,
 ) : CoroutineWorker(applicationContext, workerParameters) {
@@ -51,34 +50,34 @@ class UpdateWorker @AssistedInject constructor(
 
   private suspend fun update() {
     Log.i("UpdateWorker", "Fetching user profile")
-    val userProfile = spotifyUserRepository.userProfile()
+    val userProfile = spotifyRepository.userProfile()
 
     Log.i("UpdateWorker", "Fetching top artists")
-    spotifyArtistRepository.updateTopArtists(120)
+    spotifyRepository.updateTopArtists(120)
 
     Log.i("UpdateWorker", "Fetching albums...")
-    spotifyArtistRepository.getTopArtists().let { artists ->
+    spotifyRepository.getTopArtists().let { artists ->
       artists.forEach { artist ->
         Log.i("UpdateWorker", "Fetching albums for ${artist.name}")
-        spotifyAlbumRepository.updateAlbums(artist, userProfile)
+        spotifyRepository.updateAlbums(artist, userProfile)
       }
     }
 
     Log.i("UpdateWorker", "Fetching missing tracks...")
-    spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->
+    spotifyRepository.getLatestAlbumsMissingTracks().let { albums ->
       albums.forEach { album ->
         Log.i(
           "UpdateWorker",
           "Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}"
         )
-        spotifyAlbumRepository.updateTracks(album)
+        spotifyRepository.updateTracks(album)
       }
     }
   }
 
   private suspend fun notifyOfNewAlbums() {
     val freshAlbums =
-      spotifyAlbumRepository.getAlbumsReleasedAfter(Instant.now().startOfDayUTC())
+      spotifyRepository.getAlbumsReleasedAfter(Instant.now().startOfDayUTC())
     freshAlbumNotifier.send(freshAlbums)
   }
 

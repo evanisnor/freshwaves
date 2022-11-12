@@ -71,7 +71,6 @@ dependencies {
   implementation(libs.google.material)
   implementation(libs.handyauth.client)
   implementation(libs.jetbrains.coroutines.android)
-  implementation(libs.square.okhttp.logging)
   implementation(libs.square.moshi)
   ksp(libs.androidx.room.compiler)
   kapt(libs.bundles.hilt.compiler)
@@ -79,6 +78,7 @@ dependencies {
 
   debugImplementation(libs.bundles.androidx.debug)
   debugImplementation(libs.square.leakcanary.android)
+  debugImplementation(libs.square.okhttp.logging)
 
   testImplementation(libs.google.test.truth)
   testImplementation(libs.jetbrains.test.coroutines)

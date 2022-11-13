@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.pressBack
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.tools.TestDataLoader
 import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
@@ -62,7 +63,8 @@ class FreshAlbumsTest {
     val albumList = spotifyCacheDao.readAlbumsWithImages(30).first()
 
     launchFragmentInHiltContainer<FreshAlbumsFragment>()
-
+    InstrumentationRegistry.getInstrumentation().waitForIdleSync()
+    
     albumList.forEachIndexed { index, album ->
       freshAlbumsRobot.selectAlbumAt(index + 1)
       albumDetailsRobot.verifyAlbumOverview(album)

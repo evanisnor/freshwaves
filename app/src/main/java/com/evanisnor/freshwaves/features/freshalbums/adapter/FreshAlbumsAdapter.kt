@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumCardBinding
+import com.evanisnor.freshwaves.features.freshalbums.adapter.ThreadedListAdapter
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -61,7 +61,7 @@ class AlbumDiffCallback : DiffUtil.ItemCallback<Album>() {
   override fun areContentsTheSame(oldItem: Album, newItem: Album) = oldItem == newItem
 }
 
-class FreshAlbumsAdapter : ListAdapter<Album, FreshAlbumViewHolder>(AlbumDiffCallback()) {
+class FreshAlbumsAdapter : ThreadedListAdapter<Album, FreshAlbumViewHolder>(AlbumDiffCallback()) {
 
   interface OnAlbumSelectedListener {
     fun onAlbumSelected(album: Album)

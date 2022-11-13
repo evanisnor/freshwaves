@@ -13,9 +13,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 object SpotifyNetworkDebugModule {
 
   @Provides
-  @SpotifyNetworkModule.DebugInterceptors
   @ElementsIntoSet
-  fun debugInterceptors(): Set<Interceptor> = setOf(HttpLoggingInterceptor().apply {
+  fun interceptors(): Set<Interceptor> = setOf(HttpLoggingInterceptor().apply {
     setLevel(HttpLoggingInterceptor.Level.BASIC)
   })
 

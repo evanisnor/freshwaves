@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify
 
-import android.util.Log
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
@@ -14,6 +13,7 @@ import java.time.Instant
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow
+import timber.log.Timber
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -30,27 +30,24 @@ class SpotifyRepositoryImpl @Inject constructor(
 ) : SpotifyRepository {
 
   override suspend fun update() {
-    Log.i("UpdateWorker", "Fetching user profile")
+    Timber.d("Fetching user profile")
     val userProfile = spotifyUserRepository.userProfile()
 
-    Log.i("UpdateWorker", "Fetching top artists")
+    Timber.d("Fetching top artists")
     spotifyArtistRepository.updateTopArtists(120)
 
-    Log.i("UpdateWorker", "Fetching albums...")
+    Timber.d("Fetching albums...")
     spotifyArtistRepository.getTopArtists().let { artists ->
       artists.forEach { artist ->
-        Log.i("UpdateWorker", "Fetching albums for ${artist.name}")
+        Timber.d("Fetching albums for ${artist.name}")
         spotifyAlbumRepository.updateAlbums(artist, userProfile)
       }
     }
 
-    Log.i("UpdateWorker", "Fetching missing tracks...")
+    Timber.d("Fetching missing tracks...")
     spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->
       albums.forEach { album ->
-        Log.i(
-          "UpdateWorker",
-          "Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}"
-        )
+        Timber.d("Fetching tracks for ${album.artist?.name ?: "???"} - ${album.name}")
         spotifyAlbumRepository.updateTracks(album)
       }
     }

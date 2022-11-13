@@ -1,15 +1,11 @@
 package com.evanisnor.freshwaves.features.updater
 
 import android.content.Context
-import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 import dagger.assisted.Assisted
@@ -17,6 +13,7 @@ import dagger.assisted.AssistedInject
 import java.time.Instant
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -36,10 +33,7 @@ class UpdateWorker @AssistedInject constructor(
       spotifyRepository.update()
       notifyOfNewAlbums()
     } catch (throwable: Throwable) {
-      Log.e(
-        "UpdateWorker",
-        "Failed to update cache: $throwable"
-      )
+      Timber.e("Failed to update cache: $throwable")
       Firebase.crashlytics.recordException(throwable)
       result = Result.failure()
     }

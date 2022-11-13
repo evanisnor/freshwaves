@@ -7,6 +7,7 @@ import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
+import timber.log.Timber
 
 @HiltAndroidApp
 class FreshWavesApp : Application(), Configuration.Provider {
@@ -20,8 +21,12 @@ class FreshWavesApp : Application(), Configuration.Provider {
   @Inject
   lateinit var freshAlbumNotifier: FreshAlbumNotifier
 
+  @Inject
+  lateinit var trees: Set<@JvmSuppressWildcards Timber.Tree>
+
   override fun onCreate() {
     super.onCreate()
+    Timber.plant(*trees.toTypedArray())
     updaterBootstrapper.registerForSuccessfulAuthorization()
     freshAlbumNotifier.createNotificationChannel()
   }

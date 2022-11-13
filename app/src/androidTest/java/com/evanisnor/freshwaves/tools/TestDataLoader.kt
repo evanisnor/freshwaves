@@ -1,7 +1,6 @@
 package com.evanisnor.freshwaves.tools
 
 import android.content.Context
-import android.util.Log
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
@@ -20,6 +19,7 @@ import java.io.IOException
 import kotlin.reflect.KClass
 import okio.buffer
 import okio.source
+import timber.log.Timber
 
 /**
  * Defined types of test data
@@ -98,19 +98,13 @@ class TestDataLoader(
                   onTracks(album, albumEntity, tracksPage)
                 },
                 onFileDoesNotExist = {
-                  Log.e(
-                    "TestDataLoader",
-                    "Tracks file does not exist for album ${artist.name}, ${album.name} | $tracksPath"
-                  )
+                  Timber.e("Tracks file does not exist for album ${artist.name}, ${album.name} | $tracksPath")
                 }
               )
             }
           },
           onFileDoesNotExist = {
-            Log.e(
-              "TestDataLoader",
-              "Albums file does not exist for artist ${artist.name} | $albumsPath"
-            )
+            Timber.e("Albums file does not exist for artist ${artist.name} | $albumsPath")
           }
         )
       }
@@ -130,12 +124,12 @@ class TestDataLoader(
         if (files != null && files.isNotEmpty()) {
           files.forEach { layer3file ->
             read(path + "${File.separator}$layer3file", adapter, onRead) {
-              Log.e("TestDataLoader", "File does not exist: $path")
+              Timber.e("File does not exist: $path")
             }
           }
         } else {
           read(path, adapter, onRead) {
-            Log.e("TestDataLoader", "File does not exist: $path")
+            Timber.e("File does not exist: $path")
           }
         }
       }
@@ -149,7 +143,7 @@ class TestDataLoader(
     onFileDoesNotExist: () -> Unit,
   ) {
     with(context.assets) {
-      Log.i("TestDataLoader", "Reading file: $path")
+      Timber.i("Reading file: $path")
       try {
         open(path).use { inputStream ->
           adapter.fromJson(inputStream.source().buffer())?.let { data ->

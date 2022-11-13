@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import android.util.Log
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
@@ -9,6 +8,7 @@ import com.evanisnor.freshwaves.user.UserProfile
 import java.time.Instant
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
+import timber.log.Timber
 
 class SpotifyAlbumRepository @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
@@ -33,7 +33,7 @@ class SpotifyAlbumRepository @Inject constructor(
       userProfile = userProfile
     ).collect { albums ->
       spotifyCacheDao.insertAlbums(albums)
-      Log.i("SpotifyAlbumRepository", "Inserted ${albums.size} albums for ${artist.name}")
+      Timber.d("Inserted ${albums.size} albums for ${artist.name}")
     }
   }
 

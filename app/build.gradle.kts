@@ -72,6 +72,7 @@ dependencies {
   implementation(libs.handyauth.client)
   implementation(libs.jetbrains.coroutines.android)
   implementation(libs.square.moshi)
+  implementation(libs.timber)
   ksp(libs.androidx.room.compiler)
   kapt(libs.bundles.hilt.compiler)
   ksp(libs.square.moshi.kotlin.codegen)

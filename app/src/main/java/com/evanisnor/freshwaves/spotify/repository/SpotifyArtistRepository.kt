@@ -1,15 +1,15 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import android.util.Log
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import javax.inject.Inject
 import kotlin.math.ceil
+import timber.log.Timber
 
 class SpotifyArtistRepository @Inject constructor(
-    private val spotifyNetworkRepository: SpotifyNetworkRepository,
-    private val spotifyCacheDao: SpotifyCacheDao,
+  private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyCacheDao: SpotifyCacheDao,
 ) {
 
   suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()
@@ -20,9 +20,9 @@ class SpotifyArtistRepository @Inject constructor(
 
     for (i in 0 until pages) {
       val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
-      Log.i("SpotifyArtistRepository", "Fetched ${artists.size} artists")
+      Timber.d("Fetched ${artists.size} artists")
       spotifyCacheDao.insertArtists(artists)
-      Log.i("SpotifyArtistRepository", "Inserted ${artists.size} artists")
+      Timber.d("Inserted ${artists.size} artists")
       offset += artists.size
     }
   }

@@ -8,6 +8,7 @@ plugins {
   alias(libs.plugins.dagger.hilt)
   alias(libs.plugins.google.services)
   alias(libs.plugins.google.firebase.crashlytics)
+  alias(libs.plugins.spotless)
 }
 
 android {
@@ -55,6 +56,19 @@ android {
 
   testOptions {
     animationsDisabled = true
+  }
+}
+
+spotless {
+  kotlin {
+    ktlint(libs.versions.ktlint.get())
+      .setUseExperimental(true)
+      .editorConfigOverride(mapOf("indent_size" to 2))
+  }
+  kotlinGradle {
+    target("*.gradle.kts")
+    ktlint(libs.versions.ktlint.get())
+      .editorConfigOverride(mapOf("indent_size" to 2))
   }
 }
 

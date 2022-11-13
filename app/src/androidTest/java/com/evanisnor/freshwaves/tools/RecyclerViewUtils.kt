@@ -9,12 +9,16 @@ import androidx.test.espresso.matcher.ViewMatchers
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers
+import org.hamcrest.Matchers.any
+import org.hamcrest.StringDescription
 
 class RecyclerViewUtils {
 
   companion object {
 
     fun scrollToPosition(position: Int): ViewAction = ScrollToPositionViewAction(position)
+
+    fun waitUntilViewDraw(matcher: Matcher<View>): ViewAction = WaitUntilViewDraw(matcher)
 
     fun atPositionOnView(position: Int, id: Int, matcher: Matcher<View>) =
       AtPositionOnViewMatcher(position, id, matcher)
@@ -85,5 +89,22 @@ class AtPositionOnViewAction(
     }
 
     action.perform(uiController, holder?.itemView)
+  }
+}
+
+class WaitUntilViewDraw(private val matcher: Matcher<View>) : ViewAction {
+  override fun getConstraints(): Matcher<View> = any(View::class.java)
+
+  override fun getDescription() = StringDescription().let {
+    matcher.describeTo(it)
+    "Wait until $it"
+  }
+
+  override fun perform(uiController: UiController?, view: View?) {
+    if (view == null || matcher.matches(view) || uiController == null) {
+      return
+    }
+
+    WaitForViewDrawIdlingResource().wait(uiController, view)
   }
 }

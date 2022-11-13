@@ -1,6 +1,7 @@
 package com.evanisnor.freshwaves.tools
 
 import android.view.View
+import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
@@ -9,16 +10,12 @@ import androidx.test.espresso.matcher.ViewMatchers
 import org.hamcrest.Description
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers
-import org.hamcrest.Matchers.any
-import org.hamcrest.StringDescription
 
 class RecyclerViewUtils {
 
   companion object {
 
     fun scrollToPosition(position: Int): ViewAction = ScrollToPositionViewAction(position)
-
-    fun waitUntilViewDraw(matcher: Matcher<View>): ViewAction = WaitUntilViewDraw(matcher)
 
     fun atPositionOnView(position: Int, id: Int, matcher: Matcher<View>) =
       AtPositionOnViewMatcher(position, id, matcher)
@@ -82,29 +79,25 @@ class AtPositionOnViewAction(
   )
 
   override fun perform(uiController: UiController, view: View) {
-    val holder = (view as RecyclerView).findViewHolderForAdapterPosition(position)
+    require(view is RecyclerView)
+    var holder = view.findViewHolderForAdapterPosition(position)
 
-    assert(holder != null) {
-      "Unable to find ViewHolder for position $position"
+    // findViewHolderForAdapterPosition may return null if the layout has not been calculated yet
+    // Wait for OnGlobalLayoutListener
+    while (holder == null) {
+      WaitForCallbackIdlingResource("Waiting for view holder at position $position").apply {
+        val layoutListener = OnGlobalLayoutListener {
+          proceed()
+        }
+
+        view.viewTreeObserver.addOnGlobalLayoutListener(layoutListener)
+        wait(uiController)
+        view.viewTreeObserver.removeOnGlobalLayoutListener(layoutListener)
+      }
+
+      holder = view.findViewHolderForAdapterPosition(position)
     }
 
-    action.perform(uiController, holder?.itemView)
-  }
-}
-
-class WaitUntilViewDraw(private val matcher: Matcher<View>) : ViewAction {
-  override fun getConstraints(): Matcher<View> = any(View::class.java)
-
-  override fun getDescription() = StringDescription().let {
-    matcher.describeTo(it)
-    "Wait until $it"
-  }
-
-  override fun perform(uiController: UiController?, view: View?) {
-    if (view == null || matcher.matches(view) || uiController == null) {
-      return
-    }
-
-    WaitForViewDrawIdlingResource().wait(uiController, view)
+    action.perform(uiController, holder.itemView)
   }
 }

@@ -31,7 +31,6 @@ class FreshAlbumsRobot {
   fun selectAlbumAt(index: Int) {
     onView(ViewMatchers.withId(R.id.freshAlbumsList))
       .perform(RecyclerViewUtils.scrollToPosition(index))
-      .perform(RecyclerViewUtils.waitUntilViewDraw(isDisplayed()))
       .perform(RecyclerViewUtils.atPositionOnView(index, ViewActions.click()))
   }
 

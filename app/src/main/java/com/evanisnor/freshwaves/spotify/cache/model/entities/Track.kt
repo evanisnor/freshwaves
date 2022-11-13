@@ -10,12 +10,12 @@ import java.time.Duration
     androidx.room.ForeignKey(
       entity = Album::class,
       parentColumns = ["id"],
-      childColumns = ["albumId"]
-    )
+      childColumns = ["albumId"],
+    ),
   ],
   indices = [
-    Index(value = ["albumId"])
-  ]
+    Index(value = ["albumId"]),
+  ],
 )
 data class Track(
   val id: Int,

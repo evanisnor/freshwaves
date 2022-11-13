@@ -7,10 +7,10 @@ import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
 class FreshAlbumsViewModel @Inject constructor(
@@ -28,5 +28,4 @@ class FreshAlbumsViewModel @Inject constructor(
       spotifyRepository.getLatestAlbums().collect(_albums::emit)
     }
   }
-
 }

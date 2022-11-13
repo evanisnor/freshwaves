@@ -36,7 +36,7 @@ class UpdaterBootstrapper @Inject constructor(
       intentFilter = IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction),
       receiver = {
         enqueue(workRequest())
-      }
+      },
     )
   }
 
@@ -50,7 +50,7 @@ class UpdaterBootstrapper @Inject constructor(
 
     val delay = Duration.between(
       ZonedDateTime.now(ZoneId.systemDefault()),
-      targetStartTime
+      targetStartTime,
     )
 
     enqueue(workRequest(delay))
@@ -65,5 +65,4 @@ class UpdaterBootstrapper @Inject constructor(
       .build()
 
   private fun enqueue(workRequest: WorkRequest) = workManager.enqueue(workRequest)
-
 }

@@ -12,5 +12,4 @@ class AttributionActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.attribution_activity)
   }
-
 }

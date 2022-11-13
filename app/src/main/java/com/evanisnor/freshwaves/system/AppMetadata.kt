@@ -15,13 +15,13 @@ class AppMetadata @Inject constructor() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
       context.packageManager.getApplicationInfo(
         context.packageName,
-        PackageManager.ApplicationInfoFlags.of(PackageManager.GET_META_DATA.toLong())
+        PackageManager.ApplicationInfoFlags.of(PackageManager.GET_META_DATA.toLong()),
       )
     } else {
       @Suppress("DEPRECATION")
       context.packageManager.getApplicationInfo(
         context.packageName,
-        PackageManager.GET_META_DATA
+        PackageManager.GET_META_DATA,
       )
     }.metaData.getString(id)
       ?: throw IllegalStateException("Unable to read app metadata")

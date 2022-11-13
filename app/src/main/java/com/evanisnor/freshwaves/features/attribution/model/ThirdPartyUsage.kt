@@ -2,7 +2,6 @@ package com.evanisnor.freshwaves.features.attribution.model
 
 import com.squareup.moshi.JsonClass
 
-
 @JsonClass(generateAdapter = true)
 data class AttributionList(
   val thirdPartyUsage: List<ThirdPartyUsage> = emptyList(),
@@ -38,13 +37,13 @@ data class Modification(
 )
 
 enum class LicenseReferenceType {
-  url,
-  embedded
+  URL,
+  EMBEDDED,
 }
 
 enum class ArtifactType {
-  api,
-  code,
-  binary,
-  svg
+  API,
+  CODE,
+  BINARY,
+  SVG,
 }

@@ -6,14 +6,16 @@ import androidx.room.Index
 
 @Entity(
   primaryKeys = ["url", "artistId"],
-  foreignKeys = [ForeignKey(
-    entity = Artist::class,
-    parentColumns = ["id"],
-    childColumns = ["artistId"]
-  )],
+  foreignKeys = [
+    ForeignKey(
+      entity = Artist::class,
+      parentColumns = ["id"],
+      childColumns = ["artistId"],
+    ),
+  ],
   indices = [
-    Index(value = ["artistId"])
-  ]
+    Index(value = ["artistId"]),
+  ],
 )
 data class ArtistImage(
   val url: String,

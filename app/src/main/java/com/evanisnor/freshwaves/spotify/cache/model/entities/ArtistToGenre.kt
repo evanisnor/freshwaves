@@ -9,18 +9,18 @@ import androidx.room.Index
     androidx.room.ForeignKey(
       entity = Artist::class,
       parentColumns = ["id"],
-      childColumns = ["artistId"]
+      childColumns = ["artistId"],
     ),
     androidx.room.ForeignKey(
       entity = ArtistGenre::class,
       parentColumns = ["id"],
-      childColumns = ["genreId"]
-    )
+      childColumns = ["genreId"],
+    ),
   ],
   indices = [
     Index(value = ["artistId"]),
-    Index(value = ["genreId"])
-  ]
+    Index(value = ["genreId"]),
+  ],
 )
 data class ArtistToGenre(
   val artistId: String,

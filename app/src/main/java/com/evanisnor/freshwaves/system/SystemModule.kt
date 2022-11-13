@@ -19,5 +19,4 @@ class SystemModule {
 
   @Provides
   fun moshi(): Moshi = Moshi.Builder().build()
-
 }

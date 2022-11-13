@@ -23,7 +23,6 @@ class RecyclerViewUtils {
     fun atPositionOnView(position: Int, action: ViewAction) =
       AtPositionOnViewAction(position, action)
   }
-
 }
 
 class ScrollToPositionViewAction(
@@ -35,7 +34,7 @@ class ScrollToPositionViewAction(
   override fun getConstraints(): Matcher<View> = Matchers.allOf(
     ViewMatchers.isEnabled(),
     ViewMatchers.isDisplayed(),
-    ViewMatchers.isAssignableFrom(RecyclerView::class.java)
+    ViewMatchers.isAssignableFrom(RecyclerView::class.java),
   )
 
   override fun perform(uiController: UiController, view: View) {
@@ -59,10 +58,9 @@ class AtPositionOnViewMatcher(
     return matcher.matches(
       recyclerView.findViewHolderForAdapterPosition(position)
         ?.itemView
-        ?.findViewById(id)
+        ?.findViewById(id),
     )
   }
-
 }
 
 class AtPositionOnViewAction(
@@ -75,7 +73,7 @@ class AtPositionOnViewAction(
   override fun getConstraints(): Matcher<View> = Matchers.allOf(
     ViewMatchers.isEnabled(),
     ViewMatchers.isDisplayed(),
-    ViewMatchers.isAssignableFrom(RecyclerView::class.java)
+    ViewMatchers.isAssignableFrom(RecyclerView::class.java),
   )
 
   override fun perform(uiController: UiController, view: View) {

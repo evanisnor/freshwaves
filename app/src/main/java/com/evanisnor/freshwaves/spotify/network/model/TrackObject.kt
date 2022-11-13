@@ -13,4 +13,4 @@ data class TrackObject(
   @field:Json(name = "duration_ms") val durationMs: Long,
   val artists: List<ArtistObject>,
 
-  )
+)

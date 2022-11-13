@@ -11,5 +11,4 @@ object AttributionModule {
 //    @Provides
 //    fun attributionListJsonAdapter(moshi: Moshi): AttributionListJsonAdapter =
 //        AttributionListJsonAdapter(moshi)
-
 }

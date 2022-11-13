@@ -4,13 +4,19 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.evanisnor.freshwaves.spotify.cache.model.entities.*
-import java.time.Instant
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.spotify.cache.model.entities.AlbumImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistGenre
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistToGenre
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
+import java.time.Instant
 
 @Suppress("FunctionName")
 @Dao
@@ -96,8 +102,8 @@ abstract class SpotifyCacheDao {
       _insertArtistToGenre(
         ArtistToGenre(
           artistId = artist.id,
-          genreId = genreId
-        )
+          genreId = genreId,
+        ),
       )
     }
 
@@ -126,25 +132,25 @@ abstract class SpotifyCacheDao {
 
   @Query(
     "SELECT * FROM Artist, Album" +
-        " WHERE Artist.id = :artistId" +
-        " AND Album.artistId = Artist.id" +
-        " ORDER BY releaseDate DESC"
+      " WHERE Artist.id = :artistId" +
+      " AND Album.artistId = Artist.id" +
+      " ORDER BY releaseDate DESC",
   )
   abstract fun _readAlbums(artistId: String): Flow<List<Album>>
 
   @Query(
     "SELECT * FROM Artist, Album" +
-        " WHERE Album.artistId = Artist.id" +
-        " ORDER BY releaseDate DESC" +
-        " LIMIT :limit"
+      " WHERE Album.artistId = Artist.id" +
+      " ORDER BY releaseDate DESC" +
+      " LIMIT :limit",
   )
   abstract suspend fun _readAlbums(limit: Int): List<Album>
 
   @Query(
     "SELECT * FROM Artist, Album" +
-        " WHERE Album.artistId = Artist.id" +
-        " ORDER BY releaseDate DESC" +
-        " LIMIT :limit"
+      " WHERE Album.artistId = Artist.id" +
+      " ORDER BY releaseDate DESC" +
+      " LIMIT :limit",
   )
   abstract fun _readAlbumsActive(limit: Int): Flow<List<Album>>
 
@@ -189,6 +195,4 @@ abstract class SpotifyCacheDao {
   abstract fun _insertTrack(track: Track)
 
   // endregion
-
-
 }

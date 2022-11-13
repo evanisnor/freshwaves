@@ -5,10 +5,10 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.user.UserProfile
-import java.time.Instant
-import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import timber.log.Timber
+import java.time.Instant
+import javax.inject.Inject
 
 class SpotifyAlbumRepository @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
@@ -30,7 +30,7 @@ class SpotifyAlbumRepository @Inject constructor(
   suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) {
     spotifyNetworkRepository.artistAlbums(
       artist = artist,
-      userProfile = userProfile
+      userProfile = userProfile,
     ).collect { albums ->
       spotifyCacheDao.insertAlbums(albums)
       Timber.d("Inserted ${albums.size} albums for ${artist.name}")
@@ -42,5 +42,4 @@ class SpotifyAlbumRepository @Inject constructor(
       spotifyCacheDao.insertTracks(tracks)
     }
   }
-
 }

@@ -21,8 +21,8 @@ class FakeHandyAuth : HandyAuth {
   }
 
   override fun authorize(
-      callingActivity: ComponentActivity,
-      resultCallback: (HandyAuth.Result) -> Unit,
+    callingActivity: ComponentActivity,
+    resultCallback: (HandyAuth.Result) -> Unit,
   ) {
     loggedIn = expectedAuthResult == HandyAuth.Result.Authorized
     resultCallback(expectedAuthResult)
@@ -34,7 +34,7 @@ class FakeHandyAuth : HandyAuth {
     } else {
       HandyAccessToken(
         token = "test-token",
-        tokenType = "Fake"
+        tokenType = "Fake",
       )
     }
 

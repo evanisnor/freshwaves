@@ -38,7 +38,7 @@ android {
       isMinifyEnabled = false
       proguardFiles(
         getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro"
+        "proguard-rules.pro",
       )
     }
   }
@@ -60,15 +60,22 @@ android {
 }
 
 spotless {
+  val editorConfig = mapOf(
+    "indent_size" to 2,
+    "no-wildcard-imports" to true,
+    "ij_kotlin_allow_trailing_comma" to true,
+    "ij_kotlin_allow_trailing_comma_on_call_site" to true,
+  )
+
   kotlin {
     ktlint(libs.versions.ktlint.get())
       .setUseExperimental(true)
-      .editorConfigOverride(mapOf("indent_size" to 2))
+      .editorConfigOverride(editorConfig)
   }
   kotlinGradle {
     target("*.gradle.kts")
     ktlint(libs.versions.ktlint.get())
-      .editorConfigOverride(mapOf("indent_size" to 2))
+      .editorConfigOverride(editorConfig)
   }
 }
 

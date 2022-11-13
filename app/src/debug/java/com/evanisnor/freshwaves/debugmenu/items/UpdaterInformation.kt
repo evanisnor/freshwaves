@@ -43,14 +43,14 @@ class UpdaterInformationViewHolder(
         lastRunOn.text = it
           .atOffset(currentOffset())
           .format(
-            DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+            DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault()),
           )
       }
       debugMenuData.nextRunOn?.let {
         nextRunOn.text = it
           .atOffset(currentOffset())
           .format(
-            DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+            DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault()),
           )
       }
 

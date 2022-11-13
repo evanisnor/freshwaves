@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Artist(
-    @PrimaryKey val id: String,
-    val name: String,
+  @PrimaryKey val id: String,
+  val name: String,
 ) {
 
   @Ignore
@@ -17,10 +17,10 @@ data class Artist(
   var genres: List<ArtistGenre> = emptyList()
 
   constructor(
-      id: String,
-      name: String,
-      images: List<ArtistImage> = emptyList(),
-      genres: List<ArtistGenre> = emptyList(),
+    id: String,
+    name: String,
+    images: List<ArtistImage> = emptyList(),
+    genres: List<ArtistGenre> = emptyList(),
   ) : this(id, name) {
     this.images = images
     this.genres = genres
@@ -29,5 +29,4 @@ data class Artist(
   override fun toString(): String {
     return "Artist(id=$id, name=$name, images=$images, genres=$genres)"
   }
-
 }

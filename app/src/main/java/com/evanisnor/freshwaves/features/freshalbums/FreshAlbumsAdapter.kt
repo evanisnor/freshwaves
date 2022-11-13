@@ -25,13 +25,12 @@ class FreshAlbumViewHolder(
       FreshAlbumViewHolder(
         LayoutInflater.from(parent.context)
           .inflate(R.layout.fresh_album_card, parent, false),
-        listener
+        listener,
       )
   }
 
   fun bind(album: Album) {
     FreshAlbumCardBinding.bind(itemView).apply {
-
       album.images.firstOrNull()?.let {
         albumImage.load(it.url)
         albumImage.tag = it.url
@@ -44,7 +43,7 @@ class FreshAlbumViewHolder(
         .atZone(ZoneId.systemDefault())
         .toLocalDate()
         .format(
-          DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault())
+          DateTimeFormatter.ofPattern("MMMM d", Locale.getDefault()),
         )
     }
 
@@ -52,7 +51,6 @@ class FreshAlbumViewHolder(
       listener?.onAlbumSelected(album)
     }
   }
-
 }
 
 class AlbumDiffCallback : DiffUtil.ItemCallback<Album>() {

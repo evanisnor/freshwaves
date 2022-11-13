@@ -9,8 +9,8 @@ import com.evanisnor.freshwaves.databinding.DebugActivityBinding
 import com.evanisnor.freshwaves.debugmenu.items.UpdaterInformation
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class DebugMenuActivity : AppCompatActivity() {
@@ -46,8 +46,8 @@ class DebugMenuActivity : AppCompatActivity() {
             lastRunState = debugMenuViewModel.updaterLastKnownState(),
             lastRunOn = debugMenuViewModel.updaterLastRunOn(),
             nextRunOn = debugMenuViewModel.updaterNextRunOn(),
-            onUpdateNow = { updaterBootstrapper.updateNow() }
-          )
+            onUpdateNow = { updaterBootstrapper.updateNow() },
+          ),
         )
       }
     }

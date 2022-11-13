@@ -21,7 +21,7 @@ object HandyAuthModule {
       redirectUrl = appMetadata.spotifyRedirectUri(application),
       authorizationUrl = "https://accounts.spotify.com/authorize",
       tokenUrl = "https://accounts.spotify.com/api/token",
-      scopes = listOf("user-top-read", "user-read-private", "user-read-email")
+      scopes = listOf("user-top-read", "user-read-private", "user-read-email"),
     )
 
   @OptIn(DelicateCoroutinesApi::class)
@@ -29,7 +29,6 @@ object HandyAuthModule {
   fun handyAuth(application: Application, handyAuthConfig: HandyAuthConfig): HandyAuth =
     HandyAuth.create(
       application = application,
-      config = handyAuthConfig
+      config = handyAuthConfig,
     )
-
 }

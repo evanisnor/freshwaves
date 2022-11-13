@@ -3,9 +3,9 @@ package com.evanisnor.freshwaves.spotify.repository
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import timber.log.Timber
 import javax.inject.Inject
 import kotlin.math.ceil
-import timber.log.Timber
 
 class SpotifyArtistRepository @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,

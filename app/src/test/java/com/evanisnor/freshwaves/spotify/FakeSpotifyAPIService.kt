@@ -18,22 +18,22 @@ class FakeSpotifyAPIService : SpotifyAPIService {
     requireNotNull(privateUser)
 
   override suspend fun getTopArtists(
-      accessToken: String,
-      limit: Int,
-      offset: Int,
+    accessToken: String,
+    limit: Int,
+    offset: Int,
   ): PagingObject<ArtistObject> =
     PagingObject(requireNotNull(topArtists).slice(offset until offset + limit))
 
   override suspend fun getArtistAlbums(
-      accessToken: String,
-      artistId: String,
-      market: String,
-      limit: Int,
-      includeGroups: String,
+    accessToken: String,
+    artistId: String,
+    market: String,
+    limit: Int,
+    includeGroups: String,
   ): PagingObject<AlbumObject> = PagingObject(requireNotNull(artistAlbums))
 
   override suspend fun getAlbumTracks(
-      accessToken: String,
-      albumId: String,
+    accessToken: String,
+    albumId: String,
   ): PagingObject<TrackObject> = PagingObject(requireNotNull(albumTracks))
 }

@@ -17,7 +17,7 @@ class FakeHandyAuth : HandyAuth {
 
   override suspend fun accessToken(): HandyAccessToken = HandyAccessToken(
     token = "test-token",
-    tokenType = "Fake"
+    tokenType = "Fake",
   )
 
   override suspend fun logout() {

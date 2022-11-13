@@ -10,10 +10,10 @@ import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import java.time.Instant
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber
+import java.time.Instant
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -59,5 +59,4 @@ class UpdateWorker @AssistedInject constructor(
       updateState(UpdaterState.Idle)
     }
   }
-
 }

@@ -14,7 +14,7 @@ class AlbumTrack(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun create(parent: ViewGroup) =
       AlbumTrack(
         LayoutInflater.from(parent.context)
-          .inflate(R.layout.album_details_track_item, parent, false)
+          .inflate(R.layout.album_details_track_item, parent, false),
       )
   }
 
@@ -27,5 +27,4 @@ class AlbumTrack(itemView: View) : RecyclerView.ViewHolder(itemView) {
       }
     }
   }
-
 }

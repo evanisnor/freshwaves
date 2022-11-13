@@ -10,7 +10,6 @@ import com.evanisnor.freshwaves.tools.TestDataLoader
 import com.evanisnor.freshwaves.tools.launchFragmentInHiltContainer
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import javax.inject.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
@@ -18,6 +17,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import javax.inject.Inject
 
 @HiltAndroidTest
 @OptIn(ExperimentalCoroutinesApi::class)
@@ -42,7 +42,7 @@ class FreshAlbumsTest {
       loadEntitiesRelationally(
         onArtists = { spotifyCacheDao.insertArtists(it) },
         onAlbums = { spotifyCacheDao.insertAlbums(it) },
-        onTracks = { spotifyCacheDao.insertTracks(it) }
+        onTracks = { spotifyCacheDao.insertTracks(it) },
       )
     }
   }
@@ -64,7 +64,7 @@ class FreshAlbumsTest {
 
     launchFragmentInHiltContainer<FreshAlbumsFragment>()
     InstrumentationRegistry.getInstrumentation().waitForIdleSync()
-    
+
     albumList.forEachIndexed { index, album ->
       freshAlbumsRobot.selectAlbumAt(index + 1)
       albumDetailsRobot.verifyAlbumOverview(album)

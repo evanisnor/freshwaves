@@ -10,14 +10,14 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.google.common.truth.Truth.assertThat
-import java.time.Duration
-import java.time.Instant
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import java.time.Duration
+import java.time.Instant
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
@@ -30,10 +30,12 @@ class SpotifyAlbumRepositoryTest {
   fun setup() {
     spotifyCacheDao = FakeSpotifyCacheDao()
     val spotifyNetworkRepository = SpotifyNetworkRepository(
-      SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-        authorize()
-      }),
-      FakeSpotifyAPIService()
+      SpotifyAuthorizationImpl(
+        FakeHandyAuth().apply {
+          authorize()
+        },
+      ),
+      FakeSpotifyAPIService(),
     )
 
     spotifyAlbumRepository = SpotifyAlbumRepository(spotifyNetworkRepository, spotifyCacheDao)
@@ -56,8 +58,8 @@ class SpotifyAlbumRepositoryTest {
           artist = artist01,
           name = "Album 1",
           releaseDate = Instant.ofEpochSecond(600L),
-        )
-      )
+        ),
+      ),
     )
 
     spotifyAlbumRepository.getLatestAlbums(limit = 1).test {
@@ -69,7 +71,7 @@ class SpotifyAlbumRepositoryTest {
             name = "Album 1",
             releaseDate = Instant.ofEpochSecond(600L),
           ),
-        )
+        ),
       )
     }
   }
@@ -91,8 +93,8 @@ class SpotifyAlbumRepositoryTest {
           artist = artist01,
           name = "Album 1",
           releaseDate = Instant.ofEpochSecond(600L),
-        )
-      )
+        ),
+      ),
     )
 
     val albums = spotifyAlbumRepository.getAlbumsReleasedAfter(Instant.ofEpochSecond(600L))
@@ -103,8 +105,8 @@ class SpotifyAlbumRepositoryTest {
           artist = artist01,
           name = "Album 1",
           releaseDate = Instant.ofEpochSecond(600L),
-        )
-      )
+        ),
+      ),
     )
   }
 
@@ -126,29 +128,35 @@ class SpotifyAlbumRepositoryTest {
             artist = artist01,
             name = "Album 1",
             releaseDate = Instant.ofEpochSecond(600L),
-          )
+          ),
         ),
       )
-      spotifyCacheDao.insertTracks(listOf(Track(0,
-        "0",
-        1,
-        0,
-        1,
-        "A song",
-        "",
-        Duration.ofMinutes(3L)
-      )))
+      spotifyCacheDao.insertTracks(
+        listOf(
+          Track(
+            0,
+            "0",
+            1,
+            0,
+            1,
+            "A song",
+            "",
+            Duration.ofMinutes(3L),
+          ),
+        ),
+      )
 
       val albumsMissingTracks = spotifyAlbumRepository.getLatestAlbumsMissingTracks()
 
-      assertThat(albumsMissingTracks).isEqualTo(listOf(
-        Album(
-          id = 0,
-          artist = artist01,
-          name = "Album 0",
-          releaseDate = Instant.ofEpochSecond(500L),
+      assertThat(albumsMissingTracks).isEqualTo(
+        listOf(
+          Album(
+            id = 0,
+            artist = artist01,
+            name = "Album 0",
+            releaseDate = Instant.ofEpochSecond(500L),
+          ),
         ),
-      ))
+      )
     }
-
 }

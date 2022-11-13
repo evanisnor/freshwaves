@@ -5,10 +5,15 @@ import androidx.room.Room
 import androidx.test.platform.app.InstrumentationRegistry
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCache
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
-import com.evanisnor.freshwaves.spotify.cache.model.entities.*
-import java.time.Instant
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.spotify.cache.model.entities.AlbumImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistGenre
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistToGenre
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import kotlinx.coroutines.flow.Flow
-
+import java.time.Instant
 
 @Suppress("TestFunctionName")
 class FakeSpotifyCacheDao(
@@ -16,7 +21,7 @@ class FakeSpotifyCacheDao(
   private val dao: SpotifyCacheDao =
     Room.inMemoryDatabaseBuilder(
       context,
-      SpotifyCache::class.java
+      SpotifyCache::class.java,
     ).allowMainThreadQueries().build().spotifyCacheDao(),
 ) : SpotifyCacheDao() {
 

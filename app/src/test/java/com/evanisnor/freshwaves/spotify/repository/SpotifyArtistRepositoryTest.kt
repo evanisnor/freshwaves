@@ -28,10 +28,12 @@ class SpotifyArtistRepositoryTest {
     spotifyAPIService = FakeSpotifyAPIService()
     spotifyCacheDao = FakeSpotifyCacheDao()
     val spotifyNetworkRepository = SpotifyNetworkRepository(
-      SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-        authorize()
-      }),
-      spotifyAPIService
+      SpotifyAuthorizationImpl(
+        FakeHandyAuth().apply {
+          authorize()
+        },
+      ),
+      spotifyAPIService,
     )
 
     spotifyArtistRepository = SpotifyArtistRepository(spotifyNetworkRepository, spotifyCacheDao)
@@ -48,7 +50,7 @@ class SpotifyArtistRepositoryTest {
       listOf(
         Artist("09", "Artist 09"),
         Artist("10", "Artist 10"),
-      )
+      ),
     )
   }
 
@@ -68,7 +70,7 @@ class SpotifyArtistRepositoryTest {
         listOf(
           Artist("01", "Artist 01"),
           Artist("02", "Artist 02"),
-        )
+        ),
       )
     }
 
@@ -88,8 +90,7 @@ class SpotifyArtistRepositoryTest {
         listOf(
           Artist("01", "Artist 01"),
           Artist("02", "Artist 02"),
-        )
+        ),
       )
     }
-
 }

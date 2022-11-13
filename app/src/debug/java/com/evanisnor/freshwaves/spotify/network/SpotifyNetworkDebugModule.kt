@@ -14,8 +14,9 @@ object SpotifyNetworkDebugModule {
 
   @Provides
   @ElementsIntoSet
-  fun interceptors(): Set<Interceptor> = setOf(HttpLoggingInterceptor().apply {
-    setLevel(HttpLoggingInterceptor.Level.BASIC)
-  })
-
+  fun interceptors(): Set<Interceptor> = setOf(
+    HttpLoggingInterceptor().apply {
+      setLevel(HttpLoggingInterceptor.Level.BASIC)
+    },
+  )
 }

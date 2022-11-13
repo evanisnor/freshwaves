@@ -34,14 +34,18 @@ class LoginActivity : AppCompatActivity() {
   }
 
   private fun proceed() {
-    startActivity(Intent(this, MainActivity::class.java).apply {
-      addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-    })
+    startActivity(
+      Intent(this, MainActivity::class.java).apply {
+        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+      },
+    )
   }
 
   private fun backToLogin() {
-    startActivity(Intent(this, LoginActivity::class.java).apply {
-      addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-    })
+    startActivity(
+      Intent(this, LoginActivity::class.java).apply {
+        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+      },
+    )
   }
 }

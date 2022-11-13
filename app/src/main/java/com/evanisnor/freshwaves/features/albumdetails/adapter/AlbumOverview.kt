@@ -19,7 +19,7 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun create(parent: ViewGroup) =
       AlbumOverview(
         LayoutInflater.from(parent.context)
-          .inflate(R.layout.album_details_overview_item, parent, false)
+          .inflate(R.layout.album_details_overview_item, parent, false),
       )
   }
 
@@ -37,13 +37,15 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
         .atZone(ZoneId.systemDefault())
         .toLocalDate()
         .format(
-          DateTimeFormatter.ofPattern("YYYY", Locale.getDefault())
+          DateTimeFormatter.ofPattern("YYYY", Locale.getDefault()),
         )
 
       playWithSpotifyButton?.setOnClickListener {
-        itemView.context.startActivity(Intent(Intent.ACTION_VIEW).apply {
-          data = album.spotifyUri
-        })
+        itemView.context.startActivity(
+          Intent(Intent.ACTION_VIEW).apply {
+            data = album.spotifyUri
+          },
+        )
       }
     }
   }

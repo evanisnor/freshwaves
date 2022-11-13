@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 
-
 fun LocalBroadcastManager.register(
   intentFilter: IntentFilter,
   receiver: () -> Unit,
@@ -17,6 +16,6 @@ fun LocalBroadcastManager.register(
         receiver()
       }
     },
-    intentFilter
+    intentFilter,
   )
 }

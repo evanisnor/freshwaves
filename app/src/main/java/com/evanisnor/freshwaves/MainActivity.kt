@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.main_activity)
   }
 
-
   private fun launchAlbumDetails(albumId: Int) {
     val albumDetailsFragment = AlbumDetailsFragment.create(albumId)
 

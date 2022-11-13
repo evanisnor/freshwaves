@@ -12,10 +12,10 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Named
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import javax.inject.Named
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -34,7 +34,7 @@ class UpdaterModule {
     PreferenceDataStoreFactory.create(
       corruptionHandler = null,
       migrations = listOf(),
-      scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+      scope = CoroutineScope(Dispatchers.Default + SupervisorJob()),
     ) {
       context.preferencesDataStoreFile("UpdaterMeta")
     }

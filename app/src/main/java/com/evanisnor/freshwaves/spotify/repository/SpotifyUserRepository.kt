@@ -9,5 +9,4 @@ class SpotifyUserRepository @Inject constructor(
 ) {
 
   suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
-
 }

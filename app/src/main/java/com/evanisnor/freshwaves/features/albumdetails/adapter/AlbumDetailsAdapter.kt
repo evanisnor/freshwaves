@@ -11,7 +11,7 @@ class AlbumDetailsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
   private enum class Type {
     Overview,
     Track,
-    Disc
+    Disc,
   }
 
   private var albumDetailsList = mutableListOf<Any>()
@@ -25,10 +25,9 @@ class AlbumDetailsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     albumDetailsList.clear()
     albumDetailsList.add(album)
     if (album.tracks.distinctBy {
-        it.discNumber
-
-
-      }.size > 1) {
+      it.discNumber
+    }.size > 1
+    ) {
       var disc = 0
       album.tracks.forEach { track ->
         if (track.discNumber != disc) {

@@ -11,7 +11,6 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-
 data class AppInformation(
   val version: String,
   val versionCode: Int,
@@ -39,9 +38,8 @@ class AppInformationViewHolder(
       buildDate.text = debugMenuData.builtOn
         .atZone(ZoneId.systemDefault())
         .format(
-          DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault())
+          DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault()),
         )
     }
   }
-
 }

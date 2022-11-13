@@ -10,12 +10,12 @@ import androidx.room.PrimaryKey
     ForeignKey(
       entity = Album::class,
       parentColumns = ["id"],
-      childColumns = ["albumId"]
-    )
+      childColumns = ["albumId"],
+    ),
   ],
   indices = [
-    Index(value = ["albumId"])
-  ]
+    Index(value = ["albumId"]),
+  ],
 )
 data class AlbumImage(
   @PrimaryKey val url: String,

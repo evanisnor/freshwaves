@@ -51,5 +51,4 @@ class SpotifyAuthorizationImpl @Inject constructor(
     LocalBroadcastManager.getInstance(context)
       .sendBroadcast(Intent(authorizationSuccessfulAction))
   }
-
 }

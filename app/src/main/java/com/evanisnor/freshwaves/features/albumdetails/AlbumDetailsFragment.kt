@@ -39,7 +39,6 @@ class AlbumDetailsFragment : Fragment() {
 
   private var albumId: Int? = null
 
-
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     albumId = arguments?.getInt(albumIdArgument)
@@ -58,7 +57,6 @@ class AlbumDetailsFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.apply {
-
       details.apply {
         adapter = AlbumDetailsAdapter()
         layoutManager = LinearLayoutManager(context)
@@ -81,11 +79,12 @@ class AlbumDetailsFragment : Fragment() {
       }
 
       playWithSpotifyButton?.setOnClickListener {
-        startActivity(Intent(Intent.ACTION_VIEW).apply {
-          data = album.spotifyUri
-        })
+        startActivity(
+          Intent(Intent.ACTION_VIEW).apply {
+            data = album.spotifyUri
+          },
+        )
       }
     }
-
   }
 }

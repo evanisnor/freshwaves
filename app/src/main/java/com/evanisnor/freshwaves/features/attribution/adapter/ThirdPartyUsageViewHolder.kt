@@ -21,7 +21,7 @@ class ThirdPartyUsageViewHolder(
   companion object {
     fun create(parent: ViewGroup) = ThirdPartyUsageViewHolder(
       LayoutInflater.from(parent.context)
-        .inflate(R.layout.third_party_usage_card, parent, false)
+        .inflate(R.layout.third_party_usage_card, parent, false),
     )
   }
 
@@ -29,7 +29,6 @@ class ThirdPartyUsageViewHolder(
     thirdPartyUsage: ThirdPartyUsage,
     onLicenseButtonSelected: (License) -> Unit = {},
   ) {
-
     ThirdPartyUsageCardBinding.bind(itemView).apply {
       thirdPartyUsageName.text = thirdPartyUsage.name
       thirdPartyUsageAuthor.text = thirdPartyUsage.author
@@ -44,7 +43,7 @@ class ThirdPartyUsageViewHolder(
         isVisible = thirdPartyUsage.modifications.isNotEmpty()
         text = context.resources.getString(
           R.string.attribution_modifications,
-          thirdPartyUsage.modifications.joinToString(",") { it.description }
+          thirdPartyUsage.modifications.joinToString(",") { it.description },
         )
       }
 
@@ -65,9 +64,11 @@ class ThirdPartyUsageViewHolder(
         usageSourceLabel.text = source.artifactType.name
         usageSource.text = source.name
         usageSource.setOnClickListener {
-          itemView.context.startActivity(Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse(source.url)
-          })
+          itemView.context.startActivity(
+            Intent(Intent.ACTION_VIEW).apply {
+              data = Uri.parse(source.url)
+            },
+          )
         }
       }
   }

@@ -54,5 +54,4 @@ class DebugMenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
       holder.bind(item)
     }
   }
-
 }

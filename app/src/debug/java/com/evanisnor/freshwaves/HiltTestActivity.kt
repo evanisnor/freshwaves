@@ -11,5 +11,4 @@ class HiltTestActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_activity)
   }
-
 }

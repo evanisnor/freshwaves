@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.evanisnor.freshwaves.tools
 
 import android.content.ComponentName
@@ -26,7 +25,6 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import com.evanisnor.freshwaves.HiltTestActivity
 import com.evanisnor.freshwaves.R
-
 
 /**
  * launchFragmentInContainer from the androidx.fragment:fragment-testing library
@@ -46,8 +44,8 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
   val startActivityIntent = Intent.makeMainActivity(
     ComponentName(
       ApplicationProvider.getApplicationContext(),
-      HiltTestActivity::class.java
-    )
+      HiltTestActivity::class.java,
+    ),
   )
 
   lateinit var fragment: Fragment
@@ -55,7 +53,7 @@ inline fun <reified T : Fragment> launchFragmentInHiltContainer(
     .onActivity { activity ->
       fragment = activity.supportFragmentManager.fragmentFactory.instantiate(
         Preconditions.checkNotNull(T::class.java.classLoader),
-        T::class.java.name
+        T::class.java.name,
       )
       fragment.arguments = fragmentArgs
       activity.supportFragmentManager

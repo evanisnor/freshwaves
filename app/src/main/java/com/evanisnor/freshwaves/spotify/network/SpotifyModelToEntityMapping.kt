@@ -1,7 +1,12 @@
 package com.evanisnor.freshwaves.spotify.network
 
 import android.net.Uri
-import com.evanisnor.freshwaves.spotify.cache.model.entities.*
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.spotify.cache.model.entities.AlbumImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistGenre
+import com.evanisnor.freshwaves.spotify.cache.model.entities.ArtistImage
+import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
 import com.evanisnor.freshwaves.spotify.network.model.AlbumObject
 import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
 import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
@@ -14,7 +19,7 @@ fun PrivateUserObject.mapToUserProfile() = UserProfile(
   id = id,
   name = displayName,
   email = email,
-  country = country
+  country = country,
 )
 
 @JvmName("mapToEntitiesArtistObject")
@@ -27,14 +32,14 @@ fun ArtistObject.mapToEntity() = Artist(
       url = imageObject.url,
       artistId = id,
       width = imageObject.width,
-      height = imageObject.height
+      height = imageObject.height,
     )
   } ?: emptyList(),
   genres?.map { genre ->
     ArtistGenre(
-      name = genre
+      name = genre,
     )
-  } ?: emptyList()
+  } ?: emptyList(),
 )
 
 @JvmName("mapToEntitiesAlbumObject")
@@ -46,7 +51,6 @@ fun Collection<AlbumObject>.mapToEntity(artistId: String) = map { albumObject ->
 @JvmName("mapToEntitiesAlbumObject")
 fun Collection<AlbumObject>.mapToEntity(artist: Artist) = map { it.mapToEntity(artist) }
 fun AlbumObject.mapToEntity(artist: Artist): Album {
-
   val albumId = "${artist.name} - ${name.filter { it.isLetterOrDigit() }}"
     .lowercase()
     .hashCode()
@@ -65,7 +69,7 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
         Instant.parse("${releaseDate}T00:00:00Z")
       }
       releaseDatePrecision == "year" -> {
-        Instant.parse("${releaseDate}-01-01T00:00:00Z")
+        Instant.parse("$releaseDate-01-01T00:00:00Z")
       }
       else -> {
         Instant.MIN
@@ -77,18 +81,17 @@ fun AlbumObject.mapToEntity(artist: Artist): Album {
         url = imageObject.url,
         albumId = albumId,
         width = imageObject.width,
-        height = imageObject.height
+        height = imageObject.height,
       )
     } ?: emptyList(),
     tracks?.map { trackObject ->
       trackObject.mapToEntity(albumId)
-    } ?: emptyList()
+    } ?: emptyList(),
   )
 }
 
 fun Collection<TrackObject>.mapToEntities(albumId: Int) = map { it.mapToEntity(albumId) }
 fun TrackObject.mapToEntity(albumId: Int): Track {
-
   val trackId = "$albumId - $discNumber - $trackNumber - ${name.filter { it.isLetterOrDigit() }}"
     .lowercase()
     .hashCode()
@@ -101,6 +104,6 @@ fun TrackObject.mapToEntity(albumId: Int): Track {
     trackNumber = trackNumber,
     name = name,
     uri = uri,
-    duration = Duration.ofMillis(durationMs)
+    duration = Duration.ofMillis(durationMs),
   )
 }

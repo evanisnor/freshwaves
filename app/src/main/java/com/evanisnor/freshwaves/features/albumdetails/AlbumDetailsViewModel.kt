@@ -12,5 +12,4 @@ class AlbumDetailsViewModel @Inject constructor(
 
   suspend fun getAlbumWithTracks(albumId: Int) =
     spotifyRepository.getAlbumWithTracks(albumId)
-
 }

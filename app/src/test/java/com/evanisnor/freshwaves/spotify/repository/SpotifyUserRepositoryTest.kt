@@ -25,10 +25,12 @@ class SpotifyUserRepositoryTest {
   fun setup() {
     spotifyAPIService = FakeSpotifyAPIService()
     val spotifyNetworkRepository = SpotifyNetworkRepository(
-      SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-        authorize()
-      }),
-      spotifyAPIService
+      SpotifyAuthorizationImpl(
+        FakeHandyAuth().apply {
+          authorize()
+        },
+      ),
+      spotifyAPIService,
     )
     spotifyUserRepository = SpotifyUserRepository(spotifyNetworkRepository)
   }
@@ -39,7 +41,7 @@ class SpotifyUserRepositoryTest {
       id = "user-004",
       email = "user004@email.com",
       displayName = "Test",
-      country = "X"
+      country = "X",
     )
 
     val userProfile = spotifyUserRepository.userProfile()
@@ -49,9 +51,8 @@ class SpotifyUserRepositoryTest {
         id = "user-004",
         email = "user004@email.com",
         name = "Test",
-        country = "X"
-      )
+        country = "X",
+      ),
     )
   }
-
 }

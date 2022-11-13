@@ -55,10 +55,10 @@ class FreshAlbumsFragment : Fragment() {
       toolbar.setOnMenuItemClickListener { item ->
         when (item.itemId) {
           R.id.attribution_menu_item -> startActivity(
-            Intent(activity, AttributionActivity::class.java)
+            Intent(activity, AttributionActivity::class.java),
           )
           R.id.debug_menu_item -> startActivity(
-            Intent(activity, DebugMenuActivity::class.java)
+            Intent(activity, DebugMenuActivity::class.java),
           )
         }
 
@@ -125,5 +125,4 @@ class FreshAlbumsFragment : Fragment() {
         .commit()
     }
   }
-
 }

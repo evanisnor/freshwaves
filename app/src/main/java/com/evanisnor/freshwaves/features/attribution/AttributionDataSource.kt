@@ -21,5 +21,4 @@ class AttributionDataSource @Inject constructor(
     private const val attributionDir = "attribution"
     private const val attributionFileName = "$attributionDir/attribution.json"
   }
-
 }

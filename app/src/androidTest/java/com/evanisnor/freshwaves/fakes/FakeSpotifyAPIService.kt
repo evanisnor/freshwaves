@@ -6,10 +6,10 @@ import com.evanisnor.freshwaves.spotify.network.model.ArtistObject
 import com.evanisnor.freshwaves.spotify.network.model.PagingObject
 import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
 import com.evanisnor.freshwaves.spotify.network.model.TrackObject
+import retrofit2.mock.BehaviorDelegate
 import java.util.Queue
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
-import retrofit2.mock.BehaviorDelegate
 
 /**
  * Fake API Service for Spotify network calls
@@ -17,7 +17,6 @@ import retrofit2.mock.BehaviorDelegate
 class FakeSpotifyAPIService(
   private val behaviorDelegate: BehaviorDelegate<SpotifyAPIService>,
 ) : SpotifyAPIService {
-
 
   // region UserProfile
 

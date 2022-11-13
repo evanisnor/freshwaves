@@ -47,6 +47,4 @@ class LicenseViewerFragment : Fragment() {
       binding?.licenseText?.text = attributionRepository.getLicenseText(it)
     }
   }
-
-
 }

@@ -6,8 +6,8 @@ import androidx.work.Configuration
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import dagger.hilt.android.HiltAndroidApp
-import javax.inject.Inject
 import timber.log.Timber
+import javax.inject.Inject
 
 @HiltAndroidApp
 class FreshWavesApp : Application(), Configuration.Provider {
@@ -34,5 +34,4 @@ class FreshWavesApp : Application(), Configuration.Provider {
   override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
     .setWorkerFactory(workerFactory)
     .build()
-
 }

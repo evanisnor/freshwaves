@@ -20,5 +20,4 @@ class AttributionRepository @Inject constructor(
   fun getLicenseText(source: String): String {
     return attributionDataSource.readLicenseText(source)
   }
-
 }

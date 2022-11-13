@@ -8,11 +8,11 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.tools.RecyclerViewUtils
+import org.hamcrest.CoreMatchers
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
-import org.hamcrest.CoreMatchers
 
 class AlbumDetailsRobot {
   private val dateTimeFormatter = DateTimeFormatter.ofPattern("YYYY", Locale.getDefault())
@@ -27,44 +27,48 @@ class AlbumDetailsRobot {
       .check(albumReleaseDateMatches(expectedAlbum.releaseDate))
   }
 
-
   // region Private Matchers
 
   private fun albumNameMatches(expectedAlbumName: String) = ViewAssertions.matches(
     RecyclerViewUtils.atPositionOnView(
-      0, R.id.albumName, ViewMatchers.withText(expectedAlbumName)
-    )
+      0,
+      R.id.albumName,
+      ViewMatchers.withText(expectedAlbumName),
+    ),
   )
 
   private fun artistNameMatches(expectedArtistName: String) = ViewAssertions.matches(
     RecyclerViewUtils.atPositionOnView(
-      0, R.id.artistName,
-      ViewMatchers.withText(expectedArtistName)
-    )
+      0,
+      R.id.artistName,
+      ViewMatchers.withText(expectedArtistName),
+    ),
   )
 
   private fun albumImageUrlMatches(expectedUrl: String) = ViewAssertions.matches(
     RecyclerViewUtils.atPositionOnView(
-      0, R.id.albumImage,
+      0,
+      R.id.albumImage,
       ViewMatchers.withTagValue(
-        CoreMatchers.`is`(expectedUrl)
-      )
-    )
+        CoreMatchers.`is`(expectedUrl),
+      ),
+    ),
   )
 
   private fun albumReleaseDateMatches(expectedReleaseDate: Instant) =
     ViewAssertions.matches(
       RecyclerViewUtils.atPositionOnView(
-        0, R.id.releaseDate, ViewMatchers.withText(
+        0,
+        R.id.releaseDate,
+        ViewMatchers.withText(
           expectedReleaseDate.atZone(
-            ZoneId.systemDefault()
+            ZoneId.systemDefault(),
           )
             .toLocalDate()
-            .format(dateTimeFormatter)
-        )
-      )
+            .format(dateTimeFormatter),
+        ),
+      ),
     )
 
   // region
-
 }

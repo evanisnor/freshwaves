@@ -13,7 +13,7 @@ class DiscHeader(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun create(parent: ViewGroup) =
       DiscHeader(
         LayoutInflater.from(parent.context)
-          .inflate(R.layout.album_details_disc_item, parent, false)
+          .inflate(R.layout.album_details_disc_item, parent, false),
       )
   }
 
@@ -22,5 +22,4 @@ class DiscHeader(itemView: View) : RecyclerView.ViewHolder(itemView) {
       discLabel.text = "Disc ${disc.number}"
     }
   }
-
 }

@@ -6,5 +6,5 @@ enum class UpdaterState {
   Success,
   Failure,
   Retry,
-  Unknown
+  Unknown,
 }

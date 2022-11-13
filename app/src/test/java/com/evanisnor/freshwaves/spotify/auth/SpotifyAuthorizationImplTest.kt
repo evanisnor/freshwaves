@@ -20,9 +20,11 @@ class SpotifyAuthorizationImplTest {
 
   @Test
   fun `isAuthorized - when HandyAuth is authorized - returns true`() = runTest {
-    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-      expectedAuthResult = HandyAuth.Result.Authorized
-    })
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Authorized
+      },
+    )
 
     spotifyAuthorization.authorize(activity)
 
@@ -43,9 +45,11 @@ class SpotifyAuthorizationImplTest {
 
   @Test
   fun `authorize - when authorization granted - returns Success`() = runTest {
-    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-      expectedAuthResult = HandyAuth.Result.Authorized
-    })
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Authorized
+      },
+    )
 
     val response = spotifyAuthorization.authorize(activity)
 
@@ -54,9 +58,11 @@ class SpotifyAuthorizationImplTest {
 
   @Test
   fun `authorize - when authorization denied - returns Failure`() = runTest {
-    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-      expectedAuthResult = HandyAuth.Result.Error.Denied
-    })
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Error.Denied
+      },
+    )
 
     val response = spotifyAuthorization.authorize(activity)
 
@@ -65,9 +71,11 @@ class SpotifyAuthorizationImplTest {
 
   @Test
   fun `getAuthorizationHeader - when authorized - returns auth header`() = runTest {
-    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-      expectedAuthResult = HandyAuth.Result.Authorized
-    })
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Authorized
+      },
+    )
 
     spotifyAuthorization.authorize(activity)
 
@@ -76,9 +84,11 @@ class SpotifyAuthorizationImplTest {
 
   @Test
   fun `getAuthorizationHeader - when not authorized - throws an error`() = runTest {
-    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply {
-      expectedAuthResult = HandyAuth.Result.Error.Denied
-    })
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Error.Denied
+      },
+    )
 
     spotifyAuthorization.authorize(activity)
 
@@ -88,6 +98,5 @@ class SpotifyAuthorizationImplTest {
     } catch (e: Throwable) {
       assert(true)
     }
-
   }
 }

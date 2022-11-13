@@ -41,7 +41,7 @@ class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
     binding?.thirdPartyUsageList?.apply {
       adapter = ThirdPartyUsageListAdapter(
         attributionRepository.getAttributionList(),
-        this@ThirdPartyUsageListFragment
+        this@ThirdPartyUsageListFragment,
       )
       layoutManager = LinearLayoutManager(context)
     }
@@ -49,15 +49,17 @@ class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
 
   override fun onSelected(license: License) {
     when (license.refType) {
-      LicenseReferenceType.url -> launchBrowser(license.source)
-      LicenseReferenceType.embedded -> launchLicenseViewer(license.source)
+      LicenseReferenceType.URL -> launchBrowser(license.source)
+      LicenseReferenceType.EMBEDDED -> launchLicenseViewer(license.source)
     }
   }
 
   private fun launchBrowser(source: String) {
-    startActivity(Intent(Intent.ACTION_VIEW).apply {
-      data = Uri.parse(source)
-    })
+    startActivity(
+      Intent(Intent.ACTION_VIEW).apply {
+        data = Uri.parse(source)
+      },
+    )
   }
 
   private fun launchLicenseViewer(source: String) {

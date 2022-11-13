@@ -14,12 +14,12 @@ import com.evanisnor.freshwaves.spotify.network.model.TrackObject
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
-import java.io.File
-import java.io.IOException
-import kotlin.reflect.KClass
 import okio.buffer
 import okio.source
 import timber.log.Timber
+import java.io.File
+import java.io.IOException
+import kotlin.reflect.KClass
 
 /**
  * Defined types of test data
@@ -28,7 +28,8 @@ enum class TestData(val base: KClass<*>, vararg val parameterized: KClass<*>) {
   User(PrivateUserObject::class),
   Artists(PagingObject::class, ArtistObject::class),
   Albums(PagingObject::class, AlbumObject::class),
-  Tracks(PagingObject::class, TrackObject::class);
+  Tracks(PagingObject::class, TrackObject::class),
+  ;
 
   val directory: String = name.lowercase()
 
@@ -65,7 +66,7 @@ class TestDataLoader(
       },
       onTracks = { _, albumEntity, tracksPage ->
         onTracks(tracksPage.items.mapToEntities(albumEntity.id))
-      }
+      },
     )
   }
 
@@ -99,17 +100,16 @@ class TestDataLoader(
                 },
                 onFileDoesNotExist = {
                   Timber.e("Tracks file does not exist for album ${artist.name}, ${album.name} | $tracksPath")
-                }
+                },
               )
             }
           },
           onFileDoesNotExist = {
             Timber.e("Albums file does not exist for artist ${artist.name} | $albumsPath")
-          }
+          },
         )
       }
     }
-
   }
 
   private fun <T> readAll(
@@ -160,11 +160,10 @@ class TestDataLoader(
     moshi.adapter<T>(
       Types.newParameterizedType(
         testData.base.java,
-        *(testData.parameterized.map { it.java }.toTypedArray())
-      )
+        *(testData.parameterized.map { it.java }.toTypedArray()),
+      ),
     )
   } else {
     moshi.adapter<T>(testData.base.java)
   }
-
 }

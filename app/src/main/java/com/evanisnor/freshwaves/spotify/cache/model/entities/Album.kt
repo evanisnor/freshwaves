@@ -13,12 +13,12 @@ import java.time.Instant
     ForeignKey(
       entity = Artist::class,
       parentColumns = ["id"],
-      childColumns = ["artistId"]
-    )
+      childColumns = ["artistId"],
+    ),
   ],
   indices = [
-    Index(value = ["artistId"])
-  ]
+    Index(value = ["artistId"]),
+  ],
 )
 data class Album(
   @PrimaryKey val id: Int,
@@ -62,4 +62,3 @@ data class Album(
       "Album(id=$id, spotifyId=$spotifyId, name=$name, releaseDate=$releaseDate, artist=$artist, images=$images, tracks=$tracks)"
     }
 }
-

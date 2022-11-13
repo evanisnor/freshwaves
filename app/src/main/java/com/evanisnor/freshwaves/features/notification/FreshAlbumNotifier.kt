@@ -16,9 +16,9 @@ import com.evanisnor.freshwaves.MainActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 class FreshAlbumNotifier @Inject constructor(
   @ApplicationContext private val context: Context,
@@ -61,7 +61,7 @@ class FreshAlbumNotifier @Inject constructor(
     val title = context.resources.getQuantityString(
       R.plurals.notification_fresh_albums_title,
       albums.size,
-      albums.size
+      albums.size,
     )
 
     val text = context.getString(R.string.notification_fresh_albums_text)
@@ -82,13 +82,13 @@ class FreshAlbumNotifier @Inject constructor(
     val title = context.getString(
       R.string.notification_fresh_album_title,
       album.name,
-      album.artist?.name ?: unknownArtist
+      album.artist?.name ?: unknownArtist,
     )
 
     val text = context.resources.getQuantityString(
       R.plurals.notification_fresh_album_text,
       album.tracks.size,
-      album.tracks.size
+      album.tracks.size,
     )
 
     val albumImage = fetchAlbumImage(album)
@@ -120,7 +120,7 @@ class FreshAlbumNotifier @Inject constructor(
       Intent(context, MainActivity::class.java).apply {
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
       },
-      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
     )
 
   private fun launchAlbumDetailsPendingIntent(albumId: Int): PendingIntent =
@@ -131,14 +131,15 @@ class FreshAlbumNotifier @Inject constructor(
         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         putExtra(MainActivity.extraAlbumId, albumId)
       },
-      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
     )
 
-
   private suspend fun fetchAlbumImage(album: Album): Bitmap? {
-    val albumImageResult = imageLoader.execute(ImageRequest.Builder(context).apply {
-      data(album.images.first().url)
-    }.build())
+    val albumImageResult = imageLoader.execute(
+      ImageRequest.Builder(context).apply {
+        data(album.images.first().url)
+      }.build(),
+    )
 
     return if (albumImageResult is SuccessResult) {
       (albumImageResult.drawable as BitmapDrawable).bitmap

@@ -18,7 +18,6 @@ object SpotifyCacheModule {
   fun spotifyCacheDao(@ApplicationContext context: Context) = Room.databaseBuilder(
     context,
     SpotifyCache::class.java,
-    "spotifyCache"
+    "spotifyCache",
   ).build().spotifyCacheDao()
-
 }

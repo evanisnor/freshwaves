@@ -22,14 +22,16 @@ object SpotifyNetworkModule {
       .addConverterFactory(MoshiConverterFactory.create())
       .client(
         OkHttpClient.Builder()
-          .dispatcher(Dispatcher().apply {
-            maxRequestsPerHost = 1
-          })
+          .dispatcher(
+            Dispatcher().apply {
+              maxRequestsPerHost = 1
+            },
+          )
           .addNetworkInterceptor(RateLimitInterceptor(delayMs = 500))
           .apply {
             interceptors.forEach { addNetworkInterceptor(it) }
           }
-          .build()
+          .build(),
       )
       .build()
       .create(SpotifyAPIService::class.java)
@@ -37,5 +39,4 @@ object SpotifyNetworkModule {
   @Provides
   @ElementsIntoSet
   fun interceptors(): Set<Interceptor> = emptySet()
-
 }

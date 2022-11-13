@@ -14,5 +14,4 @@ object DebugLoggingModule {
   @Provides
   @ElementsIntoSet
   fun debugTrees(): Set<Timber.Tree> = setOf(Timber.DebugTree())
-
 }

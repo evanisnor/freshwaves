@@ -19,14 +19,13 @@ import com.evanisnor.freshwaves.tools.TestData
 import com.evanisnor.freshwaves.tools.TestDataLoader
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import javax.inject.Inject
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-
+import javax.inject.Inject
 
 @HiltAndroidTest
 @RunWith(AndroidJUnit4::class)
@@ -56,7 +55,6 @@ class UpdaterTest {
     hiltRule.inject()
 
     (spotifyAPIService as FakeSpotifyAPIService).apply {
-
       with(TestDataLoader(context)) {
         loadAllByType<PrivateUserObject>(TestData.User) {
           user = it
@@ -68,7 +66,7 @@ class UpdaterTest {
           },
           onTracks = { albumObject, _, trackPage ->
             queueTracks(albumObject.id, trackPage)
-          }
+          },
         )
       }
     }
@@ -84,7 +82,7 @@ class UpdaterTest {
 
   private fun createUpdateWorker() = TestListenableWorkerBuilder.from(
     ApplicationProvider.getApplicationContext(),
-    UpdateWorker::class.java
+    UpdateWorker::class.java,
   ).setWorkerFactory(workerFactory)
     .build() as CoroutineWorker
 }

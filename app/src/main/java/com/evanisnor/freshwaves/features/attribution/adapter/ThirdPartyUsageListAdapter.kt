@@ -16,7 +16,7 @@ class ThirdPartyUsageListAdapter(
   override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
     (holder as ThirdPartyUsageViewHolder).bind(
       attributionList.thirdPartyUsage[position],
-      onLicenseSelectedListener::onSelected
+      onLicenseSelectedListener::onSelected,
     )
   }
 

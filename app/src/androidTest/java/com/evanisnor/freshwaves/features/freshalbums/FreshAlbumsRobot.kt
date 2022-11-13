@@ -8,11 +8,11 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.tools.RecyclerViewUtils
+import org.hamcrest.CoreMatchers
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
-import org.hamcrest.CoreMatchers
 
 class FreshAlbumsRobot {
 
@@ -38,38 +38,43 @@ class FreshAlbumsRobot {
 
   private fun albumNameMatches(index: Int, expectedAlbumName: String) = matches(
     RecyclerViewUtils.atPositionOnView(
-      index, R.id.albumName, ViewMatchers.withText(expectedAlbumName)
-    )
+      index,
+      R.id.albumName,
+      ViewMatchers.withText(expectedAlbumName),
+    ),
   )
 
   private fun artistNameMatches(index: Int, expectedArtistName: String) = matches(
     RecyclerViewUtils.atPositionOnView(
-      index, R.id.artistName,
-      ViewMatchers.withText(expectedArtistName)
-    )
+      index,
+      R.id.artistName,
+      ViewMatchers.withText(expectedArtistName),
+    ),
   )
 
   private fun albumImageUrlMatches(index: Int, expectedUrl: String) = matches(
     RecyclerViewUtils.atPositionOnView(
-      index, R.id.albumImage,
+      index,
+      R.id.albumImage,
       ViewMatchers.withTagValue(
-        CoreMatchers.`is`(expectedUrl)
-      )
-    )
+        CoreMatchers.`is`(expectedUrl),
+      ),
+    ),
   )
 
   private fun albumReleaseDateMatches(index: Int, expectedReleaseDate: Instant) = matches(
     RecyclerViewUtils.atPositionOnView(
-      index, R.id.releaseDate, ViewMatchers.withText(
+      index,
+      R.id.releaseDate,
+      ViewMatchers.withText(
         expectedReleaseDate.atZone(
-          ZoneId.systemDefault()
+          ZoneId.systemDefault(),
         )
           .toLocalDate()
-          .format(dateTimeFormatter)
-      )
-    )
+          .format(dateTimeFormatter),
+      ),
+    ),
   )
 
   // region
-
 }

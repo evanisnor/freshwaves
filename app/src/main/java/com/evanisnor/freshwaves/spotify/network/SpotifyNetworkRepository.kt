@@ -4,11 +4,11 @@ import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.user.UserProfile
-import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 class SpotifyNetworkRepository @Inject constructor(
   private val spotifyAuthorization: SpotifyAuthorization,
@@ -25,7 +25,7 @@ class SpotifyNetworkRepository @Inject constructor(
     val topArtists = spotifyAPIService.getTopArtists(
       accessToken = bearerToken,
       limit = limit,
-      offset = offset
+      offset = offset,
     )
     topArtists.items.mapToEntity()
   }
@@ -38,7 +38,7 @@ class SpotifyNetworkRepository @Inject constructor(
     val albums = spotifyAPIService.getArtistAlbums(
       accessToken = bearerToken,
       artistId = artist.id,
-      market = userProfile.country
+      market = userProfile.country,
     )
     emit(albums.items.mapToEntity(artist.id))
   }.flowOn(Dispatchers.IO)
@@ -47,7 +47,7 @@ class SpotifyNetworkRepository @Inject constructor(
     val bearerToken = spotifyAuthorization.getAuthorizationHeader()
     val tracks = spotifyAPIService.getAlbumTracks(
       accessToken = bearerToken,
-      albumId = album.spotifyId
+      albumId = album.spotifyId,
     )
     emit(tracks.items.mapToEntities(album.id))
   }.flowOn(Dispatchers.IO)

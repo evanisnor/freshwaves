@@ -20,12 +20,9 @@ class FakeHandyAuth : HandyAuth {
     loggedIn = true
   }
 
-  override fun authorize(
-    callingActivity: ComponentActivity,
-    resultCallback: (HandyAuth.Result) -> Unit,
-  ) {
+  override suspend fun authorize(callingActivity: ComponentActivity): HandyAuth.Result {
     loggedIn = expectedAuthResult == HandyAuth.Result.Authorized
-    resultCallback(expectedAuthResult)
+    return expectedAuthResult
   }
 
   override suspend fun accessToken(): HandyAccessToken =

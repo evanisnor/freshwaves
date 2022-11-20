@@ -13,8 +13,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.coroutines.resume
-import kotlin.coroutines.suspendCoroutine
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -32,17 +30,12 @@ class SpotifyAuthorizationImpl @Inject constructor(
     get() = handyAuth.isAuthorized
 
   override suspend fun authorize(activity: ComponentActivity): SpotifyAuthorization.Response =
-    suspendCoroutine { continuation ->
-      handyAuth.authorize(activity) { result ->
-        when (result) {
-          is HandyAuth.Result.Authorized -> {
-            sendSuccessfulAuthorizationBroadcast(activity)
-            continuation.resume(SpotifyAuthorization.Response.Success)
-          }
-          is HandyAuth.Result.Error ->
-            continuation.resume(SpotifyAuthorization.Response.Failure)
-        }
+    when (handyAuth.authorize(activity)) {
+      is HandyAuth.Result.Authorized -> {
+        sendSuccessfulAuthorizationBroadcast(activity)
+        SpotifyAuthorization.Response.Success
       }
+      is HandyAuth.Result.Error -> SpotifyAuthorization.Response.Failure
     }
 
   override suspend fun getAuthorizationHeader(): String = handyAuth.accessToken().asHeaderValue()

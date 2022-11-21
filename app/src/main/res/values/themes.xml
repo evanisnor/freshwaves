@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.FreshWaves" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.FreshWaves" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primaryVariant</item>
@@ -69,7 +69,7 @@
         <item name="fontFamily">@font/bebas_neue_regular</item>
     </style>
 
-    <style name="FreshAlbumCardTheme" parent="Widget.MaterialComponents.CardView">
+    <style name="FreshAlbumCardTheme" parent="Widget.Material3.CardView.Elevated">
         <item name="android:background">@color/surface</item>
         <item name="android:textColor">@color/onSurface</item>
         <item name="colorOnSurface">@color/onSurface</item>
@@ -77,11 +77,12 @@
         <item name="textAppearanceBody1">@color/onSurface</item>
     </style>
 
-    <style name="FreshLoadingSpinner" parent="Widget.MaterialComponents.CircularProgressIndicator" />
+    <style name="FreshFloatingActionButton" parent="Widget.Material3.FloatingActionButton.Surface" />
+
+    <style name="FreshLoadingSpinner" parent="Widget.Material3.CircularProgressIndicator" />
 
     <style name="FreshLoadingMessage">
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
-        </item>
+        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
         <item name="android:textColor">@color/onSurface</item>
         <item name="background">@null</item>
         <item name="android:padding">8dp</item>

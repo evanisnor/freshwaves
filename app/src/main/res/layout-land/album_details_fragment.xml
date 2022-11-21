@@ -30,6 +30,7 @@
         tools:listitem="@layout/album_details_track_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        style="@style/FreshFloatingActionButton"
         android:id="@+id/playWithSpotifyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

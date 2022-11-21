@@ -73,6 +73,7 @@
         <item name="android:background">@color/surface</item>
         <item name="android:textColor">@color/onSurface</item>
         <item name="colorOnSurface">@color/onSurface</item>
+        <item name="android:textAppearance">@color/onSurface</item>
         <item name="textAppearanceBody1">@color/onSurface</item>
     </style>
 

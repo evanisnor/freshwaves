@@ -7,7 +7,7 @@
         <shape android:shape="rectangle">
             <stroke
                 android:width="2dp"
-                android:color="?attr/colorPrimary" />
+                android:color="@color/onSurface" />
             <solid android:color="?android:attr/statusBarColor" />
         </shape>
     </item>

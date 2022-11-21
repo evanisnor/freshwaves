@@ -10,7 +10,7 @@
     <color name="backgroundOverlay">#66172022</color>
     <color name="onBackground">#FAFAFA</color>
     <color name="surface">#364B4F</color>
-    <color name="onSurface">#FAFAFA</color>
+    <color name="onSurface">#ebfff4</color>
     <color name="error">#DC143C</color>
-    <color name="onError">#FAFAFA</color>
+    <color name="onError">#ebfff4</color>
 </resources>

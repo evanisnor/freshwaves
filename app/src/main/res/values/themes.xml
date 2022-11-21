@@ -51,7 +51,7 @@
         <item name="popupTheme">@style/Theme.PopupOverlay.Menu</item>
     </style>
 
-    <style name="Theme.PopupOverlay.Menu" parent="ThemeOverlay.AppCompat.Light">
+    <style name="Theme.PopupOverlay.Menu" parent="ThemeOverlay.Material3.Light">
         <item name="android:textColor">@color/onBackground</item>
     </style>
 

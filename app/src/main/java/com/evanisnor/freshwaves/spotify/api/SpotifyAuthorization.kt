@@ -25,6 +25,11 @@ interface SpotifyAuthorization {
   suspend fun authorize(activity: ComponentActivity): Response
 
   /**
+   * Log out of Spotify by resetting auth cache
+   */
+  suspend fun logout()
+
+  /**
    * Get the latest authorization header value for API requests
    */
   suspend fun getAuthorizationHeader(): String

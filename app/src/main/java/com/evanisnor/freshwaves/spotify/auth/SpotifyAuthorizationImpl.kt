@@ -38,6 +38,10 @@ class SpotifyAuthorizationImpl @Inject constructor(
       is HandyAuth.Result.Error -> SpotifyAuthorization.Response.Failure
     }
 
+  override suspend fun logout() {
+    handyAuth.logout()
+  }
+
   override suspend fun getAuthorizationHeader(): String = handyAuth.accessToken().asHeaderValue()
 
   private fun sendSuccessfulAuthorizationBroadcast(context: Context) {

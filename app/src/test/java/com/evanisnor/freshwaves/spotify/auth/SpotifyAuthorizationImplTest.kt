@@ -70,6 +70,18 @@ class SpotifyAuthorizationImplTest {
   }
 
   @Test
+  fun `logout - when authorized - logs you out`() = runTest {
+    val handyAuth = FakeHandyAuth().apply {
+      expectedAuthResult = HandyAuth.Result.Authorized
+    }
+    val spotifyAuthorization = SpotifyAuthorizationImpl(handyAuth)
+
+    spotifyAuthorization.logout()
+
+    assertThat(handyAuth.isAuthorized).isFalse()
+  }
+
+  @Test
   fun `getAuthorizationHeader - when authorized - returns auth header`() = runTest {
     val spotifyAuthorization = SpotifyAuthorizationImpl(
       FakeHandyAuth().apply {

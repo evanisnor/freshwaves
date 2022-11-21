@@ -8,6 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import javax.inject.Inject
 
 class SpotifyNetworkRepository @Inject constructor(
@@ -16,12 +17,12 @@ class SpotifyNetworkRepository @Inject constructor(
 ) {
 
   suspend fun userProfile(): UserProfile = withContext(Dispatchers.IO) {
-    val bearerToken = spotifyAuthorization.getAuthorizationHeader()
+    val bearerToken = getBearerToken()
     spotifyAPIService.getUserProfile(bearerToken).mapToUserProfile()
   }
 
   suspend fun topArtists(limit: Int, offset: Int): List<Artist> = withContext(Dispatchers.IO) {
-    val bearerToken = spotifyAuthorization.getAuthorizationHeader()
+    val bearerToken = getBearerToken()
     val topArtists = spotifyAPIService.getTopArtists(
       accessToken = bearerToken,
       limit = limit,
@@ -34,7 +35,7 @@ class SpotifyNetworkRepository @Inject constructor(
     artist: Artist,
     userProfile: UserProfile,
   ) = flow {
-    val bearerToken = spotifyAuthorization.getAuthorizationHeader()
+    val bearerToken = getBearerToken()
     val albums = spotifyAPIService.getArtistAlbums(
       accessToken = bearerToken,
       artistId = artist.id,
@@ -44,11 +45,19 @@ class SpotifyNetworkRepository @Inject constructor(
   }.flowOn(Dispatchers.IO)
 
   suspend fun albumTracks(album: Album) = flow {
-    val bearerToken = spotifyAuthorization.getAuthorizationHeader()
+    val bearerToken = getBearerToken()
     val tracks = spotifyAPIService.getAlbumTracks(
       accessToken = bearerToken,
       albumId = album.spotifyId,
     )
     emit(tracks.items.mapToEntities(album.id))
   }.flowOn(Dispatchers.IO)
+
+  private suspend fun getBearerToken(): String = try {
+    spotifyAuthorization.getAuthorizationHeader()
+  } catch (error: Throwable) {
+    Timber.e(error)
+    spotifyAuthorization.logout()
+    throw error
+  }
 }

@@ -25,5 +25,6 @@
     <string name="title_activity_attribution">Attribution</string>
     <string name="attribution_modifications">Modifications: %1$s</string>
     <string name="menu_open_source">Open Source Attribution</string>
+    <string name="attribution_license_label">license</string>
 
 </resources>

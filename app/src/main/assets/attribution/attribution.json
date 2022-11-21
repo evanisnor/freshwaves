@@ -5,14 +5,14 @@
       "author": "Spotify AB",
       "license": {
         "name": "Spotify Developer Policy",
-        "refType": "url",
+        "refType": "URL",
         "source": "https://developer.spotify.com/policy"
       },
       "licenseUrl": "https://developer.spotify.com/policy",
       "usage": "User authentication, retrieving and caching metadata",
       "sources": [
         {
-          "artifactType": "api",
+          "artifactType": "API",
           "name": "Web API",
           "url": "https://developer.spotify.com/documentation/web-api"
         }
@@ -23,13 +23,13 @@
       "author": "Maxicons",
       "license": {
         "name": "CC BY 4.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "cc_by_4.0.license"
       },
       "usage": "App icon",
       "sources": [
         {
-          "artifactType": "svg",
+          "artifactType": "SVG",
           "name": "Iconfinder.com",
           "url": "https://www.iconfinder.com/iconsets/japan-flat-2"
         }
@@ -45,13 +45,13 @@
       "author": "Icon54",
       "license": {
         "name": "Free with Attribution",
-        "refType": "url",
+        "refType": "URL",
         "source": "https://www.iconfinder.com/icon54"
       },
       "usage": "Menu icon",
       "sources": [
         {
-          "artifactType": "svg",
+          "artifactType": "SVG",
           "name": "Iconfinder.com",
           "url": "https://www.iconfinder.com/iconsets/logos-4"
         }
@@ -62,18 +62,18 @@
       "author": "Google, Dagger Authors",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Dependency injection",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "GitHub",
           "url": "https://github.com/google/dagger"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Maven Central",
           "url": "https://search.maven.org/artifact/com.google.dagger/dagger"
         }
@@ -84,18 +84,18 @@
       "author": "Google",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Usability enhancements",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "googlesource.com",
           "url": "https://android.googlesource.com/platform/frameworks/support"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Google Maven",
           "url": "https://maven.google.com"
         }
@@ -106,18 +106,18 @@
       "author": "Block, Inc.",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Communicating with remote services",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "GitHub",
           "url": "https://github.com/square/retrofit"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Maven Central",
           "url": "https://search.maven.org/artifact/com.squareup.retrofit2/retrofit"
         }
@@ -128,18 +128,18 @@
       "author": "Block, Inc.",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Communicating with remote services",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "GitHub",
           "url": "https://github.com/square/okhttp"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Maven Central",
           "url": "https://search.maven.org/artifact/com.squareup.okhttp3/okhttp"
         }
@@ -150,18 +150,18 @@
       "author": "Block, Inc.",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Serializing and de-serializing of JSON-formatted information",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "GitHub",
           "url": "https://github.com/square/moshi"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Maven Central",
           "url": "https://search.maven.org/artifact/com.squareup.moshi/moshi"
         }
@@ -172,18 +172,18 @@
       "author": "Instacart",
       "license": {
         "name": "Apache 2.0",
-        "refType": "embedded",
+        "refType": "EMBEDDED",
         "source": "apache_2.0.license"
       },
       "usage": "Fetching images from remote services for display to the user",
       "sources": [
         {
-          "artifactType": "code",
+          "artifactType": "CODE",
           "name": "GitHub",
           "url": "https://github.com/coil-kt/coil"
         },
         {
-          "artifactType": "binary",
+          "artifactType": "BINARY",
           "name": "Maven Central",
           "url": "https://search.maven.org/artifact/io.coil-kt/coil"
         }

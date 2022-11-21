@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.FreshWaves" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.FreshWaves" parent="Theme.Material3.Dark.NoActionBar">
         <item name="fontFamily">@font/yantramanav_regular</item>
 
         <!-- Primary brand color. -->

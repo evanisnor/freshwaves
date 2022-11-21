@@ -18,7 +18,18 @@
             android:id="@+id/toolbar"
             style="@style/FreshToolbar.AppBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:navigationIcon="?attr/homeAsUpIndicator">
+
+            <ImageView
+                style="@style/FreshToolbar.Icon"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_open_source"
+                app:tint="@color/onSurface" />
 
             <TextView
                 style="@style/FreshToolbar.Title"
@@ -31,6 +42,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        style="@style/FreshAlbumList"
         android:id="@+id/thirdPartyUsageList"
         android:layout_width="0dp"
         android:layout_height="0dp"

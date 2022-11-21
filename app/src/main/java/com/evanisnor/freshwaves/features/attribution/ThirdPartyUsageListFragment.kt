@@ -38,12 +38,18 @@ class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
-    binding?.thirdPartyUsageList?.apply {
-      adapter = ThirdPartyUsageListAdapter(
-        attributionRepository.getAttributionList(),
-        this@ThirdPartyUsageListFragment,
-      )
-      layoutManager = LinearLayoutManager(context)
+    binding?.apply {
+      toolbar.setNavigationOnClickListener {
+        activity?.finish()
+      }
+
+      thirdPartyUsageList.apply {
+        adapter = ThirdPartyUsageListAdapter(
+          attributionRepository.getAttributionList(),
+          this@ThirdPartyUsageListFragment,
+        )
+        layoutManager = LinearLayoutManager(context)
+      }
     }
   }
 

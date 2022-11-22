@@ -1,6 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
 import java.time.Instant
+import java.util.Properties
+import java.io.FileInputStream
 
 plugins {
   alias(libs.plugins.android.application)
@@ -12,6 +14,11 @@ plugins {
   alias(libs.plugins.google.firebase.crashlytics)
   alias(libs.plugins.spotless)
 }
+
+
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 android {
   compileSdk = 33
@@ -42,6 +49,17 @@ android {
         getDefaultProguardFile("proguard-android-optimize.txt"),
         "proguard-rules.pro",
       )
+    }
+  }
+
+  if (keystorePropertiesFile.exists()) {
+    signingConfigs {
+      create("release") {
+        keyAlias = keystoreProperties["keyAlias"].toString()
+        keyPassword = keystoreProperties["keyPassword"].toString()
+        storeFile = file(keystoreProperties["storeFile"].toString())
+        storePassword = keystoreProperties["storePassword"].toString()
+      }
     }
   }
 

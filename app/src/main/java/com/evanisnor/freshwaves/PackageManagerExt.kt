@@ -21,7 +21,7 @@ fun PackageManager.getAppSignature(packageName: String): String {
     getPackageInfo(
       packageName,
       PackageManager.GET_SIGNING_CERTIFICATES,
-    ).signatures.first().toByteArray()
+    ).signingInfo.signingCertificateHistory.first().toByteArray()
   } else {
     @Suppress("PackageManagerGetSignatures", "DEPRECATION")
     getPackageInfo(

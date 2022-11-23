@@ -1,8 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+import java.io.FileInputStream
 import java.time.Instant
 import java.util.Properties
-import java.io.FileInputStream
 
 plugins {
   alias(libs.plugins.android.application)
@@ -14,7 +14,6 @@ plugins {
   alias(libs.plugins.google.firebase.crashlytics)
   alias(libs.plugins.spotless)
 }
-
 
 val keystorePropertiesFile = rootProject.file("keystore.properties")
 val keystoreProperties = Properties()
@@ -37,21 +36,6 @@ android {
     testInstrumentationRunner = "com.evanisnor.freshwaves.runner.HiltAndroidTestRunner"
   }
 
-  buildFeatures {
-    buildConfig = true
-    viewBinding = true
-  }
-
-  buildTypes {
-    release {
-      isMinifyEnabled = false
-      proguardFiles(
-        getDefaultProguardFile("proguard-android-optimize.txt"),
-        "proguard-rules.pro",
-      )
-    }
-  }
-
   if (keystorePropertiesFile.exists()) {
     signingConfigs {
       create("release") {
@@ -60,6 +44,22 @@ android {
         storeFile = file(keystoreProperties["storeFile"].toString())
         storePassword = keystoreProperties["storePassword"].toString()
       }
+    }
+  }
+
+  buildFeatures {
+    buildConfig = true
+    viewBinding = true
+  }
+
+  buildTypes {
+    release {
+      isMinifyEnabled = false
+      signingConfig = signingConfigs.getByName("release")
+      proguardFiles(
+        getDefaultProguardFile("proguard-android-optimize.txt"),
+        "proguard-rules.pro",
+      )
     }
   }
 

@@ -11,5 +11,5 @@ object BackendAPIURLModule {
 
   @Provides
   @BackendAPIModule.BackendUrl
-  fun backendUrl(): String = "https://freshwaves.evanisnor.com/"
+  fun backendUrl(): String = "https://freshwaves.api.evanisnor.com/"
 }

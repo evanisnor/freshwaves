@@ -10,8 +10,7 @@ import kotlin.math.ceil
 
 class SpotifyArtistRepository @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
-  private val spotifyCacheDao: SpotifyCacheDao,
-  private val backendAPIRepository: BackendAPIRepository,
+  private val spotifyCacheDao: SpotifyCacheDao
 ) {
 
   suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()
@@ -25,7 +24,6 @@ class SpotifyArtistRepository @Inject constructor(
       Timber.d("Fetched ${artists.size} artists")
       spotifyCacheDao.insertArtists(artists)
       Timber.d("Inserted ${artists.size} artists")
-      backendAPIRepository.reportFavouriteArtists(artists.map { it.name })
       offset += artists.size
     }
   }

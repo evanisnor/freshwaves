@@ -41,7 +41,6 @@ class SpotifyArtistRepositoryTest {
     spotifyArtistRepository = SpotifyArtistRepository(
       spotifyNetworkRepository,
       spotifyCacheDao,
-      BackendAPIRepository("", FakeBackendAPIService()),
     )
   }
 

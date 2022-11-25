@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.spotify
 
+import com.evanisnor.freshwaves.backend.BackendAPIRepository
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
@@ -14,6 +15,11 @@ import timber.log.Timber
 import java.time.Instant
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -27,22 +33,30 @@ class SpotifyRepositoryImpl @Inject constructor(
   private val spotifyUserRepository: SpotifyUserRepository,
   private val spotifyArtistRepository: SpotifyArtistRepository,
   private val spotifyAlbumRepository: SpotifyAlbumRepository,
+  private val backendAPIRepository: BackendAPIRepository,
 ) : SpotifyRepository {
 
-  override suspend fun update() {
+  private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
+  override suspend fun update() = withContext(scope.coroutineContext) {
     Timber.d("Fetching user profile")
     val userProfile = spotifyUserRepository.userProfile()
 
     Timber.d("Fetching top artists")
     spotifyArtistRepository.updateTopArtists(120)
+    val artists = spotifyArtistRepository.getTopArtists()
+
+    Timber.d("Reporting top artists...")
+    // Send this asynchronously so we don't interrupt the UI with lag or errors
+    scope.launch {
+      backendAPIRepository.reportFavouriteArtists(artists.map { it.name })
+    }
 
     Timber.d("Fetching albums...")
-    spotifyArtistRepository.getTopArtists().let { artists ->
       artists.forEach { artist ->
         Timber.d("Fetching albums for ${artist.name}")
         spotifyAlbumRepository.updateAlbums(artist, userProfile)
       }
-    }
 
     Timber.d("Fetching missing tracks...")
     spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->

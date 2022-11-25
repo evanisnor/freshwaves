@@ -55,7 +55,7 @@ android {
 
   buildTypes {
     release {
-      isMinifyEnabled = false
+      isMinifyEnabled = true
       if (keystorePropertiesFile.exists()) {
         signingConfig = signingConfigs.getByName("release")
       }

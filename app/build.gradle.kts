@@ -26,7 +26,7 @@ android {
     minSdk = 27
     targetSdk = 33
     versionCode = "git rev-list --count main".execute().toInt()
-    versionName = "0.1.0"
+    versionName = generateVersionNumber()
 
     manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
 
@@ -143,10 +143,18 @@ dependencies {
  */
 fun String.execute(): String {
   val outputStream = ByteArrayOutputStream()
+  println("Executing command: $this")
   project.exec {
     workingDir = projectDir
     commandLine(this@execute.split(" "))
     standardOutput = outputStream
   }
   return String(outputStream.toByteArray()).trim()
+}
+
+fun generateVersionNumber(): String {
+  val year = "date +\"%Y\"".execute().trim('"')
+  val month = "date +\"%m\"".execute().trim('"')
+  val commitsThisMonth = "git rev-list --count main --since=\"$year-$month-01\"".execute()
+  return "$year.$month.$commitsThisMonth"
 }

@@ -33,12 +33,6 @@ jobs:
         run: ./gradlew build
       - name: Checks
         run: ./gradlew check
-      - name: Instrumentation Checks
-        uses: ReactiveCircus/android-emulator-runner@v2.24.0
-        with:
-          api-level: 29
-          disable-animations: true
-          script: ./gradlew connectedCheck
       - name: Bundle app
         run: ./gradlew bundleRelease
       - uses: r0adkll/sign-android-release@v1
@@ -60,5 +54,6 @@ jobs:
           packageName: com.evanisnor.freshwaves
           releaseFiles: ${{steps.sign_app.outputs.signedReleaseFile}}
           track: alpha
+          status: completed
           mappingFile: app/build/outputs/mapping/release/mapping.txt
 

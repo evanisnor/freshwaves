@@ -9,9 +9,4 @@
         app:iconTint="@color/onBackground"
         app:showAsAction="collapseActionView" />
 
-    <item
-        android:id="@+id/debug_menu_item"
-        android:title=""
-        app:showAsAction="never" />
-
 </menu>

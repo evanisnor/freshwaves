@@ -10,16 +10,16 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.time.Instant
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -53,10 +53,10 @@ class SpotifyRepositoryImpl @Inject constructor(
     }
 
     Timber.d("Fetching albums...")
-      artists.forEach { artist ->
-        Timber.d("Fetching albums for ${artist.name}")
-        spotifyAlbumRepository.updateAlbums(artist, userProfile)
-      }
+    artists.forEach { artist ->
+      Timber.d("Fetching albums for ${artist.name}")
+      spotifyAlbumRepository.updateAlbums(artist, userProfile)
+    }
 
     Timber.d("Fetching missing tracks...")
     spotifyAlbumRepository.getLatestAlbumsMissingTracks().let { albums ->

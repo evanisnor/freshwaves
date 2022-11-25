@@ -1,7 +1,5 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import com.evanisnor.freshwaves.backend.BackendAPIRepository
-import com.evanisnor.freshwaves.backend.FakeBackendAPIService
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.FakeSpotifyAPIService
 import com.evanisnor.freshwaves.spotify.FakeSpotifyCacheDao

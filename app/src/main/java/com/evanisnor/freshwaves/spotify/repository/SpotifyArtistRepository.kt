@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import com.evanisnor.freshwaves.backend.BackendAPIRepository
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
@@ -10,7 +9,7 @@ import kotlin.math.ceil
 
 class SpotifyArtistRepository @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
-  private val spotifyCacheDao: SpotifyCacheDao
+  private val spotifyCacheDao: SpotifyCacheDao,
 ) {
 
   suspend fun getTopArtists(): List<Artist> = spotifyCacheDao.readArtists()

@@ -3,8 +3,6 @@ name: Android CI
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -62,4 +60,4 @@ jobs:
           releaseFiles: ${{steps.sign_app.outputs.signedReleaseFile}}
           track: alpha
           mappingFile: app/build/outputs/mapping/release/mapping.txt
-          
+

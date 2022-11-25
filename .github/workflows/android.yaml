@@ -40,11 +40,13 @@ jobs:
           api-level: 29
           disable-animations: true
           script: ./gradlew connectedCheck
+      - name: Bundle app
+        run: ./gradlew bundleRelease
       - uses: r0adkll/sign-android-release@v1
-        name: Sign app APK
+        name: Sign app bundle
         id: sign_app
         with:
-          releaseDirectory: app/build/outputs/apk/release
+          releaseDirectory: app/build/outputs/bundle/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY_BASE_64 }}
           alias: ${{ secrets.SIGNING_KEY_ALIAS }}
           keyStorePassword: ${{ secrets.SIGNING_KEY_PASSWORD }}

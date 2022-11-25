@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import java.io.ByteArrayOutputStream
 import java.io.FileInputStream
 import java.time.Instant
 import java.util.Properties
@@ -24,7 +25,7 @@ android {
     applicationId = "com.evanisnor.freshwaves"
     minSdk = 27
     targetSdk = 33
-    versionCode = 1
+    versionCode = "git rev-list --count main".execute().toInt()
     versionName = "0.1.0"
 
     manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
@@ -135,4 +136,17 @@ dependencies {
   androidTestImplementation(libs.jetbrains.test.coroutines)
   androidTestImplementation(libs.square.test.retrofit.mock)
   kaptAndroidTest(libs.bundles.hilt.compiler)
+}
+
+/**
+ * Handy function for executing shell commands and getting the output
+ */
+fun String.execute(): String {
+  val outputStream = ByteArrayOutputStream()
+  project.exec {
+    workingDir = projectDir
+    commandLine(this@execute.split(" "))
+    standardOutput = outputStream
+  }
+  return String(outputStream.toByteArray()).trim()
 }

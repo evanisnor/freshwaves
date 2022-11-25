@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.features.attribution.model
 
+import androidx.annotation.Keep
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
@@ -36,11 +37,13 @@ data class Modification(
   val description: String,
 )
 
+@Keep
 enum class LicenseReferenceType {
   URL,
   EMBEDDED,
 }
 
+@Keep
 enum class ArtifactType {
   API,
   CODE,

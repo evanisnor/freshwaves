@@ -1,13 +1,13 @@
 package com.evanisnor.freshwaves.backend
 
-import com.evanisnor.freshwaves.RootModule
+import com.evanisnor.freshwaves.system.SystemModule
 import timber.log.Timber
 import java.io.IOException
 import java.util.Base64
 import javax.inject.Inject
 
 class BackendAPIRepository @Inject constructor(
-  @RootModule.ApplicationSignature appSignature: String,
+  @SystemModule.ApplicationSignature appSignature: String,
   private val backendAPIService: BackendAPIService,
 ) {
 

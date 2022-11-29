@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.features.notification
 
+import android.Manifest
 import android.app.Notification
 import android.app.PendingIntent
 import android.content.Context
@@ -15,10 +16,11 @@ import coil.request.SuccessResult
 import com.evanisnor.freshwaves.MainActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.system.hasPermission
 import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import javax.inject.Inject
 
 class FreshAlbumNotifier @Inject constructor(
   @ApplicationContext private val context: Context,
@@ -32,7 +34,7 @@ class FreshAlbumNotifier @Inject constructor(
 
   private val imageLoader = ImageLoader.invoke(context)
 
-  suspend fun send(freshAlbums: List<Album>) {
+  suspend fun send(freshAlbums: List<Album>) = withContext(Dispatchers.Main) {
     freshAlbums.forEach { album ->
       val albumNotification = buildAlbumNotification(album)
       send(album, albumNotification)
@@ -109,11 +111,15 @@ class FreshAlbumNotifier @Inject constructor(
   }
 
   private fun send(notification: Notification) {
-    notificationManager.notify(freshAlbumsNotification, notification)
+    withNotificationPermission {
+      //noinspection MissingPermission
+      notificationManager.notify(freshAlbumsNotification, notification)
+    }
   }
 
-  private suspend fun send(album: Album, notification: Notification) =
-    withContext(Dispatchers.Main) {
+  private fun send(album: Album, notification: Notification) =
+    withNotificationPermission {
+      //noinspection MissingPermission
       notificationManager.notify(album.hashCode(), notification)
     }
 
@@ -149,6 +155,12 @@ class FreshAlbumNotifier @Inject constructor(
       (albumImageResult.drawable as BitmapDrawable).bitmap
     } else {
       null
+    }
+  }
+
+  private fun withNotificationPermission(ifGranted: () -> Unit) {
+    if (context.hasPermission(Manifest.permission.POST_NOTIFICATIONS)) {
+      ifGranted()
     }
   }
 }

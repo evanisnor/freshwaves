@@ -12,16 +12,20 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
-import com.evanisnor.freshwaves.debugmenu.DebugMenuActivity
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.features.attribution.AttributionActivity
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.evanisnor.freshwaves.system.DebugMenu
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
+
+  @Inject
+  lateinit var debugMenu: DebugMenu
 
   private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
   private val freshAlbumsAdapter = FreshAlbumsAdapter()
@@ -53,16 +57,18 @@ class FreshAlbumsFragment : Fragment() {
       }
 
       toolbar.setOnMenuItemClickListener { item ->
-        when (item.itemId) {
-          R.id.attribution_menu_item -> startActivity(
-            Intent(activity, AttributionActivity::class.java),
-          )
-          R.id.debug_menu_item -> startActivity(
-            Intent(activity, DebugMenuActivity::class.java),
-          )
+        return@setOnMenuItemClickListener when (item.itemId) {
+          R.id.attribution_menu_item -> {
+            startActivity(
+              Intent(activity, AttributionActivity::class.java),
+            )
+            true
+          }
+//          R.id.debug_menu_item -> startActivity(
+//            Intent(activity, DebugMenuActivity::class.java),
+//          )
+          else -> debugMenu.onMenuItemClick(activity, item.itemId)
         }
-
-        false
       }
     }
   }

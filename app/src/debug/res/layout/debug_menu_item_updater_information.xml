@@ -111,6 +111,17 @@
             tools:text="Month Day Year Time" />
 
         <Button
+            android:id="@+id/testNotificationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/test_notification_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/runUpdaterNowButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
+
+        <Button
             android:id="@+id/runUpdaterNowButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -118,7 +129,7 @@
             android:text="@string/run_update_now_label"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/testNotificationButton"
             app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

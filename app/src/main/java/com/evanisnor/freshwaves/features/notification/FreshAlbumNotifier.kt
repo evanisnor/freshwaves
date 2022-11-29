@@ -91,7 +91,11 @@ class FreshAlbumNotifier @Inject constructor(
       album.tracks.size,
     )
 
-    val albumImage = fetchAlbumImage(album)
+    val albumImage = if (album.images.isNotEmpty()) {
+      fetchAlbumImage(album)
+    } else {
+      null
+    }
 
     return NotificationCompat.Builder(context, notificationChannel)
       .setSmallIcon(R.drawable.disc_icon)

@@ -19,6 +19,7 @@ data class UpdaterInformation(
   val lastRunOn: Instant?,
   val nextRunOn: Instant?,
   val onUpdateNow: () -> Unit,
+  val onTestNotification: () -> Unit,
 ) : DebugMenuData
 
 class UpdaterInformationViewHolder(
@@ -52,6 +53,10 @@ class UpdaterInformationViewHolder(
           .format(
             DateTimeFormatter.ofPattern("MMM d, y @ h:mm a", Locale.getDefault()),
           )
+      }
+
+      testNotificationButton.setOnClickListener {
+        debugMenuData.onTestNotification()
       }
 
       runUpdaterNowButton.apply {

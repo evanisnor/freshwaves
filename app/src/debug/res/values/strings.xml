@@ -8,5 +8,6 @@
     <string name="last_run_status_label">Last update status</string>
     <string name="last_run_on_label">Last update on</string>
     <string name="next_run_on_label">Next update</string>
+    <string name="test_notification_label">Test Notification</string>
     <string name="run_update_now_label">Run Update Now</string>
 </resources>

@@ -67,7 +67,7 @@ class FreshAlbumNotifier @Inject constructor(
     val text = context.getString(R.string.notification_fresh_albums_text)
 
     return NotificationCompat.Builder(context, notificationChannel)
-      .setSmallIcon(R.drawable.wave_icon)
+      .setSmallIcon(R.drawable.ic_wave_notification)
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
       .setContentTitle(title)
       .setContentText(text)

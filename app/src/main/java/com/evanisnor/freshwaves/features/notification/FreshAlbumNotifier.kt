@@ -18,9 +18,9 @@ import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.hasPermission
 import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 class FreshAlbumNotifier @Inject constructor(
   @ApplicationContext private val context: Context,

@@ -5,13 +5,24 @@
 
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryContainer">@color/primary</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimary</item>
+        <item name="colorPrimaryInverse">@color/onPrimary</item>
         <item name="colorPrimaryVariant">@color/primaryVariant</item>
         <item name="colorOnPrimary">@color/onPrimary</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary</item>
+        <item name="colorOnSecondaryContainer">@color/onSecondary</item>
         <item name="colorSecondaryVariant">@color/secondaryVariant</item>
         <item name="colorOnSecondary">@color/onSecondary</item>
+
+        <!-- Tertiary brand color - Same as secondary. -->
+        <item name="colorTertiary">@color/secondary</item>
+        <item name="colorTertiaryContainer">@color/secondary</item>
+        <item name="colorOnTertiaryContainer">@color/onSecondary</item>
+        <item name="colorOnTertiary">@color/onSecondary</item>
 
         <!-- Background -->
         <item name="android:background">@color/background</item>
@@ -22,12 +33,22 @@
         <!-- Surface -->
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorSurfaceVariant">@color/surface</item>
+        <item name="colorOnSurfaceVariant">@color/onSurface</item>
+        <item name="colorSurfaceInverse">@color/onSurface</item>
+        <item name="colorOnSurfaceInverse">@color/surface</item>
         <item name="colorPrimarySurface">@color/surface</item>
         <item name="colorOnPrimarySurface">@color/onSurface</item>
 
         <!-- Error -->
         <item name="android:colorError">@color/error</item>
+        <item name="colorError">@color/error</item>
         <item name="colorOnError">@color/onError</item>
+        <item name="colorErrorContainer">@color/surface</item>
+        <item name="colorOnErrorContainer">@color/onSurface</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">@color/onSurface</item>
 
         <!-- Cards -->
         <item name="materialCardViewStyle">@style/FreshAlbumCardTheme</item>

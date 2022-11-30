@@ -11,6 +11,6 @@
     <color name="onBackground">#EBFFF4</color>
     <color name="surface">#364B4F</color>
     <color name="onSurface">#EBFFF4</color>
-    <color name="error">#DC143C</color>
+    <color name="error">#c24e44</color>
     <color name="onError">#EBFFF4</color>
 </resources>

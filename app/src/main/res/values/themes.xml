@@ -62,6 +62,10 @@
         <!-- Progress Bar -->
         <item name="progressBarStyle">@style/FreshLoadingSpinner</item>
 
+        <!-- Snackbar -->
+        <item name="snackbarStyle">@style/Widget.Material3.PopupMenu</item>
+        <item name="snackbarTextViewStyle">@style/FreshSnackbar.Text</item>
+
     </style>
 
     <style name="FreshToolbar.AppBar">
@@ -71,11 +75,7 @@
     <style name="FreshToolbar">
         <item name="android:elevation">0dp</item>
         <item name="android:textColor">@color/onBackground</item>
-        <item name="popupTheme">@style/Theme.PopupOverlay.Menu</item>
-    </style>
-
-    <style name="Theme.PopupOverlay.Menu" parent="ThemeOverlay.Material3.Light">
-        <item name="android:textColor">@color/onBackground</item>
+        <item name="popupTheme">@style/Widget.Material3.PopupMenu</item>
     </style>
 
     <style name="FreshToolbar.Icon">
@@ -113,5 +113,13 @@
 
     <style name="FreshAlbumList">
       <item name="android:background">@drawable/list_background</item>
+    </style>
+
+    <style name="FreshSnackbar" parent="@style/Widget.Material3.PopupMenu">
+      <item name="android:textColor">@color/onBackground</item>
+    </style>
+
+    <style name="FreshSnackbar.Text" parent="@style/Widget.Material3.Snackbar.TextView">
+      <item name="android:textColor">@color/error</item>
     </style>
 </resources>

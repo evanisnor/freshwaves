@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.evanisnor.freshwaves.databinding.ConnectAccountFragmentBinding
+import com.evanisnor.freshwaves.ext.showSnackbar
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,8 +48,7 @@ class ConnectAccountFragment : Fragment() {
         when (pendingAuthorization.authorize(requireContext())) {
           is SpotifyAuthorization.Response.Success -> proceedToFreshAlbums()
           is SpotifyAuthorization.Response.Failure -> {
-            Snackbar.make(binding!!.root, "Login to Spotify failed", Snackbar.LENGTH_INDEFINITE)
-              .show()
+            binding?.root?.showSnackbar(R.string.connect_to_spotify_failed, Snackbar.LENGTH_INDEFINITE)
           }
         }
       }

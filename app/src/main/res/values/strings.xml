@@ -3,6 +3,7 @@
     <string name="pitch">Stay up to date with the latest releases from your favorite artists</string>
 
     <string name="connect_to_spotify">Connect to Spotify</string>
+    <string name="connect_to_spotify_failed">⚠ Login to Spotify failed. Please try again!</string>
 
     <string name="loading_message">Checking for sounds…</string>
 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:minHeight="28dp"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <ImageView
+    android:id="@+id/spotify_logo"
+    android:layout_width="35dp"
+    android:layout_height="0dp"
+    android:padding="6dp"
+    android:background="@drawable/connect_button_shape_left"
+    android:importantForAccessibility="no"
+    android:scaleType="centerInside"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/spotify_logo_green" />
+
+  <TextView
+    style="@style/TextAppearance.Material3.LabelSmall"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/connect_button_shape_right"
+    android:minWidth="200dp"
+    android:gravity="center"
+    android:padding="6dp"
+    android:text="@string/connect_to_spotify"
+    android:textAllCaps="true"
+    tools:text="Connect to something in a language that has lots of characters"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toEndOf="@id/spotify_logo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

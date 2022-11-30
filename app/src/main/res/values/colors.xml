@@ -2,15 +2,15 @@
 <resources>
     <color name="primary">#61d482</color>
     <color name="primaryVariant">#32996d</color>
-    <color name="onPrimary">#FAFAFA</color>
+    <color name="onPrimary">#ebfff4</color>
     <color name="secondary">#95d6b5</color>
     <color name="secondaryVariant">#4457dcbb</color>
     <color name="onSecondary">#7B7B7B</color>
     <color name="background">#172022</color>
     <color name="backgroundOverlay">#66172022</color>
-    <color name="onBackground">#FAFAFA</color>
+    <color name="onBackground">#EBFFF4</color>
     <color name="surface">#364B4F</color>
-    <color name="onSurface">#ebfff4</color>
+    <color name="onSurface">#EBFFF4</color>
     <color name="error">#DC143C</color>
-    <color name="onError">#ebfff4</color>
+    <color name="onError">#EBFFF4</color>
 </resources>

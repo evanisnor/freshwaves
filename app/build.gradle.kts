@@ -79,6 +79,7 @@ android {
 
   testOptions {
     animationsDisabled = true
+    unitTests.isIncludeAndroidResources = true
   }
 }
 
@@ -121,10 +122,11 @@ dependencies {
   kapt(libs.bundles.hilt.compiler)
   ksp(libs.square.moshi.kotlin.codegen)
 
-  debugImplementation(libs.bundles.androidx.debug)
   debugImplementation(libs.square.leakcanary.android)
   debugImplementation(libs.square.okhttp.logging)
 
+  implementation(libs.androidx.test.fragment)
+  testImplementation(libs.bundles.androidx.debug)
   testImplementation(libs.google.test.truth)
   testImplementation(libs.jetbrains.test.coroutines)
   testImplementation(libs.junit)

@@ -1,22 +1,22 @@
 package com.evanisnor.freshwaves.spotify.auth
 
-import androidx.activity.ComponentActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.testing.launchFragment
+import androidx.lifecycle.lifecycleScope
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.handyauth.client.HandyAuth
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
 class SpotifyAuthorizationImplTest {
-
-  private val activity = Robolectric.buildActivity(ComponentActivity::class.java).get()
 
   @Test
   fun `isAuthorized - when HandyAuth is authorized - returns true`() = runTest {
@@ -26,7 +26,10 @@ class SpotifyAuthorizationImplTest {
       },
     )
 
-    spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
+    }
 
     assertThat(spotifyAuthorization.isAuthorized).isTrue()
   }
@@ -38,7 +41,10 @@ class SpotifyAuthorizationImplTest {
     }
     val spotifyAuthorization = SpotifyAuthorizationImpl(handyAuth)
 
-    spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
+    }
 
     assertThat(spotifyAuthorization.isAuthorized).isFalse()
   }
@@ -51,9 +57,12 @@ class SpotifyAuthorizationImplTest {
       },
     )
 
-    val response = spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      val response = spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
 
-    assertThat(response).isEqualTo(SpotifyAuthorization.Response.Success)
+      assertThat(response).isEqualTo(SpotifyAuthorization.Response.Success)
+    }
   }
 
   @Test
@@ -64,9 +73,12 @@ class SpotifyAuthorizationImplTest {
       },
     )
 
-    val response = spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      val response = spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
 
-    assertThat(response).isEqualTo(SpotifyAuthorization.Response.Failure)
+      assertThat(response).isEqualTo(SpotifyAuthorization.Response.Failure)
+    }
   }
 
   @Test
@@ -89,7 +101,10 @@ class SpotifyAuthorizationImplTest {
       },
     )
 
-    spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
+    }
 
     assertThat(spotifyAuthorization.getAuthorizationHeader()).isEqualTo("Fake test-token")
   }
@@ -102,13 +117,29 @@ class SpotifyAuthorizationImplTest {
       },
     )
 
-    spotifyAuthorization.authorize(activity)
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment)
+        .authorize(fragment.requireContext())
+    }
 
     try {
       spotifyAuthorization.getAuthorizationHeader()
       assert(false) { "Expected error not thrown" }
     } catch (e: Throwable) {
       assert(true)
+    }
+  }
+
+  /**
+   * Syntactically pleasant way ot launching a suspend function from an anonymous Fragment.
+   */
+  private fun launchInFragment(launchOnFragment: suspend (Fragment) -> Unit) {
+    with(launchFragment<Fragment>()) {
+      onFragment {
+        it.lifecycleScope.launch {
+          launchOnFragment(it)
+        }
+      }
     }
   }
 }

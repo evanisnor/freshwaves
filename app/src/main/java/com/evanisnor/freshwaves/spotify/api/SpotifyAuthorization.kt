@@ -1,11 +1,20 @@
 package com.evanisnor.freshwaves.spotify.api
 
+import android.content.Context
 import androidx.activity.ComponentActivity
+import androidx.fragment.app.Fragment
 
 /**
  * Authorization interface for Spotify
  */
 interface SpotifyAuthorization {
+
+  /**
+   * Login Flow State
+   */
+  interface PendingAuthorization {
+    suspend fun authorize(context: Context): Response
+  }
 
   /**
    * Authorization response types
@@ -16,6 +25,12 @@ interface SpotifyAuthorization {
   }
 
   val isAuthorized: Boolean
+
+  /**
+   * Prepare the authorization flow. Call [PendingAuthorization.authorize] when you want to
+   * launch the authorization flow.
+   */
+  suspend fun prepareAuthorization(fragment: Fragment): PendingAuthorization
 
   /**
    * Begin the authorization flow.

@@ -68,6 +68,11 @@
 
     </style>
 
+    <style name="Theme.FreshWaves.Login" parent="Theme.FreshWaves">
+      <item name="android:windowTranslucentStatus">true</item>
+      <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
     <style name="FreshToolbar.AppBar">
         <item name="android:background">@drawable/title_border</item>
     </style>

@@ -48,10 +48,10 @@ class AlbumDetailsFragment : Fragment() {
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?,
-  ): View {
-    _binding = AlbumDetailsFragmentBinding.inflate(inflater, container, false)
-    return binding.root
-  }
+  ): View = AlbumDetailsFragmentBinding.inflate(inflater, container, false)
+    .apply {
+      _binding = this
+    }.root
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
@@ -60,6 +60,10 @@ class AlbumDetailsFragment : Fragment() {
       details.apply {
         adapter = AlbumDetailsAdapter()
         layoutManager = LinearLayoutManager(context)
+      }
+
+      toolbar.setNavigationOnClickListener {
+        activity?.onBackPressedDispatcher?.onBackPressed()
       }
     }
 

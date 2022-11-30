@@ -7,7 +7,6 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        style="@style/FreshAlbumList"
         android:id="@+id/freshAlbumsList"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -46,20 +45,23 @@
             style="@style/FreshToolbar.AppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
             android:gravity="center"
             app:menu="@menu/main_menu">
 
             <ImageView
                 style="@style/FreshToolbar.Icon"
-                android:layout_width="78dp"
-                android:layout_height="78dp"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="8dp"
                 android:importantForAccessibility="no"
-                android:src="@drawable/wave_green" />
+                android:src="@drawable/wave_icon_round_with_border" />
 
             <TextView
                 style="@style/FreshToolbar.Title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:padding="8dp"
                 android:text="@string/app_name" />
 
         </com.google.android.material.appbar.MaterialToolbar>

@@ -10,11 +10,13 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.evanisnor.freshwaves.LoginActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.features.attribution.AttributionActivity
 import com.evanisnor.freshwaves.features.updater.UpdaterState
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.DebugMenu
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,6 +28,9 @@ class FreshAlbumsFragment : Fragment() {
 
   @Inject
   lateinit var debugMenu: DebugMenu
+
+  @Inject
+  lateinit var spotifyAuthorization: SpotifyAuthorization
 
   private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
   private val freshAlbumsAdapter = FreshAlbumsAdapter()
@@ -58,6 +63,16 @@ class FreshAlbumsFragment : Fragment() {
 
       toolbar.setOnMenuItemClickListener { item ->
         return@setOnMenuItemClickListener when (item.itemId) {
+          R.id.logout -> {
+            lifecycleScope.launch {
+              spotifyAuthorization.logout()
+              activity?.finish()
+              startActivity(
+                Intent(activity, LoginActivity::class.java),
+              )
+            }
+            true
+          }
           R.id.attribution_menu_item -> {
             startActivity(
               Intent(activity, AttributionActivity::class.java),

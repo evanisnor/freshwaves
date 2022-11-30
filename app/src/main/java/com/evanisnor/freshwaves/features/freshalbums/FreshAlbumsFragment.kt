@@ -64,9 +64,6 @@ class FreshAlbumsFragment : Fragment() {
             )
             true
           }
-//          R.id.debug_menu_item -> startActivity(
-//            Intent(activity, DebugMenuActivity::class.java),
-//          )
           else -> debugMenu.onMenuItemClick(activity, item.itemId)
         }
       }

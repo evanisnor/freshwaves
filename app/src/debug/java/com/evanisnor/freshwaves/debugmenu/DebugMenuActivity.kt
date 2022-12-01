@@ -37,6 +37,10 @@ class DebugMenuActivity : AppCompatActivity() {
     binding = DebugActivityBinding.inflate(layoutInflater).apply {
       setContentView(root)
 
+      toolbar.setNavigationOnClickListener {
+        finish()
+      }
+
       debugMenu.apply {
         layoutManager = LinearLayoutManager(context)
         adapter = debugMenuAdapter

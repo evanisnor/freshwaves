@@ -28,6 +28,7 @@
               style="@style/FreshToolbar.Icon"
               android:layout_width="?attr/actionBarSize"
               android:layout_height="?attr/actionBarSize"
+               android:layout_marginStart="8dp"
               android:padding="8dp"
               android:importantForAccessibility="no"
               android:src="@drawable/wave_icon_round_with_border" />

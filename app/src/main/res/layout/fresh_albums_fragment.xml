@@ -6,16 +6,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appBarLayout"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:layout_constraintBottom_toBottomOf="@+id/freshAlbumsList"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0">
+
+      <com.google.android.material.appbar.MaterialToolbar
+          android:id="@+id/toolbar"
+          style="@style/FreshToolbar.AppBar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:minHeight="?attr/actionBarSize"
+          android:gravity="center"
+          app:menu="@menu/main_menu">
+
+          <ImageView
+              style="@style/FreshToolbar.Icon"
+              android:layout_width="?attr/actionBarSize"
+              android:layout_height="?attr/actionBarSize"
+              android:padding="8dp"
+              android:importantForAccessibility="no"
+              android:src="@drawable/wave_icon_round_with_border" />
+
+          <TextView
+              style="@style/FreshToolbar.Title"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:padding="8dp"
+              android:text="@string/app_name" />
+
+      </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/freshAlbumsList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="?attr/actionBarSize"
         app:layout_constraintWidth_max="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         tools:listitem="@layout/fresh_album_card" />
 
     <include
@@ -27,44 +63,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/freshAlbumsList"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         app:layout_constraintVertical_bias="0.45" />
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_constraintBottom_toBottomOf="@+id/freshAlbumsList"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            style="@style/FreshToolbar.AppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:minHeight="?attr/actionBarSize"
-            android:gravity="center"
-            app:menu="@menu/main_menu">
-
-            <ImageView
-                style="@style/FreshToolbar.Icon"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:padding="8dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/wave_icon_round_with_border" />
-
-            <TextView
-                style="@style/FreshToolbar.Title"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                android:text="@string/app_name" />
-
-        </com.google.android.material.appbar.MaterialToolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

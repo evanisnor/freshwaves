@@ -77,7 +77,7 @@ class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
 
     activity?.supportFragmentManager?.apply {
       beginTransaction()
-        .replace(R.id.fragment, licenseViewerFragment)
+        .replace(android.R.id.content, licenseViewerFragment)
         .addToBackStack(LicenseViewerFragment.TAG)
         .commit()
     }

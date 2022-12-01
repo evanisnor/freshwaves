@@ -20,6 +20,10 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
 
+  companion object {
+    const val TAG = "ThirdPartyUsageListFragment"
+  }
+
   @Inject
   lateinit var attributionRepository: AttributionRepository
 
@@ -40,7 +44,7 @@ class ThirdPartyUsageListFragment : Fragment(), OnLicenseSelectedListener {
     super.onViewCreated(view, savedInstanceState)
     binding?.apply {
       toolbar.setNavigationOnClickListener {
-        activity?.finish()
+        activity?.onBackPressedDispatcher?.onBackPressed()
       }
 
       thirdPartyUsageList.apply {

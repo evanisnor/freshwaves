@@ -14,7 +14,7 @@ import com.evanisnor.freshwaves.LoginActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
-import com.evanisnor.freshwaves.features.attribution.AttributionActivity
+import com.evanisnor.freshwaves.features.attribution.ThirdPartyUsageListFragment
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -74,9 +74,12 @@ class FreshAlbumsFragment : Fragment() {
             true
           }
           R.id.attribution_menu_item -> {
-            startActivity(
-              Intent(activity, AttributionActivity::class.java),
-            )
+            activity?.apply {
+              supportFragmentManager.beginTransaction()
+                .add(android.R.id.content, ThirdPartyUsageListFragment())
+                .addToBackStack(ThirdPartyUsageListFragment.TAG)
+                .commit()
+            }
             true
           }
           else -> debugMenu.onMenuItemClick(activity, item.itemId)

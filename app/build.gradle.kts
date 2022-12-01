@@ -25,7 +25,7 @@ android {
     applicationId = "com.evanisnor.freshwaves"
     minSdk = 27
     targetSdk = 33
-    versionCode = "git rev-list --count main".execute().toInt().also {
+    versionCode = countGitCommits().also {
       println("Current Version Code: $it")
     }
     versionName = generateVersionNumber().also {
@@ -147,20 +147,26 @@ dependencies {
 /**
  * Handy function for executing shell commands and getting the output
  */
-fun String.execute(): String {
+fun String.execute(vararg args: String = emptyArray()): String {
   val outputStream = ByteArrayOutputStream()
   project.exec {
     workingDir = projectDir
     environment("TZ", "Etc/UTC")
-    commandLine(this@execute.split(" "))
+    commandLine(mutableListOf(this@execute).apply { addAll(args) })
     standardOutput = outputStream
   }
   return String(outputStream.toByteArray()).trim()
 }
 
 fun generateVersionNumber(): String {
-  val year = "date +\"%Y\"".execute().trim('"')
-  val month = "date +\"%m\"".execute().trim('"')
-  val commitsThisMonth = "git rev-list --count main --since=\"$year-$month-01\"".execute()
+  val year = "date".execute("+\"%Y\"").trim('"')
+  val month = "date".execute("+\"%m\"").trim('"')
+  val commitsThisMonth = countGitCommits(since = "$year-$month-01 00:00:00")
   return "$year.$month.$commitsThisMonth"
 }
+
+fun countGitCommits(since: String? = null) = if (!since.isNullOrBlank()) {
+  "git".execute("rev-list", "--count", "main", "--since=\"$since\"")
+} else {
+  "git".execute("rev-list", "--count", "main")
+}.toInt()

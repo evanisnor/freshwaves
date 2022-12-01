@@ -25,8 +25,12 @@ android {
     applicationId = "com.evanisnor.freshwaves"
     minSdk = 27
     targetSdk = 33
-    versionCode = "git rev-list --count main".execute().toInt()
-    versionName = generateVersionNumber()
+    versionCode = "git rev-list --count main".execute().toInt().also {
+      println("Current Version Code: $it")
+    }
+    versionName = generateVersionNumber().also {
+      println("Current Version: $it")
+    }
 
     manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
 
@@ -145,9 +149,9 @@ dependencies {
  */
 fun String.execute(): String {
   val outputStream = ByteArrayOutputStream()
-  println("Executing command: $this")
   project.exec {
     workingDir = projectDir
+    environment("TZ", "Etc/UTC")
     commandLine(this@execute.split(" "))
     standardOutput = outputStream
   }

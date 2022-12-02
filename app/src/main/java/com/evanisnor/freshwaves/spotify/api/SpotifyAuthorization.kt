@@ -1,7 +1,6 @@
 package com.evanisnor.freshwaves.spotify.api
 
 import android.content.Context
-import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
 
 /**
@@ -31,13 +30,6 @@ interface SpotifyAuthorization {
    * launch the authorization flow.
    */
   suspend fun prepareAuthorization(fragment: Fragment): PendingAuthorization
-
-  /**
-   * Begin the authorization flow.
-   * @param [activity] Activity used to launch the login flow
-   * @return [Response]
-   */
-  suspend fun authorize(activity: ComponentActivity): Response
 
   /**
    * Log out of Spotify by resetting auth cache

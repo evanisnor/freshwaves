@@ -7,6 +7,29 @@
   android:background="@color/background"
   android:theme="@style/FreshAlbumCardTheme">
 
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      style="@style/FreshToolbar.AppBar.Light"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:gravity="center"
+      android:minHeight="?attr/actionBarSize"
+      app:navigationIcon="?attr/homeAsUpIndicator"
+      tools:title="Album name goes here" />
+
+  </com.google.android.material.appbar.AppBarLayout>
+
   <ImageView
     android:id="@+id/albumImage"
     android:layout_width="wrap_content"
@@ -16,7 +39,7 @@
     android:scaleType="fitCenter"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
     tools:srcCompat="@tools:sample/avatars" />
 
   <androidx.recyclerview.widget.RecyclerView
@@ -26,7 +49,7 @@
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/albumImage"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
     tools:listitem="@layout/album_details_track_item" />
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -46,27 +69,5 @@
     app:layout_constraintTop_toTopOf="@+id/albumImage"
     app:layout_constraintVertical_bias="1.0"
     app:srcCompat="@drawable/play_icon" />
-
-  <com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/appBarLayout"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="@android:color/transparent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.0">
-
-    <com.google.android.material.appbar.MaterialToolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@android:color/transparent"
-      android:gravity="center"
-      android:minHeight="?attr/actionBarSize"
-      app:navigationIcon="?attr/homeAsUpIndicator" />
-
-  </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

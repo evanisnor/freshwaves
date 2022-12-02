@@ -7,19 +7,6 @@
   android:background="@color/background"
   android:theme="@style/FreshAlbumCardTheme">
 
-  <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/details"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.0"
-    tools:listheader="@layout/album_details_overview_item"
-    tools:listitem="@layout/album_details_track_item" />
-
   <com.google.android.material.appbar.AppBarLayout
     android:id="@+id/appBarLayout"
     android:layout_width="match_parent"
@@ -33,13 +20,26 @@
 
     <com.google.android.material.appbar.MaterialToolbar
       android:id="@+id/toolbar"
+      style="@style/FreshToolbar.AppBar.Light"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@android:color/transparent"
       android:gravity="center"
       android:minHeight="?attr/actionBarSize"
-      app:navigationIcon="?attr/homeAsUpIndicator" />
+      app:navigationIcon="?attr/homeAsUpIndicator"
+      tools:title="Album name goes here" />
 
   </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/details"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+    app:layout_constraintVertical_bias="0.0"
+    tools:listitem="@layout/album_details_track_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

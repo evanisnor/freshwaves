@@ -78,6 +78,8 @@ class AlbumDetailsFragment : Fragment() {
     (binding.details.adapter as AlbumDetailsAdapter).submit(album)
 
     binding.apply {
+      toolbar.title = album.name
+
       albumImage?.apply {
         load(album.images.first().url)
       }

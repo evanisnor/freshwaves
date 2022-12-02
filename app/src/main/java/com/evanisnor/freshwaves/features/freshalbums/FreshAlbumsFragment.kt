@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -20,8 +21,10 @@ import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.DebugMenu
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
@@ -86,45 +89,39 @@ class FreshAlbumsFragment : Fragment() {
         }
       }
     }
-  }
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
     registerAdapterClickListener()
 
-    lifecycleScope.launch {
-      listenForFreshAlbums()
-    }
-  }
-
-  override fun onResume() {
-    super.onResume()
-    lifecycleScope.launch {
-      listenForUpdaterStatus()
-    }
-  }
-
-  private fun toggleLoadingMessage(showLoadingMessage: Boolean) {
-    binding?.apply {
-      if (showLoadingMessage) {
-        emptyMessage.loading.visibility = View.VISIBLE
-        freshAlbumsList.visibility = View.INVISIBLE
-      } else {
-        emptyMessage.loading.visibility = View.GONE
-        freshAlbumsList.visibility = View.VISIBLE
+    with(lifecycleScope) {
+      launchWhenCreated {
+        listenForFreshAlbums()
+      }
+      launchWhenResumed {
+        listenForUpdaterStatus()
       }
     }
   }
 
-  private suspend fun listenForUpdaterStatus() {
-    freshAlbumsViewModel.updaterState.collect { result ->
-      toggleLoadingMessage(result == UpdaterState.Running)
+  private fun toggleViews(state: UpdaterState, albumCount: Int) {
+    if (state == UpdaterState.Idle || state == UpdaterState.Retry || state == UpdaterState.Unknown) return
+    binding?.apply {
+      loadingMessage.loading.isVisible = state == UpdaterState.Running
+      freshAlbumsList.isVisible = state == UpdaterState.Success && albumCount > 0
+      emptyMessage.empty.isVisible = state == UpdaterState.Success  && albumCount == 0
+      errorMessage.error.isVisible = state == UpdaterState.Failure
     }
   }
 
   private suspend fun listenForFreshAlbums() {
     freshAlbumsViewModel.albums.collect { albums ->
       freshAlbumsAdapter.submitList(albums)
+      toggleViews(freshAlbumsViewModel.lastKnownUpdaterState(), albums.size)
+    }
+  }
+
+  private suspend fun listenForUpdaterStatus() {
+    freshAlbumsViewModel.updaterState.collect { result ->
+      toggleViews(result, freshAlbumsAdapter.itemCount)
     }
   }
 

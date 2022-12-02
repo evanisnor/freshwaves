@@ -8,6 +8,8 @@
     <string name="log_out">Log out</string>
 
     <string name="loading_message">Checking for sounds…</string>
+    <string name="loading_error_message">Oops! Something went wrong.</string>
+    <string name="loading_empty_message">There are no new updates for you right now. Check back later!</string>
 
     <string name="notification_channel_name">Fresh Albums</string>
     <string name="notification_channel_description">Lets you know when new albums are released</string>

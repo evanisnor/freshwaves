@@ -56,8 +56,32 @@
         tools:listitem="@layout/fresh_album_card" />
 
     <include
-        android:id="@+id/emptyMessage"
+        android:id="@+id/loadingMessage"
         layout="@layout/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <include
+        android:id="@+id/emptyMessage"
+        layout="@layout/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <include
+        android:id="@+id/errorMessage"
+        layout="@layout/error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"

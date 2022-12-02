@@ -1,124 +1,124 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="Theme.FreshWaves" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="fontFamily">@font/yantramanav_regular</item>
+  <!-- Base application theme. -->
+  <style name="Theme.FreshWaves" parent="Theme.Material3.Dark.NoActionBar">
+    <item name="fontFamily">@font/yantramanav_regular</item>
 
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryContainer">@color/primary</item>
-        <item name="colorOnPrimaryContainer">@color/onPrimary</item>
-        <item name="colorPrimaryInverse">@color/onPrimary</item>
-        <item name="colorPrimaryVariant">@color/primaryVariant</item>
-        <item name="colorOnPrimary">@color/onPrimary</item>
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryContainer">@color/primary</item>
+    <item name="colorOnPrimaryContainer">@color/onPrimary</item>
+    <item name="colorPrimaryInverse">@color/onPrimary</item>
+    <item name="colorPrimaryVariant">@color/primaryVariant</item>
+    <item name="colorOnPrimary">@color/onPrimary</item>
 
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorSecondaryContainer">@color/secondary</item>
-        <item name="colorOnSecondaryContainer">@color/onSecondary</item>
-        <item name="colorSecondaryVariant">@color/secondaryVariant</item>
-        <item name="colorOnSecondary">@color/onSecondary</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/secondary</item>
+    <item name="colorSecondaryContainer">@color/secondary</item>
+    <item name="colorOnSecondaryContainer">@color/onSecondary</item>
+    <item name="colorSecondaryVariant">@color/secondaryVariant</item>
+    <item name="colorOnSecondary">@color/onSecondary</item>
 
-        <!-- Tertiary brand color - Same as secondary. -->
-        <item name="colorTertiary">@color/secondary</item>
-        <item name="colorTertiaryContainer">@color/secondary</item>
-        <item name="colorOnTertiaryContainer">@color/onSecondary</item>
-        <item name="colorOnTertiary">@color/onSecondary</item>
+    <!-- Tertiary brand color - Same as secondary. -->
+    <item name="colorTertiary">@color/secondary</item>
+    <item name="colorTertiaryContainer">@color/secondary</item>
+    <item name="colorOnTertiaryContainer">@color/onSecondary</item>
+    <item name="colorOnTertiary">@color/onSecondary</item>
 
-        <!-- Background -->
-        <item name="android:background">@color/background</item>
-        <item name="android:colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/onBackground</item>
-        <item name="colorControlNormal">@color/onBackground</item>
+    <!-- Background -->
+    <item name="android:background">@color/background</item>
+    <item name="android:colorBackground">@color/background</item>
+    <item name="colorOnBackground">@color/onBackground</item>
+    <item name="colorControlNormal">@color/onBackground</item>
 
-        <!-- Surface -->
-        <item name="colorSurface">@color/surface</item>
-        <item name="colorOnSurface">@color/onSurface</item>
-        <item name="colorSurfaceVariant">@color/surface</item>
-        <item name="colorOnSurfaceVariant">@color/onSurface</item>
-        <item name="colorSurfaceInverse">@color/onSurface</item>
-        <item name="colorOnSurfaceInverse">@color/surface</item>
-        <item name="colorPrimarySurface">@color/surface</item>
-        <item name="colorOnPrimarySurface">@color/onSurface</item>
+    <!-- Surface -->
+    <item name="colorSurface">@color/surface</item>
+    <item name="colorOnSurface">@color/onSurface</item>
+    <item name="colorSurfaceVariant">@color/surface</item>
+    <item name="colorOnSurfaceVariant">@color/onSurface</item>
+    <item name="colorSurfaceInverse">@color/onSurface</item>
+    <item name="colorOnSurfaceInverse">@color/surface</item>
+    <item name="colorPrimarySurface">@color/surface</item>
+    <item name="colorOnPrimarySurface">@color/onSurface</item>
 
-        <!-- Error -->
-        <item name="android:colorError">@color/error</item>
-        <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/onError</item>
-        <item name="colorErrorContainer">@color/surface</item>
-        <item name="colorOnErrorContainer">@color/onSurface</item>
+    <!-- Error -->
+    <item name="android:colorError">@color/error</item>
+    <item name="colorError">@color/error</item>
+    <item name="colorOnError">@color/onError</item>
+    <item name="colorErrorContainer">@color/surface</item>
+    <item name="colorOnErrorContainer">@color/onSurface</item>
 
-        <!-- Outline -->
-        <item name="colorOutline">@color/onSurface</item>
+    <!-- Outline -->
+    <item name="colorOutline">@color/onSurface</item>
 
-        <!-- Cards -->
-        <item name="materialCardViewStyle">@style/FreshAlbumCardTheme</item>
+    <!-- Cards -->
+    <item name="materialCardViewStyle">@style/FreshAlbumCardTheme</item>
 
-        <!-- Status Bar -->
-        <item name="android:statusBarColor">@color/background</item>
+    <!-- Status Bar -->
+    <item name="android:statusBarColor">@color/background</item>
 
-        <!-- ActionBar -->
-        <item name="toolbarStyle">@style/FreshToolbar</item>
+    <!-- ActionBar -->
+    <item name="toolbarStyle">@style/FreshToolbar</item>
 
-        <!-- Progress Bar -->
-        <item name="progressBarStyle">@style/FreshLoadingSpinner</item>
+    <!-- Progress Bar -->
+    <item name="progressBarStyle">@style/FreshLoadingSpinner</item>
 
-        <!-- Snackbar -->
-        <item name="snackbarStyle">@style/Widget.Material3.PopupMenu</item>
-        <item name="snackbarTextViewStyle">@style/FreshSnackbar.Text</item>
+    <!-- Snackbar -->
+    <item name="snackbarStyle">@style/Widget.Material3.PopupMenu</item>
+    <item name="snackbarTextViewStyle">@style/FreshSnackbar.Text</item>
 
-    </style>
+  </style>
 
-    <style name="Theme.FreshWaves.Login" parent="Theme.FreshWaves">
-      <item name="android:windowTranslucentStatus">true</item>
-      <item name="android:windowTranslucentNavigation">true</item>
-    </style>
+  <style name="Theme.FreshWaves.Login" parent="Theme.FreshWaves">
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:windowTranslucentNavigation">true</item>
+  </style>
 
-    <style name="FreshToolbar.AppBar">
-        <item name="android:background">@color/background</item>
-    </style>
+  <style name="FreshToolbar.AppBar">
+    <item name="android:background">@color/background</item>
+  </style>
 
-    <style name="FreshToolbar">
-        <item name="android:elevation">0dp</item>
-        <item name="android:textColor">@color/onBackground</item>
-        <item name="popupTheme">@style/Widget.Material3.PopupMenu</item>
-    </style>
+  <style name="FreshToolbar">
+    <item name="android:elevation">0dp</item>
+    <item name="android:textColor">@color/onBackground</item>
+    <item name="popupTheme">@style/Widget.Material3.PopupMenu</item>
+  </style>
 
-    <style name="FreshToolbar.Icon">
-        <item name="android:background">@null</item>
-    </style>
+  <style name="FreshToolbar.Icon">
+    <item name="android:background">@null</item>
+  </style>
 
-    <style name="FreshToolbar.Title">
-        <item name="android:textColor">@color/secondary</item>
-        <item name="android:background">@null</item>
-        <item name="android:textSize">38sp</item>
-        <item name="android:gravity">bottom|start</item>
-        <item name="fontFamily">@font/bebas_neue_regular</item>
-    </style>
+  <style name="FreshToolbar.Title">
+    <item name="android:textColor">@color/secondary</item>
+    <item name="android:background">@null</item>
+    <item name="android:textSize">38sp</item>
+    <item name="android:gravity">bottom|start</item>
+    <item name="fontFamily">@font/bebas_neue_regular</item>
+  </style>
 
-    <style name="FreshAlbumCardTheme" parent="Widget.Material3.CardView.Elevated">
-        <item name="android:background">@color/surface</item>
-        <item name="android:textColor">@color/onSurface</item>
-        <item name="colorOnSurface">@color/onSurface</item>
-        <item name="android:textAppearance">@color/onSurface</item>
-        <item name="textAppearanceBody1">@color/onSurface</item>
-    </style>
+  <style name="FreshAlbumCardTheme" parent="Widget.Material3.CardView.Elevated">
+    <item name="android:background">@color/surface</item>
+    <item name="android:textColor">@color/onSurface</item>
+    <item name="colorOnSurface">@color/onSurface</item>
+    <item name="android:textAppearance">@color/onSurface</item>
+    <item name="textAppearanceBody1">@color/onSurface</item>
+  </style>
 
-    <style name="FreshFloatingActionButton" parent="Widget.Material3.FloatingActionButton.Surface" />
+  <style name="FreshFloatingActionButton" parent="Widget.Material3.FloatingActionButton.Surface" />
 
-    <style name="FreshLoadingSpinner" parent="Widget.Material3.CircularProgressIndicator" />
+  <style name="FreshLoadingSpinner" parent="Widget.Material3.CircularProgressIndicator" />
 
-    <style name="FreshLoadingMessage">
-        <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
-        <item name="android:textColor">@color/onSurface</item>
-        <item name="background">@null</item>
-        <item name="android:padding">8dp</item>
-    </style>
+  <style name="FreshLoadingMessage">
+    <item name="android:textAppearance">@style/TextAppearance.Material3.TitleLarge</item>
+    <item name="android:textColor">@color/onSurface</item>
+    <item name="background">@null</item>
+    <item name="android:padding">8dp</item>
+  </style>
 
-    <style name="FreshSnackbar" parent="@style/Widget.Material3.PopupMenu">
-      <item name="android:textColor">@color/onBackground</item>
-    </style>
+  <style name="FreshSnackbar" parent="@style/Widget.Material3.PopupMenu">
+    <item name="android:textColor">@color/onBackground</item>
+  </style>
 
-    <style name="FreshSnackbar.Text" parent="@style/Widget.Material3.Snackbar.TextView">
-      <item name="android:textColor">@color/error</item>
-    </style>
+  <style name="FreshSnackbar.Text" parent="@style/Widget.Material3.Snackbar.TextView">
+    <item name="android:textColor">@color/error</item>
+  </style>
 </resources>

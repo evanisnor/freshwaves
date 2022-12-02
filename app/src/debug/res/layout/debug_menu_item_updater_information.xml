@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="16dp"
+  android:clickable="false"
+  android:theme="?attr/materialCardViewStyle">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:clickable="false"
-    android:theme="?attr/materialCardViewStyle">
+    android:layout_height="match_parent"
+    android:padding="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp">
+    <TextView
+      android:id="@+id/statusLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/updater_state_label"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/statusLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/updater_state_label"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+      android:id="@+id/status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/statusLabel"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Running" />
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/statusLabel"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Running" />
+    <TextView
+      android:id="@+id/lastStatusLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/last_run_status_label"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/statusLabel"
+      app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/lastStatusLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/last_run_status_label"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/statusLabel"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+      android:id="@+id/lastStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/lastStatusLabel"
+      app:layout_constraintTop_toBottomOf="@id/status"
+      tools:text="Success" />
 
-        <TextView
-            android:id="@+id/lastStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/lastStatusLabel"
-            app:layout_constraintTop_toBottomOf="@id/status"
-            tools:text="Success" />
+    <TextView
+      android:id="@+id/lastRunOnLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/last_run_on_label"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/lastStatusLabel"
+      app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/lastRunOnLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/last_run_on_label"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lastStatusLabel"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+      android:id="@+id/lastRunOn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/lastRunOnLabel"
+      app:layout_constraintTop_toBottomOf="@id/lastStatus"
+      tools:text="Month Day Year Time" />
 
-        <TextView
-            android:id="@+id/lastRunOn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/lastRunOnLabel"
-            app:layout_constraintTop_toBottomOf="@id/lastStatus"
-            tools:text="Month Day Year Time" />
+    <TextView
+      android:id="@+id/nextRunOnLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/next_run_on_label"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/lastRunOnLabel"
+      app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/nextRunOnLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/next_run_on_label"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lastRunOnLabel"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+      android:id="@+id/nextRunOn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/nextRunOnLabel"
+      app:layout_constraintTop_toBottomOf="@id/lastRunOn"
+      tools:text="Month Day Year Time" />
 
-        <TextView
-            android:id="@+id/nextRunOn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/nextRunOnLabel"
-            app:layout_constraintTop_toBottomOf="@id/lastRunOn"
-            tools:text="Month Day Year Time" />
+    <Button
+      android:id="@+id/testNotificationButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/test_notification_label"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/runUpdaterNowButton"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
 
-        <Button
-            android:id="@+id/testNotificationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/test_notification_label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/runUpdaterNowButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
+    <Button
+      android:id="@+id/runUpdaterNowButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/run_update_now_label"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/testNotificationButton"
+      app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
 
-        <Button
-            android:id="@+id/runUpdaterNowButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/run_update_now_label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/testNotificationButton"
-            app:layout_constraintTop_toBottomOf="@+id/nextRunOnLabel" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

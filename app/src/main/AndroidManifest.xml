@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.evanisnor.freshwaves">
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.evanisnor.freshwaves">
 
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <application
-        android:name=".FreshWavesApp"
-        android:allowBackup="true"
-        android:fullBackupOnly="true"
-        android:icon="@mipmap/wave_color"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.FreshWaves">
+  <application
+    android:name=".FreshWavesApp"
+    android:allowBackup="true"
+    android:fullBackupOnly="true"
+    android:icon="@mipmap/wave_color"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.FreshWaves">
 
-        <meta-data
-            android:name="spotifyClientId"
-            android:value="3db837a49d3c4df0a277b0adaa748d87" />
-        <meta-data
-            android:name="spotifyRedirectUri"
-            android:value="com.evanisnor.freshwaves://authorize" />
+    <meta-data
+      android:name="spotifyClientId"
+      android:value="3db837a49d3c4df0a277b0adaa748d87" />
+    <meta-data
+      android:name="spotifyRedirectUri"
+      android:value="com.evanisnor.freshwaves://authorize" />
 
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/Theme.FreshWaves.Login"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+    <activity
+      android:name=".LoginActivity"
+      android:exported="true"
+      android:theme="@style/Theme.FreshWaves.Login">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+    <activity
+      android:name=".MainActivity"
+      android:exported="false" />
 
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            android:exported="false"
-            tools:node="remove" />
-    </application>
+    <provider
+      android:name="androidx.startup.InitializationProvider"
+      android:authorities="${applicationId}.androidx-startup"
+      android:exported="false"
+      tools:node="remove" />
+  </application>
 
 </manifest>

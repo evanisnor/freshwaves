@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appBarLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="?attr/actionBarSize"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbar"
+      style="@style/FreshToolbar.AppBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:minHeight="?attr/actionBarSize"
+      app:navigationIcon="?attr/homeAsUpIndicator">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            style="@style/FreshToolbar.AppBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
-            android:gravity="center"
-            app:navigationIcon="?attr/homeAsUpIndicator">
+      <TextView
+        style="@style/FreshToolbar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:text="@string/title_activity_attribution" />
 
-            <TextView
-                style="@style/FreshToolbar.Title"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="8dp"
-                android:text="@string/title_activity_attribution" />
+    </com.google.android.material.appbar.MaterialToolbar>
 
-        </com.google.android.material.appbar.MaterialToolbar>
+  </com.google.android.material.appbar.AppBarLayout>
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/thirdPartyUsageList"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/thirdPartyUsageList"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

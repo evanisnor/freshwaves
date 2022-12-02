@@ -24,8 +24,8 @@
     android:id="@+id/logo_icon"
     android:layout_width="80dp"
     android:layout_height="80dp"
-    android:importantForAccessibility="no"
     android:background="@android:color/transparent"
+    android:importantForAccessibility="no"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +45,8 @@
     app:layout_constraintTop_toBottomOf="@+id/logo_icon" />
 
   <TextView
-    style="@style/TextAppearance.Material3.LabelLarge"
     android:id="@+id/pitch_text"
+    style="@style/TextAppearance.Material3.LabelLarge"
     android:layout_width="280dp"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
@@ -55,7 +55,7 @@
     android:text="@string/pitch"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/app_name"/>
+    app:layout_constraintTop_toBottomOf="@id/app_name" />
 
   <include
     android:id="@+id/connect_spotify_button"

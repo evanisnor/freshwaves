@@ -1,39 +1,39 @@
 <resources>
-    <string name="app_name">Fresh Waves</string>
-    <string name="pitch">Stay up to date with the latest releases from your favorite artists</string>
+  <string name="app_name">Fresh Waves</string>
+  <string name="pitch">Stay up to date with the latest releases from your favorite artists</string>
 
-    <string name="connect_to_spotify">Connect to Spotify</string>
-    <string name="connect_to_spotify_failed">⚠️ Login to Spotify failed. Please try again!</string>
+  <string name="connect_to_spotify">Connect to Spotify</string>
+  <string name="connect_to_spotify_failed">⚠️ Login to Spotify failed. Please try again!</string>
 
-    <string name="log_out">Log out</string>
+  <string name="log_out">Log out</string>
 
-    <string name="loading_message">Checking for sounds…</string>
-    <string name="loading_error_message">Oops! Something went wrong.</string>
-    <string name="loading_empty_message">There are no new updates for you right now. Check back later!</string>
+  <string name="loading_message">Checking for sounds…</string>
+  <string name="loading_error_message">Oops! Something went wrong.</string>
+  <string name="loading_empty_message">There are no new updates for you right now. Check back later!</string>
 
-    <string name="notification_channel_name">Fresh Albums</string>
-    <string name="notification_channel_description">Lets you know when new albums are released</string>
-    <string name="notification_unknown_artist">Unknown</string>
+  <string name="notification_channel_name">Fresh Albums</string>
+  <string name="notification_channel_description">Lets you know when new albums are released</string>
+  <string name="notification_unknown_artist">Unknown</string>
 
-    <plurals name="notification_fresh_albums_title">
-        <item quantity="one">%1$d fresh album for you this week!</item>
-        <item quantity="many">%1$d fresh albums for you this week!</item>
-        <item quantity="other">%1$d fresh albums for you this week!</item>
-    </plurals>
-    <string name="notification_fresh_albums_text">Tap to check it out</string>
+  <plurals name="notification_fresh_albums_title">
+    <item quantity="one">%1$d fresh album for you this week!</item>
+    <item quantity="many">%1$d fresh albums for you this week!</item>
+    <item quantity="other">%1$d fresh albums for you this week!</item>
+  </plurals>
+  <string name="notification_fresh_albums_text">Tap to check it out</string>
 
-    <string name="notification_fresh_album_title">"%1$s" by %2$s</string>
-    <plurals name="notification_fresh_album_text">
-        <item quantity="one">%1$d track</item>
-        <item quantity="many">%1$d tracks</item>
-        <item quantity="other">%1$d tracks</item>
-    </plurals>
+  <string name="notification_fresh_album_title">"%1$s" by %2$s</string>
+  <plurals name="notification_fresh_album_text">
+    <item quantity="one">%1$d track</item>
+    <item quantity="many">%1$d tracks</item>
+    <item quantity="other">%1$d tracks</item>
+  </plurals>
 
-    <string name="play_with_spotify">Play with Spotify</string>
+  <string name="play_with_spotify">Play with Spotify</string>
 
-    <string name="title_activity_attribution">♥ Open Source</string>
-    <string name="attribution_modifications">Modifications: %1$s</string>
-    <string name="menu_open_source">Open Source Attribution</string>
-    <string name="attribution_license_label">license</string>
+  <string name="title_activity_attribution">♥ Open Source</string>
+  <string name="attribution_modifications">Modifications: %1$s</string>
+  <string name="menu_open_source">Open Source Attribution</string>
+  <string name="attribution_license_label">license</string>
 
 </resources>

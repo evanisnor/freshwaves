@@ -1,15 +1,12 @@
 package com.evanisnor.freshwaves.spotify.auth
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.testing.launchFragment
-import androidx.lifecycle.lifecycleScope
 import app.cash.turbine.test
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
+import com.evanisnor.freshwaves.ext.launchInFragment
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.handyauth.client.HandyAuth
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -207,19 +204,6 @@ class SpotifyAuthorizationImplTest {
 
     spotifyAuthorization.latestResponse.test {
       assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Success)
-    }
-  }
-
-  /**
-   * Syntactically pleasant way ot launching a suspend function from an anonymous Fragment.
-   */
-  private fun launchInFragment(launchOnFragment: suspend (Fragment) -> Unit) {
-    with(launchFragment<Fragment>()) {
-      onFragment {
-        it.lifecycleScope.launch {
-          launchOnFragment(it)
-        }
-      }
     }
   }
 }

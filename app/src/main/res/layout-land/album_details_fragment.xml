@@ -4,7 +4,6 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@color/background"
   android:theme="@style/FreshAlbumCardTheme">
 
   <com.google.android.material.appbar.AppBarLayout
@@ -34,6 +33,7 @@
     android:id="@+id/albumImage"
     android:layout_width="wrap_content"
     android:layout_height="0dp"
+    android:layout_margin="16dp"
     android:adjustViewBounds="true"
     android:importantForAccessibility="no"
     android:scaleType="fitCenter"
@@ -51,23 +51,5 @@
     app:layout_constraintStart_toEndOf="@+id/albumImage"
     app:layout_constraintTop_toBottomOf="@id/appBarLayout"
     tools:listitem="@layout/album_details_track_item" />
-
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/playWithSpotifyButton"
-    style="@style/FreshFloatingActionButton"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:clickable="true"
-    android:contentDescription="@string/play_with_spotify"
-    android:tint="@android:color/black"
-    app:borderWidth="0dp"
-    app:layout_constraintBottom_toBottomOf="@+id/albumImage"
-    app:layout_constraintEnd_toEndOf="@+id/albumImage"
-    app:layout_constraintHorizontal_bias="1.0"
-    app:layout_constraintStart_toStartOf="@+id/albumImage"
-    app:layout_constraintTop_toTopOf="@+id/albumImage"
-    app:layout_constraintVertical_bias="1.0"
-    app:srcCompat="@drawable/play_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

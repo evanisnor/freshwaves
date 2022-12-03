@@ -10,6 +10,7 @@
     android:id="@+id/albumImage"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
+    android:layout_margin="16dp"
     android:adjustViewBounds="true"
     android:importantForAccessibility="no"
     android:scaleType="fitCenter"
@@ -17,24 +18,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:srcCompat="@tools:sample/avatars" />
-
-  <TextView
-    android:id="@+id/artistName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginBottom="16dp"
-    android:ellipsize="end"
-    android:maxLines="2"
-    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/albumName"
-    tools:text="King Gizzard &amp; the Lizard Wizard" />
 
   <TextView
     android:id="@+id/albumName"
@@ -66,25 +49,40 @@
     app:layout_constraintHorizontal_bias="1.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/albumImage"
-    app:layout_constraintVertical_bias="0.13999999"
+    app:layout_constraintVertical_bias="0.0"
     tools:text="2017" />
 
-  <com.google.android.material.floatingactionbutton.FloatingActionButton
-    android:id="@+id/playWithSpotifyButton"
-    style="@style/FreshFloatingActionButton"
+  <TextView
+    android:id="@+id/artistName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/albumName"
+    tools:text="King Gizzard &amp; the Lizard Wizard" />
+
+  <Button
+    android:id="@+id/listenOnSpotifyButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    android:clickable="true"
-    android:contentDescription="@string/play_with_spotify"
+    android:text="@string/listen_on_spotify"
     android:tint="@android:color/black"
-    app:borderWidth="0dp"
-    app:layout_constraintBottom_toBottomOf="@+id/albumImage"
+    app:icon="@drawable/spotify_logo_green"
+    app:iconGravity="textStart"
+    app:iconSize="21dp"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="1.0"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0"
-    app:srcCompat="@drawable/play_icon" />
+    app:layout_constraintTop_toBottomOf="@+id/artistName"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

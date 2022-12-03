@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.features.albumdetails
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -82,14 +81,6 @@ class AlbumDetailsFragment : Fragment() {
 
       albumImage?.apply {
         load(album.images.first().url)
-      }
-
-      playWithSpotifyButton?.setOnClickListener {
-        startActivity(
-          Intent(Intent.ACTION_VIEW).apply {
-            data = album.spotifyUri
-          },
-        )
       }
     }
   }

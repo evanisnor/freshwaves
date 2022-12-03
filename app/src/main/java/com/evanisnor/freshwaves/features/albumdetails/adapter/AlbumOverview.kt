@@ -40,7 +40,7 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
           DateTimeFormatter.ofPattern("YYYY", Locale.getDefault()),
         )
 
-      playWithSpotifyButton?.setOnClickListener {
+      listenOnSpotifyButton.setOnClickListener {
         itemView.context.startActivity(
           Intent(Intent.ACTION_VIEW).apply {
             data = album.spotifyUri

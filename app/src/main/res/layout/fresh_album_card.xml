@@ -18,6 +18,7 @@
       android:id="@+id/albumImage"
       android:layout_width="130dp"
       android:layout_height="130dp"
+      android:padding="8dp"
       android:importantForAccessibility="no"
       android:scaleType="fitCenter"
       app:layout_constraintBottom_toBottomOf="parent"

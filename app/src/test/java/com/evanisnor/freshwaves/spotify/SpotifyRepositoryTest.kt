@@ -11,6 +11,7 @@ import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
+import com.evanisnor.freshwaves.user.UserStateRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -55,7 +56,7 @@ class SpotifyRepositoryTest {
     )
     SpotifyRepositoryImpl(
       spotifyCacheDao.database,
-      spotifyAuthorization,
+      UserStateRepository(spotifyAuthorization),
       spotifyUserRepository,
       spotifyArtistRepository,
       spotifyAlbumRepository,
@@ -74,8 +75,10 @@ class SpotifyRepositoryTest {
   fun `init - when user is authorized - data is available`() = runTest {
     val spotifyRepository = SpotifyRepositoryImpl(
       spotifyCacheDao.database,
-      SpotifyAuthorizationImpl(
-        FakeHandyAuth().apply { authorize() },
+      UserStateRepository(
+        SpotifyAuthorizationImpl(
+          FakeHandyAuth().apply { authorize() },
+        ),
       ),
       spotifyUserRepository,
       spotifyArtistRepository,

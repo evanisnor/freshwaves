@@ -12,13 +12,14 @@ import javax.inject.Inject
 
 class UserStateRepository @Inject constructor(
   private val spotifyAuthorization: SpotifyAuthorization,
-  scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
 ) {
 
   sealed interface State {
     object NoUser : State
     object LoggedIn : State
   }
+
+  private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
   init {
     scope.launch {

@@ -20,10 +20,12 @@ import javax.inject.Singleton
 object FakeSpotifyCacheModule {
 
   @Provides
+  fun spotifyCacheDatabase(@ApplicationContext context: Context) = Room.inMemoryDatabaseBuilder(
+    context,
+    SpotifyCache::class.java,
+  ).build()
+
+  @Provides
   @Singleton
-  fun spotifyCacheDao(@ApplicationContext context: Context): SpotifyCacheDao =
-    Room.inMemoryDatabaseBuilder(
-      context,
-      SpotifyCache::class.java,
-    ).build().spotifyCacheDao()
+  fun spotifyCacheDao(database: SpotifyCache): SpotifyCacheDao = database.spotifyCacheDao()
 }

@@ -1,7 +1,9 @@
 package com.evanisnor.freshwaves.spotify
 
 import com.evanisnor.freshwaves.backend.BackendAPIRepository
+import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
+import com.evanisnor.freshwaves.spotify.cache.SpotifyCache
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
@@ -30,6 +32,8 @@ abstract class SpotifyRepositoryModule {
 }
 
 class SpotifyRepositoryImpl @Inject constructor(
+  private val spotifyCacheDatabase: SpotifyCache,
+  private val spotifyAuthorization: SpotifyAuthorization,
   private val spotifyUserRepository: SpotifyUserRepository,
   private val spotifyArtistRepository: SpotifyArtistRepository,
   private val spotifyAlbumRepository: SpotifyAlbumRepository,
@@ -37,6 +41,16 @@ class SpotifyRepositoryImpl @Inject constructor(
 ) : SpotifyRepository {
 
   private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
+  init {
+    scope.launch {
+      spotifyAuthorization.latestResponse.collect {
+        if (it == SpotifyAuthorization.Response.Failure) {
+          spotifyCacheDatabase.clearAllTables()
+        }
+      }
+    }
+  }
 
   override suspend fun update() = withContext(scope.coroutineContext) {
     Timber.d("Fetching user profile")

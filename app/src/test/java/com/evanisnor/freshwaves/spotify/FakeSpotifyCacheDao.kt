@@ -18,11 +18,11 @@ import java.time.Instant
 @Suppress("TestFunctionName")
 class FakeSpotifyCacheDao(
   context: Context = InstrumentationRegistry.getInstrumentation().context,
-  private val dao: SpotifyCacheDao =
-    Room.inMemoryDatabaseBuilder(
-      context,
-      SpotifyCache::class.java,
-    ).allowMainThreadQueries().build().spotifyCacheDao(),
+  val database: SpotifyCache = Room.inMemoryDatabaseBuilder(
+    context,
+    SpotifyCache::class.java,
+  ).allowMainThreadQueries().build(),
+  private val dao: SpotifyCacheDao = database.spotifyCacheDao(),
 ) : SpotifyCacheDao() {
 
   override suspend fun _readArtists(): List<Artist> = dao._readArtists()

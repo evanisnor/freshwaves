@@ -6,12 +6,13 @@
   android:layout_height="wrap_content"
   android:clickable="true"
   android:foreground="?android:attr/selectableItemBackground"
-  android:minHeight="28dp">
+  android:minHeight="48dp">
 
   <ImageView
     android:id="@+id/spotify_logo"
     android:layout_width="36dp"
     android:layout_height="0dp"
+    android:minHeight="48dp"
     android:background="@drawable/connect_button_shape_left"
     android:importantForAccessibility="no"
     android:padding="6dp"
@@ -25,6 +26,7 @@
     style="@style/TextAppearance.Material3.LabelMedium"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
+    android:minHeight="48dp"
     android:background="@drawable/connect_button_shape_right"
     android:gravity="center"
     android:includeFontPadding="false"
@@ -37,6 +39,6 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@id/spotify_logo"
     app:layout_constraintTop_toTopOf="parent"
-    tools:text="Connect to something in a language that has lots of characters" />
+    tools:text="Connect to something" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -63,6 +63,19 @@
       app:layout_constraintVertical_bias="0.0"
       tools:text="The Beatles" />
 
+    <ImageView
+      android:layout_width="21dp"
+      android:layout_height="21dp"
+      android:layout_margin="8dp"
+      app:srcCompat="@drawable/spotify_logo_green"
+      app:layout_constraintStart_toEndOf="@id/albumImage"
+      app:layout_constraintEnd_toStartOf="@id/releaseDate"
+      app:layout_constraintTop_toBottomOf="@id/artistName"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintVertical_bias="1.0"
+      />
+
     <TextView
       android:id="@+id/releaseDate"
       android:layout_width="wrap_content"

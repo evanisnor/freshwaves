@@ -5,10 +5,15 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import com.evanisnor.freshwaves.user.UserStateRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.launch
 import java.time.Instant
 import javax.inject.Inject
 import javax.inject.Named
@@ -17,6 +22,7 @@ import javax.inject.Singleton
 @Singleton
 class UpdaterRepository @Inject constructor(
   @Named("UpdaterMeta") private val updaterMeta: DataStore<Preferences>,
+  userStateRepository: UserStateRepository,
 ) {
 
   companion object {
@@ -25,9 +31,23 @@ class UpdaterRepository @Inject constructor(
     private val nextRunTimestamp = longPreferencesKey("nextRunTimestamp")
   }
 
+  private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
   private val _state: MutableStateFlow<UpdaterState> = MutableStateFlow(UpdaterState.Idle)
   val state: StateFlow<UpdaterState>
     get() = _state.asStateFlow()
+
+  init {
+    scope.launch {
+      userStateRepository.currentState.collect { it ->
+        if (it == UserStateRepository.State.NoUser) {
+          updaterMeta.edit { prefs ->
+            prefs.clear()
+          }
+        }
+      }
+    }
+  }
 
   internal suspend fun updateState(updaterState: UpdaterState) {
     if (updaterState != UpdaterState.Idle && updaterState != UpdaterState.Unknown) {

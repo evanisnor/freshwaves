@@ -45,7 +45,7 @@ class ConnectAccountFragment : Fragment() {
 
     binding?.connectSpotifyButton?.root?.setOnClickListener {
       lifecycleScope.launch {
-        when (pendingAuthorization.authorize(requireContext())) {
+        when (pendingAuthorization.authorize()) {
           is SpotifyAuthorization.Response.Success -> proceedToFreshAlbums()
           is SpotifyAuthorization.Response.Failure -> {
             binding?.root?.showSnackbar(R.string.connect_to_spotify_failed, Snackbar.LENGTH_INDEFINITE)

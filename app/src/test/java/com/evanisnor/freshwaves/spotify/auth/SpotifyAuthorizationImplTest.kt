@@ -3,6 +3,7 @@ package com.evanisnor.freshwaves.spotify.auth
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.testing.launchFragment
 import androidx.lifecycle.lifecycleScope
+import app.cash.turbine.test
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.handyauth.client.HandyAuth
@@ -27,8 +28,7 @@ class SpotifyAuthorizationImplTest {
     )
 
     launchInFragment { fragment ->
-      spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
     }
 
     assertThat(spotifyAuthorization.isAuthorized).isTrue()
@@ -42,8 +42,7 @@ class SpotifyAuthorizationImplTest {
     val spotifyAuthorization = SpotifyAuthorizationImpl(handyAuth)
 
     launchInFragment { fragment ->
-      spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
     }
 
     assertThat(spotifyAuthorization.isAuthorized).isFalse()
@@ -58,8 +57,7 @@ class SpotifyAuthorizationImplTest {
     )
 
     launchInFragment { fragment ->
-      val response = spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      val response = spotifyAuthorization.prepareAuthorization(fragment).authorize()
 
       assertThat(response).isEqualTo(SpotifyAuthorization.Response.Success)
     }
@@ -74,8 +72,7 @@ class SpotifyAuthorizationImplTest {
     )
 
     launchInFragment { fragment ->
-      val response = spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      val response = spotifyAuthorization.prepareAuthorization(fragment).authorize()
 
       assertThat(response).isEqualTo(SpotifyAuthorization.Response.Failure)
     }
@@ -102,8 +99,7 @@ class SpotifyAuthorizationImplTest {
     )
 
     launchInFragment { fragment ->
-      spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
     }
 
     assertThat(spotifyAuthorization.getAuthorizationHeader()).isEqualTo("Fake test-token")
@@ -118,8 +114,7 @@ class SpotifyAuthorizationImplTest {
     )
 
     launchInFragment { fragment ->
-      spotifyAuthorization.prepareAuthorization(fragment)
-        .authorize(fragment.requireContext())
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
     }
 
     try {
@@ -127,6 +122,91 @@ class SpotifyAuthorizationImplTest {
       assert(false) { "Expected error not thrown" }
     } catch (e: Throwable) {
       assert(true)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when not authorised - returns Failure`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth())
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Failure)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when authorised - returns Success`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(FakeHandyAuth().apply { authorize() })
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Success)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when user logs in successfully - returns Success`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Authorized
+      },
+    )
+
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
+    }
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Success)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when user log in fails - returns Failure`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        expectedAuthResult = HandyAuth.Result.Error.Denied
+      },
+    )
+
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
+    }
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Failure)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when user logs out - returns Failure`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        authorize()
+      },
+    )
+
+    spotifyAuthorization.logout()
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Failure)
+    }
+  }
+
+  @Test
+  fun `latestResponse - when user logs out and logs back in - returns Success`() = runTest {
+    val spotifyAuthorization = SpotifyAuthorizationImpl(
+      FakeHandyAuth().apply {
+        authorize()
+      },
+    )
+
+    spotifyAuthorization.logout()
+    launchInFragment { fragment ->
+      spotifyAuthorization.prepareAuthorization(fragment).authorize()
+    }
+
+    spotifyAuthorization.latestResponse.test {
+      assertThat(awaitItem()).isEqualTo(SpotifyAuthorization.Response.Success)
     }
   }
 

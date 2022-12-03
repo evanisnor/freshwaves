@@ -8,8 +8,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class UserStateRepository @Inject constructor(
   private val spotifyAuthorization: SpotifyAuthorization,
 ) {
@@ -28,6 +31,7 @@ class UserStateRepository @Inject constructor(
           is SpotifyAuthorization.Response.Success -> _currentState.emit(State.LoggedIn)
           is SpotifyAuthorization.Response.Failure -> _currentState.emit(State.NoUser)
         }
+        Timber.d("Current User State: ${_currentState.value.javaClass.simpleName}")
       }
     }
   }
@@ -39,5 +43,6 @@ class UserStateRepository @Inject constructor(
       State.NoUser
     },
   )
+
   val currentState: Flow<State> = _currentState.asStateFlow()
 }

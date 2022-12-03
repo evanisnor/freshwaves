@@ -13,6 +13,7 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -29,6 +30,11 @@ private class LoginUserFlow(
   private val onResponse: suspend (SpotifyAuthorization.Response) -> Unit,
 ) :
   SpotifyAuthorization.PendingAuthorization {
+
+  init {
+    Timber.d("Preparing user login")
+  }
+
   override suspend fun authorize(): SpotifyAuthorization.Response =
     when (handyAuthPendingAuthorization.authorize()) {
       is HandyAuth.Result.Authorized -> {
@@ -56,19 +62,23 @@ class SpotifyAuthorizationImpl @Inject constructor(
   override val isAuthorized: Boolean
     get() = handyAuth.isAuthorized
 
-  override val latestResponse: Flow<SpotifyAuthorization.Response> = _latestResponse.asStateFlow()
+  override val latestResponse: Flow<SpotifyAuthorization.Response> =
+    _latestResponse.asStateFlow()
 
   override suspend fun prepareAuthorization(fragment: Fragment): SpotifyAuthorization.PendingAuthorization =
     LoginUserFlow(handyAuth.prepareAuthorization(fragment)) {
+      Timber.d("Received authorization response: $it")
+      _latestResponse.emit(it)
+
       // TODO Remove this side-effect
       if (it is SpotifyAuthorization.Response.Success) {
         LocalBroadcastManager.getInstance(fragment.requireContext())
           .sendBroadcast(Intent(authorizationSuccessfulAction))
       }
-      _latestResponse.emit(it)
     }
 
   override suspend fun logout() {
+    Timber.i("Logging out")
     handyAuth.logout()
     _latestResponse.emit(SpotifyAuthorization.Response.Failure)
   }

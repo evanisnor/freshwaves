@@ -7,6 +7,8 @@ import javax.inject.Inject
 
 class AppMetadata @Inject constructor() {
 
+  fun adMobAdAlbumCard(context: Context) = metaData(context, "adMobAdAlbumCard")
+
   fun spotifyClientId(context: Context) = metaData(context, "spotifyClientId")
 
   fun spotifyRedirectUri(context: Context) = metaData(context, "spotifyRedirectUri")

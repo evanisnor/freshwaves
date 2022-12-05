@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import org.jetbrains.kotlin.util.capitalizeDecapitalize.toUpperCaseAsciiOnly
 import java.io.ByteArrayOutputStream
 import java.io.FileInputStream
 import java.time.Instant
@@ -32,6 +33,14 @@ android {
       println("Current Version: $it")
     }
 
+    manifestPlaceholders["adMobAppId"] = readEnvironmentVariable(
+      name = "ADMOB_APPID",
+      default = "ca-app-pub-3940256099942544~3347511713",
+    )
+    manifestPlaceholders["adMobAdAlbumCard"] = readEnvironmentVariable(
+      name = "ADMOB_AD_ALBUMCARD",
+      default = "ca-app-pub-3940256099942544/2247696110",
+    )
     manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
 
     buildConfigField("Long", "BUILD_TIMESTAMP", "${Instant.now().toEpochMilli()}L")
@@ -171,3 +180,11 @@ fun countGitCommits(since: String? = null) = if (!since.isNullOrBlank()) {
 } else {
   "git".execute("rev-list", "--count", "main")
 }.toInt()
+
+fun readEnvironmentVariable(
+  name: String,
+  default: String,
+): String {
+  val fromEnv = System.getenv(name.toUpperCaseAsciiOnly())
+  return if (fromEnv.isNullOrBlank()) default else fromEnv
+}

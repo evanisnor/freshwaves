@@ -1,8 +1,10 @@
 package com.evanisnor.freshwaves
 
 import android.app.Application
+import androidx.annotation.Keep
 import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
+import com.evanisnor.freshwaves.ads.AdMob
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import dagger.hilt.android.HiltAndroidApp
@@ -20,6 +22,11 @@ class FreshWavesApp : Application(), Configuration.Provider {
 
   @Inject
   lateinit var freshAlbumNotifier: FreshAlbumNotifier
+
+  @Inject
+  @Suppress("unused")
+  @Keep
+  lateinit var adMob: AdMob
 
   @Inject
   lateinit var trees: Set<@JvmSuppressWildcards Timber.Tree>

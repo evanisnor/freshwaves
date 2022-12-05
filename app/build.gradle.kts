@@ -114,6 +114,7 @@ dependencies {
     exclude(group = "com.squareup.moshi", module = "moshi")
   }
   implementation(libs.coil)
+  implementation(libs.google.ads)
   implementation(platform(libs.google.firebase.bom))
   implementation(libs.google.firebase.analytics)
   implementation(libs.google.firebase.crashlytics)

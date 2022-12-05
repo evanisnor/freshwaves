@@ -16,15 +16,14 @@ import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.features.attribution.ThirdPartyUsageListFragment
+import com.evanisnor.freshwaves.features.freshalbums.adapter.FreshAlbumsAdapter
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.DebugMenu
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
@@ -107,7 +106,7 @@ class FreshAlbumsFragment : Fragment() {
     binding?.apply {
       loadingMessage.loading.isVisible = state == UpdaterState.Running
       freshAlbumsList.isVisible = state == UpdaterState.Success && albumCount > 0
-      emptyMessage.empty.isVisible = state == UpdaterState.Success  && albumCount == 0
+      emptyMessage.empty.isVisible = state == UpdaterState.Success && albumCount == 0
       errorMessage.error.isVisible = state == UpdaterState.Failure
     }
   }

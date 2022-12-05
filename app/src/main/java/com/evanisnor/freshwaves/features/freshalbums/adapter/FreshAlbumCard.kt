@@ -1,10 +1,8 @@
-package com.evanisnor.freshwaves.features.freshalbums
+package com.evanisnor.freshwaves.features.freshalbums.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.evanisnor.freshwaves.R
@@ -14,7 +12,7 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 
-class FreshAlbumViewHolder(
+class FreshAlbumCard(
   itemView: View,
   private val listener: FreshAlbumsAdapter.OnAlbumSelectedListener?,
 ) :
@@ -22,7 +20,7 @@ class FreshAlbumViewHolder(
 
   companion object {
     fun create(parent: ViewGroup, listener: FreshAlbumsAdapter.OnAlbumSelectedListener?) =
-      FreshAlbumViewHolder(
+      FreshAlbumCard(
         LayoutInflater.from(parent.context)
           .inflate(R.layout.fresh_album_card, parent, false),
         listener,
@@ -50,27 +48,5 @@ class FreshAlbumViewHolder(
     itemView.setOnClickListener {
       listener?.onAlbumSelected(album)
     }
-  }
-}
-
-class AlbumDiffCallback : DiffUtil.ItemCallback<Album>() {
-  override fun areItemsTheSame(oldItem: Album, newItem: Album) = oldItem == newItem
-
-  override fun areContentsTheSame(oldItem: Album, newItem: Album) = oldItem == newItem
-}
-
-class FreshAlbumsAdapter : ListAdapter<Album, FreshAlbumViewHolder>(AlbumDiffCallback()) {
-
-  interface OnAlbumSelectedListener {
-    fun onAlbumSelected(album: Album)
-  }
-
-  var listener: OnAlbumSelectedListener? = null
-
-  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FreshAlbumViewHolder =
-    FreshAlbumViewHolder.create(parent, listener)
-
-  override fun onBindViewHolder(holder: FreshAlbumViewHolder, position: Int) {
-    holder.bind(getItem(position))
   }
 }

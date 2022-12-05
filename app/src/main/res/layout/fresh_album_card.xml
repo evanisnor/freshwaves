@@ -67,6 +67,7 @@
       android:layout_width="21dp"
       android:layout_height="21dp"
       android:layout_margin="8dp"
+      android:importantForAccessibility="no"
       app:srcCompat="@drawable/spotify_logo_green"
       app:layout_constraintStart_toEndOf="@id/albumImage"
       app:layout_constraintEnd_toStartOf="@id/releaseDate"

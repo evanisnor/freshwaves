@@ -1,17 +1,14 @@
 package com.evanisnor.freshwaves.ads
 
+import android.annotation.SuppressLint
 import android.content.Context
 import com.evanisnor.freshwaves.system.AppMetadata
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.nativead.NativeAd
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -22,7 +19,6 @@ class AdMob @Inject constructor(
   appMetadata: AppMetadata,
 ) : AdIntegration {
 
-  private val scope: CoroutineScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
   private val albumCardId = appMetadata.adMobAdAlbumCard(context)
 
   init {
@@ -31,20 +27,20 @@ class AdMob @Inject constructor(
     }
   }
 
-  override fun buildAlbumCardAd(onLoaded: (NativeAd) -> Unit) {
-    scope.launch {
-      AdLoader.Builder(context, albumCardId)
-        .forNativeAd {
-          onLoaded(it)
-        }
-        .withAdListener(
-          object : AdListener() {
-            override fun onAdFailedToLoad(error: LoadAdError) {
-              Timber.e("Failed to load Album Card Ad: ${error.cause ?: "Unknown"}")
-            }
-          },
-        )
-        .build()
-    }
+  @SuppressLint("VisibleForTests")
+  override fun buildAlbumCardAd(onLoaded: (Advertisement) -> Unit) {
+    AdLoader.Builder(context, albumCardId)
+      .forNativeAd {
+        onLoaded(Advertisement(it))
+      }
+      .withAdListener(
+        object : AdListener() {
+          override fun onAdFailedToLoad(error: LoadAdError) {
+            Timber.e("Failed to load Album Card Ad. Cause: ${error.cause ?: "Unknown"}\n${error.responseInfo}")
+          }
+        },
+      )
+      .build()
+      .loadAd(AdRequest.Builder().build())
   }
 }

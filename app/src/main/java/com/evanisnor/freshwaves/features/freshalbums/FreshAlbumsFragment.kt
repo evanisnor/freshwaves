@@ -10,13 +10,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.evanisnor.freshwaves.LoginActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
 import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.features.attribution.ThirdPartyUsageListFragment
 import com.evanisnor.freshwaves.features.freshalbums.adapter.FreshAlbumsAdapter
+import com.evanisnor.freshwaves.features.freshalbums.adapter.ObservableLinearLayoutManager
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -34,8 +34,10 @@ class FreshAlbumsFragment : Fragment() {
   @Inject
   lateinit var spotifyAuthorization: SpotifyAuthorization
 
+  @Inject
+  lateinit var freshAlbumsAdapter: FreshAlbumsAdapter
+
   private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
-  private val freshAlbumsAdapter = FreshAlbumsAdapter()
   private var binding: FreshAlbumsFragmentBinding? = null
 
   override fun onCreateView(
@@ -56,11 +58,14 @@ class FreshAlbumsFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+    val observableLinearLayoutManager = ObservableLinearLayoutManager(requireContext())
 
     binding?.apply {
       freshAlbumsList.apply {
         adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
-        layoutManager = LinearLayoutManager(context)
+        layoutManager = observableLinearLayoutManager.apply {
+          insertAdvertisements(this)
+        }
       }
 
       toolbar.setOnMenuItemClickListener { item ->
@@ -140,6 +145,16 @@ class FreshAlbumsFragment : Fragment() {
         .add(android.R.id.content, albumDetailsFragment)
         .addToBackStack(AlbumDetailsFragment.TAG)
         .commit()
+    }
+  }
+
+  private fun insertAdvertisements(layoutManager: ObservableLinearLayoutManager) {
+    layoutManager.whenLayoutCompleted {
+      val lastVisiblePosition = findLastVisibleItemPosition()
+      if (lastVisiblePosition > 0) {
+        freshAlbumsAdapter.insertAdvertisements(lastVisiblePosition, offset = 2)
+        whenLayoutCompleted { }
+      }
     }
   }
 }

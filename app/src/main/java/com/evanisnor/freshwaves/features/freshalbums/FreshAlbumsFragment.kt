@@ -55,7 +55,6 @@ class FreshAlbumsFragment : Fragment() {
   override fun onDestroy() {
     super.onDestroy()
     binding = null
-    freshAlbumsAdapter.destroyAds()
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,9 +64,7 @@ class FreshAlbumsFragment : Fragment() {
     binding?.apply {
       freshAlbumsList.apply {
         adapter = ConcatAdapter(HeaderAdapter(), freshAlbumsAdapter)
-        layoutManager = observableLinearLayoutManager.apply {
-          insertAdvertisements(this)
-        }
+        layoutManager = observableLinearLayoutManager
       }
 
       toolbar.setOnMenuItemClickListener { item ->
@@ -100,7 +97,7 @@ class FreshAlbumsFragment : Fragment() {
 
     with(lifecycleScope) {
       launchWhenCreated {
-        listenForFreshAlbums()
+        listenForFreshAlbums(observableLinearLayoutManager)
       }
       launchWhenResumed {
         listenForUpdaterStatus()
@@ -118,10 +115,11 @@ class FreshAlbumsFragment : Fragment() {
     }
   }
 
-  private suspend fun listenForFreshAlbums() {
+  private suspend fun listenForFreshAlbums(observableLinearLayoutManager: ObservableLinearLayoutManager) {
     freshAlbumsViewModel.albums.collect { albums ->
       freshAlbumsAdapter.submitList(albums)
       toggleViews(freshAlbumsViewModel.lastKnownUpdaterState(), albums.size)
+      insertAdvertisements(observableLinearLayoutManager)
     }
   }
 
@@ -152,9 +150,13 @@ class FreshAlbumsFragment : Fragment() {
 
   private fun insertAdvertisements(layoutManager: ObservableLinearLayoutManager) {
     layoutManager.whenLayoutCompleted {
-      val lastVisiblePosition = findLastVisibleItemPosition()
-      if (lastVisiblePosition > 0) {
-        freshAlbumsAdapter.insertAdvertisements(max(lastVisiblePosition, 5), offset = 2)
+      val lastVisiblePosition = max(findLastVisibleItemPosition(), 5)
+      if (lastVisiblePosition > 0 && freshAlbumsAdapter.itemCount > 0) {
+        val adIndexes = freshAlbumsAdapter.indexesThatNeedAds(lastVisiblePosition, 2)
+        lifecycleScope.launch {
+          val albumCardAds = freshAlbumsViewModel.generateAlbumCardAds(numberOfAds = adIndexes.size)
+          freshAlbumsAdapter.insertAdvertisements(albumCardAds, adIndexes)
+        }
         whenLayoutCompleted { }
       }
     }

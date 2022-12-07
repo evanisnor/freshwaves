@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.evanisnor.freshwaves.ads.AdIntegration
 import com.evanisnor.freshwaves.ads.Advertisement
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import timber.log.Timber
@@ -23,7 +22,6 @@ class AlbumListDiffCallback : DiffUtil.ItemCallback<AlbumListItem>() {
 }
 
 class FreshAlbumsAdapter @Inject constructor(
-  private val adIntegration: AdIntegration,
   private val adFreshAlbumCardFactory: AdFreshAlbumCardFactory,
 ) : RecyclerView.Adapter<ViewHolder>() {
 
@@ -38,33 +36,36 @@ class FreshAlbumsAdapter @Inject constructor(
     differ.submitList(albums.map { AlbumListItem.FreshAlbumItem(it) })
   }
 
-  fun insertAdvertisements(lastVisiblePosition: Int, offset: Int = 0) {
-    if (lastVisiblePosition <= offset) return
-
+  fun indexesThatNeedAds(
+    lastVisiblePosition: Int,
+    offset: Int = 0,
+  ): List<Int> {
+    if (lastVisiblePosition <= offset) return emptyList()
     val increment = lastVisiblePosition - offset
     var i = increment
     val adIndexes = mutableListOf<Int>()
-
     while (i < itemCount) {
       adIndexes.add(0, i)
       i += increment
     }
+    return adIndexes
+  }
 
+  fun insertAdvertisements(
+    albumCardAds: List<Advertisement>,
+    adIndexes: List<Int>,
+  ) {
     Timber.d("Inserting ${adIndexes.size} Album Card ads")
+    val adIndexQueue = adIndexes.toMutableList()
     differ.submitList(
       differ.currentList.toMutableList().apply {
-        adIndexes.forEachIndexed { n, adIndex ->
+        for (albumCardAd in albumCardAds) {
+          val adIndex = adIndexQueue.removeAt(0)
           Timber.d("Inserting Album Card ad at position $adIndex")
-          adIntegration.buildAlbumCardAd("adCard-$n") { ad ->
-            add(adIndex, AlbumListItem.AdvertisementItem(ad))
-          }
+          add(adIndex, AlbumListItem.AdvertisementItem(albumCardAd))
         }
       },
     )
-  }
-
-  fun destroyAds() {
-    adIntegration.clearCache("adCard")
   }
 
   override fun getItemCount(): Int = differ.currentList.size

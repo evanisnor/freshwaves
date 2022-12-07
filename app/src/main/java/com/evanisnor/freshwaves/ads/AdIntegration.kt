@@ -1,5 +1,6 @@
 package com.evanisnor.freshwaves.ads
 
+import com.google.android.gms.ads.LoadAdError
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -7,7 +8,12 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 interface AdIntegration {
-  fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit)
+
+  class LoadFailed(error: LoadAdError) : RuntimeException(
+    "Failed to load ad. Cause: ${error.cause ?: "Unknown"}\n${error.responseInfo}",
+  )
+
+  suspend fun buildAlbumCardAd(contextualId: String): Advertisement
 
   fun clearCache(contextualIdStartsWith: String = "")
 }

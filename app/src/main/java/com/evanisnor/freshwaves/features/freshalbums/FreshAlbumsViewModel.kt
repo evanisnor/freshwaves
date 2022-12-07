@@ -2,6 +2,7 @@ package com.evanisnor.freshwaves.features.freshalbums
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.evanisnor.freshwaves.ads.AlbumCardAdRepository
 import com.evanisnor.freshwaves.features.updater.UpdaterRepository
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
@@ -16,6 +17,7 @@ import javax.inject.Inject
 class FreshAlbumsViewModel @Inject constructor(
   updaterRepository: UpdaterRepository,
   private val spotifyRepository: SpotifyRepository,
+  private val albumCardAdRepository: AlbumCardAdRepository,
 ) : ViewModel() {
 
   val updaterState: StateFlow<UpdaterState> = updaterRepository.state
@@ -30,4 +32,10 @@ class FreshAlbumsViewModel @Inject constructor(
   }
 
   fun lastKnownUpdaterState(): UpdaterState = updaterState.value
+
+  suspend fun generateAlbumCardAds(numberOfAds: Int) = albumCardAdRepository.generateAlbumCardAds(numberOfAds)
+
+  override fun onCleared() {
+    albumCardAdRepository.destroyAds()
+  }
 }

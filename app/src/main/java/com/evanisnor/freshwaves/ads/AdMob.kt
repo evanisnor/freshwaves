@@ -9,6 +9,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -19,6 +24,7 @@ class AdMob @Inject constructor(
   appMetadata: AppMetadata,
 ) : AdIntegration {
 
+  private val mainScope = CoroutineScope(Dispatchers.Main.immediate)
   private val albumCardId = appMetadata.adMobAdAlbumCard(context)
   private val cache = mutableMapOf<String, Advertisement>()
 
@@ -28,25 +34,34 @@ class AdMob @Inject constructor(
     }
   }
 
+  @OptIn(ExperimentalCoroutinesApi::class)
   @SuppressLint("VisibleForTests")
-  override fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit) {
-    cache[contextualId]?.let(onLoaded)?.also { return }
-    AdLoader.Builder(context, albumCardId)
-      .forNativeAd {
-        val ad = Advertisement(it)
-        cache[contextualId] = ad
-        onLoaded(ad)
+  override suspend fun buildAlbumCardAd(contextualId: String): Advertisement =
+    suspendCancellableCoroutine { continuation ->
+      cache[contextualId]?.let {
+        continuation.resume(it) {}
+        return@suspendCancellableCoroutine
       }
-      .withAdListener(
-        object : AdListener() {
-          override fun onAdFailedToLoad(error: LoadAdError) {
-            Timber.e("Failed to load Album Card Ad. Cause: ${error.cause ?: "Unknown"}\n${error.responseInfo}")
+
+      mainScope.launch {
+        Timber.i("Requesting native advertisement for $contextualId")
+        AdLoader.Builder(context, albumCardId)
+          .forNativeAd {
+            val ad = Advertisement(it)
+            cache[contextualId] = ad
+            continuation.resume(ad) {}
           }
-        },
-      )
-      .build()
-      .loadAd(AdRequest.Builder().build())
-  }
+          .withAdListener(
+            object : AdListener() {
+              override fun onAdFailedToLoad(error: LoadAdError) {
+                continuation.cancel(AdIntegration.LoadFailed(error))
+              }
+            },
+          )
+          .build()
+          .loadAd(AdRequest.Builder().build())
+      }
+    }
 
   override fun clearCache(contextualIdStartsWith: String) {
     cache

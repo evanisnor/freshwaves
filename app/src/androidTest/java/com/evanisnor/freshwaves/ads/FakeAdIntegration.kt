@@ -8,16 +8,14 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 class FakeAdIntegration @Inject constructor() : AdIntegration {
-  override fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit) {
-    // TODO Maybe test with ads?
-//    onLoaded(Advertisement(
-//      headline = "An ad!",
-//      body = "Buy this thing please",
-//      callToAction = "NOW",
-//      icon = null,
-//      adChoicesLogo = null
-//    ))
-  }
+  override suspend fun buildAlbumCardAd(contextualId: String): Advertisement =
+    Advertisement(
+      headline = "An ad!",
+      body = "Buy this thing please",
+      callToAction = "NOW",
+      icon = null,
+      adChoicesLogo = null,
+    )
 
   override fun clearCache(contextualIdStartsWith: String) {}
 }

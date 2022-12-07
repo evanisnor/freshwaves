@@ -55,6 +55,7 @@ class FreshAlbumsFragment : Fragment() {
   override fun onDestroy() {
     super.onDestroy()
     binding = null
+    freshAlbumsAdapter.destroyAds()
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

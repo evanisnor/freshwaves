@@ -63,6 +63,10 @@ class FreshAlbumsAdapter @Inject constructor(
     )
   }
 
+  fun destroyAds() {
+    adIntegration.clearCache("adCard")
+  }
+
   override fun getItemCount(): Int = differ.currentList.size
 
   override fun getItemViewType(position: Int): Int = when (differ.currentList[position]) {

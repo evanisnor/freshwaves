@@ -47,4 +47,13 @@ class AdMob @Inject constructor(
       .build()
       .loadAd(AdRequest.Builder().build())
   }
+
+  override fun clearCache(contextualIdStartsWith: String) {
+    cache
+      .filter { it.key.startsWith(contextualIdStartsWith) }
+      .forEach {
+        it.value.nativeAd?.destroy()
+        cache.remove(it.key)
+      }
+  }
 }

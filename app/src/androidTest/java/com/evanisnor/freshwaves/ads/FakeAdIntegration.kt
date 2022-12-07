@@ -18,6 +18,8 @@ class FakeAdIntegration @Inject constructor() : AdIntegration {
 //      adChoicesLogo = null
 //    ))
   }
+
+  override fun clearCache(contextualIdStartsWith: String) {}
 }
 
 @Module

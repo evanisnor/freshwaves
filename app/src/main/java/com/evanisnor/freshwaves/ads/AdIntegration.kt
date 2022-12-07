@@ -8,6 +8,8 @@ import javax.inject.Singleton
 
 interface AdIntegration {
   fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit)
+
+  fun clearCache(contextualIdStartsWith: String = "")
 }
 
 @Module

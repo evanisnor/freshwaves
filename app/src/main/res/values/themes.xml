@@ -120,6 +120,7 @@
     <item name="colorOnSurface">@color/onBackground</item>
     <item name="android:textAppearance">@color/onBackground</item>
     <item name="textAppearanceBody1">@color/onBackground</item>
+    <item name="android:outlineProvider">none</item>
   </style>
 
   <style name="FreshFloatingActionButton" parent="Widget.Material3.FloatingActionButton.Surface" />

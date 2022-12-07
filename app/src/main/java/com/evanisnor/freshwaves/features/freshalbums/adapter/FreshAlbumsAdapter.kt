@@ -53,9 +53,9 @@ class FreshAlbumsAdapter @Inject constructor(
     Timber.d("Inserting ${adIndexes.size} Album Card ads")
     differ.submitList(
       differ.currentList.toMutableList().apply {
-        for (adIndex in adIndexes) {
+        adIndexes.forEachIndexed { n, adIndex ->
           Timber.d("Inserting Album Card ad at position $adIndex")
-          adIntegration.buildAlbumCardAd { ad ->
+          adIntegration.buildAlbumCardAd("adCard-$n") { ad ->
             add(adIndex, AlbumListItem.AdvertisementItem(ad))
           }
         }

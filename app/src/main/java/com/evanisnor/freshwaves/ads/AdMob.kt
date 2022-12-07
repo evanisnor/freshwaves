@@ -20,6 +20,7 @@ class AdMob @Inject constructor(
 ) : AdIntegration {
 
   private val albumCardId = appMetadata.adMobAdAlbumCard(context)
+  private val cache = mutableMapOf<String, Advertisement>()
 
   init {
     MobileAds.initialize(context) {
@@ -28,10 +29,13 @@ class AdMob @Inject constructor(
   }
 
   @SuppressLint("VisibleForTests")
-  override fun buildAlbumCardAd(onLoaded: (Advertisement) -> Unit) {
+  override fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit) {
+    cache[contextualId]?.let(onLoaded)?.also { return }
     AdLoader.Builder(context, albumCardId)
       .forNativeAd {
-        onLoaded(Advertisement(it))
+        val ad = Advertisement(it)
+        cache[contextualId] = ad
+        onLoaded(ad)
       }
       .withAdListener(
         object : AdListener() {

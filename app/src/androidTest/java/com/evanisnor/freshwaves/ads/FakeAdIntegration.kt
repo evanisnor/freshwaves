@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 class FakeAdIntegration @Inject constructor() : AdIntegration {
-  override fun buildAlbumCardAd(onLoaded: (Advertisement) -> Unit) {
+  override fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit) {
     // TODO Maybe test with ads?
 //    onLoaded(Advertisement(
 //      headline = "An ad!",

@@ -7,7 +7,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 interface AdIntegration {
-  fun buildAlbumCardAd(onLoaded: (Advertisement) -> Unit)
+  fun buildAlbumCardAd(contextualId: String, onLoaded: (Advertisement) -> Unit)
 }
 
 @Module

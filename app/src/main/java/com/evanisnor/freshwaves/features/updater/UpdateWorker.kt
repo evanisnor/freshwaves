@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.time.Instant
+import java.time.temporal.ChronoUnit
 
 @HiltWorker
 class UpdateWorker @AssistedInject constructor(
@@ -43,8 +44,9 @@ class UpdateWorker @AssistedInject constructor(
   }
 
   private suspend fun notifyOfNewAlbums() {
-    val freshAlbums =
-      spotifyRepository.getAlbumsReleasedAfter(Instant.now().startOfDayUTC())
+    // Check for new albums released since the day after the last update, or just check from today.
+    val checkDate = updaterRepository.lastRunOn()?.plus(1, ChronoUnit.DAYS) ?: Instant.now()
+    val freshAlbums = spotifyRepository.getAlbumsReleasedAfter(checkDate.startOfDayUTC())
     freshAlbumNotifier.send(freshAlbums)
   }
 

@@ -12,8 +12,8 @@ import timber.log.Timber
 import javax.inject.Inject
 
 sealed interface AlbumListItem {
-  class FreshAlbum(val album: Album) : AlbumListItem
-  class AdCard(val ad: Advertisement) : AlbumListItem
+  class FreshAlbumItem(val album: Album) : AlbumListItem
+  class AdvertisementItem(val ad: Advertisement) : AlbumListItem
 }
 
 class AlbumListDiffCallback : DiffUtil.ItemCallback<AlbumListItem>() {
@@ -35,52 +35,52 @@ class FreshAlbumsAdapter @Inject constructor(
   var listener: OnAlbumSelectedListener? = null
 
   fun submitList(albums: List<Album>) {
-    differ.submitList(albums.map { AlbumListItem.FreshAlbum(it) })
+    differ.submitList(albums.map { AlbumListItem.FreshAlbumItem(it) })
   }
 
   fun insertAdvertisements(lastVisiblePosition: Int, offset: Int = 0) {
     if (lastVisiblePosition <= offset) return
+
+    val increment = lastVisiblePosition - offset
+    var i = increment
+    val adIndexes = mutableListOf<Int>()
+
+    while (i < itemCount) {
+      adIndexes.add(0, i)
+      i += increment
+    }
+
+    Timber.d("Inserting ${adIndexes.size} Album Card ads")
     differ.submitList(
       differ.currentList.toMutableList().apply {
-        removeAll { it is AlbumListItem.AdCard }
+        for (adIndex in adIndexes) {
+          Timber.d("Inserting Album Card ad at position $adIndex")
+          adIntegration.buildAlbumCardAd { ad ->
+            add(adIndex, AlbumListItem.AdvertisementItem(ad))
+          }
+        }
       },
     )
-    val numberOfAds =
-      differ.currentList.filterNot { it is AlbumListItem.AdCard }.size / lastVisiblePosition + 1
-    Timber.d("Inserting $numberOfAds Album Card ads")
-
-    var adPosition = lastVisiblePosition - offset
-    for (i in 0 until numberOfAds) {
-      adIntegration.buildAlbumCardAd { ad ->
-        differ.submitList(
-          differ.currentList.toMutableList().apply {
-            Timber.d("Inserting Album Card ad at position $adPosition")
-            add(adPosition, AlbumListItem.AdCard(ad))
-            adPosition += lastVisiblePosition
-          },
-        )
-      }
-    }
   }
 
   override fun getItemCount(): Int = differ.currentList.size
 
   override fun getItemViewType(position: Int): Int = when (differ.currentList[position]) {
-    is AlbumListItem.FreshAlbum -> AlbumListItem.FreshAlbum::class.hashCode()
-    is AlbumListItem.AdCard -> AlbumListItem.AdCard::class.hashCode()
+    is AlbumListItem.FreshAlbumItem -> AlbumListItem.FreshAlbumItem::class.hashCode()
+    is AlbumListItem.AdvertisementItem -> AlbumListItem.AdvertisementItem::class.hashCode()
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
     when (viewType) {
-      AlbumListItem.FreshAlbum::class.hashCode() -> FreshAlbumCard.create(parent, listener)
-      AlbumListItem.AdCard::class.hashCode() -> adFreshAlbumCardFactory.create(parent)
+      AlbumListItem.FreshAlbumItem::class.hashCode() -> FreshAlbumCard.create(parent, listener)
+      AlbumListItem.AdvertisementItem::class.hashCode() -> adFreshAlbumCardFactory.create(parent)
       else -> throw IllegalStateException("Unknown view type $viewType")
     }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     when (holder) {
-      is FreshAlbumCard -> holder.bind((differ.currentList[position] as AlbumListItem.FreshAlbum).album)
-      is AdFreshAlbumCard -> holder.bind((differ.currentList[position] as AlbumListItem.AdCard).ad)
+      is FreshAlbumCard -> holder.bind((differ.currentList[position] as AlbumListItem.FreshAlbumItem).album)
+      is AdFreshAlbumCard -> holder.bind((differ.currentList[position] as AlbumListItem.AdvertisementItem).ad)
     }
   }
 }

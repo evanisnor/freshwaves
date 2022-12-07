@@ -24,6 +24,7 @@ import com.evanisnor.freshwaves.system.DebugMenu
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.math.max
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
@@ -152,7 +153,7 @@ class FreshAlbumsFragment : Fragment() {
     layoutManager.whenLayoutCompleted {
       val lastVisiblePosition = findLastVisibleItemPosition()
       if (lastVisiblePosition > 0) {
-        freshAlbumsAdapter.insertAdvertisements(lastVisiblePosition, offset = 2)
+        freshAlbumsAdapter.insertAdvertisements(max(lastVisiblePosition, 5), offset = 2)
         whenLayoutCompleted { }
       }
     }

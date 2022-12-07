@@ -3,7 +3,9 @@ package com.evanisnor.freshwaves.features.freshalbums.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import coil.clear
 import coil.load
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumCardBinding
@@ -29,9 +31,19 @@ class FreshAlbumCard(
 
   fun bind(album: Album) {
     FreshAlbumCardBinding.bind(itemView).apply {
-      album.images.firstOrNull()?.let {
-        albumImage.load(it.url)
-        albumImage.tag = it.url
+      if (album.images.isEmpty()) {
+        albumImage.clear()
+        albumImage.setImageDrawable(
+          ContextCompat.getDrawable(
+            itemView.context,
+            R.drawable.album_art_placeholder,
+          ),
+        )
+      } else {
+        album.images.firstOrNull()?.let {
+          albumImage.load(it.url)
+          albumImage.tag = it.url
+        }
       }
 
       albumName.text = album.name

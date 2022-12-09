@@ -67,8 +67,12 @@ android {
   }
 
   buildTypes {
+    debug {
+      manifestPlaceholders["enableCrashlytics"] = false
+    }
     release {
       isMinifyEnabled = true
+      manifestPlaceholders["enableCrashlytics"] = true
       if (keystorePropertiesFile.exists()) {
         signingConfig = signingConfigs.getByName("release")
       }

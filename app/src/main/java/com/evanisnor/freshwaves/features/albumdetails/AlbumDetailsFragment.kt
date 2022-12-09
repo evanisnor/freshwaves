@@ -80,7 +80,9 @@ class AlbumDetailsFragment : Fragment() {
       toolbar.title = album.name
 
       albumImage?.apply {
-        load(album.images.first().url)
+        if (album.images.isNotEmpty()) {
+          load(album.images.first().url)
+        }
       }
     }
   }

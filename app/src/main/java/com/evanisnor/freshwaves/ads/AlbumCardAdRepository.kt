@@ -13,6 +13,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.CoroutineExceptionHandler
+import timber.log.Timber
 
 interface AlbumCardAdRepository {
   suspend fun generateAlbumCardAds(numberOfAds: Int): List<Advertisement>
@@ -24,13 +26,14 @@ class AlbumCardAdRepositoryImpl @Inject constructor(
 ) : AlbumCardAdRepository {
 
   private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+  private val exceptionHandler = CoroutineExceptionHandler { _, throwable -> Timber.e(throwable) }
 
   override suspend fun generateAlbumCardAds(numberOfAds: Int): List<Advertisement> =
     withContext(scope.coroutineContext) {
       val ads = mutableListOf<CompletableDeferred<Advertisement>>()
       for (n in 0 until numberOfAds) {
         ads.add(CompletableDeferred())
-        scope.launch {
+        scope.launch(exceptionHandler) {
           val ad = adIntegration.buildAlbumCardAd("adCard-$n")
           ads[n].complete(ad)
         }

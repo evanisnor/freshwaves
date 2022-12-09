@@ -17,6 +17,7 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.SupervisorJob
 
 @Singleton
 class AdMob @Inject constructor(
@@ -24,7 +25,7 @@ class AdMob @Inject constructor(
   appMetadata: AppMetadata,
 ) : AdIntegration {
 
-  private val mainScope = CoroutineScope(Dispatchers.Main.immediate)
+  private val mainScope = CoroutineScope(Dispatchers.Main.immediate + SupervisorJob())
   private val albumCardId = appMetadata.adMobAdAlbumCard(context)
   private val cache = mutableMapOf<String, Advertisement>()
 

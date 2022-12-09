@@ -56,7 +56,7 @@ class SpotifyNetworkRepository @Inject constructor(
   private suspend fun getBearerToken(): String = try {
     spotifyAuthorization.getAuthorizationHeader()
   } catch (error: Throwable) {
-    Timber.e(error)
+    Timber.w(error)
     spotifyAuthorization.logout()
     throw error
   }

@@ -28,6 +28,7 @@ class AdFreshAlbumCard @AssistedInject constructor(
 
   fun bind(ad: Advertisement) {
     AdsNativeAdViewBinding.bind(itemView).root.apply {
+      destroy()
       AdsFreshAlbumCardBinding.inflate(layoutInflater, this, true).apply {
         adIcon.setImageDrawable(ad.icon)
         adChoicesLogo.setImageDrawable(ad.adChoicesLogo)
@@ -35,7 +36,6 @@ class AdFreshAlbumCard @AssistedInject constructor(
         adText.text = ad.body
         callToaction.text = ad.callToAction
       }
-
       ad.nativeAd?.let(this::setNativeAd)
     }
   }

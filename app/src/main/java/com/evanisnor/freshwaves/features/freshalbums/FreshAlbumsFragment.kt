@@ -52,11 +52,6 @@ class FreshAlbumsFragment : Fragment() {
       }.root
   }
 
-  override fun onDestroy() {
-    super.onDestroy()
-    binding = null
-  }
-
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     val observableLinearLayoutManager = ObservableLinearLayoutManager(requireContext())
@@ -103,6 +98,11 @@ class FreshAlbumsFragment : Fragment() {
         listenForUpdaterStatus()
       }
     }
+  }
+
+  override fun onDestroy() {
+    super.onDestroy()
+    binding = null
   }
 
   private fun toggleViews(state: UpdaterState, albumCount: Int) {

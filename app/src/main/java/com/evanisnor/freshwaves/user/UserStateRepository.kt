@@ -24,6 +24,16 @@ class UserStateRepository @Inject constructor(
 
   private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
+  private val _currentState: MutableStateFlow<State> = MutableStateFlow(
+    if (spotifyAuthorization.isAuthorized) {
+      State.LoggedIn
+    } else {
+      State.NoUser
+    },
+  )
+
+  val currentState: Flow<State> = _currentState.asStateFlow()
+
   init {
     scope.launch {
       spotifyAuthorization.latestResponse.collect {
@@ -35,14 +45,4 @@ class UserStateRepository @Inject constructor(
       }
     }
   }
-
-  private val _currentState: MutableStateFlow<State> = MutableStateFlow(
-    if (spotifyAuthorization.isAuthorized) {
-      State.LoggedIn
-    } else {
-      State.NoUser
-    },
-  )
-
-  val currentState: Flow<State> = _currentState.asStateFlow()
 }

@@ -57,7 +57,6 @@ class SpotifyNetworkRepository @Inject constructor(
     spotifyAuthorization.getAuthorizationHeader()
   } catch (error: Throwable) {
     Timber.w(error)
-    spotifyAuthorization.logout()
     throw error
   }
 }

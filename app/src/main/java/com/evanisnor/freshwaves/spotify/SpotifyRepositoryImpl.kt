@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.spotify
 
-import com.evanisnor.freshwaves.backend.BackendAPIRepository
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCache
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -37,7 +36,6 @@ class SpotifyRepositoryImpl @Inject constructor(
   private val spotifyUserRepository: SpotifyUserRepository,
   private val spotifyArtistRepository: SpotifyArtistRepository,
   private val spotifyAlbumRepository: SpotifyAlbumRepository,
-  private val backendAPIRepository: BackendAPIRepository,
 ) : SpotifyRepository {
 
   private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
@@ -59,12 +57,6 @@ class SpotifyRepositoryImpl @Inject constructor(
     Timber.d("Fetching top artists")
     spotifyArtistRepository.updateTopArtists(120)
     val artists = spotifyArtistRepository.getTopArtists()
-
-    Timber.d("Reporting top artists...")
-    // Send this asynchronously so we don't interrupt the UI with lag or errors
-    scope.launch {
-      backendAPIRepository.reportFavouriteArtists(artists.map { it.name })
-    }
 
     Timber.d("Fetching albums...")
     artists.forEach { artist ->

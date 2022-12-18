@@ -35,6 +35,7 @@ object SpotifyNetworkModule {
       )
       .build()
       .create(SpotifyAPIService::class.java)
+      .let { SpotifyAPIServiceErrorWrappingDelegate(it) }
 
   @Provides
   @ElementsIntoSet

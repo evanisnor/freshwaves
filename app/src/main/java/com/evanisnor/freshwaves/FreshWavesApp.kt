@@ -5,6 +5,7 @@ import androidx.annotation.Keep
 import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
 import com.evanisnor.freshwaves.ads.AdIntegration
+import com.evanisnor.freshwaves.ext.wrapHttpException
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import dagger.hilt.android.HiltAndroidApp
@@ -33,6 +34,7 @@ class FreshWavesApp : Application(), Configuration.Provider {
 
   override fun onCreate() {
     super.onCreate()
+    setupUncaughtExceptionHandling()
     Timber.plant(*trees.toTypedArray())
     updaterBootstrapper.registerForSuccessfulAuthorization()
     freshAlbumNotifier.createNotificationChannel()
@@ -41,4 +43,11 @@ class FreshWavesApp : Application(), Configuration.Provider {
   override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
     .setWorkerFactory(workerFactory)
     .build()
+
+  private fun setupUncaughtExceptionHandling() {
+    val oldExceptionHandler = Thread.getDefaultUncaughtExceptionHandler()
+    Thread.setDefaultUncaughtExceptionHandler { t, throwable ->
+      oldExceptionHandler?.uncaughtException(t, throwable.wrapHttpException())
+    }
+  }
 }

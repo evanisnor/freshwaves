@@ -8,6 +8,8 @@ import com.evanisnor.freshwaves.ads.AdIntegration
 import com.evanisnor.freshwaves.ext.wrapHttpException
 import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 import javax.inject.Inject
@@ -47,6 +49,7 @@ class FreshWavesApp : Application(), Configuration.Provider {
   private fun setupUncaughtExceptionHandling() {
     val oldExceptionHandler = Thread.getDefaultUncaughtExceptionHandler()
     Thread.setDefaultUncaughtExceptionHandler { t, throwable ->
+      Firebase.crashlytics.recordException(throwable)
       oldExceptionHandler?.uncaughtException(t, throwable.wrapHttpException())
     }
   }

@@ -5,16 +5,21 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.user.UserProfile
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
-import timber.log.Timber
 import javax.inject.Inject
 
 class SpotifyNetworkRepository @Inject constructor(
   private val spotifyAuthorization: SpotifyAuthorization,
   private val spotifyAPIService: SpotifyAPIService,
 ) {
+
+  class BearerTokenRefreshError(attempts: Int, cause: Throwable?) : Error(
+    "Failed to refresh bearer token after $attempts attempts",
+    cause,
+  )
 
   suspend fun userProfile(): UserProfile = withContext(Dispatchers.IO) {
     val bearerToken = getBearerToken()
@@ -53,10 +58,18 @@ class SpotifyNetworkRepository @Inject constructor(
     emit(tracks.items.mapToEntities(album.id))
   }.flowOn(Dispatchers.IO)
 
-  private suspend fun getBearerToken(): String = try {
+  private suspend fun getBearerToken(attempt: Int = 0): String = try {
     spotifyAuthorization.getAuthorizationHeader()
   } catch (error: Throwable) {
-    Timber.w(error)
-    throw error
+    if (attempt >= BEARER_TOKEN_RETRY_MAX_ATTEMPTS) {
+      throw BearerTokenRefreshError(attempt, error)
+    }
+    delay(BEARER_TOKEN_RETRY_DELAY_MS)
+    getBearerToken(attempt + 1)
+  }
+
+  companion object {
+    private const val BEARER_TOKEN_RETRY_DELAY_MS = 3000L
+    private const val BEARER_TOKEN_RETRY_MAX_ATTEMPTS = 3
   }
 }

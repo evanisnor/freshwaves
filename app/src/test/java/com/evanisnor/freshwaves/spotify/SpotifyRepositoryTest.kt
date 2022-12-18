@@ -1,8 +1,6 @@
 package com.evanisnor.freshwaves.spotify
 
 import app.cash.turbine.test
-import com.evanisnor.freshwaves.backend.BackendAPIRepository
-import com.evanisnor.freshwaves.backend.FakeBackendAPIService
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -29,7 +27,6 @@ class SpotifyRepositoryTest {
   private lateinit var spotifyUserRepository: SpotifyUserRepository
   private lateinit var spotifyArtistRepository: SpotifyArtistRepository
   private lateinit var spotifyAlbumRepository: SpotifyAlbumRepository
-  private lateinit var backendAPIRepository: BackendAPIRepository
 
   @Before
   fun setup() {
@@ -46,7 +43,6 @@ class SpotifyRepositoryTest {
     spotifyUserRepository = SpotifyUserRepository(spotifyNetworkRepository)
     spotifyArtistRepository = SpotifyArtistRepository(spotifyNetworkRepository, spotifyCacheDao)
     spotifyAlbumRepository = SpotifyAlbumRepository(spotifyNetworkRepository, spotifyCacheDao)
-    backendAPIRepository = BackendAPIRepository("test", FakeBackendAPIService())
   }
 
   @Test
@@ -60,7 +56,6 @@ class SpotifyRepositoryTest {
       spotifyUserRepository,
       spotifyArtistRepository,
       spotifyAlbumRepository,
-      backendAPIRepository,
     )
 
     val artist01 = Artist("01", "Artist 01")
@@ -83,7 +78,6 @@ class SpotifyRepositoryTest {
       spotifyUserRepository,
       spotifyArtistRepository,
       spotifyAlbumRepository,
-      backendAPIRepository,
     )
 
     val artist01 = Artist("01", "Artist 01")

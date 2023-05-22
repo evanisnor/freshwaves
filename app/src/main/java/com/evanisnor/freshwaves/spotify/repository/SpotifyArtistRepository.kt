@@ -3,6 +3,7 @@ package com.evanisnor.freshwaves.spotify.repository
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
+import com.evanisnor.freshwaves.spotify.network.mapToEntity
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -37,7 +38,7 @@ class SpotifyArtistRepositoryImpl @Inject constructor(
     var offset = 0
 
     for (i in 0 until pages) {
-      val artists = spotifyNetworkDataSource.topArtists(artistsPerPage, offset)
+      val artists = spotifyNetworkDataSource.topArtists(artistsPerPage, offset).mapToEntity()
       Timber.d("Fetched ${artists.size} artists")
       spotifyCacheDao.insertArtists(artists)
       Timber.d("Inserted ${artists.size} artists")

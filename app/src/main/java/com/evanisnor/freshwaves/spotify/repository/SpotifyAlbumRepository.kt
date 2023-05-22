@@ -4,6 +4,8 @@ import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
+import com.evanisnor.freshwaves.spotify.network.mapToEntities
+import com.evanisnor.freshwaves.spotify.network.mapToEntity
 import com.evanisnor.freshwaves.user.UserProfile
 import dagger.Binds
 import dagger.Module
@@ -14,6 +16,7 @@ import timber.log.Timber
 import java.time.Instant
 import javax.inject.Inject
 import javax.inject.Singleton
+import kotlinx.coroutines.flow.map
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -58,15 +61,19 @@ class SpotifyAlbumRepositoryImpl @Inject constructor(
     spotifyNetworkDataSource.artistAlbums(
       artist = artist,
       userProfile = userProfile,
-    ).collect { albums ->
-      spotifyCacheDao.insertAlbums(albums)
-      Timber.d("Inserted ${albums.size} albums for ${artist.name}")
-    }
+    )
+      .map { albumObjects -> albumObjects.mapToEntity(artist.id) }
+      .collect { albums ->
+        spotifyCacheDao.insertAlbums(albums)
+        Timber.d("Inserted ${albums.size} albums for ${artist.name}")
+      }
   }
 
   override suspend fun updateTracks(album: Album) {
-    spotifyNetworkDataSource.albumTracks(album).collect { tracks ->
-      spotifyCacheDao.insertTracks(tracks)
-    }
+    spotifyNetworkDataSource.albumTracks(album)
+      .map { trackObjects -> trackObjects.mapToEntities(album.id) }
+      .collect { tracks ->
+        spotifyCacheDao.insertTracks(tracks)
+      }
   }
 }

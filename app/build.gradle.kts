@@ -20,6 +20,7 @@ plugins {
 val keystorePropertiesFile = rootProject.file("keystore.properties")
 
 android {
+  namespace = "com.evanisnor.freshwaves"
   compileSdk = 33
 
   defaultConfig {

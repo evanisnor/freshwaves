@@ -3,9 +3,9 @@ package com.evanisnor.freshwaves.features.updater
 import androidx.work.Constraints
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import androidx.work.WorkRequest
 import com.evanisnor.freshwaves.features.updater.localbroadcast.LocalBroadcastDelegate
+import com.evanisnor.freshwaves.features.updater.workmanager.WorkManagerDelegate
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import java.time.DayOfWeek
 import java.time.Duration
@@ -16,7 +16,7 @@ import java.time.temporal.TemporalAdjusters
 import javax.inject.Inject
 
 class UpdaterBootstrapper @Inject constructor(
-  private val workManager: WorkManager,
+  private val workManager: WorkManagerDelegate,
   private val localBroadcast: LocalBroadcastDelegate,
 ) {
 

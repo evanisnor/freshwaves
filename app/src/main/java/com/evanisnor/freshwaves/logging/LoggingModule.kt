@@ -13,5 +13,5 @@ object LoggingModule {
 
   @Provides
   @ElementsIntoSet
-  fun timberTrees(): Set<Timber.Tree> = setOf(DeadTree())
+  fun timberTrees(): Set<Timber.Tree> = setOf(RemoteLoggingTree())
 }

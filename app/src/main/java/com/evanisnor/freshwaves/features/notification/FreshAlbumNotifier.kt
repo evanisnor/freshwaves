@@ -15,24 +15,38 @@ import coil.request.ImageRequest
 import coil.request.SuccessResult
 import com.evanisnor.freshwaves.MainActivity
 import com.evanisnor.freshwaves.R
+import com.evanisnor.freshwaves.features.updater.UpdaterRepository
+import com.evanisnor.freshwaves.features.updater.startOfDayUTC
+import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.hasPermission
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.time.Instant
+import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 class FreshAlbumNotifier @Inject constructor(
   @ApplicationContext private val context: Context,
   private val notificationManager: NotificationManagerCompat,
+  private val updaterRepository: UpdaterRepository,
+  private val spotifyRepository: SpotifyRepository,
 ) {
 
   companion object {
-    private const val notificationChannel = "fresh-waves-update"
-    private const val freshAlbumsNotification = 235246
+    private const val NOTIFICATION_CHANNEL = "fresh-waves-update"
+    private const val FRESH_ALBUMS_NOTIFICATION = 235246
   }
 
   private val imageLoader = ImageLoader.invoke(context)
+
+  suspend fun notifyOfNewAlbums() {
+    // Check for new albums released since the day after the last update, or just check from today.
+    val checkDate = updaterRepository.lastRunOn()?.plus(1, ChronoUnit.DAYS) ?: Instant.now()
+    val freshAlbums = spotifyRepository.getAlbumsReleasedAfter(checkDate.startOfDayUTC())
+    send(freshAlbums)
+  }
 
   suspend fun send(freshAlbums: List<Album>) = withContext(Dispatchers.Main) {
     freshAlbums.forEach { album ->
@@ -51,7 +65,7 @@ class FreshAlbumNotifier @Inject constructor(
     val description = context.getString(R.string.notification_channel_description)
     val importance = NotificationManagerCompat.IMPORTANCE_DEFAULT
 
-    val channel = NotificationChannelCompat.Builder(notificationChannel, importance).apply {
+    val channel = NotificationChannelCompat.Builder(NOTIFICATION_CHANNEL, importance).apply {
       setName(name)
       setDescription(description)
     }.build()
@@ -68,7 +82,7 @@ class FreshAlbumNotifier @Inject constructor(
 
     val text = context.getString(R.string.notification_fresh_albums_text)
 
-    return NotificationCompat.Builder(context, notificationChannel)
+    return NotificationCompat.Builder(context, NOTIFICATION_CHANNEL)
       .setSmallIcon(R.drawable.ic_wave_notification)
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
       .setContentTitle(title)
@@ -99,7 +113,7 @@ class FreshAlbumNotifier @Inject constructor(
       null
     }
 
-    return NotificationCompat.Builder(context, notificationChannel)
+    return NotificationCompat.Builder(context, NOTIFICATION_CHANNEL)
       .setSmallIcon(R.drawable.disc_icon)
       .setLargeIcon(albumImage)
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
@@ -113,7 +127,7 @@ class FreshAlbumNotifier @Inject constructor(
   private fun send(notification: Notification) {
     withNotificationPermission {
       //noinspection MissingPermission
-      notificationManager.notify(freshAlbumsNotification, notification)
+      notificationManager.notify(FRESH_ALBUMS_NOTIFICATION, notification)
     }
   }
 

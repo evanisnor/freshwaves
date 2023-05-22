@@ -9,7 +9,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.time.Instant
-import java.time.temporal.ChronoUnit
 import javax.inject.Inject
 
 class UpdaterController @Inject constructor(
@@ -45,7 +44,7 @@ class UpdaterController @Inject constructor(
         }
       }
 
-      notifyOfNewAlbums()
+      freshAlbumNotifier.notifyOfNewAlbums()
     } catch (throwable: Throwable) {
       Timber.e("Failed to update cache: $throwable")
       Firebase.crashlytics.recordException(throwable)
@@ -54,13 +53,6 @@ class UpdaterController @Inject constructor(
 
     finish(result)
     result
-  }
-
-  private suspend fun notifyOfNewAlbums() {
-    // Check for new albums released since the day after the last update, or just check from today.
-    val checkDate = updaterRepository.lastRunOn()?.plus(1, ChronoUnit.DAYS) ?: Instant.now()
-    val freshAlbums = spotifyRepository.getAlbumsReleasedAfter(checkDate.startOfDayUTC())
-    freshAlbumNotifier.send(freshAlbums)
   }
 
   private suspend fun finish(result: ListenableWorker.Result) {

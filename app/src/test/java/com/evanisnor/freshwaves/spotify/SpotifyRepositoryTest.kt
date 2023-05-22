@@ -6,9 +6,9 @@ import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
-import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
+import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepositoryImpl
+import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepositoryImpl
+import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepositoryImpl
 import com.evanisnor.freshwaves.user.UserStateRepository
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -24,9 +24,9 @@ import java.time.Instant
 class SpotifyRepositoryTest {
 
   private lateinit var spotifyCacheDao: FakeSpotifyCacheDao
-  private lateinit var spotifyUserRepository: SpotifyUserRepository
-  private lateinit var spotifyArtistRepository: SpotifyArtistRepository
-  private lateinit var spotifyAlbumRepository: SpotifyAlbumRepository
+  private lateinit var spotifyUserRepository: SpotifyUserRepositoryImpl
+  private lateinit var spotifyArtistRepository: SpotifyArtistRepositoryImpl
+  private lateinit var spotifyAlbumRepository: SpotifyAlbumRepositoryImpl
 
   @Before
   fun setup() {
@@ -40,9 +40,9 @@ class SpotifyRepositoryTest {
       FakeSpotifyAPIService(),
     )
 
-    spotifyUserRepository = SpotifyUserRepository(spotifyNetworkRepository)
-    spotifyArtistRepository = SpotifyArtistRepository(spotifyNetworkRepository, spotifyCacheDao)
-    spotifyAlbumRepository = SpotifyAlbumRepository(spotifyNetworkRepository, spotifyCacheDao)
+    spotifyUserRepository = SpotifyUserRepositoryImpl(spotifyNetworkRepository)
+    spotifyArtistRepository = SpotifyArtistRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
+    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
   }
 
   @Test

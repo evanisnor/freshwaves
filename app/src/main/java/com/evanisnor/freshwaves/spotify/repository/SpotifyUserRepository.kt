@@ -2,11 +2,28 @@ package com.evanisnor.freshwaves.spotify.repository
 
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.user.UserProfile
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Inject
+import javax.inject.Singleton
 
-class SpotifyUserRepository @Inject constructor(
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class SpotifyUserRepositoryModule {
+  @Singleton
+  @Binds
+  abstract fun bindSpotifyUserRepository(impl: SpotifyUserRepositoryImpl): SpotifyUserRepository
+}
+
+interface SpotifyUserRepository {
+  suspend fun userProfile(): UserProfile
+}
+
+class SpotifyUserRepositoryImpl @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
-) {
+) : SpotifyUserRepository {
 
-  suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
+  override suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
 }

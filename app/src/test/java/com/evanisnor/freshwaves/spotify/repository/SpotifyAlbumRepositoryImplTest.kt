@@ -21,10 +21,10 @@ import java.time.Instant
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
-class SpotifyAlbumRepositoryTest {
+class SpotifyAlbumRepositoryImplTest {
 
   private lateinit var spotifyCacheDao: FakeSpotifyCacheDao
-  private lateinit var spotifyAlbumRepository: SpotifyAlbumRepository
+  private lateinit var spotifyAlbumRepository: SpotifyAlbumRepositoryImpl
 
   @Before
   fun setup() {
@@ -38,7 +38,7 @@ class SpotifyAlbumRepositoryTest {
       FakeSpotifyAPIService(),
     )
 
-    spotifyAlbumRepository = SpotifyAlbumRepository(spotifyNetworkRepository, spotifyCacheDao)
+    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
   }
 
   @Test

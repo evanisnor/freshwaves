@@ -1,16 +1,7 @@
 package com.evanisnor.freshwaves.spotify.api
 
-import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import kotlinx.coroutines.flow.Flow
-import java.time.Instant
+import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepository
+import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepository
+import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepository
 
-interface SpotifyRepository {
-
-  suspend fun update()
-
-  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>>
-
-  suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album>
-
-  suspend fun getAlbumWithTracks(albumId: Int): Album
-}
+interface SpotifyRepository : SpotifyAlbumRepository, SpotifyArtistRepository, SpotifyUserRepository

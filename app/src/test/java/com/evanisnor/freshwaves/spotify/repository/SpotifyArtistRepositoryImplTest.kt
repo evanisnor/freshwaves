@@ -17,11 +17,11 @@ import org.robolectric.RobolectricTestRunner
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
-class SpotifyArtistRepositoryTest {
+class SpotifyArtistRepositoryImplTest {
 
   private lateinit var spotifyCacheDao: FakeSpotifyCacheDao
   private lateinit var spotifyAPIService: FakeSpotifyAPIService
-  private lateinit var spotifyArtistRepository: SpotifyArtistRepository
+  private lateinit var spotifyArtistRepository: SpotifyArtistRepositoryImpl
 
   @Before
   fun setup() {
@@ -36,7 +36,7 @@ class SpotifyArtistRepositoryTest {
       spotifyAPIService,
     )
 
-    spotifyArtistRepository = SpotifyArtistRepository(
+    spotifyArtistRepository = SpotifyArtistRepositoryImpl(
       spotifyNetworkRepository,
       spotifyCacheDao,
     )

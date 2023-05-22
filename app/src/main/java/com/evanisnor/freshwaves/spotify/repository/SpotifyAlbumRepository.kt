@@ -5,29 +5,56 @@ import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
 import com.evanisnor.freshwaves.user.UserProfile
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.Flow
 import timber.log.Timber
 import java.time.Instant
 import javax.inject.Inject
+import javax.inject.Singleton
 
-class SpotifyAlbumRepository @Inject constructor(
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class SpotifyAlbumRepositoryModule {
+  @Singleton
+  @Binds
+  abstract fun bindSpotifyAlbumRepository(impl: SpotifyAlbumRepositoryImpl): SpotifyAlbumRepository
+}
+
+interface SpotifyAlbumRepository {
+  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>>
+
+  suspend fun getLatestAlbumsMissingTracks(): List<Album>
+
+  suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album>
+
+  suspend fun getAlbumWithTracks(albumId: Int): Album
+
+  suspend fun updateAlbums(artist: Artist, userProfile: UserProfile)
+
+  suspend fun updateTracks(album: Album)
+}
+
+class SpotifyAlbumRepositoryImpl @Inject constructor(
   private val spotifyNetworkRepository: SpotifyNetworkRepository,
   private val spotifyCacheDao: SpotifyCacheDao,
-) {
+) : SpotifyAlbumRepository {
 
-  suspend fun getLatestAlbums(limit: Int = 30): Flow<List<Album>> =
+  override suspend fun getLatestAlbums(limit: Int): Flow<List<Album>> =
     spotifyCacheDao.readAlbumsWithImages(limit)
 
-  suspend fun getLatestAlbumsMissingTracks(): List<Album> =
+  override suspend fun getLatestAlbumsMissingTracks(): List<Album> =
     spotifyCacheDao.readLatestAlbumsMissingTracks(30)
 
-  suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album> =
+  override suspend fun getAlbumsReleasedAfter(instant: Instant): List<Album> =
     spotifyCacheDao.readAlbumsReleasedAfter(instant)
 
-  suspend fun getAlbumWithTracks(albumId: Int): Album =
+  override suspend fun getAlbumWithTracks(albumId: Int): Album =
     spotifyCacheDao.readAlbumWithTracks(albumId)
 
-  suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) {
+  override suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) {
     spotifyNetworkRepository.artistAlbums(
       artist = artist,
       userProfile = userProfile,
@@ -37,7 +64,7 @@ class SpotifyAlbumRepository @Inject constructor(
     }
   }
 
-  suspend fun updateTracks(album: Album) {
+  override suspend fun updateTracks(album: Album) {
     spotifyNetworkRepository.albumTracks(album).collect { tracks ->
       spotifyCacheDao.insertTracks(tracks)
     }

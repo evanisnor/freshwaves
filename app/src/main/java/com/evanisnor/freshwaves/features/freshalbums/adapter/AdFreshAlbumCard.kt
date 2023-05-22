@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.evanisnor.freshwaves.ads.Advertisement
 import com.evanisnor.freshwaves.databinding.AdsFreshAlbumCardBinding
 import com.evanisnor.freshwaves.databinding.AdsNativeAdViewBinding
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import java.time.Instant
 
 @AssistedFactory
 interface AdFreshAlbumCardFactory {
@@ -37,6 +40,8 @@ class AdFreshAlbumCard @AssistedInject constructor(
         callToaction.text = ad.callToAction
       }
       ad.nativeAd?.let(this::setNativeAd)
+
+      Firebase.crashlytics.setCustomKey("ad_impression", Instant.now().epochSecond)
     }
   }
 }

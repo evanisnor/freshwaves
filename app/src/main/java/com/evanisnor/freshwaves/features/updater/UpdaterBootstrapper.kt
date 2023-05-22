@@ -36,7 +36,7 @@ class UpdaterBootstrapper @Inject constructor(
     localBroadcast.register(
       action = SpotifyAuthorization.authorizationSuccessfulAction,
       receiver = {
-        Firebase.crashlytics.setCustomKey("user_logged_in", Instant.now().epochSecond)
+        Firebase.crashlytics.setCustomKey("login", Instant.now().epochSecond)
         enqueue(workRequest())
       },
     )

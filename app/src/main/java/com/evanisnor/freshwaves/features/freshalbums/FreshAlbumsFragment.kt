@@ -24,8 +24,11 @@ import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.system.DebugMenu
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import java.time.Instant
 import javax.inject.Inject
 import kotlin.math.max
 
@@ -71,6 +74,7 @@ class FreshAlbumsFragment : Fragment() {
       toolbar.setOnMenuItemClickListener { item ->
         return@setOnMenuItemClickListener when (item.itemId) {
           R.id.logout -> {
+            Firebase.crashlytics.setCustomKey("logout", Instant.now().epochSecond)
             lifecycleScope.launch {
               spotifyAuthorization.logout()
               activity?.finish()

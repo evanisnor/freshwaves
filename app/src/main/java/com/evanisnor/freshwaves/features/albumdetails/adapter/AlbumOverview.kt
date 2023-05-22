@@ -9,6 +9,9 @@ import coil.load
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.AlbumDetailsOverviewItemBinding
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
+import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -41,6 +44,7 @@ class AlbumOverview(itemView: View) : RecyclerView.ViewHolder(itemView) {
         )
 
       listenOnSpotifyButton.setOnClickListener {
+        Firebase.crashlytics.setCustomKey("listen_on_spotify", Instant.now().epochSecond)
         itemView.context.startActivity(
           Intent(Intent.ACTION_VIEW).apply {
             data = album.spotifyUri

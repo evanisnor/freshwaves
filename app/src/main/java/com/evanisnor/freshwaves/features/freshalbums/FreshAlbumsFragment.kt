@@ -17,6 +17,7 @@ import com.evanisnor.freshwaves.features.albumdetails.AlbumDetailsFragment
 import com.evanisnor.freshwaves.features.attribution.ThirdPartyUsageListFragment
 import com.evanisnor.freshwaves.features.freshalbums.adapter.FreshAlbumsAdapter
 import com.evanisnor.freshwaves.features.freshalbums.adapter.ObservableLinearLayoutManager
+import com.evanisnor.freshwaves.features.permissionscheck.NotificationPermissionChecker
 import com.evanisnor.freshwaves.features.updater.UpdaterState
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
@@ -37,6 +38,9 @@ class FreshAlbumsFragment : Fragment() {
 
   @Inject
   lateinit var freshAlbumsAdapter: FreshAlbumsAdapter
+
+  @Inject
+  lateinit var notificationPermissionChecker: NotificationPermissionChecker
 
   private val freshAlbumsViewModel: FreshAlbumsViewModel by activityViewModels()
   private var binding: FreshAlbumsFragmentBinding? = null
@@ -89,6 +93,7 @@ class FreshAlbumsFragment : Fragment() {
     }
 
     registerAdapterClickListener()
+    notificationPermissionChecker.promptForNotificationPermission(requireActivity())
 
     with(lifecycleScope) {
       launchWhenCreated {

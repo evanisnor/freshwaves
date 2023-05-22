@@ -35,13 +35,13 @@ jobs:
         run: ./gradlew check
       - name: Bundle app
         run: ./gradlew bundleRelease
-      - uses: r0adkll/sign-android-release@v1
+      - uses: ilharp/sign-android-release@v1
         name: Sign app bundle
         id: sign_app
         with:
-          releaseDirectory: app/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.SIGNING_KEY_BASE_64 }}
-          alias: ${{ secrets.SIGNING_KEY_ALIAS }}
+          releaseDir: app/build/outputs/bundle/release
+          signingKey: ${{ secrets.SIGNING_KEY_BASE_64 }}
+          keyAlias: ${{ secrets.SIGNING_KEY_ALIAS }}
           keyStorePassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
           keyPassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
       - uses: actions/upload-artifact@v3

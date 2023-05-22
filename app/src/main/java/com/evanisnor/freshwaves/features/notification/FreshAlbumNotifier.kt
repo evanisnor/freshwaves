@@ -1,6 +1,5 @@
 package com.evanisnor.freshwaves.features.notification
 
-import android.Manifest
 import android.app.Notification
 import android.app.PendingIntent
 import android.content.Context
@@ -15,11 +14,11 @@ import coil.request.ImageRequest
 import coil.request.SuccessResult
 import com.evanisnor.freshwaves.MainActivity
 import com.evanisnor.freshwaves.R
+import com.evanisnor.freshwaves.features.notification.notificationmanager.NotificationManagerDelegate
 import com.evanisnor.freshwaves.features.updater.UpdaterRepository
 import com.evanisnor.freshwaves.features.updater.startOfDayUTC
 import com.evanisnor.freshwaves.spotify.api.SpotifyRepository
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
-import com.evanisnor.freshwaves.system.hasPermission
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -30,7 +29,7 @@ import javax.inject.Inject
 
 class FreshAlbumNotifier @Inject constructor(
   @ApplicationContext private val context: Context,
-  private val notificationManager: NotificationManagerCompat,
+  private val notificationManager: NotificationManagerDelegate,
   private val updaterRepository: UpdaterRepository,
   private val spotifyRepository: SpotifyRepository,
 ) {
@@ -127,17 +126,12 @@ class FreshAlbumNotifier @Inject constructor(
   }
 
   private fun send(notification: Notification) {
-    withNotificationPermission {
-      //noinspection MissingPermission
-      notificationManager.notify(FRESH_ALBUMS_NOTIFICATION, notification)
-    }
+    notificationManager.notify(FRESH_ALBUMS_NOTIFICATION, notification)
   }
 
-  private fun send(album: Album, notification: Notification) =
-    withNotificationPermission {
-      //noinspection MissingPermission
-      notificationManager.notify(album.hashCode(), notification)
-    }
+  private fun send(album: Album, notification: Notification) {
+    notificationManager.notify(album.hashCode(), notification)
+  }
 
   private fun launchMainActivityPendingIntent(): PendingIntent =
     PendingIntent.getActivity(
@@ -171,12 +165,6 @@ class FreshAlbumNotifier @Inject constructor(
       (albumImageResult.drawable as BitmapDrawable).bitmap
     } else {
       null
-    }
-  }
-
-  private fun withNotificationPermission(ifGranted: () -> Unit) {
-    if (context.hasPermission(Manifest.permission.POST_NOTIFICATIONS)) {
-      ifGranted()
     }
   }
 }

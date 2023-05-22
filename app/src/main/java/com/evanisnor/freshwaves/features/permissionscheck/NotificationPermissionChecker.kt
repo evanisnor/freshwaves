@@ -9,6 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.system.hasPermission
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -41,7 +42,7 @@ class NotificationPermissionChecker @Inject constructor() {
   }
 
   private fun showRationaleDialog(context: Context, onClick: (Boolean) -> Unit) {
-    AlertDialog.Builder(context)
+    MaterialAlertDialogBuilder(context)
       .setTitle(context.getString(R.string.notification_permission_rationale))
       .setNegativeButton(context.getString(R.string.notification_permission_decline)) { _, _ ->
         onClick(false)

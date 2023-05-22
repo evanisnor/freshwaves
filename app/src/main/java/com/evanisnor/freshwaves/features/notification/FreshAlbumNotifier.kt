@@ -32,14 +32,13 @@ class FreshAlbumNotifier @Inject constructor(
   private val notificationManager: NotificationManagerDelegate,
   private val updaterRepository: UpdaterRepository,
   private val spotifyRepository: SpotifyRepository,
+  private val imageLoader: ImageLoader,
 ) {
 
   companion object {
     private const val NOTIFICATION_CHANNEL = "fresh-waves-update"
     private const val FRESH_ALBUMS_NOTIFICATION = 235246
   }
-
-  private val imageLoader = ImageLoader.invoke(context)
 
   suspend fun notifyOfNewAlbums() {
     // Check for new albums released since the day after the last update, or just check from today.

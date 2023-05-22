@@ -2,6 +2,7 @@ package com.evanisnor.freshwaves.system
 
 import android.content.Context
 import androidx.core.app.NotificationManagerCompat
+import coil.ImageLoader
 import com.evanisnor.freshwaves.getAppSignature
 import com.squareup.moshi.Moshi
 import dagger.Module
@@ -27,6 +28,9 @@ object SystemModule {
   @Provides
   fun notificationManager(@ApplicationContext context: Context): NotificationManagerCompat =
     NotificationManagerCompat.from(context)
+
+  @Provides
+  fun imageLoader(@ApplicationContext context: Context): ImageLoader = ImageLoader.invoke(context)
 
   @Provides
   fun moshi(): Moshi = Moshi.Builder().build()

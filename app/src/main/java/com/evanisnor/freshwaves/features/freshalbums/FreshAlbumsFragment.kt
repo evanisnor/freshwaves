@@ -107,8 +107,8 @@ class FreshAlbumsFragment : Fragment() {
       }
     }
     viewLifecycleOwner.lifecycleScope.launch {
-      repeatOnLifecycle(Lifecycle.State.CREATED) {
-        listenForFreshAlbums(observableLinearLayoutManager)
+      repeatOnLifecycle(Lifecycle.State.RESUMED) {
+        listenForUpdaterStatus()
       }
     }
   }

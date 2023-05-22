@@ -1,12 +1,11 @@
 package com.evanisnor.freshwaves.features.updater
 
-import android.content.IntentFilter
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.work.Constraints
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
+import com.evanisnor.freshwaves.features.updater.localbroadcast.LocalBroadcastDelegate
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
 import java.time.DayOfWeek
 import java.time.Duration
@@ -18,11 +17,11 @@ import javax.inject.Inject
 
 class UpdaterBootstrapper @Inject constructor(
   private val workManager: WorkManager,
-  private val localBroadcastManager: LocalBroadcastManager,
+  private val localBroadcast: LocalBroadcastDelegate,
 ) {
 
   companion object {
-    val constraints: Constraints = Constraints.Builder()
+    val CONSTRAINTS: Constraints = Constraints.Builder()
       .setRequiredNetworkType(NetworkType.CONNECTED)
       .build()
   }
@@ -32,8 +31,8 @@ class UpdaterBootstrapper @Inject constructor(
   }
 
   fun registerForSuccessfulAuthorization() {
-    localBroadcastManager.register(
-      intentFilter = IntentFilter(SpotifyAuthorization.authorizationSuccessfulAction),
+    localBroadcast.register(
+      action = SpotifyAuthorization.authorizationSuccessfulAction,
       receiver = {
         enqueue(workRequest())
       },
@@ -60,7 +59,7 @@ class UpdaterBootstrapper @Inject constructor(
 
   private fun workRequest(delay: Duration = Duration.ZERO) =
     OneTimeWorkRequestBuilder<UpdateWorker>()
-      .setConstraints(constraints)
+      .setConstraints(CONSTRAINTS)
       .setInitialDelay(delay)
       .build()
 

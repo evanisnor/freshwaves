@@ -1,4 +1,4 @@
-package com.evanisnor.freshwaves.features.updater
+package com.evanisnor.freshwaves.features.updater.localbroadcast
 
 import android.content.BroadcastReceiver
 import android.content.Context

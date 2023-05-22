@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.evanisnor.freshwaves.databinding.ConnectAccountFragmentBinding
 import com.evanisnor.freshwaves.ext.showSnackbar
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
@@ -35,8 +37,10 @@ class ConnectAccountFragment : Fragment() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    lifecycleScope.launchWhenCreated {
-      pendingAuthorization = spotifyAuthorization.prepareAuthorization(this@ConnectAccountFragment)
+    lifecycleScope.launch {
+      repeatOnLifecycle(Lifecycle.State.CREATED) {
+        pendingAuthorization = spotifyAuthorization.prepareAuthorization(this@ConnectAccountFragment)
+      }
     }
   }
 

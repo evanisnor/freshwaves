@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.ConcatAdapter
 import com.evanisnor.freshwaves.LoginActivity
 import com.evanisnor.freshwaves.R
@@ -95,12 +97,14 @@ class FreshAlbumsFragment : Fragment() {
     registerAdapterClickListener()
     notificationPermissionChecker.promptForNotificationPermission(requireActivity())
 
-    with(lifecycleScope) {
-      launchWhenCreated {
+    viewLifecycleOwner.lifecycleScope.launch {
+      repeatOnLifecycle(Lifecycle.State.CREATED) {
         listenForFreshAlbums(observableLinearLayoutManager)
       }
-      launchWhenResumed {
-        listenForUpdaterStatus()
+    }
+    viewLifecycleOwner.lifecycleScope.launch {
+      repeatOnLifecycle(Lifecycle.State.CREATED) {
+        listenForFreshAlbums(observableLinearLayoutManager)
       }
     }
   }

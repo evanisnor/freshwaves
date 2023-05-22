@@ -6,7 +6,6 @@ import android.os.Build
 import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.system.hasPermission
 import com.google.android.material.dialog.MaterialAlertDialogBuilder

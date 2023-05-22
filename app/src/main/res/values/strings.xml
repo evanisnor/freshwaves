@@ -12,7 +12,7 @@
   <string name="loading_empty_message">There are no new updates for you right now. Check back later!</string>
 
   <string name="notification_channel_name">Fresh Albums</string>
-  <string name="notification_channel_description">Lets you know when new albums are released</string>
+  <string name="notification_channel_description">Lets you know when new music is released</string>
   <string name="notification_unknown_artist">Unknown</string>
 
   <plurals name="notification_fresh_albums_title">
@@ -35,7 +35,7 @@
   <string name="attribution_modifications">Modifications: %1$s</string>
   <string name="menu_open_source">Open Source Attribution</string>
   <string name="attribution_license_label">license</string>
-  <string name="notification_permission_rationale">Enable notifications to get notified of the latest releases!</string>
+  <string name="notification_permission_rationale">Enable notifications to get an alert when new music is released!</string>
   <string name="notification_permission_decline">No thanks</string>
   <string name="notification_permission_accept">Yes!</string>
 

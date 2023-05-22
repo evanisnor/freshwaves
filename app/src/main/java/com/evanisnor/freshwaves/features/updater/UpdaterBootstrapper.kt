@@ -7,6 +7,8 @@ import androidx.work.WorkRequest
 import com.evanisnor.freshwaves.features.updater.localbroadcast.LocalBroadcastDelegate
 import com.evanisnor.freshwaves.features.updater.workmanager.WorkManagerDelegate
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
+import com.google.firebase.crashlytics.ktx.crashlytics
+import com.google.firebase.ktx.Firebase
 import java.time.DayOfWeek
 import java.time.Duration
 import java.time.Instant
@@ -34,6 +36,7 @@ class UpdaterBootstrapper @Inject constructor(
     localBroadcast.register(
       action = SpotifyAuthorization.authorizationSuccessfulAction,
       receiver = {
+        Firebase.crashlytics.setCustomKey("user_logged_in", Instant.now().epochSecond)
         enqueue(workRequest())
       },
     )

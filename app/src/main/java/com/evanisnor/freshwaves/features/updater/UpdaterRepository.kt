@@ -6,6 +6,10 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import com.evanisnor.freshwaves.user.UserStateRepository
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -19,22 +23,51 @@ import javax.inject.Inject
 import javax.inject.Named
 import javax.inject.Singleton
 
-@Singleton
-class UpdaterRepository @Inject constructor(
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class UpdaterRepositoryModule {
+  @Singleton
+  @Binds
+  abstract fun bindUpdaterRepository(impl: RealUpdaterRepository): UpdaterRepository
+}
+
+/**
+ * Repository that holds [UpdaterState] and information about updater executions.
+ */
+interface UpdaterRepository {
+  val state: StateFlow<UpdaterState>
+
+  suspend fun updateState(updaterState: UpdaterState)
+
+  suspend fun lastKnownState(): UpdaterState
+
+  suspend fun updateLastRun(lastRun: Instant)
+
+  suspend fun lastRunOn(): Instant?
+
+  suspend fun updateNextRun(nextRun: Instant)
+
+  suspend fun nextRunOn(): Instant?
+}
+
+/**
+ * Real implementation of [UpdaterRepository]
+ */
+class RealUpdaterRepository @Inject constructor(
   @Named("UpdaterMeta") private val updaterMeta: DataStore<Preferences>,
   userStateRepository: UserStateRepository,
-) {
+) : UpdaterRepository {
 
   companion object {
-    private val lastKnownStateKey = stringPreferencesKey("lastKnownState")
-    private val lastRunTimestamp = longPreferencesKey("lastRunTimestamp")
-    private val nextRunTimestamp = longPreferencesKey("nextRunTimestamp")
+    private val LAST_KNOWN_STATE_KEY = stringPreferencesKey("lastKnownState")
+    private val LAST_RUN_TIMESTAMP = longPreferencesKey("lastRunTimestamp")
+    private val NEXT_RUN_TIMESTAMP = longPreferencesKey("nextRunTimestamp")
   }
 
   private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
   private val _state: MutableStateFlow<UpdaterState> = MutableStateFlow(UpdaterState.Idle)
-  val state: StateFlow<UpdaterState>
+  override val state: StateFlow<UpdaterState>
     get() = _state.asStateFlow()
 
   init {
@@ -49,17 +82,17 @@ class UpdaterRepository @Inject constructor(
     }
   }
 
-  internal suspend fun updateState(updaterState: UpdaterState) {
+  override suspend fun updateState(updaterState: UpdaterState) {
     if (updaterState != UpdaterState.Idle && updaterState != UpdaterState.Unknown) {
       updaterMeta.edit { meta ->
-        meta[lastKnownStateKey] = updaterState.name
+        meta[LAST_KNOWN_STATE_KEY] = updaterState.name
       }
     }
     _state.emit(updaterState)
   }
 
-  suspend fun lastKnownState(): UpdaterState {
-    val lastKnownStateName = updaterMeta.data.firstOrNull()?.get(lastKnownStateKey)
+  override suspend fun lastKnownState(): UpdaterState {
+    val lastKnownStateName = updaterMeta.data.firstOrNull()?.get(LAST_KNOWN_STATE_KEY)
     return if (lastKnownStateName != null) {
       UpdaterState.valueOf(lastKnownStateName)
     } else {
@@ -67,14 +100,14 @@ class UpdaterRepository @Inject constructor(
     }
   }
 
-  suspend fun updateLastRun(lastRun: Instant) {
+  override suspend fun updateLastRun(lastRun: Instant) {
     updaterMeta.edit { meta ->
-      meta[lastRunTimestamp] = lastRun.toEpochMilli()
+      meta[LAST_RUN_TIMESTAMP] = lastRun.toEpochMilli()
     }
   }
 
-  suspend fun lastRunOn(): Instant? {
-    val lastRunTimestampMs = updaterMeta.data.firstOrNull()?.get(lastRunTimestamp)
+  override suspend fun lastRunOn(): Instant? {
+    val lastRunTimestampMs = updaterMeta.data.firstOrNull()?.get(LAST_RUN_TIMESTAMP)
     return if (lastRunTimestampMs != null) {
       Instant.ofEpochMilli(lastRunTimestampMs)
     } else {
@@ -82,14 +115,14 @@ class UpdaterRepository @Inject constructor(
     }
   }
 
-  suspend fun updateNextRun(nextRun: Instant) {
+  override suspend fun updateNextRun(nextRun: Instant) {
     updaterMeta.edit { meta ->
-      meta[nextRunTimestamp] = nextRun.toEpochMilli()
+      meta[NEXT_RUN_TIMESTAMP] = nextRun.toEpochMilli()
     }
   }
 
-  suspend fun nextRunOn(): Instant? {
-    val nextRunTimestampMs = updaterMeta.data.firstOrNull()?.get(nextRunTimestamp)
+  override suspend fun nextRunOn(): Instant? {
+    val nextRunTimestampMs = updaterMeta.data.firstOrNull()?.get(NEXT_RUN_TIMESTAMP)
     return if (nextRunTimestampMs != null) {
       Instant.ofEpochMilli(nextRunTimestampMs)
     } else {

@@ -3,7 +3,7 @@ package com.evanisnor.freshwaves.spotify.repository
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import com.evanisnor.freshwaves.user.UserProfile
 import dagger.Binds
 import dagger.Module
@@ -38,7 +38,7 @@ interface SpotifyAlbumRepository {
 }
 
 class SpotifyAlbumRepositoryImpl @Inject constructor(
-  private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyNetworkDataSource: SpotifyNetworkDataSource,
   private val spotifyCacheDao: SpotifyCacheDao,
 ) : SpotifyAlbumRepository {
 
@@ -55,7 +55,7 @@ class SpotifyAlbumRepositoryImpl @Inject constructor(
     spotifyCacheDao.readAlbumWithTracks(albumId)
 
   override suspend fun updateAlbums(artist: Artist, userProfile: UserProfile) {
-    spotifyNetworkRepository.artistAlbums(
+    spotifyNetworkDataSource.artistAlbums(
       artist = artist,
       userProfile = userProfile,
     ).collect { albums ->
@@ -65,7 +65,7 @@ class SpotifyAlbumRepositoryImpl @Inject constructor(
   }
 
   override suspend fun updateTracks(album: Album) {
-    spotifyNetworkRepository.albumTracks(album).collect { tracks ->
+    spotifyNetworkDataSource.albumTracks(album).collect { tracks ->
       spotifyCacheDao.insertTracks(tracks)
     }
   }

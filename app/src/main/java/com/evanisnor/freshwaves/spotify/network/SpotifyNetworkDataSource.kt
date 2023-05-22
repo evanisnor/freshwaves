@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class SpotifyNetworkRepository @Inject constructor(
+class SpotifyNetworkDataSource @Inject constructor(
   private val spotifyAuthorization: SpotifyAuthorization,
   private val spotifyAPIService: SpotifyAPIService,
 ) {

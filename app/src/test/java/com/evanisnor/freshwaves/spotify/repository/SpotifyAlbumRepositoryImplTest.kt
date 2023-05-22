@@ -8,7 +8,7 @@ import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Track
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -29,7 +29,7 @@ class SpotifyAlbumRepositoryImplTest {
   @Before
   fun setup() {
     spotifyCacheDao = FakeSpotifyCacheDao()
-    val spotifyNetworkRepository = SpotifyNetworkRepository(
+    val spotifyNetworkDataSource = SpotifyNetworkDataSource(
       SpotifyAuthorizationImpl(
         FakeHandyAuth().apply {
           authorize()
@@ -38,7 +38,7 @@ class SpotifyAlbumRepositoryImplTest {
       FakeSpotifyAPIService(),
     )
 
-    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
+    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkDataSource, spotifyCacheDao)
   }
 
   @Test

@@ -5,7 +5,7 @@ import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Album
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import com.evanisnor.freshwaves.spotify.repository.SpotifyAlbumRepositoryImpl
 import com.evanisnor.freshwaves.spotify.repository.SpotifyArtistRepositoryImpl
 import com.evanisnor.freshwaves.spotify.repository.SpotifyUserRepositoryImpl
@@ -31,7 +31,7 @@ class SpotifyRepositoryTest {
   @Before
   fun setup() {
     spotifyCacheDao = FakeSpotifyCacheDao()
-    val spotifyNetworkRepository = SpotifyNetworkRepository(
+    val spotifyNetworkDataSource = SpotifyNetworkDataSource(
       SpotifyAuthorizationImpl(
         FakeHandyAuth().apply {
           authorize()
@@ -40,9 +40,9 @@ class SpotifyRepositoryTest {
       FakeSpotifyAPIService(),
     )
 
-    spotifyUserRepository = SpotifyUserRepositoryImpl(spotifyNetworkRepository)
-    spotifyArtistRepository = SpotifyArtistRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
-    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkRepository, spotifyCacheDao)
+    spotifyUserRepository = SpotifyUserRepositoryImpl(spotifyNetworkDataSource)
+    spotifyArtistRepository = SpotifyArtistRepositoryImpl(spotifyNetworkDataSource, spotifyCacheDao)
+    spotifyAlbumRepository = SpotifyAlbumRepositoryImpl(spotifyNetworkDataSource, spotifyCacheDao)
   }
 
   @Test

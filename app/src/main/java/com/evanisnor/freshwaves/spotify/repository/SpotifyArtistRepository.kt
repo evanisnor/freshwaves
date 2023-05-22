@@ -2,7 +2,7 @@ package com.evanisnor.freshwaves.spotify.repository
 
 import com.evanisnor.freshwaves.spotify.cache.SpotifyCacheDao
 import com.evanisnor.freshwaves.spotify.cache.model.entities.Artist
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -26,7 +26,7 @@ interface SpotifyArtistRepository {
 }
 
 class SpotifyArtistRepositoryImpl @Inject constructor(
-  private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyNetworkDataSource: SpotifyNetworkDataSource,
   private val spotifyCacheDao: SpotifyCacheDao,
 ) : SpotifyArtistRepository {
 
@@ -37,7 +37,7 @@ class SpotifyArtistRepositoryImpl @Inject constructor(
     var offset = 0
 
     for (i in 0 until pages) {
-      val artists = spotifyNetworkRepository.topArtists(artistsPerPage, offset)
+      val artists = spotifyNetworkDataSource.topArtists(artistsPerPage, offset)
       Timber.d("Fetched ${artists.size} artists")
       spotifyCacheDao.insertArtists(artists)
       Timber.d("Inserted ${artists.size} artists")

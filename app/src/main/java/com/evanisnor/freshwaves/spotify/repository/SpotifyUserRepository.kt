@@ -1,6 +1,6 @@
 package com.evanisnor.freshwaves.spotify.repository
 
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import com.evanisnor.freshwaves.user.UserProfile
 import dagger.Binds
 import dagger.Module
@@ -22,8 +22,8 @@ interface SpotifyUserRepository {
 }
 
 class SpotifyUserRepositoryImpl @Inject constructor(
-  private val spotifyNetworkRepository: SpotifyNetworkRepository,
+  private val spotifyNetworkDataSource: SpotifyNetworkDataSource,
 ) : SpotifyUserRepository {
 
-  override suspend fun userProfile(): UserProfile = spotifyNetworkRepository.userProfile()
+  override suspend fun userProfile(): UserProfile = spotifyNetworkDataSource.userProfile()
 }

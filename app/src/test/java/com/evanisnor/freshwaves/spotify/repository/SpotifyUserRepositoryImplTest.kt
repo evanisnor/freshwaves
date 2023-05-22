@@ -3,7 +3,7 @@ package com.evanisnor.freshwaves.spotify.repository
 import com.evanisnor.freshwaves.deps.handyauth.FakeHandyAuth
 import com.evanisnor.freshwaves.spotify.FakeSpotifyAPIService
 import com.evanisnor.freshwaves.spotify.auth.SpotifyAuthorizationImpl
-import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkRepository
+import com.evanisnor.freshwaves.spotify.network.SpotifyNetworkDataSource
 import com.evanisnor.freshwaves.spotify.network.model.PrivateUserObject
 import com.evanisnor.freshwaves.user.UserProfile
 import com.google.common.truth.Truth.assertThat
@@ -24,7 +24,7 @@ class SpotifyUserRepositoryImplTest {
   @Before
   fun setup() {
     spotifyAPIService = FakeSpotifyAPIService()
-    val spotifyNetworkRepository = SpotifyNetworkRepository(
+    val spotifyNetworkDataSource = SpotifyNetworkDataSource(
       SpotifyAuthorizationImpl(
         FakeHandyAuth().apply {
           authorize()
@@ -32,7 +32,7 @@ class SpotifyUserRepositoryImplTest {
       ),
       spotifyAPIService,
     )
-    spotifyUserRepository = SpotifyUserRepositoryImpl(spotifyNetworkRepository)
+    spotifyUserRepository = SpotifyUserRepositoryImpl(spotifyNetworkDataSource)
   }
 
   @Test

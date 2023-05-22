@@ -52,7 +52,7 @@ jobs:
         with:
           serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
           packageName: com.evanisnor.freshwaves
-          releaseFiles: ${{steps.sign_app.outputs.signedReleaseFile}}
+          releaseFiles: ${{steps.sign_app.outputs.signedFile}}
           track: alpha
           status: completed
           mappingFile: app/build/outputs/mapping/release/mapping.txt

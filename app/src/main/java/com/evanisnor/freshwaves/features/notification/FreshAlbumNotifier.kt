@@ -23,6 +23,7 @@ import com.evanisnor.freshwaves.system.hasPermission
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import javax.inject.Inject
@@ -49,6 +50,7 @@ class FreshAlbumNotifier @Inject constructor(
   }
 
   suspend fun send(freshAlbums: List<Album>) = withContext(Dispatchers.Main) {
+    Timber.i("Notifying user of fresh albums")
     freshAlbums.forEach { album ->
       val albumNotification = buildAlbumNotification(album)
       send(album, albumNotification)

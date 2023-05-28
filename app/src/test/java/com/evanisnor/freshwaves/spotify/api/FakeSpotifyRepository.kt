@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.asFlow
 import java.time.Instant
 
 class FakeSpotifyRepository(
-  var albums: List<Album> = emptyList(),
+  var albums: MutableList<Album> = mutableListOf(),
 ) : SpotifyRepository {
 
   override suspend fun getLatestAlbums(limit: Int): Flow<List<Album>> =

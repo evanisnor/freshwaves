@@ -2,6 +2,7 @@ package com.evanisnor.freshwaves.features.updater
 
 import com.evanisnor.freshwaves.features.updater.localbroadcast.LocalBroadcastDelegate
 import com.evanisnor.freshwaves.features.updater.workmanager.FakeWorkManager
+import com.evanisnor.freshwaves.integration.crashlytics.FakeCrashlytics
 import org.junit.Test
 import java.time.DayOfWeek
 import java.time.ZoneId
@@ -20,7 +21,11 @@ class UpdaterBootstrapperTest {
     }
   }
 
-  private val updaterBootstrapper = UpdaterBootstrapper(workManager, localBroadcastDelegate)
+  private val updaterBootstrapper = UpdaterBootstrapper(
+    workManager,
+    localBroadcastDelegate,
+    FakeCrashlytics(),
+  )
 
   @Test
   fun `updateNow - when called - worker job is queued`() {

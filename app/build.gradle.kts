@@ -21,27 +21,31 @@ val keystorePropertiesFile = rootProject.file("keystore.properties")
 
 android {
   namespace = "com.evanisnor.freshwaves"
-  compileSdk = 33
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "com.evanisnor.freshwaves"
     minSdk = 27
-    targetSdk = 33
-    versionCode = countGitCommits().also {
-      println("Current Version Code: $it")
-    }
-    versionName = generateVersionNumber().also {
-      println("Current Version: $it")
-    }
+    targetSdk = 34
+    versionCode =
+      countGitCommits().also {
+        println("Current Version Code: $it")
+      }
+    versionName =
+      generateVersionNumber().also {
+        println("Current Version: $it")
+      }
 
-    manifestPlaceholders["adMobAppId"] = readEnvironmentVariable(
-      name = "ADMOB_APPID",
-      default = "ca-app-pub-3940256099942544~3347511713",
-    )
-    manifestPlaceholders["adMobAdAlbumCard"] = readEnvironmentVariable(
-      name = "ADMOB_AD_ALBUMCARD",
-      default = "ca-app-pub-3940256099942544/2247696110",
-    )
+    manifestPlaceholders["adMobAppId"] =
+      readEnvironmentVariable(
+        name = "ADMOB_APPID",
+        default = "ca-app-pub-3940256099942544~3347511713",
+      )
+    manifestPlaceholders["adMobAdAlbumCard"] =
+      readEnvironmentVariable(
+        name = "ADMOB_AD_ALBUMCARD",
+        default = "ca-app-pub-3940256099942544/2247696110",
+      )
     manifestPlaceholders["redirectUriScheme"] = "com.evanisnor.freshwaves"
 
     buildConfigField("Long", "BUILD_TIMESTAMP", "${Instant.now().toEpochMilli()}L")
@@ -102,12 +106,13 @@ android {
 }
 
 spotless {
-  val editorConfig = mapOf(
-    "indent_size" to 2,
-    "no-wildcard-imports" to true,
-    "ij_kotlin_allow_trailing_comma" to true,
-    "ij_kotlin_allow_trailing_comma_on_call_site" to true,
-  )
+  val editorConfig =
+    mapOf(
+      "indent_size" to 2,
+      "no-wildcard-imports" to true,
+      "ij_kotlin_allow_trailing_comma" to true,
+      "ij_kotlin_allow_trailing_comma_on_call_site" to true,
+    )
 
   kotlin {
     ktlint(libs.versions.ktlint.get())
@@ -180,11 +185,12 @@ fun generateVersionNumber(): String {
   return "$year.$month.$commitsThisMonth"
 }
 
-fun countGitCommits(since: String? = null) = if (!since.isNullOrBlank()) {
-  "git".execute("rev-list", "--count", "main", "--since=\"$since\"")
-} else {
-  "git".execute("rev-list", "--count", "main")
-}.toInt()
+fun countGitCommits(since: String? = null) =
+  if (!since.isNullOrBlank()) {
+    "git".execute("rev-list", "--count", "main", "--since=\"$since\"")
+  } else {
+    "git".execute("rev-list", "--count", "main")
+  }.toInt()
 
 fun readEnvironmentVariable(
   name: String,

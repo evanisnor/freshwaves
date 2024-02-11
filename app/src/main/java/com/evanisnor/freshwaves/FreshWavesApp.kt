@@ -10,15 +10,22 @@ import com.evanisnor.freshwaves.features.notification.FreshAlbumNotifier
 import com.evanisnor.freshwaves.features.updater.UpdaterBootstrapper
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
+import dagger.hilt.EntryPoint
+import dagger.hilt.EntryPoints
+import dagger.hilt.InstallIn
 import dagger.hilt.android.HiltAndroidApp
+import dagger.hilt.components.SingletonComponent
 import timber.log.Timber
 import javax.inject.Inject
 
 @HiltAndroidApp
 class FreshWavesApp : Application(), Configuration.Provider {
 
-  @Inject
-  lateinit var workerFactory: HiltWorkerFactory
+  @EntryPoint
+  @InstallIn(SingletonComponent::class)
+  interface HiltWorkerFactoryEntryPoint {
+    fun workerFactory(): HiltWorkerFactory
+  }
 
   @Inject
   lateinit var updaterBootstrapper: UpdaterBootstrapper
@@ -34,6 +41,10 @@ class FreshWavesApp : Application(), Configuration.Provider {
   @Inject
   lateinit var trees: Set<@JvmSuppressWildcards Timber.Tree>
 
+  override val workManagerConfiguration: Configuration = Configuration.Builder()
+    .setWorkerFactory(EntryPoints.get(this, HiltWorkerFactoryEntryPoint::class.java).workerFactory())
+    .build()
+
   override fun onCreate() {
     super.onCreate()
     setupUncaughtExceptionHandling()
@@ -41,10 +52,6 @@ class FreshWavesApp : Application(), Configuration.Provider {
     updaterBootstrapper.registerForSuccessfulAuthorization()
     freshAlbumNotifier.createNotificationChannel()
   }
-
-  override fun getWorkManagerConfiguration(): Configuration = Configuration.Builder()
-    .setWorkerFactory(workerFactory)
-    .build()
 
   private fun setupUncaughtExceptionHandling() {
     val oldExceptionHandler = Thread.getDefaultUncaughtExceptionHandler()

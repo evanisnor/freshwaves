@@ -20,7 +20,6 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class FreshWavesApp : Application(), Configuration.Provider {
-
   @EntryPoint
   @InstallIn(SingletonComponent::class)
   interface HiltWorkerFactoryEntryPoint {
@@ -41,9 +40,10 @@ class FreshWavesApp : Application(), Configuration.Provider {
   @Inject
   lateinit var trees: Set<@JvmSuppressWildcards Timber.Tree>
 
-  override val workManagerConfiguration: Configuration = Configuration.Builder()
-    .setWorkerFactory(EntryPoints.get(this, HiltWorkerFactoryEntryPoint::class.java).workerFactory())
-    .build()
+  override val workManagerConfiguration: Configuration =
+    Configuration.Builder()
+      .setWorkerFactory(EntryPoints.get(this, HiltWorkerFactoryEntryPoint::class.java).workerFactory())
+      .build()
 
   override fun onCreate() {
     super.onCreate()

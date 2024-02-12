@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
  * Authorization interface for Spotify
  */
 interface SpotifyAuthorization {
-
   /**
    * Login Flow State
    */
@@ -19,8 +18,9 @@ interface SpotifyAuthorization {
    * Authorization response types
    */
   sealed interface Response {
-    object Success : Response
-    object Failure : Response
+    data object Success : Response
+
+    data object Failure : Response
   }
 
   val isAuthorized: Boolean
@@ -42,12 +42,4 @@ interface SpotifyAuthorization {
    * Get the latest authorization header value for API requests
    */
   suspend fun getAuthorizationHeader(): String
-
-  companion object {
-
-    /**
-     * Used for LocalBroadcast intent until I refactor this into something nicer.
-     */
-    const val authorizationSuccessfulAction = "authorization-successful"
-  }
 }

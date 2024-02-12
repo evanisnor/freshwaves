@@ -1,10 +1,7 @@
 package com.evanisnor.freshwaves.spotify.auth
 
-import android.content.Intent
 import androidx.fragment.app.Fragment
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization
-import com.evanisnor.freshwaves.spotify.api.SpotifyAuthorization.Companion.authorizationSuccessfulAction
 import com.evanisnor.handyauth.client.HandyAuth
 import dagger.Binds
 import dagger.Module
@@ -30,7 +27,6 @@ private class LoginUserFlow(
   private val onResponse: suspend (SpotifyAuthorization.Response) -> Unit,
 ) :
   SpotifyAuthorization.PendingAuthorization {
-
   init {
     Timber.d("Preparing user login")
   }
@@ -46,42 +42,37 @@ private class LoginUserFlow(
     }
 }
 
-class SpotifyAuthorizationImpl @Inject constructor(
-  private val handyAuth: HandyAuth,
-) : SpotifyAuthorization {
+class SpotifyAuthorizationImpl
+  @Inject
+  constructor(
+    private val handyAuth: HandyAuth,
+  ) : SpotifyAuthorization {
+    private val _latestResponse =
+      MutableStateFlow(
+        if (isAuthorized) {
+          SpotifyAuthorization.Response.Success
+        } else {
+          SpotifyAuthorization.Response.Failure
+        },
+      )
 
-  private val _latestResponse =
-    MutableStateFlow(
-      if (isAuthorized) {
-        SpotifyAuthorization.Response.Success
-      } else {
-        SpotifyAuthorization.Response.Failure
-      },
-    )
+    override val isAuthorized: Boolean
+      get() = handyAuth.isAuthorized
 
-  override val isAuthorized: Boolean
-    get() = handyAuth.isAuthorized
+    override val latestResponse: Flow<SpotifyAuthorization.Response> =
+      _latestResponse.asStateFlow()
 
-  override val latestResponse: Flow<SpotifyAuthorization.Response> =
-    _latestResponse.asStateFlow()
-
-  override suspend fun prepareAuthorization(fragment: Fragment): SpotifyAuthorization.PendingAuthorization =
-    LoginUserFlow(handyAuth.prepareAuthorization(fragment)) {
-      Timber.d("Received authorization response: $it")
-      _latestResponse.emit(it)
-
-      // TODO Remove this side-effect
-      if (it is SpotifyAuthorization.Response.Success) {
-        LocalBroadcastManager.getInstance(fragment.requireContext())
-          .sendBroadcast(Intent(authorizationSuccessfulAction))
+    override suspend fun prepareAuthorization(fragment: Fragment): SpotifyAuthorization.PendingAuthorization =
+      LoginUserFlow(handyAuth.prepareAuthorization(fragment)) {
+        Timber.d("Received authorization response: $it")
+        _latestResponse.emit(it)
       }
+
+    override suspend fun logout() {
+      Timber.i("Logging out")
+      handyAuth.logout()
+      _latestResponse.emit(SpotifyAuthorization.Response.Failure)
     }
 
-  override suspend fun logout() {
-    Timber.i("Logging out")
-    handyAuth.logout()
-    _latestResponse.emit(SpotifyAuthorization.Response.Failure)
+    override suspend fun getAuthorizationHeader(): String = handyAuth.accessToken().asHeaderValue()
   }
-
-  override suspend fun getAuthorizationHeader(): String = handyAuth.accessToken().asHeaderValue()
-}

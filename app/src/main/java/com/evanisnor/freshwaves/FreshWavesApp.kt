@@ -15,6 +15,9 @@ import dagger.hilt.EntryPoints
 import dagger.hilt.InstallIn
 import dagger.hilt.android.HiltAndroidApp
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -49,8 +52,11 @@ class FreshWavesApp : Application(), Configuration.Provider {
     super.onCreate()
     setupUncaughtExceptionHandling()
     Timber.plant(*trees.toTypedArray())
-    updaterBootstrapper.registerForSuccessfulAuthorization()
     freshAlbumNotifier.createNotificationChannel()
+
+    CoroutineScope(Dispatchers.Default).launch {
+      updaterBootstrapper.runUpdateAfterAuthorization()
+    }
   }
 
   private fun setupUncaughtExceptionHandling() {

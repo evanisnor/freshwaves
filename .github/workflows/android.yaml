@@ -56,4 +56,5 @@ jobs:
           track: alpha
           status: completed
           mappingFile: app/build/outputs/mapping/release/mapping.txt
+          changesNotSentForReview: true
 

@@ -12,6 +12,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.ConcatAdapter
+import com.evanisnor.freshwaves.FeatureFlags
 import com.evanisnor.freshwaves.LoginActivity
 import com.evanisnor.freshwaves.R
 import com.evanisnor.freshwaves.databinding.FreshAlbumsFragmentBinding
@@ -34,7 +35,6 @@ import kotlin.math.max
 
 @AndroidEntryPoint
 class FreshAlbumsFragment : Fragment() {
-
   @Inject
   lateinit var debugMenu: DebugMenu
 
@@ -61,7 +61,10 @@ class FreshAlbumsFragment : Fragment() {
       }.root
   }
 
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+  override fun onViewCreated(
+    view: View,
+    savedInstanceState: Bundle?,
+  ) {
     super.onViewCreated(view, savedInstanceState)
     val observableLinearLayoutManager = ObservableLinearLayoutManager(requireContext())
 
@@ -118,7 +121,10 @@ class FreshAlbumsFragment : Fragment() {
     binding = null
   }
 
-  private fun toggleViews(state: UpdaterState, albumCount: Int) {
+  private fun toggleViews(
+    state: UpdaterState,
+    albumCount: Int,
+  ) {
     if (state == UpdaterState.Idle || state == UpdaterState.Retry || state == UpdaterState.Unknown) return
     binding?.apply {
       loadingMessage.loading.isVisible = state == UpdaterState.Running
@@ -132,7 +138,10 @@ class FreshAlbumsFragment : Fragment() {
     freshAlbumsViewModel.albums.collect { albums ->
       freshAlbumsAdapter.submitList(albums)
       toggleViews(freshAlbumsViewModel.lastKnownUpdaterState(), albums.size)
-      insertAdvertisements(observableLinearLayoutManager)
+
+      if (FeatureFlags.ENABLE_ADVERTISEMENTS) {
+        insertAdvertisements(observableLinearLayoutManager)
+      }
     }
   }
 
@@ -143,11 +152,12 @@ class FreshAlbumsFragment : Fragment() {
   }
 
   private fun registerAdapterClickListener() {
-    freshAlbumsAdapter.listener = object : FreshAlbumsAdapter.OnAlbumSelectedListener {
-      override fun onAlbumSelected(album: Album) {
-        launchAlbumDetails(album)
+    freshAlbumsAdapter.listener =
+      object : FreshAlbumsAdapter.OnAlbumSelectedListener {
+        override fun onAlbumSelected(album: Album) {
+          launchAlbumDetails(album)
+        }
       }
-    }
   }
 
   private fun launchAlbumDetails(album: Album) {
